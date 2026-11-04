@@ -1,5 +1,6 @@
 import type { ParkArea, ParkAttraction } from "../../types";
 import { epcot, epcotAreas } from "./epcot.catalog";
+import { buschGardensTampa, buschGardensTampaAreas } from "./busch-gardens-tampa.catalog";
 import { epicUniverse, epicUniverseAreas } from "./epic-universe.catalog";
 import { hollywoodStudios, hollywoodStudiosAreas } from "./hollywood-studios.catalog";
 import { islandsOfAdventure, islandsOfAdventureAreas } from "./islands-of-adventure.catalog";
@@ -16,6 +17,7 @@ export interface ParkCatalog {
 export const parkCatalogs: Record<string, ParkCatalog> = {
   "magic-kingdom": { name: "Magic Kingdom", areas: magicKingdomAreas, attractions: magicKingdom },
   epcot: { name: "EPCOT", areas: epcotAreas, attractions: epcot },
+  "busch-gardens-tampa": { name: "Busch Gardens Tampa Bay", areas: buschGardensTampaAreas, attractions: buschGardensTampa },
   "epic-universe": { name: "Universal Epic Universe", areas: epicUniverseAreas, attractions: epicUniverse },
   "hollywood-studios": { name: "Disney's Hollywood Studios", areas: hollywoodStudiosAreas, attractions: hollywoodStudios },
   "islands-of-adventure": { name: "Universal Islands of Adventure", areas: islandsOfAdventureAreas, attractions: islandsOfAdventure },

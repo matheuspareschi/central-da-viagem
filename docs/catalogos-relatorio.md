@@ -2,7 +2,9 @@
 
 Fonte: `docs/fontes/Guia_Completo_de_Atracoes_dos_Parques_de_Orlando.pdf` (7 páginas). Os textos foram transcritos sem alterações; apóstrofos tipográficos (’) do PDF foram preservados.
 
-Status por parque: EPCOT (piloto, feito) · demais parques (aguardando confirmação do piloto).
+Status: todos os parques do PDF feitos (EPCOT, Universal Studios Florida, Islands of Adventure, Hollywood Studios, Epic Universe, Busch Gardens Tampa). Magic Kingdom só comparado.
+
+Regra de ligação usada nos dias: só liga quando o nome é igual ou muda só caixa, acento, aspas, "&"/"and", parênteses ou o prefixo "Área ·" do dia 11. Tradução, subtítulo extra ou item que combina várias atrações fica sem ligação.
 
 ---
 
@@ -327,6 +329,43 @@ O PDF traz só 6 atrações desse parque. Não completei com outras; o dia 17 e 
 
 ---
 
-## Demais parques
+## Busch Gardens Tampa Bay (`busch-gardens-tampa`)
 
-Ainda não feito: Busch Gardens Tampa.
+### 1. Contagem
+
+| Linhas de atração no PDF | Entradas geradas | `show` |
+|---|---|---|
+| 8 | 8 | 0 |
+
+O PDF não separa áreas: área única `atracoes` ("Atrações").
+
+### 2. Itens com `verify: true`
+
+Nenhum.
+
+### 3. Suspeitas de erro ou texto estranho
+
+- **"Cobras's Curse"**: provável erro de digitação (o dia 21 escreve "Cobra's Curse"). Mantido; como o `id` sai do nome, ficou `cobrass-curse`.
+- "SheiKra Dive Coaster (Queda Vertical)": no PDF a coluna ATRAÇÃO traz só "SheiKra" e o tipo é "Dive Coaster (Queda Vertical)"; transcrito assim.
+- "Serengeti Flyer: Balanço gigante a 109 km/h": dado numérico mantido, para conferir na revisão.
+
+### 4. Áreas com nome combinado
+
+Nenhuma (área única).
+
+### 5. Dia 21 × catálogo
+
+**Ligados (7):** Cheetah Hunt, Cobra's Curse (`cobrass-curse`, diferença só de grafia), Serengeti Flyer, SheiKra, Tigris, Iron Gwazi, Montu.
+
+**Não ligados:** nenhum item do dia com equivalente duvidoso. Sem equivalente no catálogo (ok): Visão geral e logística, Cheetah Run, Lion & Hyena Ridge, Serengeti Safari (o catálogo tem Serengeti Express, que é outra atração), Animal Care Center, Elephant Interaction Area, Penguin Point, Animal Connections, Almoço, Falcon's Fury, Phoenix Rising, Pantopia Theater, Congo River Rapids, Ubanga-Banga Bumper Cars, Habitat Hideaway, Stanleyville Theater, Walkabout Way, Lory Land, Myombe Reserve, Moroccan Palace Theatre.
+
+### 6. Itens que parecem faltar segundo o próprio PDF
+
+Nenhum indicado pelo PDF (o PDF lista só as montanhas-russas e o trem safári; o dia 21 cita muito mais, mas isso não vem do PDF).
+
+---
+
+## Pendências gerais
+
+- Kennedy Space Center fora desta rodada (não está no PDF); o dia 24 não tem `parkId`.
+- O dia 10 (compras, cronograma) não recebeu `parkId`: não é checklist de parque.
