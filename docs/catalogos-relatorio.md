@@ -159,6 +159,63 @@ Nenhum indicado pelo PDF.
 
 ---
 
+## Universal Islands of Adventure (`islands-of-adventure`)
+
+### 1. Contagem
+
+| Linhas de atração no PDF | Entradas geradas | `show` |
+|---|---|---|
+| 16 | 16 | 0 |
+
+Por área: Marvel Super Hero Island (3), Toon Lagoon & Skull Island (3), Seuss Landing & The Lost Continent (3), Jurassic Park (4; Pteranodon Flyers continua na página seguinte), The Wizarding World of Harry Potter - Hogsmeade (3).
+
+### 2. Itens com `verify: true`
+
+Nenhum. Pteranodon Flyers traz "restrito a crianças com acompanhante", que é regra de acesso, não reforma ou fechamento.
+
+### 3. Suspeitas de erro ou texto estranho
+
+- "livro do O Gato de Chapéu" (The Cat in the Hat): artigo duplicado.
+- "Hagrid’s Magical Creatures Motorbike": o dia 15 escreve "Hagrid's Motorbike Adventure".
+- "Montanha-Russa de Lançamentos" (Hagrid’s): plural, enquanto o Hulk usa "de Lançamento"; mantido.
+- Hulk: "túnel inclinado com 7 inversões" e Doctor Doom's Fearfall: "Lançamento vertical… seguido por queda": frases mantidas, só conferir os dados na revisão.
+- Apóstrofos: o PDF mistura reto (Doctor Doom's) e tipográfico (Dudley Do-Right’s, Bluto’s, Hagrid’s); mantidos como estão.
+
+### 4. Áreas com nome combinado
+
+"Toon Lagoon & Skull Island", "Seuss Landing & The Lost Continent"; "The Wizarding World of Harry Potter - Hogsmeade" tem hífen no nome.
+
+### 5. Dias 15 e 18 × catálogo
+
+O dia 10 está na lista de expectativa, mas é um dia de compras em formato de cronograma (sem checklist de parque), então não recebeu `parkId`. O dia 18 é dividido; o `parkId` foi posto na trilha `islands-of-adventure`.
+
+**Ligados:**
+
+| Dia | Item | `attractionId` |
+|---|---|---|
+| 15 e 18 | Jurassic World VelociCoaster | `jurassic-world-velocicoaster` |
+| 15 | Harry Potter and the Forbidden Journey | `harry-potter-and-the-forbidden-journey` ("&" × "and") |
+| 15 | Skull Island: Reign of Kong | `skull-island-reign-of-kong` |
+| 18 | Jurassic Park River Adventure (se reaberto) | `jurassic-park-river-adventure` (o parêntese é nota do dia) |
+
+**Não ligados, com sugestão:**
+
+| Dia | Item | Sugestão | Motivo |
+|---|---|---|---|
+| 15 e 18 | Hagrid's Motorbike Adventure | `hagrids-magical-creatures-motorbike` | Nome diferente. |
+| 15 | Toon Lagoon: Ripsaw Falls e Bilge-Rat Barges | `dudley-do-rights-ripsaw-falls` e `popeye-and-blutos-bilge-rat-barges` | Item com duas atrações. |
+| 15 e 18 | Marvel: Spider-Man e Hulk | `the-amazing-adventures-of-spider-man` e `the-incredible-hulk-coaster` | Item com duas atrações. |
+| 15 | Repetição: Hagrid's ou VelociCoaster (Single Rider) | uma das duas acima | Item de escolha. |
+| 18 | Hogwarts Express: ida a King's Cross / volta a Hogsmeade | `hogwarts-express-kings-cross` (catálogo do Universal Studios Florida) | A atração está em outro parque. |
+
+**Sem equivalente no catálogo** (ok): Almoço no Três Vassouras, Lojas de Hogsmeade, Jurassic Park Discovery Center, Jantar, Ollivanders e varinha (o PDF só lista Ollivanders no Universal Studios Florida), Hog's Head, Projeção de Natal, Pôr do sol, Plataforma 9¾, CityWalk, Daily Dealz.
+
+### 6. Itens que parecem faltar segundo o próprio PDF
+
+Nenhum indicado pelo PDF.
+
+---
+
 ## Demais parques
 
-Ainda não feitos: Islands of Adventure, Hollywood Studios, Epic Universe, Busch Gardens Tampa.
+Ainda não feitos: Hollywood Studios, Epic Universe, Busch Gardens Tampa.
