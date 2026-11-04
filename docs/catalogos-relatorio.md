@@ -273,6 +273,60 @@ Nenhum indicado pelo PDF.
 
 ---
 
+## Universal Epic Universe (`epic-universe`)
+
+### 1. Contagem
+
+| Linhas de atração no PDF | Entradas geradas | `show` |
+|---|---|---|
+| 6 | 6 | 0 |
+
+Áreas: Celestial Park (1), Donkey Kong (1), Isle of Berk (1), Harry Potter (1), Dark Universe (1), Sem área informada (1).
+
+### 2. Itens com `verify: true`
+
+Nenhum.
+
+### 3. Suspeitas de erro ou texto estranho
+
+- A coluna do PDF é "ATRAÇÃO / ÁREA", com a área entre parênteses. O `name` ficou sem o parêntese e a área virou o rótulo (ex.: "Stardust Racers (Celestial Park)" → nome "Stardust Racers", área "Celestial Park"). Os textos de `name` ficam, por isso, sem o parêntese que está no PDF.
+- Mario Kart: Bowser’s Challenge não traz parêntese: área `sem-area`, rótulo "Sem área informada".
+- As áreas "Donkey Kong", "Harry Potter" e "Dark Universe" são, no PDF, nomes de franquia entre parênteses, não nomes de áreas do parque; mantidos assim.
+- "Dueling coaster" (descrição do Stardust Racers) e "Celestial Spin" mantidos em inglês, como no PDF.
+
+### 4. Áreas com nome combinado
+
+Nenhuma.
+
+### 5. Dias 17 e 22 × catálogo
+
+**Ligados:**
+
+| Dia | Item | `attractionId` |
+|---|---|---|
+| 17 | Hiccup's Wing Gliders | `hiccups-wing-gliders` |
+| 17 | Stardust Racers | `stardust-racers` |
+| 17 | Mario Kart: Bowser's Challenge | `mario-kart-bowsers-challenge` |
+| 22 | Hiccup's Wing Gliders (repetição) | `hiccups-wing-gliders` (o parêntese é nota do dia) |
+
+**Não ligados, com sugestão:**
+
+| Dia | Item | Sugestão | Motivo |
+|---|---|---|---|
+| 17 | Monsters Unchained: The Frankenstein Experiment | `monsters-unchained` | O dia acrescenta subtítulo. |
+| 17 | Harry Potter and the Battle at the Ministry | `battle-at-the-ministry` | O dia acrescenta "Harry Potter and the". |
+| 17 | Mine-Cart Madness e fotos com personagens | `mine-cart-madness` | Item combina atração e fotos. |
+| 22 | Ministry Viewing | `battle-at-the-ministry` | Não está claro se é a atração. |
+| 22 | Dark Universe: Monsters Unchained e Das Stakehaus | `monsters-unchained` | Item combina atração e restaurante. |
+
+**Sem equivalente no catálogo** (ok): Chegada e estacionamento, Regras de fila, Dragon Racer's Rally, Banguela / Isle of Berk, The Untrainable Dragon, Spit Fyre Grill, Fyre Drill, Curse of the Werewolf, Ruas de Paris, Pizza Moon, Lojas do Celestial Park, Noite no Stardust / Super Nintendo World, Celestial Goodnight, Snoggletog, Le Cirque Arcanus, Toadstool Café, Power-Up Band, Mead Hall, favoritas à noite.
+
+### 6. Itens que parecem faltar segundo o próprio PDF
+
+O PDF traz só 6 atrações desse parque. Não completei com outras; o dia 17 e o dia 22 citam várias atrações e shows do parque que o PDF não lista (ver as listas acima).
+
+---
+
 ## Demais parques
 
-Ainda não feitos: Epic Universe, Busch Gardens Tampa.
+Ainda não feito: Busch Gardens Tampa.
