@@ -109,6 +109,56 @@ Catálogo não alterado. Mesmos 31 itens de atração nas mesmas áreas; o catá
 
 ---
 
+## Universal Studios Florida (`universal-studios-florida`)
+
+### 1. Contagem
+
+| Linhas de atração no PDF | Entradas geradas | `show` |
+|---|---|---|
+| 18 | 18 | 3 |
+
+Por área: Minion Land (3), New York (4), San Francisco & Hollywood (3), World Expo & DreamWorks Land (4), Springfield & Diagon Alley (Harry Potter) (4).
+`show`: Shows de Rua (Blues Brothers / Beat Builders), Horror Make-Up Show, The Bourne Stuntacular.
+
+### 2. Itens com `verify: true`
+
+Nenhum. Mais próximo: E.T. Adventure ("única atração original do parque ainda em operação"), sem menção a reforma ou fechamento.
+
+### 3. Suspeitas de erro ou texto estranho
+
+- "Gringotes" (descrição de Harry Potter & Escape from Gringotts); o nome da atração usa "Gringotts".
+- "percussão de obra" (Shows de Rua): talvez "percussão de obras" ou outra expressão.
+- "Montanha-Russa 3D Multi-sensorial": o PDF quebra a linha no hífen; mantido "Multi-sensorial" (pode ser só efeito da quebra).
+- "Ônibus" em "Fast & Furious - Supercharged": só confirmar se é o termo pretendido.
+- "Race Through New York Jimmy Fallon" e "TRANSFORMERS: The Ride-3D": nomes sem a pontuação usual, mantidos.
+- Classificação de `kind` a confirmar: Horror Make-Up Show (show de comédia, ao vivo → `show`); Shrek's Swamp & Po's Kung Fu Camp (tipo "Playgrounds & Shows" → `attraction`); Ollivanders Wand Shop ("Show Curto / Loja" → `attraction`).
+
+### 4. Áreas com nome combinado
+
+"San Francisco & Hollywood", "World Expo & DreamWorks Land", "Springfield & Diagon Alley (Harry Potter)".
+
+### 5. Dia 13 (checklist) × catálogo
+
+**Ligados (6):** Revenge of the Mummy, Transformers: The Ride 3D (`transformers-the-ride-3d`), Race Through New York (Jimmy Fallon), The Bourne Stuntacular, E.T. Adventure, Men in Black Alien Attack.
+
+**Não ligados, com sugestão:**
+
+| Item do dia | Sugestão | Motivo |
+|---|---|---|
+| Harry Potter and the Escape from Gringotts | `harry-potter-and-escape-from-gringotts` | Nome do PDF é "Harry Potter & Escape from Gringotts" (sem "the"). |
+| Gringotts (2ª vez) | idem | Repetição. |
+| Minion Mayhem e Villain-Con Minion Blast | `despicable-me-minion-mayhem` e `villain-con-minion-blast` | Item combina duas atrações. |
+| The Simpsons Ride e donut Lard Lad | `the-simpsons-ride` | Item combina atração e lanche. |
+| Ollivanders e varinhas | `ollivanders-wand-shop` | Item inclui compras. |
+
+**Sem equivalente no catálogo** (ok): Fotos no Beco Diagonal, Almoço fora do pico, Jantar no Caldeirão Furado, Parada de Natal e árvore.
+
+### 6. Itens que parecem faltar segundo o próprio PDF
+
+Nenhum indicado pelo PDF.
+
+---
+
 ## Demais parques
 
-Aguardando confirmação do piloto: Universal Studios Florida, Islands of Adventure, Hollywood Studios, Epic Universe, Busch Gardens Tampa.
+Ainda não feitos: Islands of Adventure, Hollywood Studios, Epic Universe, Busch Gardens Tampa.

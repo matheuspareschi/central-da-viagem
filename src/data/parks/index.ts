@@ -1,5 +1,6 @@
 import type { ParkArea, ParkAttraction } from "../../types";
 import { epcot, epcotAreas } from "./epcot.catalog";
+import { universalStudiosFlorida, universalStudiosFloridaAreas } from "./universal-studios-florida.catalog";
 import { magicKingdom, magicKingdomAreas } from "./magic-kingdom.catalog";
 
 export interface ParkCatalog {
@@ -12,4 +13,5 @@ export interface ParkCatalog {
 export const parkCatalogs: Record<string, ParkCatalog> = {
   "magic-kingdom": { name: "Magic Kingdom", areas: magicKingdomAreas, attractions: magicKingdom },
   epcot: { name: "EPCOT", areas: epcotAreas, attractions: epcot },
+  "universal-studios-florida": { name: "Universal Studios Florida", areas: universalStudiosFloridaAreas, attractions: universalStudiosFlorida },
 };
