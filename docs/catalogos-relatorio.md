@@ -216,6 +216,63 @@ Nenhum indicado pelo PDF.
 
 ---
 
+## Disney's Hollywood Studios (`hollywood-studios`)
+
+### 1. Contagem
+
+| Linhas de atração no PDF | Entradas geradas | `show` |
+|---|---|---|
+| 14 | 14 | 5 |
+
+Por área: Hollywood & Sunset Boulevard (4), Toy Story Land (3), Echo Lake & Animation Courtyard (4), Star Wars: Galaxy's Edge & Espetáculos (3).
+`show`: Beauty and the Beast – Live on Stage, Indiana Jones Epic Stunt Spectacular!, Frozen Sing-Along Celebration, The Little Mermaid – Musical Adventure, Fantasmic!.
+
+### 2. Itens com `verify: true`
+
+Nenhum. The Little Mermaid – Musical Adventure traz "Espetáculo renovado", que descreve o show, não uma reforma ou fechamento.
+
+### 3. Suspeitas de erro ou texto estranho
+
+- Área "Star Wars: Galaxy's Edge & Espetáculos" mistura uma land com uma categoria: Fantasmic! (show) está nela.
+- Travessões longos (–) em "Beauty and the Beast – Live on Stage", "Star Tours – The Adventures Continue" e "The Little Mermaid – Musical Adventure"; mantidos.
+- Tipo "Show de Acrobacias" (Indiana Jones) sem "ao Vivo", enquanto o de Universal usa "Show de Acrobacias ao Vivo"; mantido.
+- Frozen Sing-Along Celebration: classificado como `show` (tipo "Show Interativo Musical"); confirmar.
+
+### 4. Áreas com nome combinado
+
+"Hollywood & Sunset Boulevard", "Echo Lake & Animation Courtyard", "Star Wars: Galaxy's Edge & Espetáculos".
+
+### 5. Dia 11 (trilha `hollywood-studios`) × catálogo
+
+Os nomes do dia vêm no formato "Área · Atração". Comparei só a parte depois do "·".
+
+**Ligados (5):**
+
+| Item do dia | `attractionId` | Observação |
+|---|---|---|
+| Mickey and Minnie's Runaway Railway | `mickey-and-minnies-runaway-railway` | "and" × "&" e apóstrofo. |
+| Slinky Dog Dash | `slinky-dog-dash` | |
+| Millennium Falcon: Smugglers Run | `millennium-falcon-smugglers-run` | |
+| Rise of the Resistance | `star-wars-rise-of-the-resistance` | O PDF acrescenta o prefixo "Star Wars:". |
+| Fantasmic! | `fantasmic` | |
+
+**Não ligados, com sugestão:**
+
+| Item do dia | Sugestão | Motivo |
+|---|---|---|
+| Torre do Terror | `tower-of-terror` | Nome traduzido. |
+| Rock 'n' Roller Coaster | `rock-n-roller-coaster-aerosmith` | O PDF acrescenta "Aerosmith". |
+| Show da Bela e a Fera | `beauty-and-the-beast-live-on-stage` | Nome traduzido. |
+| Star Tours | `star-tours-the-adventures-continue` | O PDF acrescenta o subtítulo. |
+
+**Sem equivalente no catálogo** (ok): Pausa para alimentação, Foto com Mickey e Minnie, Pixar Plaza (fotos com personagens), Toy Story Land (fotos à noite), Show World of Animation. Os itens da trilha "Matheus e Jairo" (lojas, Windermere, Old Town) não são de parque.
+
+### 6. Itens que parecem faltar segundo o próprio PDF
+
+Nenhum indicado pelo PDF.
+
+---
+
 ## Demais parques
 
-Ainda não feitos: Hollywood Studios, Epic Universe, Busch Gardens Tampa.
+Ainda não feitos: Epic Universe, Busch Gardens Tampa.
