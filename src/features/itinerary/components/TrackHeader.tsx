@@ -20,8 +20,6 @@ export function TrackHeader({ title, category, group, summary }: TrackHeaderProp
         )}
         <h2 className="font-serif text-[32px] font-bold leading-tight text-ink">{title}</h2>
       </div>
-      {group && <p className="mt-2 text-sm font-semibold text-ink-soft">{group}</p>}
-      <p className="mt-2 text-[15px] leading-normal text-ink-soft">{summary}</p>
     </header>
   );
 }
