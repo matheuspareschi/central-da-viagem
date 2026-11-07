@@ -9,7 +9,7 @@ interface TrackHeaderProps {
   summary: string;
 }
 
-export function TrackHeader({ title, category, group, summary }: TrackHeaderProps) {
+export function TrackHeader({ title, category }: TrackHeaderProps) {
   return (
     <header className="mt-5">
       <div className="flex items-center gap-3">
