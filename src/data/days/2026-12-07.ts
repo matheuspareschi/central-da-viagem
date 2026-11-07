@@ -29,13 +29,14 @@ export default {
         summary: "Dia inteiro com os clássicos de todas as lands, desfile e show de fogos à noite. Almoço e lanches dentro do parque.",
         journey: {
           tiles: [
-            { label: "Acordar", value: "6h45" },
+            { label: "Acordar", value: "6h15" },
             { label: "Sair de casa", value: "7h15" },
             { label: "Estacionamento abre", value: "8h00" },
             { label: "Parque aberto", value: "9h–23h" },
           ],
           notes: [
             { icon: "car", text: "De carro: ~20–25 min até o estacionamento." },
+            { icon: "info", text: "Chegada para entrar no early entry (para não hóspedes)." },
             { icon: "transit", text: "Até a entrada: tram, depois monorail ou balsa (~20–30 min a mais). Pegue o mapa em português (pt-br) ao chegar." },
           ],
           alerts: ["Confirmar no app: em dezembro pode haver festa de Natal com ingresso separado e fechamento antecipado. Veja se o dia 7 é uma dessas noites."],

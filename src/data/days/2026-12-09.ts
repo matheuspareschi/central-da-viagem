@@ -24,9 +24,10 @@ export default {
     parkId: "epcot",
     summary: "Dia de parque único, sem trilha paralela de compras. Ritmo rápido em World Celebration, World Discovery e World Nature pela manhã, para deixar a tarde/noite inteira livre no World Showcase.",
     journey: {
-      tiles: [{ label: "Acordar", value: "7h" }, { label: "Sair do resort", value: "7h30" }, { label: "Estacionamento", value: "~8h" }, { label: "Parque aberto", value: "9h–21h" }],
+      tiles: [{ label: "Acordar", value: "6h30" }, { label: "Sair do resort", value: "7h30" }, { label: "Estacionamento abre", value: "8h00" }, { label: "Parque aberto", value: "9h–21h" }],
       notes: [
         { icon: "car", text: "~25 min até os portões." },
+        { icon: "info", text: "Utilizar early entry (não hóspedes)." },
         { icon: "info", text: "Café da manhã leve em casa antes de sair; levar lanches próprios (queijo, frutas, snacks) para o meio da manhã." },
         { icon: "info", text: "No World Showcase, preferir quiosques baratos a restaurantes table-service." },
       ],

@@ -5,7 +5,7 @@ import { parkCatalogs } from "../src/data/parks/index.ts";
 import { shopRegions } from "../src/data/shopping/index.ts";
 import { listDayTracks, type DayTrack } from "../src/lib/dayTracks.ts";
 import { toMinutes } from "../src/lib/schedule.ts";
-import type { DayData, ParkAttraction, StopStep, TransitStep } from "../src/types";
+import type { DayData, JourneyTile, ParkAttraction, StopStep, TransitStep } from "../src/types";
 
 const MAX_JOURNEY_TILES = 4;
 const daysDirectory = resolve(import.meta.dirname, "../src/data/days");
@@ -106,6 +106,59 @@ function checkEmptyTextFields(scope: string, attractions: ParkAttraction[]): str
   );
 }
 
+const CLOCK_LABEL = /^~?(\d{1,2})h(\d{2})?$/;
+
+function parseClockLabel(label: string): number | undefined {
+  const match = CLOCK_LABEL.exec(label);
+  return match ? Number(match[1]) * MINUTES_PER_HOUR + Number(match[2] ?? 0) : undefined;
+}
+
+interface ParkTimeTiles {
+  wakeUp?: string;
+  leave?: string;
+  parkingOpens?: string;
+  parkHours?: string;
+}
+
+function pickParkTimeTiles(tiles: JourneyTile[]): ParkTimeTiles {
+  const valueOf = (matches: (label: string) => boolean) => tiles.find((tile) => matches(tile.label))?.value;
+  return {
+    wakeUp: valueOf((label) => label === "Acordar"),
+    leave: valueOf((label) => label.startsWith("Sair")),
+    parkingOpens: valueOf((label) => label === "Estacionamento abre"),
+    parkHours: valueOf((label) => label.startsWith("Parque ab")),
+  };
+}
+
+function findInvalidClockLabels(times: ParkTimeTiles): string[] {
+  const [opening, closing] = times.parkHours?.split("–") ?? [];
+  const labels = [times.wakeUp, times.leave, times.parkingOpens, opening, closing];
+  return labels.filter((label): label is string => label !== undefined && parseClockLabel(label) === undefined);
+}
+
+function isStrictlyAscending(minutes: (number | undefined)[]): boolean {
+  const known = minutes.filter((value): value is number => value !== undefined);
+  return known.every((value, index) => index === 0 || known[index - 1] < value);
+}
+
+/** Acordar < Sair de casa < Estacionamento abre ≤ abertura do parque < fechamento. */
+function checkParkTimes(where: string, { category, extras }: DayTrack): string[] {
+  if (category !== "parque") return [];
+  const times = pickParkTimeTiles(extras.journey.tiles);
+  const invalid = findInvalidClockLabels(times).map((label) => `${where}: horário "${label}" fora do formato do app (ex.: 6h15, 8h00)`);
+  if (invalid.length > 0) return invalid;
+
+  const [opening, closing] = times.parkHours?.split("–") ?? [];
+  const [wakeUp, leave, parkingOpens, opens, closes] = [times.wakeUp, times.leave, times.parkingOpens, opening, closing].map(
+    (label) => (label === undefined ? undefined : parseClockLabel(label)),
+  );
+  const errors: string[] = [];
+  if (!isStrictlyAscending([wakeUp, leave, parkingOpens])) errors.push(`${where}: "Acordar", "Sair" e "Estacionamento abre" fora de ordem`);
+  if (parkingOpens !== undefined && opens !== undefined && parkingOpens > opens) errors.push(`${where}: o estacionamento abre depois do parque`);
+  if (opens !== undefined && closes !== undefined && closes <= opens) errors.push(`${where}: o parque fecha antes de abrir`);
+  return errors;
+}
+
 function checkCatalogs(): string[] {
   return Object.entries(parkCatalogs).flatMap(([parkId, { areas, attractions }]) => {
     const scope = `catálogo "${parkId}"`;
@@ -126,7 +179,7 @@ function checkCatalogs(): string[] {
 function checkDay(day: DayData): string[] {
   return listDayTracks(day).flatMap((track) => {
     const where = describeTrack(day, track);
-    return [...checkRequiredFields(where, track), ...checkChecklist(where, track), ...checkSchedule(where, track), ...checkDerivedTiles(where, track)];
+    return [...checkRequiredFields(where, track), ...checkChecklist(where, track), ...checkSchedule(where, track), ...checkDerivedTiles(where, track), ...checkParkTimes(where, track)];
   });
 }
 

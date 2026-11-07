@@ -6,7 +6,7 @@ export default {
   day: 17,
   park: {
     name: "Epic Universe",
-    departure: "7h10",
+    departure: "7h15",
     opening: "9h",
     closing: "21h",
   },
@@ -51,7 +51,7 @@ export default {
             title: "Horários",
             list: [
               "06h15 acordar",
-              "07h10 sair de Storey Lake (~30 min de carro; rota I-4 oeste, saída Kirkman Rd/International Dr)",
+              "07h15 sair de Storey Lake (~30 min de carro; rota I-4 oeste, saída Kirkman Rd/International Dr)",
               "~07h45 estacionar",
               "~08h15 no portão, com o ingresso já aberto no app",
               "09h00 abertura",

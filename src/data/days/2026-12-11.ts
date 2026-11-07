@@ -27,7 +27,7 @@ export default {
         summary: "Dia no Hollywood Studios, com portões das 09h às 21h.",
         group: "Sandra, Thiago, Silvana, Gabriel, Renata e Isabela",
         journey: {
-          tiles: [{ label: "Acordar", value: "7h15" }, { label: "Sair de casa", value: "7h45" }, { label: "Estacionamento abre", value: "8h" }, { label: "Parque aberto", value: "9h–21h" }],
+          tiles: [{ label: "Acordar", value: "7h00" }, { label: "Sair de casa", value: "7h45" }, { label: "Estacionamento abre", value: "8h" }, { label: "Parque aberto", value: "9h–21h" }],
           notes: [
             { icon: "car", text: "Ida até os portões ~20 min." },
             { icon: "info", text: "Deixar os lanches do parque separados no dia anterior. Mochilas com filtro solar, remédios etc." },

@@ -6,8 +6,9 @@ export default {
   day: 21,
   park: {
     name: "Busch Gardens Tampa",
-    departure: "7h45",
-    opening: "10h",
+    departure: "7h00",
+    opening: "9h",
+    closing: "21h",
   },
   weekday: "Seg",
   liturgicalWeekday: "Semana de Natal",
@@ -24,12 +25,12 @@ export default {
     summary: "Todas as montanhas-russas. Circuito anti-horário: Edge of Africa → Egypt → Nairobi → Pantopia → Congo → Wild Oasis → Stanleyville → Bird Gardens → Morocco, com a Montu por último.",
     group: "Grupo só de radicais (acima de 1,38 m)",
     journey: {
-      tiles: [{ label: "Parque abre", value: "10h" }],
+      tiles: [{ label: "Parque aberto", value: "9h–21h" }],
       notes: [
         { icon: "info", text: "Quem não quiser fazer a Montu espera na saída ou usa o Rider Switch." },
         { icon: "info", text: "O roteiro completo termina por volta das 19h, então o Tampa Outlet só cabe saindo do parque até ~17h e cortando os extras (Lory Land, Habitat Hideaway, Ubanga-Banga, teatros, Walkabout Way, Congo River Rapids)." },
       ],
-      alerts: ["Confirmar: horários sugeridos assumem abertura às 10h."],
+      alerts: ["Confirmar: horários sugeridos assumem abertura às 9h."],
     },
     attractions: [
       {
@@ -42,8 +43,8 @@ export default {
             icon: "parking",
             title: "Endereço / Estacionamento",
             paragraphs: [
-              "10165 McKinley Dr, Tampa, FL. Cerca de 1h30 de carro de Orlando pela I-4 Oeste. Estacionamento pago à parte.",
-              "Sugestão: acordar 6h45, sair do Storey Lake às 7h45 e chegar ~9h30, 30 minutos antes de abrir.",
+              "10165 McKinley Dr, Tampa, FL. Cerca de 1h30 a 1h45 de carro de Orlando pela I-4 Oeste (~100 km, sujeito a trânsito). Estacionamento pago à parte.",
+              "Sugestão: acordar 6h00, sair do Storey Lake às 7h00 e chegar ~9h30, 30 minutos antes de abrir.",
             ],
           },
           {

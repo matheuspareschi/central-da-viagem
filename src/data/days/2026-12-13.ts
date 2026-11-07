@@ -25,9 +25,9 @@ export default {
     // REVISAR (notes): Item "Chegada e preparação" dividido entre tiles e notes; conferir agrupamento.
     summary: "Visita única ao Universal Studios (não haverá segunda visita). Domingo costuma ser mais cheio.",
     journey: {
-      tiles: [{ label: "Acordar", value: "6h30" }, { label: "Sair de casa", value: "7h15" }, { label: "Estacionamento e portão", value: "8h15" }, { label: "Beco Diagonal", value: "9h" }],
+      tiles: [{ label: "Acordar", value: "6h15" }, { label: "Sair de casa", value: "7h15" }, { label: "Estacionamento e portão", value: "8h15" }, { label: "Beco Diagonal", value: "9h" }],
       notes: [
-        { icon: "car", text: "25–35 min até o estacionamento." },
+        { icon: "car", text: "~15 min até os portões." },
         { icon: "info", text: "Às 9h00, seguir a pé para o Beco Diagonal via New York e San Francisco (~12 min)." },
         { icon: "info", text: "6000 Universal Blvd, Orlando, FL 32819. Estacionamento a partir de US$35 por dia (2026). São duas garagens enormes: anote o setor e o andar." },
         { icon: "info", text: "Da garagem ao portão pelo CityWalk são cerca de 15–20 min a pé." },

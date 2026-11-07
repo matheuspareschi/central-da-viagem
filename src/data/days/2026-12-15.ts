@@ -25,9 +25,10 @@ export default {
     // REVISAR (notes): Item "Chegada e preparação" redistribuído; conferir.
     summary: "Primeira visita ao Islands: máximo aproveitamento até ~16h. Single Rider para ganhar tempo.",
     journey: {
-      tiles: [{ label: "Acordar", value: "6h30" }, { label: "Sair de Storey Lake", value: "7h15" }, { label: "No portão", value: "~8h15" }, { label: "Parque aberto", value: "9h–20h" }],
+      tiles: [{ label: "Acordar", value: "6h15" }, { label: "Sair de Storey Lake", value: "7h15" }, { label: "No portão", value: "~8h15" }, { label: "Parque aberto", value: "9h–20h" }],
       notes: [
         { icon: "car", text: "~35 min + caminhada." },
+        { icon: "info", text: "Tem early entry (para não hóspedes). Se chegar antes das 8:00, ir na Hulk (se conseguir entrar antes)." },
         { icon: "info", text: "Estacionamento: 6000 Universal Blvd (~US$35); da garagem ao portão são ~15–20 min a pé; o Islands fica à esquerda depois do CityWalk." },
         { icon: "info", text: "Se já andou no Hagrid's e no Hulk na quinta 10/12, abra direto na VelociCoaster e pule o Hulk." },
       ],
