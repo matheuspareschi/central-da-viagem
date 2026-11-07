@@ -36,17 +36,6 @@ export default {
     },
     attractions: [
       {
-        id: "hagrids",
-        name: "Hagrid's Motorbike Adventure",
-        icon: "target",
-        sections: [
-          { color: "gold", icon: "lightbulb", title: "Horário sugerido", paragraphs: ["Por volta das 9h10."] },
-          { color: "navy", icon: "house", title: "Endereço", paragraphs: ["The Wizarding World of Harry Potter – Hogsmeade, Islands of Adventure."] },
-          { color: "citrus", icon: "leaf", title: "Sobre", paragraphs: ["Montanha-russa temática, ~80 km/h, sem inversões, altura mínima 1,22 m. Fila é a pior do parque o dia todo."] },
-          { color: "gold", icon: "lightbulb", title: "Dica", paragraphs: ["Ir à direita no lago, por Seuss Landing e Lost Continent, até Hogsmeade (~10 min) e entrar direto na fila. Armário obrigatório. Decidir antes quem vai de moto e quem vai no sidecar; os primeiros carrinhos são mais emocionantes. Single Rider disponível."] },
-        ],
-      },
-      {
         id: "velocicoaster",
         attractionId: "jurassic-world-velocicoaster",
         name: "Jurassic World VelociCoaster",
@@ -67,6 +56,17 @@ export default {
           { color: "citrus", icon: "leaf", title: "Sobre", paragraphs: ["Dark ride com simulador dentro do castelo. Altura mínima 1,22 m. A fila é a melhor parte (quadros falantes, escritório do Dumbledore)."] },
           { color: "gold", icon: "lightbulb", title: "Dica", paragraphs: ["Armários grátis do lado de fora. Quem enjoa com vídeo em movimento pode pedir o Castle Tour."] },
           { color: "attn", icon: "alert", title: "Atenção", paragraphs: ["Os guias divergem sobre Single Rider aqui: perguntar na porta."] },
+        ],
+      },
+      {
+        id: "hagrids",
+        name: "Hagrid's Motorbike Adventure",
+        icon: "target",
+        sections: [
+          { color: "gold", icon: "lightbulb", title: "Horário sugerido", paragraphs: ["Por volta das 9h10."] },
+          { color: "navy", icon: "house", title: "Endereço", paragraphs: ["The Wizarding World of Harry Potter – Hogsmeade, Islands of Adventure."] },
+          { color: "citrus", icon: "leaf", title: "Sobre", paragraphs: ["Montanha-russa temática, ~80 km/h, sem inversões, altura mínima 1,22 m. Fila é a pior do parque o dia todo."] },
+          { color: "gold", icon: "lightbulb", title: "Dica", paragraphs: ["Ir à direita no lago, por Seuss Landing e Lost Continent, até Hogsmeade (~10 min) e entrar direto na fila. Armário obrigatório. Decidir antes quem vai de moto e quem vai no sidecar; os primeiros carrinhos são mais emocionantes. Single Rider disponível."] },
         ],
       },
       {

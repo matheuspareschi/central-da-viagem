@@ -77,6 +77,32 @@ Para o Thiago decidir se vale centralizar:
 - No dia 7 (Magic Kingdom) o `park` está dentro da trilha; nos dias 11 e 18 não existe.
 - Os alertas ("Confirmar no app: horário assumido…") repetem a abertura em texto.
 
+## 9. Ordem dos itens (segunda rodada)
+
+Os itens de cada checklist foram reordenados para seguir a ordem do PDF. Só a ordem mudou: nenhum texto, `id` ou `section` foi alterado (o diff tem o mesmo número de linhas inseridas e removidas). Itens que só existem no app (almoço, jantar, lojas, projeção de Natal) ficaram junto do vizinho em que já estavam; itens que só existem no PDF (por exemplo Velozes e Furiosos, Yoshi's Adventure, Sky Ride, Kumba) não foram acrescentados.
+
+| Dia | Parque | Situação |
+|---|---|---|
+| 7 | Magic Kingdom | Já seguia o PDF. |
+| 9 | EPCOT | Reordenado: Spaceship Earth, Mickey, foto da bola → World of Nature (Soarin', Coca-Cola, Moana) → World Discovery (Guardiões, Mission: Space, Test Track) → World Showcase na ordem do PDF → fogos. **Alteração no diretório de trabalho, sem commit**, porque o arquivo já tinha mudanças suas. |
+| 11 | Hollywood Studios | Já seguia o PDF. |
+| 13 | Universal Studios Florida | Reordenado: Transformers, Beco Diagonal (fotos), Ollivanders, Gringotts, Men in Black, Simpsons, almoço, E.T., Bourne, Mummy, Race Through New York, Minions; jantar, 2ª volta no Gringotts e parada de Natal ao fim. |
+| 15 | Islands of Adventure (1ª visita) | Reordenado: VelociCoaster, Forbidden Journey, Hagrid's (antes estava no começo). |
+| 17 | Epic Universe (1ª visita) | Reordenado: Mario Kart, Mine-Cart, Ministério, show do dragão, Fyre Drill, Wing Gliders, Dragon Racers, Monsters Unchained, Werewolf, Stardust Racers. |
+| 18 e 22 | 2ª visita | Não coberta pelo PDF; não alterados. |
+| 21 | Busch Gardens | Reordenado: Cheetah, Cobra's Curse, SheiKra, Tigris (antes das atrações de animais), Falcon's Fury, Serengeti Flyer, Iron Gwazi, Montu por último. |
+
+Correspondências que fiz entre nomes do PDF e do app, para você conferir: Metro Flu → Battle at the Ministry; "Fire Dreel" → Fyre Drill; "Hiccup's Ring Gliders" → Hiccup's Wing Gliders; "Dragon Racers" → Dragon Racer's Rally; "Castelo do Frankenstein" → Monsters Unchained; show de Como Treinar Seu Dragão → The Untrainable Dragon; "Cheetah" → Cheetah Hunt. "Rhino Rally (river rapids)" ficou sem correspondência (o app tem Congo River Rapids, mas não liguei).
+
+### Horários e textos que a nova ordem deixou desencontrados (não alterados)
+
+- **Dias 13, 15, 17:** vários itens trazem "Por volta das Xh" e "logo depois de…" (15 trechos no dia 13, 13 no 15, 5 no 17). Com a nova ordem esses horários e referências não crescem mais em sequência.
+- **Dia 9:** o Guardiões diz "deve ser a primeira parada do dia, antes até da Spaceship Earth"; o PDF manda Spaceship Earth primeiro e Guardiões depois.
+- **Dia 17:** a regra de ouro "começar pela Isle of Berk" contradiz o PDF, que começa pelo Super Nintendo World.
+- **Dia 21:** o resumo ainda descreve o circuito anti-horário (Edge of Africa → Egypt → Nairobi → Pantopia → …); o PDF coloca SheiKra e Tigris logo depois da Cobra's Curse. A Kumba (fechada) não está no app.
+- **Dia 13:** Ollivanders agora vem antes do Gringotts, mas o texto dele diz que é melhor à noite (18:00).
+- Corrigido nesta rodada: dia 21, "chegar ~9h30, 30 minutos antes de abrir" virou "entre ~8h30 e ~8h45, de 15 a 30 minutos antes de abrir" (7h00 + 1h30–1h45 do PDF, abertura 9h).
+
 ## 8. Pendência fora desta tarefa
 
 `npm run build` falha em `tsc` por duas variáveis não usadas (`group` e `summary`) em `src/features/itinerary/components/TrackHeader.tsx`. É uma alteração que já estava no diretório de trabalho, sem relação com esta correção, e não foi tocada.

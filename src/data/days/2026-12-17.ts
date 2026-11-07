@@ -88,23 +88,23 @@ export default {
         ],
       },
       {
-        id: "hiccups-wing-gliders",
-        attractionId: "hiccups-wing-gliders",
-        name: "Hiccup's Wing Gliders",
+        id: "mario-kart",
+        attractionId: "mario-kart-bowsers-challenge",
+        name: "Mario Kart: Bowser's Challenge",
         icon: "target",
         sections: [
           {
             color: "navy",
             icon: "target",
             title: "Onde",
-            paragraphs: ["Isle of Berk (Como Treinar o Seu Dragão). Altura mínima: 1,02 m. Abertura às 09h00."],
+            paragraphs: ["Super Nintendo World (entrada pelo cano verde). Altura mínima: 1,02 m. Por volta das 15h40."],
           },
           {
             color: "citrus",
             icon: "target",
             title: "Sobre",
             paragraphs: [
-              "Montanha-russa familiar de ~72 km/h, sem inversões. Simula um voo sobre a ilha ao lado de Soluço e Banguela e passa perto da lagoa.",
+              "Corrida com óculos de realidade aumentada e projeção mapeada, em carrinhos de 4 lugares. O objetivo é coletar 100 moedas e vencer o Bowser. A fila no castelo do Bowser faz parte da graça.",
             ],
           },
           {
@@ -112,44 +112,14 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "Primeira atração do dia: a fila é de ~10 a 25 min na abertura e cresce o dia todo. Pedir a primeira fileira só se a fila estiver curta, pois o cenário fica mais bonito.",
+              "Ouvir as instruções antes de começar: a atração não é intuitiva. Fila ~60 a 90 min; Single Rider. Se passar de 75 min, deixar para depois das 19h30.",
             ],
           },
         ],
       },
       {
-        id: "stardust-racers",
-        attractionId: "stardust-racers",
-        name: "Stardust Racers",
-        icon: "target",
-        sections: [
-          {
-            color: "navy",
-            icon: "target",
-            title: "Onde",
-            paragraphs: ["Celestial Park, do lado mais perto da Isle of Berk. Altura mínima: 1,22 m. Por volta das 09h30."],
-          },
-          {
-            color: "citrus",
-            icon: "target",
-            title: "Sobre",
-            paragraphs: [
-              "Montanha-russa de lançamento duplo: dois trens em corrida paralela, ~100 km/h, inversões e quedas. É a atração mais radical do parque e a favorita dos guias.",
-            ],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Dica",
-            paragraphs: [
-              "Fazer as DUAS pistas (a verde é um pouco mais intensa, segundo os guias). Armário obrigatório na fila. Segunda pista por Single Rider para ganhar tempo.",
-            ],
-          },
-        ],
-      },
-      {
-        id: "dragon-racers-rally",
-        name: "Dragon Racer's Rally (opcional)",
+        id: "mine-cart-madness",
+        name: "Mine-Cart Madness e fotos com personagens",
         icon: "target",
         sections: [
           {
@@ -157,150 +127,16 @@ export default {
             icon: "target",
             title: "Sobre",
             paragraphs: [
-              "Giro aéreo com asas controláveis. Dura pouco mais de 1 min e há pouca explicação. Altura mínima: 1,22 m.",
-            ],
-          },
-          {
-            color: "attn",
-            icon: "alert",
-            title: "Atenção",
-            paragraphs: ["Só vale com fila de até 20 min. Não aceita Express Pass. Primeira da lista de cortes."],
-          },
-        ],
-      },
-      {
-        id: "banguela-isle-of-berk",
-        name: "Banguela e passeio na Isle of Berk",
-        icon: "camera",
-        sections: [
-          {
-            color: "citrus",
-            icon: "camera",
-            title: "Sobre",
-            paragraphs: [
-              "Meet & Greet com o Banguela por volta das 10h40 (ele fica numa área externa, dá para vê-lo de fora da fila). Personagens andam pela ilha. A decoração de Natal (Snoggletog) está nas lojas Hiccup's Work Shop, How to Treat Your Dragon e Toothless' Treasures.",
+              "Montanha-russa familiar do Donkey Kong (altura mínima 1,02 m). O trilho parece incompleto e o carrinho salta entre trechos. Por volta das 16h50.",
             ],
           },
           {
             color: "gold",
             icon: "camera",
-            title: "Foto de capa",
-            paragraphs: ["As duas estátuas vikings de 12 m na lagoa, por volta das 10h30: luz boa e área ainda vazia."],
-          },
-        ],
-      },
-      {
-        id: "untrainable-dragon",
-        name: "The Untrainable Dragon",
-        icon: "camera",
-        sections: [
-          {
-            color: "navy",
-            icon: "camera",
-            title: "Onde",
-            paragraphs: ["Isle of Berk. Show de ~18 a 20 min, com ar-condicionado."],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Horário",
-            paragraphs: [
-              "Estimativa de um site: 11h00, 13h30 e 16h (confirmar no app). Chegar 15 a 20 min antes. Se o das 11h não encaixar, usar o das 13h30.",
-            ],
-          },
-          {
-            color: "citrus",
-            icon: "camera",
-            title: "Sobre",
-            paragraphs: ["Espetáculo com dragões animatrônicos e acrobacias. O ponto alto é o Banguela voando sobre o público."],
-          },
-        ],
-      },
-      {
-        id: "spit-fyre-grill",
-        name: "Almoço no Spit Fyre Grill",
-        icon: "burger",
-        sections: [
-          {
-            color: "navy",
-            icon: "burger",
-            title: "Onde",
-            paragraphs: ["Isle of Berk, com vista para a Fyre Drill. Chegar ~11h40, antes do pico das 12h."],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "Bowls e grelhados, o preferido do guia VPD. Evitar o cone de pão de alho com macarrão e queijo (~US$ 20), que o guia não recomenda.",
+              "Fotos com Mario, Luigi, Peach, Toad e Donkey Kong (horários no app). Pular a Yoshi's Adventure. Paninis no Yoshi's Snack Stand. Power-Up Band: decidir só no dia 22.",
             ],
-          },
-        ],
-      },
-      {
-        id: "fyre-drill",
-        name: "Fyre Drill (opcional)",
-        icon: "target",
-        sections: [
-          {
-            color: "citrus",
-            icon: "target",
-            title: "Sobre",
-            paragraphs: ["Passeio de barco com canhões d'água para acertar alvos. Molha MUITO. Sem altura mínima."],
-          },
-          {
-            color: "attn",
-            icon: "alert",
-            title: "Atenção",
-            paragraphs: ["Só se a máxima do dia passar de ~21 °C; senão, pular. Guardar as bolsas no baú do barco."],
-          },
-        ],
-      },
-      {
-        id: "monsters-unchained",
-        name: "Monsters Unchained: The Frankenstein Experiment",
-        icon: "target",
-        sections: [
-          {
-            color: "navy",
-            icon: "target",
-            title: "Onde",
-            paragraphs: ["Dark Universe (Frankenstein Manor). Altura mínima: 1,22 m. Por volta das 12h35."],
-          },
-          {
-            color: "citrus",
-            icon: "target",
-            title: "Sobre",
-            paragraphs: [
-              "Simulador com movimento e 15 animatrônicos. Drácula liberta Lobisomem, Múmia e outros monstros no experimento da Dra. Victoria Frankenstein.",
-            ],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Dica",
-            paragraphs: ["Fila ~30 a 60 min; Single Rider disponível; armário. Quem enjoa fácil com movimento deve ter cuidado."],
-          },
-        ],
-      },
-      {
-        id: "curse-of-the-werewolf",
-        name: "Curse of the Werewolf e fotos com monstros (opcional)",
-        icon: "camera",
-        sections: [
-          {
-            color: "citrus",
-            icon: "target",
-            title: "Sobre",
-            paragraphs: [
-              "Montanha-russa giratória familiar (altura mínima 1,02 m). O carrinho gira no próprio eixo, então pular se alguém não curte giro. Fotos com Noiva de Frankenstein, Homem Invisível e Ygor.",
-            ],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Dica",
-            paragraphs: ["Olhar o The Burning Blade Tavern: a hélice do moinho pega fogo a cada 20 min."],
           },
         ],
       },
@@ -359,23 +195,111 @@ export default {
         ],
       },
       {
-        id: "mario-kart",
-        attractionId: "mario-kart-bowsers-challenge",
-        name: "Mario Kart: Bowser's Challenge",
+        id: "untrainable-dragon",
+        name: "The Untrainable Dragon",
+        icon: "camera",
+        sections: [
+          {
+            color: "navy",
+            icon: "camera",
+            title: "Onde",
+            paragraphs: ["Isle of Berk. Show de ~18 a 20 min, com ar-condicionado."],
+          },
+          {
+            color: "gold",
+            icon: "lightbulb",
+            title: "Horário",
+            paragraphs: [
+              "Estimativa de um site: 11h00, 13h30 e 16h (confirmar no app). Chegar 15 a 20 min antes. Se o das 11h não encaixar, usar o das 13h30.",
+            ],
+          },
+          {
+            color: "citrus",
+            icon: "camera",
+            title: "Sobre",
+            paragraphs: ["Espetáculo com dragões animatrônicos e acrobacias. O ponto alto é o Banguela voando sobre o público."],
+          },
+        ],
+      },
+      {
+        id: "banguela-isle-of-berk",
+        name: "Banguela e passeio na Isle of Berk",
+        icon: "camera",
+        sections: [
+          {
+            color: "citrus",
+            icon: "camera",
+            title: "Sobre",
+            paragraphs: [
+              "Meet & Greet com o Banguela por volta das 10h40 (ele fica numa área externa, dá para vê-lo de fora da fila). Personagens andam pela ilha. A decoração de Natal (Snoggletog) está nas lojas Hiccup's Work Shop, How to Treat Your Dragon e Toothless' Treasures.",
+            ],
+          },
+          {
+            color: "gold",
+            icon: "camera",
+            title: "Foto de capa",
+            paragraphs: ["As duas estátuas vikings de 12 m na lagoa, por volta das 10h30: luz boa e área ainda vazia."],
+          },
+        ],
+      },
+      {
+        id: "spit-fyre-grill",
+        name: "Almoço no Spit Fyre Grill",
+        icon: "burger",
+        sections: [
+          {
+            color: "navy",
+            icon: "burger",
+            title: "Onde",
+            paragraphs: ["Isle of Berk, com vista para a Fyre Drill. Chegar ~11h40, antes do pico das 12h."],
+          },
+          {
+            color: "gold",
+            icon: "lightbulb",
+            title: "Dica",
+            paragraphs: [
+              "Bowls e grelhados, o preferido do guia VPD. Evitar o cone de pão de alho com macarrão e queijo (~US$ 20), que o guia não recomenda.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "fyre-drill",
+        name: "Fyre Drill (opcional)",
+        icon: "target",
+        sections: [
+          {
+            color: "citrus",
+            icon: "target",
+            title: "Sobre",
+            paragraphs: ["Passeio de barco com canhões d'água para acertar alvos. Molha MUITO. Sem altura mínima."],
+          },
+          {
+            color: "attn",
+            icon: "alert",
+            title: "Atenção",
+            paragraphs: ["Só se a máxima do dia passar de ~21 °C; senão, pular. Guardar as bolsas no baú do barco."],
+          },
+        ],
+      },
+      {
+        id: "hiccups-wing-gliders",
+        attractionId: "hiccups-wing-gliders",
+        name: "Hiccup's Wing Gliders",
         icon: "target",
         sections: [
           {
             color: "navy",
             icon: "target",
             title: "Onde",
-            paragraphs: ["Super Nintendo World (entrada pelo cano verde). Altura mínima: 1,02 m. Por volta das 15h40."],
+            paragraphs: ["Isle of Berk (Como Treinar o Seu Dragão). Altura mínima: 1,02 m. Abertura às 09h00."],
           },
           {
             color: "citrus",
             icon: "target",
             title: "Sobre",
             paragraphs: [
-              "Corrida com óculos de realidade aumentada e projeção mapeada, em carrinhos de 4 lugares. O objetivo é coletar 100 moedas e vencer o Bowser. A fila no castelo do Bowser faz parte da graça.",
+              "Montanha-russa familiar de ~72 km/h, sem inversões. Simula um voo sobre a ilha ao lado de Soluço e Banguela e passa perto da lagoa.",
             ],
           },
           {
@@ -383,14 +307,14 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "Ouvir as instruções antes de começar: a atração não é intuitiva. Fila ~60 a 90 min; Single Rider. Se passar de 75 min, deixar para depois das 19h30.",
+              "Primeira atração do dia: a fila é de ~10 a 25 min na abertura e cresce o dia todo. Pedir a primeira fileira só se a fila estiver curta, pois o cenário fica mais bonito.",
             ],
           },
         ],
       },
       {
-        id: "mine-cart-madness",
-        name: "Mine-Cart Madness e fotos com personagens",
+        id: "dragon-racers-rally",
+        name: "Dragon Racer's Rally (opcional)",
         icon: "target",
         sections: [
           {
@@ -398,15 +322,91 @@ export default {
             icon: "target",
             title: "Sobre",
             paragraphs: [
-              "Montanha-russa familiar do Donkey Kong (altura mínima 1,02 m). O trilho parece incompleto e o carrinho salta entre trechos. Por volta das 16h50.",
+              "Giro aéreo com asas controláveis. Dura pouco mais de 1 min e há pouca explicação. Altura mínima: 1,22 m.",
+            ],
+          },
+          {
+            color: "attn",
+            icon: "alert",
+            title: "Atenção",
+            paragraphs: ["Só vale com fila de até 20 min. Não aceita Express Pass. Primeira da lista de cortes."],
+          },
+        ],
+      },
+      {
+        id: "monsters-unchained",
+        name: "Monsters Unchained: The Frankenstein Experiment",
+        icon: "target",
+        sections: [
+          {
+            color: "navy",
+            icon: "target",
+            title: "Onde",
+            paragraphs: ["Dark Universe (Frankenstein Manor). Altura mínima: 1,22 m. Por volta das 12h35."],
+          },
+          {
+            color: "citrus",
+            icon: "target",
+            title: "Sobre",
+            paragraphs: [
+              "Simulador com movimento e 15 animatrônicos. Drácula liberta Lobisomem, Múmia e outros monstros no experimento da Dra. Victoria Frankenstein.",
             ],
           },
           {
             color: "gold",
-            icon: "camera",
+            icon: "lightbulb",
+            title: "Dica",
+            paragraphs: ["Fila ~30 a 60 min; Single Rider disponível; armário. Quem enjoa fácil com movimento deve ter cuidado."],
+          },
+        ],
+      },
+      {
+        id: "curse-of-the-werewolf",
+        name: "Curse of the Werewolf e fotos com monstros (opcional)",
+        icon: "camera",
+        sections: [
+          {
+            color: "citrus",
+            icon: "target",
+            title: "Sobre",
+            paragraphs: [
+              "Montanha-russa giratória familiar (altura mínima 1,02 m). O carrinho gira no próprio eixo, então pular se alguém não curte giro. Fotos com Noiva de Frankenstein, Homem Invisível e Ygor.",
+            ],
+          },
+          {
+            color: "gold",
+            icon: "lightbulb",
+            title: "Dica",
+            paragraphs: ["Olhar o The Burning Blade Tavern: a hélice do moinho pega fogo a cada 20 min."],
+          },
+        ],
+      },
+      {
+        id: "stardust-racers",
+        attractionId: "stardust-racers",
+        name: "Stardust Racers",
+        icon: "target",
+        sections: [
+          {
+            color: "navy",
+            icon: "target",
+            title: "Onde",
+            paragraphs: ["Celestial Park, do lado mais perto da Isle of Berk. Altura mínima: 1,22 m. Por volta das 09h30."],
+          },
+          {
+            color: "citrus",
+            icon: "target",
+            title: "Sobre",
+            paragraphs: [
+              "Montanha-russa de lançamento duplo: dois trens em corrida paralela, ~100 km/h, inversões e quedas. É a atração mais radical do parque e a favorita dos guias.",
+            ],
+          },
+          {
+            color: "gold",
+            icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "Fotos com Mario, Luigi, Peach, Toad e Donkey Kong (horários no app). Pular a Yoshi's Adventure. Paninis no Yoshi's Snack Stand. Power-Up Band: decidir só no dia 22.",
+              "Fazer as DUAS pistas (a verde é um pouco mais intensa, segundo os guias). Armário obrigatório na fila. Segunda pista por Single Rider para ganhar tempo.",
             ],
           },
         ],

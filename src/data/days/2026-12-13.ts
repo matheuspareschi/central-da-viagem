@@ -42,6 +42,110 @@ export default {
     },
     attractions: [
       {
+        id: "transformers",
+        attractionId: "transformers-the-ride-3d",
+        name: "Transformers: The Ride 3D",
+        icon: "target",
+        sections: [
+          {
+            color: "gold",
+            icon: "lightbulb",
+            title: "Horário sugerido",
+            paragraphs: [
+              "Por volta das 12h00. Meio do dia: brinquedos de fila menor, shows com ar-condicionado e almoço fora do pico.",
+            ],
+          },
+          {
+            color: "citrus",
+            icon: "target",
+            title: "Sobre",
+            paragraphs: [
+              "Simulador 3D com movimento, com Optimus Prime gigante na porta. Dá para sentir o calor das explosões. Fila média de ~33 min.",
+            ],
+          },
+          {
+            color: "gold",
+            icon: "lightbulb",
+            title: "Dica",
+            paragraphs: [
+              "Fazer antes das 13h. Tem single rider. Depois, Race Through New York (Jimmy Fallon, ~18 min, com ar-condicionado) para aliviar o calor.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "beco-diagonal",
+        name: "Fotos no Beco Diagonal",
+        icon: "camera",
+        sections: [
+          {
+            color: "gold",
+            icon: "lightbulb",
+            title: "Horário sugerido",
+            paragraphs: ["Por volta das 10h00. Depois, ~10 min a pé até New York."],
+          },
+          {
+            color: "citrus",
+            icon: "camera",
+            title: "Sobre",
+            list: [
+              "Dragão do Gringotts cuspindo fogo.",
+              "Beco Bativolta (Knockturn Alley).",
+              "Largo Grimmauld nº 12: esperar o Kreacher na janela.",
+              "Cabine telefônica vermelha: discar 62442 para o Ministério da Magia.",
+              "Parede da Plataforma 9¾ no King's Cross: um filma o outro \"atravessando\".",
+              "Knight Bus: foto pelos fundos, sem fila.",
+              "Câmbio dos duendes (dólar por notas de Gringotts).",
+            ],
+          },
+          {
+            color: "gold",
+            icon: "lightbulb",
+            title: "Dica",
+            paragraphs: [
+              "Não compre varinha agora: a loja lota. A escolha da varinha é melhor à noite (Ollivanders, 18:00). Decoração de Natal do Universal Holidays no Beco Diagonal.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "ollivanders",
+        name: "Ollivanders e varinhas",
+        icon: "bag",
+        sections: [
+          {
+            color: "gold",
+            icon: "lightbulb",
+            title: "Horário sugerido",
+            paragraphs: [
+              "Por volta das 18h00. Noite de Harry Potter: Ollivanders mais vazio, jantar temático e segunda volta no Gringotts.",
+            ],
+          },
+          {
+            color: "navy",
+            icon: "house",
+            title: "Endereço",
+            paragraphs: ["Beco Diagonal, Universal Studios Florida."],
+          },
+          {
+            color: "citrus",
+            icon: "bag",
+            title: "Sobre",
+            paragraphs: [
+              "Teatrinho interativo de ~10 min em que a varinha escolhe o bruxo, com saída pela loja. Varinhas custavam de US$65 a US$85 em 2025. As varinhas interativas funcionam em todo o Beco Diagonal e em Hogsmeade.",
+            ],
+          },
+          {
+            color: "gold",
+            icon: "lightbulb",
+            title: "Dica",
+            paragraphs: [
+              "À noite a fila é menor e as chances de ser escolhido aumentam; grupo só de adultos tem mais chance. Decida antes se alguém vai comprar varinha.",
+            ],
+          },
+        ],
+      },
+      {
         id: "gringotts",
         name: "Harry Potter and the Escape from Gringotts",
         icon: "target",
@@ -87,28 +191,56 @@ export default {
         ],
       },
       {
-        id: "beco-diagonal",
-        name: "Fotos no Beco Diagonal",
-        icon: "camera",
+        id: "mib",
+        attractionId: "men-in-black-alien-attack",
+        name: "Men in Black Alien Attack",
+        icon: "target",
         sections: [
           {
             color: "gold",
             icon: "lightbulb",
             title: "Horário sugerido",
-            paragraphs: ["Por volta das 10h00. Depois, ~10 min a pé até New York."],
+            paragraphs: ["Por volta das 17h15. Depois, ~10 min a pé de volta ao Beco Diagonal."],
+          },
+          {
+            color: "navy",
+            icon: "house",
+            title: "Endereço",
+            paragraphs: ["Área World Expo, Universal Studios Florida."],
           },
           {
             color: "citrus",
-            icon: "camera",
+            icon: "target",
             title: "Sobre",
-            list: [
-              "Dragão do Gringotts cuspindo fogo.",
-              "Beco Bativolta (Knockturn Alley).",
-              "Largo Grimmauld nº 12: esperar o Kreacher na janela.",
-              "Cabine telefônica vermelha: discar 62442 para o Ministério da Magia.",
-              "Parede da Plataforma 9¾ no King's Cross: um filma o outro \"atravessando\".",
-              "Knight Bus: foto pelos fundos, sem fila.",
-              "Câmbio dos duendes (dólar por notas de Gringotts).",
+            paragraphs: [
+              "Dark ride de tiro com placar, com mais de 120 tipos de alienígenas. Fila de ~22 min à tarde; tem single rider.",
+            ],
+          },
+          {
+            color: "attn",
+            icon: "alert",
+            title: "Atenção",
+            paragraphs: ["Os carrinhos giram bastante: quem enjoa com facilidade deve ter cuidado."],
+          },
+        ],
+      },
+      {
+        id: "simpsons",
+        name: "The Simpsons Ride e donut Lard Lad",
+        icon: "corn",
+        sections: [
+          {
+            color: "gold",
+            icon: "lightbulb",
+            title: "Horário sugerido",
+            paragraphs: ["Por volta das 16h40."],
+          },
+          {
+            color: "citrus",
+            icon: "target",
+            title: "Sobre",
+            paragraphs: [
+              "Simulador em tela de 25 m de diâmetro (~22 min de fila). Na área, Duff Beer, Moe's Tavern (foto e Love Tester) e o donut rosa gigante do Lard Lad.",
             ],
           },
           {
@@ -116,7 +248,88 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "Não compre varinha agora: a loja lota. A escolha da varinha é melhor à noite (Ollivanders, 18:00). Decoração de Natal do Universal Holidays no Beco Diagonal.",
+              "Sentar na primeira fileira e não olhar para os lados. O donut dá para dividir com o grupo.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "almoco",
+        name: "Almoço fora do pico",
+        icon: "burger",
+        sections: [
+          {
+            color: "gold",
+            icon: "lightbulb",
+            title: "Horário sugerido",
+            paragraphs: ["Por volta das 14h30."],
+          },
+          {
+            color: "gold",
+            icon: "burger",
+            title: "Onde comer",
+            list: [
+              "Illumination's Minion Café (hambúrguer de rosbife, salmão).",
+              "Mel's Drive-In (Hollywood): hambúrguer, chicken fingers, milkshake.",
+              "Louie's Italian (New York) e Krusty Burger (Springfield) como alternativas.",
+            ],
+          },
+          {
+            color: "palm",
+            icon: "lightbulb",
+            title: "Observação",
+            paragraphs: [
+              "Pedir pelo app com a carteira configurada evita fila. Preço de parque: espere pagar caro.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "et-adventure",
+        attractionId: "e-t-adventure",
+        name: "E.T. Adventure",
+        icon: "target",
+        sections: [
+          {
+            color: "gold",
+            icon: "lightbulb",
+            title: "Horário sugerido",
+            paragraphs: ["Por volta das 15h50. Opcional, fila de ~28 min."],
+          },
+        ],
+      },
+      {
+        id: "bourne",
+        attractionId: "the-bourne-stuntacular",
+        name: "The Bourne Stuntacular",
+        icon: "camera",
+        sections: [
+          {
+            color: "gold",
+            icon: "lightbulb",
+            title: "Horário sugerido",
+            paragraphs: ["Por volta das 15h15."],
+          },
+          {
+            color: "navy",
+            icon: "house",
+            title: "Endereço",
+            paragraphs: ["Área Hollywood, Universal Studios Florida."],
+          },
+          {
+            color: "citrus",
+            icon: "target",
+            title: "Sobre",
+            paragraphs: [
+              "Espetáculo de dublês com telão LED côncavo e palco giratório (~30 min), sentado e com ar-condicionado. Considerado o que mais surpreende no parque.",
+            ],
+          },
+          {
+            color: "gold",
+            icon: "lightbulb",
+            title: "Dica",
+            paragraphs: [
+              "Escolher a sessão no app e chegar 15 min antes. Depois, E.T. Adventure (opcional, fila de ~28 min).",
             ],
           },
         ],
@@ -161,38 +374,6 @@ export default {
         ],
       },
       {
-        id: "transformers",
-        attractionId: "transformers-the-ride-3d",
-        name: "Transformers: The Ride 3D",
-        icon: "target",
-        sections: [
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Horário sugerido",
-            paragraphs: [
-              "Por volta das 12h00. Meio do dia: brinquedos de fila menor, shows com ar-condicionado e almoço fora do pico.",
-            ],
-          },
-          {
-            color: "citrus",
-            icon: "target",
-            title: "Sobre",
-            paragraphs: [
-              "Simulador 3D com movimento, com Optimus Prime gigante na porta. Dá para sentir o calor das explosões. Fila média de ~33 min.",
-            ],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Dica",
-            paragraphs: [
-              "Fazer antes das 13h. Tem single rider. Depois, Race Through New York (Jimmy Fallon, ~18 min, com ar-condicionado) para aliviar o calor.",
-            ],
-          },
-        ],
-      },
-      {
         id: "race-through-new-york",
         attractionId: "race-through-new-york-jimmy-fallon",
         name: "Race Through New York (Jimmy Fallon)",
@@ -231,187 +412,6 @@ export default {
             title: "Dica",
             paragraphs: [
               "Pop-A-Nana (pipoca doce de banana) para dividir. Villain-Con é um dos primeiros itens a cortar se o dia apertar.",
-            ],
-          },
-        ],
-      },
-      {
-        id: "almoco",
-        name: "Almoço fora do pico",
-        icon: "burger",
-        sections: [
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Horário sugerido",
-            paragraphs: ["Por volta das 14h30."],
-          },
-          {
-            color: "gold",
-            icon: "burger",
-            title: "Onde comer",
-            list: [
-              "Illumination's Minion Café (hambúrguer de rosbife, salmão).",
-              "Mel's Drive-In (Hollywood): hambúrguer, chicken fingers, milkshake.",
-              "Louie's Italian (New York) e Krusty Burger (Springfield) como alternativas.",
-            ],
-          },
-          {
-            color: "palm",
-            icon: "lightbulb",
-            title: "Observação",
-            paragraphs: [
-              "Pedir pelo app com a carteira configurada evita fila. Preço de parque: espere pagar caro.",
-            ],
-          },
-        ],
-      },
-      {
-        id: "bourne",
-        attractionId: "the-bourne-stuntacular",
-        name: "The Bourne Stuntacular",
-        icon: "camera",
-        sections: [
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Horário sugerido",
-            paragraphs: ["Por volta das 15h15."],
-          },
-          {
-            color: "navy",
-            icon: "house",
-            title: "Endereço",
-            paragraphs: ["Área Hollywood, Universal Studios Florida."],
-          },
-          {
-            color: "citrus",
-            icon: "target",
-            title: "Sobre",
-            paragraphs: [
-              "Espetáculo de dublês com telão LED côncavo e palco giratório (~30 min), sentado e com ar-condicionado. Considerado o que mais surpreende no parque.",
-            ],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Dica",
-            paragraphs: [
-              "Escolher a sessão no app e chegar 15 min antes. Depois, E.T. Adventure (opcional, fila de ~28 min).",
-            ],
-          },
-        ],
-      },
-      {
-        id: "et-adventure",
-        attractionId: "e-t-adventure",
-        name: "E.T. Adventure",
-        icon: "target",
-        sections: [
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Horário sugerido",
-            paragraphs: ["Por volta das 15h50. Opcional, fila de ~28 min."],
-          },
-        ],
-      },
-      {
-        id: "simpsons",
-        name: "The Simpsons Ride e donut Lard Lad",
-        icon: "corn",
-        sections: [
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Horário sugerido",
-            paragraphs: ["Por volta das 16h40."],
-          },
-          {
-            color: "citrus",
-            icon: "target",
-            title: "Sobre",
-            paragraphs: [
-              "Simulador em tela de 25 m de diâmetro (~22 min de fila). Na área, Duff Beer, Moe's Tavern (foto e Love Tester) e o donut rosa gigante do Lard Lad.",
-            ],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Dica",
-            paragraphs: [
-              "Sentar na primeira fileira e não olhar para os lados. O donut dá para dividir com o grupo.",
-            ],
-          },
-        ],
-      },
-      {
-        id: "mib",
-        attractionId: "men-in-black-alien-attack",
-        name: "Men in Black Alien Attack",
-        icon: "target",
-        sections: [
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Horário sugerido",
-            paragraphs: ["Por volta das 17h15. Depois, ~10 min a pé de volta ao Beco Diagonal."],
-          },
-          {
-            color: "navy",
-            icon: "house",
-            title: "Endereço",
-            paragraphs: ["Área World Expo, Universal Studios Florida."],
-          },
-          {
-            color: "citrus",
-            icon: "target",
-            title: "Sobre",
-            paragraphs: [
-              "Dark ride de tiro com placar, com mais de 120 tipos de alienígenas. Fila de ~22 min à tarde; tem single rider.",
-            ],
-          },
-          {
-            color: "attn",
-            icon: "alert",
-            title: "Atenção",
-            paragraphs: ["Os carrinhos giram bastante: quem enjoa com facilidade deve ter cuidado."],
-          },
-        ],
-      },
-      {
-        id: "ollivanders",
-        name: "Ollivanders e varinhas",
-        icon: "bag",
-        sections: [
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Horário sugerido",
-            paragraphs: [
-              "Por volta das 18h00. Noite de Harry Potter: Ollivanders mais vazio, jantar temático e segunda volta no Gringotts.",
-            ],
-          },
-          {
-            color: "navy",
-            icon: "house",
-            title: "Endereço",
-            paragraphs: ["Beco Diagonal, Universal Studios Florida."],
-          },
-          {
-            color: "citrus",
-            icon: "bag",
-            title: "Sobre",
-            paragraphs: [
-              "Teatrinho interativo de ~10 min em que a varinha escolhe o bruxo, com saída pela loja. Varinhas custavam de US$65 a US$85 em 2025. As varinhas interativas funcionam em todo o Beco Diagonal e em Hogsmeade.",
-            ],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Dica",
-            paragraphs: [
-              "À noite a fila é menor e as chances de ser escolhido aumentam; grupo só de adultos tem mais chance. Decida antes se alguém vai comprar varinha.",
             ],
           },
         ],

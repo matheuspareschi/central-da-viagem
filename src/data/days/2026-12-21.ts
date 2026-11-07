@@ -44,7 +44,7 @@ export default {
             title: "Endereço / Estacionamento",
             paragraphs: [
               "10165 McKinley Dr, Tampa, FL. Cerca de 1h30 a 1h45 de carro de Orlando pela I-4 Oeste (~100 km, sujeito a trânsito). Estacionamento pago à parte.",
-              "Sugestão: acordar 6h00, sair do Storey Lake às 7h00 e chegar ~9h30, 30 minutos antes de abrir.",
+              "Sugestão: acordar 6h00, sair do Storey Lake às 7h00 e chegar entre ~8h30 e ~8h45, de 15 a 30 minutos antes de abrir.",
             ],
           },
           {
@@ -166,6 +166,75 @@ export default {
             title: "Dica",
             paragraphs: [
               "~11h30. Na fila dá para ver cobras venenosas de perto, atrás de vidro.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "sheikra",
+        attractionId: "sheikra",
+        name: "SheiKra",
+        icon: "target",
+        sections: [
+          {
+            color: "citrus",
+            icon: "target",
+            title: "Sobre",
+            paragraphs: [
+              "Stanleyville. Montanha-russa de queda livre de 90°, com pernas soltas, mais de 110 km/h. O carrinho trava ~3 segundos no topo antes de cair.",
+            ],
+          },
+          {
+            color: "gold",
+            icon: "lightbulb",
+            title: "Dica",
+            paragraphs: [
+              "~16h15. Usar o Quick Queue se a fila estiver grande.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "tigris",
+        attractionId: "tigris",
+        name: "Tigris",
+        icon: "target",
+        sections: [
+          {
+            color: "citrus",
+            icon: "target",
+            title: "Sobre",
+            paragraphs: [
+              "Stanleyville. Montanha-russa de 3 lançamentos, 45 m de altura, 100 km/h, com marcha à ré. Inaugurada em 2019.",
+            ],
+          },
+          {
+            color: "gold",
+            icon: "lightbulb",
+            title: "Dica",
+            paragraphs: ["Fica ao lado da SheiKra: faça as duas em sequência."],
+          },
+        ],
+      },
+      {
+        id: "stanleyville-theater",
+        name: "Stanleyville Theater",
+        icon: "camera",
+        sections: [
+          {
+            color: "citrus",
+            icon: "camera",
+            title: "Sobre",
+            paragraphs: [
+              "Stanleyville. Apresentações sazonais, como shows de música e acrobacias.",
+            ],
+          },
+          {
+            color: "attn",
+            icon: "alert",
+            title: "Atenção",
+            paragraphs: [
+              "Ver a programação do dia. O VPD sugere gastar o tempo com outras atrações.",
             ],
           },
         ],
@@ -453,75 +522,6 @@ export default {
             title: "Atenção",
             paragraphs: [
               "Está dentro de uma área infantil. Só vale se estiver no caminho.",
-            ],
-          },
-        ],
-      },
-      {
-        id: "sheikra",
-        attractionId: "sheikra",
-        name: "SheiKra",
-        icon: "target",
-        sections: [
-          {
-            color: "citrus",
-            icon: "target",
-            title: "Sobre",
-            paragraphs: [
-              "Stanleyville. Montanha-russa de queda livre de 90°, com pernas soltas, mais de 110 km/h. O carrinho trava ~3 segundos no topo antes de cair.",
-            ],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Dica",
-            paragraphs: [
-              "~16h15. Usar o Quick Queue se a fila estiver grande.",
-            ],
-          },
-        ],
-      },
-      {
-        id: "tigris",
-        attractionId: "tigris",
-        name: "Tigris",
-        icon: "target",
-        sections: [
-          {
-            color: "citrus",
-            icon: "target",
-            title: "Sobre",
-            paragraphs: [
-              "Stanleyville. Montanha-russa de 3 lançamentos, 45 m de altura, 100 km/h, com marcha à ré. Inaugurada em 2019.",
-            ],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Dica",
-            paragraphs: ["Fica ao lado da SheiKra: faça as duas em sequência."],
-          },
-        ],
-      },
-      {
-        id: "stanleyville-theater",
-        name: "Stanleyville Theater",
-        icon: "camera",
-        sections: [
-          {
-            color: "citrus",
-            icon: "camera",
-            title: "Sobre",
-            paragraphs: [
-              "Stanleyville. Apresentações sazonais, como shows de música e acrobacias.",
-            ],
-          },
-          {
-            color: "attn",
-            icon: "alert",
-            title: "Atenção",
-            paragraphs: [
-              "Ver a programação do dia. O VPD sugere gastar o tempo com outras atrações.",
             ],
           },
         ],
