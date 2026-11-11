@@ -32,34 +32,34 @@ export default {
         steps: [
           {
             kind: "stop",
-            time: "15:15",
+            time: "15:40", // REVISAR: chegada pedida 15h40 (antes 15:15, diferença de +25 min, não +20)
             stopId: "",
             name: "Pouso em MCO",
             icon: "target",
           },
           {
             kind: "stop",
-            time: "15:15",
+            time: "15:40", // REVISAR: segue a chegada
             stopId: "",
             name: "Desembarque, imigração e bagagem",
             icon: "target",
           },
           {
             kind: "stop",
-            time: "16:15",
+            time: "16:35", // REVISAR: +20 min
             stopId: "retirada-carros",
             name: "Retirada dos carros e pedágio",
             icon: "target",
           },
           {
             kind: "transit",
-            time: "16:50",
+            time: "17:10", // REVISAR: +20 min
             duration: "~20–25 min",
             destinationName: "Florida Mall",
           },
           {
             kind: "stop",
-            time: "17:15",
+            time: "17:35", // REVISAR: +20 min
             stopId: "apple-store",
             name: "Apple Store (Florida Mall)",
             icon: "bag",
@@ -71,40 +71,40 @@ export default {
         steps: [
           {
             kind: "stop",
-            time: "18:00",
+            time: "18:20", // REVISAR: +20 min
             stopId: "jantar-florida-mall",
             name: "Jantar no Florida Mall (praça de alimentação)",
             icon: "burger",
           },
           {
             kind: "transit",
-            time: "19:15",
+            time: "19:35", // REVISAR: +20 min
             duration: "~30 min",
             destinationName: "Storey Lake Resort, Kissimmee",
           },
           {
             kind: "stop",
-            time: "19:45",
+            time: "20:05", // REVISAR: +20 min
             stopId: "chegada-resort",
             name: "Chegada ao Storey Lake Resort — acomodação",
             icon: "house",
           },
           {
             kind: "transit",
-            time: "19:45",
+            time: "20:05", // REVISAR: +20 min
             duration: "~15 min",
             destinationName: "Walmart Supercenter (só quem for)",
           },
           {
             kind: "stop",
-            time: "20:00",
+            time: "20:20", // REVISAR: +20 min
             stopId: "walmart-chegada",
             name: "Walmart Supercenter — Compras da Semana",
             icon: "bag",
           },
           {
             kind: "transit",
-            time: "20:30",
+            time: "20:50", // REVISAR: +20 min
             duration: "~15 min",
             destinationName: "Storey Lake Resort, Kissimmee",
           },
@@ -116,7 +116,7 @@ export default {
         id: "retirada-carros",
         name: "Retirada dos carros e pedágio",
         icon: "target",
-        time: "16:15",
+        time: "16:35",
         sections: [
           {
             color: "navy",
@@ -148,7 +148,7 @@ export default {
         id: "apple-store",
         name: "Apple Store (Florida Mall)",
         icon: "bag",
-        time: "17:15",
+        time: "17:35",
         sections: [
           {
             color: "navy",
@@ -190,7 +190,7 @@ export default {
         link: mapSearchUrl("Jantar no Florida Mall", "8001 S Orange Blossom Trail, Orlando, FL 32809"),
         name: "Jantar no Florida Mall (praça de alimentação)",
         icon: "burger",
-        time: "18:00",
+        time: "18:20",
         sections: [
           {
             color: "navy",
@@ -230,7 +230,7 @@ export default {
         id: "chegada-resort",
         name: "Chegada ao Storey Lake Resort",
         icon: "house",
-        time: "19:45",
+        time: "20:05",
         sections: [
           {
             color: "navy",
@@ -263,7 +263,7 @@ export default {
         action: "groceryList",
         name: "Walmart Supercenter — Compras da Semana",
         icon: "bag",
-        time: "20:00",
+        time: "20:20",
         sections: [
           {
             color: "navy",
@@ -272,6 +272,12 @@ export default {
             paragraphs: [
               "4444 W Vine St, Kissimmee, FL 34746.",
             ],
+          },
+          {
+            color: "navy",
+            icon: "lightbulb",
+            title: "Horário de funcionamento",
+            paragraphs: ["Fecha às 23h00."],
           },
           {
             color: "citrus",

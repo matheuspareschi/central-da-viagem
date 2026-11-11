@@ -18,10 +18,15 @@ export default {
     // REVISAR (notes): O texto original diz "Dia 13 é Saint Augustine", mas Saint Augustine é o dia 14 (o dia 13 é Universal Studios).
     summary: "Grupo em carros, saindo e voltando do Storey Lake Resort.",
     journey: {
-      tiles: [],
+      tiles: [
+        { label: "Acordar", value: "8h40" },
+        { label: "Sair de casa", value: "9h45" },
+      ],
       notes: [
-        { icon: "info", text: "A parada no CityWalk à noite é opcional (nem todos estão comprometidos)." },
+        { icon: "car", text: "De carro: ~10 min até a primeira parada." },
+        { icon: "info", text: "A parada no Disney Springs à noite é opcional (nem todos estão comprometidos)." }, // REVISAR: trocado de CityWalk
         { icon: "info", text: "Dia 13 é Saint Augustine com saída cedo." },
+        { icon: "info", text: "Doceria Melt'n Dip Crepe & Gelato: informação de que está fechada; não incluída no roteiro." },
       ],
       alerts: [],
     },
@@ -30,7 +35,7 @@ export default {
         title: "Manhã",
         note: "Bloco longo de compras no outlet.",
         steps: [
-          { kind: "transit", time: "09:45", duration: "15 min", destinationName: "Lake Buena Vista Factory Stores" },
+          { kind: "transit", time: "09:45", duration: "10 min", destinationName: "Lake Buena Vista Factory Stores" },
           { kind: "stop", time: "10:00", stopId: "lake-buena-vista-factory-stores", name: "Lake Buena Vista Factory Stores", icon: "bag" },
         ],
       },
@@ -39,17 +44,16 @@ export default {
         steps: [
           { kind: "transit", time: "14:30", duration: "20 min", destinationName: "WonderWorks e ICON Park" },
           { kind: "stop", time: "15:00", stopId: "wonderworks-icon-park", name: "WonderWorks (casa torta) e ICON Park", icon: "camera" },
-          { kind: "stop", time: "16:00", stopId: "doceria-arabe", name: "Doceria de doces árabes (a confirmar)", icon: "burger" },
-          { kind: "transit", time: "16:45", duration: "25–30 min", destinationName: "Lake Eola Park" },
-          { kind: "stop", time: "17:30", stopId: "lake-eola", name: "Lake Eola: decoração, mercado e show da árvore", icon: "tree" },
+          { kind: "transit", time: "16:00", duration: "25–30 min", destinationName: "Lake Eola Park" }, // REVISAR: sem a doceria (45 min), horários seguintes 45 min antes
+          { kind: "stop", time: "16:45", stopId: "lake-eola", name: "Lake Eola: decoração, mercado e show da árvore", icon: "tree" },
         ],
       },
       {
         title: "Noite",
         steps: [
-          { kind: "transit", time: "19:30", duration: "20–25 min", destinationName: "Universal CityWalk" },
-          { kind: "stop", time: "20:00", stopId: "", name: "Universal CityWalk", icon: "target" },
-          { kind: "transit", time: "21:30", duration: "25–30 min", destinationName: "Storey Lake Resort" },
+          { kind: "transit", time: "18:45", duration: "20–25 min", destinationName: "Disney Springs" }, // REVISAR: 45 min antes
+          { kind: "stop", time: "19:15", stopId: "disney-springs", name: "Disney Springs (conhecer o lugar, ver lojas diferentes)", icon: "target" }, // REVISAR
+          { kind: "transit", time: "20:45", duration: "25–30 min", destinationName: "Storey Lake Resort" }, // REVISAR
         ],
       },
     ],
@@ -139,34 +143,10 @@ export default {
         ],
       },
       {
-        id: "doceria-arabe",
-        name: "Doceria de doces árabes (a confirmar)",
-        icon: "burger",
-        time: "16:00",
-        sections: [
-          {
-            color: "attn",
-            icon: "alert",
-            title: "Atenção",
-            paragraphs: [
-              "O nome e o endereço da doceria ainda precisam ser confirmados. Se ficar longe de I-Drive, a ordem pode ser trocada para encaixar no caminho do Lake Eola.",
-            ],
-          },
-          {
-            color: "palm",
-            icon: "lightbulb",
-            title: "Dica",
-            paragraphs: [
-              "Montem uma caixa mista para dividir entre as famílias. Baklava e maamoul são os clássicos para provar.",
-            ],
-          },
-        ],
-      },
-      {
         id: "lake-eola",
         name: "Lake Eola Park",
         icon: "tree",
-        time: "17:30",
+        time: "16:45",
         sections: [
           {
             color: "navy",
@@ -199,6 +179,29 @@ export default {
             paragraphs: [
               "As datas e horários de 2026 ainda não foram publicados; as informações acima seguem o padrão de 2025. Confirmem em orlando.gov/holidays perto da viagem. O trânsito da I-4 aos sábados costuma pesar.",
             ],
+          },
+        ],
+      },
+      {
+        id: "disney-springs",
+        name: "Disney Springs",
+        icon: "target",
+        time: "19:15",
+        sections: [
+          {
+            color: "navy",
+            icon: "parking",
+            title: "Endereço e Estacionamento",
+            paragraphs: [
+              "1486 E Buena Vista Dr, Lake Buena Vista, FL 32830",
+              "Entrada e estacionamento gratuitos.",
+            ],
+          },
+          {
+            color: "citrus",
+            icon: "target",
+            title: "Objetivo",
+            paragraphs: ["Conhecer o lugar, ver lojas diferentes."],
           },
         ],
       },

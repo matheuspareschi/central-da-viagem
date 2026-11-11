@@ -16,11 +16,17 @@ export default {
   },
   itinerary: {
     kind: "schedule",
-    summary: "Compras no Orlando Outlet Marketplace, jantar no Epic McDonald's, Islands of Adventure à noite (Hulk e Hagrid's) e CityWalk depois do fechamento do parque.",
+    summary: "Compras no Orlando Outlet Marketplace, Islands of Adventure à noite (Hagrid's primeiro; o parque fecha às 19h), jantar no Epic McDonald's e CityWalk.",
     group: "Grupo completo · 10 pessoas · 2 carros",
     journey: {
-      tiles: [{ label: "Compras no outlet", value: "10h–17h" }],
+      tiles: [
+        { label: "Acordar", value: "8h00" },
+        { label: "Sair de casa", value: "9h20" },
+        { label: "Compras no outlet", value: "10h–17h" },
+        { label: "Islands fecha", value: "19h" },
+      ],
       notes: [
+        { icon: "car", text: "De carro: ~25 min da casa até o Orlando Outlet Marketplace." },
         { icon: "info", text: "Horários são sugestões e podem mudar conforme o andamento das compras." },
       ],
       alerts: [],
@@ -32,34 +38,16 @@ export default {
         steps: [
           {
             kind: "transit",
-            time: "09:05",
+            time: "09:20", // REVISAR: saída da casa 9h20 (antes 09:05)
             duration: "~25–30 min",
             destinationName: "Orlando Outlet Marketplace",
           },
           {
             kind: "stop",
-            time: "09:35",
+            time: "09:50", // REVISAR: mantida a diferença de 30 min até a saída
             stopId: "outlet-marketplace",
             name: "Orlando Outlet Marketplace (abre às 10h)",
             icon: "bag",
-          },
-        ],
-      },
-      {
-        title: "Tarde",
-        steps: [
-          {
-            kind: "transit",
-            time: "17:00",
-            duration: "~10 min",
-            destinationName: "Epic McDonald's",
-          },
-          {
-            kind: "stop",
-            time: "17:10",
-            stopId: "epic-mcdonalds",
-            name: "Epic McDonald's — jantar",
-            icon: "burger",
           },
         ],
       },
@@ -68,27 +56,40 @@ export default {
         steps: [
           {
             kind: "transit",
-            time: "18:30",
+            time: "17:40", // REVISAR: para chegar às 18h; compras seguem até 17h
             duration: "~15–20 min",
             destinationName: "Universal's Islands of Adventure",
           },
           {
             kind: "stop",
-            time: "18:50",
+            time: "18:00",
             stopId: "islands-of-adventure",
-            name: "Islands of Adventure — Hulk e Hagrid's",
+            name: "Islands of Adventure — Hagrid's primeiro (chegar às 18h: estacionamento grátis a partir desse horário. Fecha às 19h)",
             icon: "target",
           },
           {
+            kind: "transit",
+            time: "19:00", // REVISAR: depende do fim da visita (~1h)
+            duration: "~10 min",
+            destinationName: "Epic McDonald's",
+          },
+          {
             kind: "stop",
-            time: "19:30",
+            time: "19:15", // REVISAR: derivado do fim da visita ao parque
+            stopId: "epic-mcdonalds",
+            name: "Epic McDonald's — jantar",
+            icon: "burger",
+          },
+          {
+            kind: "stop",
+            time: "20:00", // REVISAR: antes 19:30; o parque fecha às 19h, conferir se ainda faz sentido
             stopId: "hogwarts-lights",
             name: "Castelo de Hogwarts iluminado",
             icon: "camera",
           },
           {
             kind: "stop",
-            time: "20:15",
+            time: "20:30", // REVISAR: antes 20:15
             stopId: "citywalk",
             name: "CityWalk — passeio a pé",
             icon: "tree",
@@ -107,7 +108,7 @@ export default {
         id: "outlet-marketplace",
         name: "Orlando Outlet Marketplace",
         icon: "bag",
-        time: "09:35",
+        time: "09:50",
         shopRegionId: "outlet-marketplace",
         sections: [
           {
@@ -139,7 +140,7 @@ export default {
             icon: "lightbulb",
             title: "Horário",
             paragraphs: [
-              "Abre às 10h (horário padrão do centro; confirmar no site oficial da Premium Outlets para 10/12). Chegue às 9h35 para estar na porta na abertura. Plano: compras das 10h às 17h.",
+              "Abre às 10h (horário padrão do centro; confirmar no site oficial da Premium Outlets para 10/12). Chegue às 9h50 para estar na porta na abertura. Plano: compras das 10h às 17h.",
             ],
           },
           {
@@ -157,7 +158,7 @@ export default {
         link: mapSearchUrl("Epic McDonald's", "6875 Sand Lake Rd, Orlando, FL 32819"),
         name: "Epic McDonald's",
         icon: "burger",
-        time: "17:10",
+        time: "19:15",
         sections: [
           {
             color: "navy",
@@ -180,7 +181,7 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "Jantar barato e rápido, de 17h10 às 18h30. Peça pelos quiosques para evitar fila no balcão e saia às 18h30 para o parque.",
+              "Jantar barato e rápido, depois do Islands of Adventure. Peça pelos quiosques para evitar fila no balcão.",
             ],
           },
         ],
@@ -189,7 +190,7 @@ export default {
         id: "islands-of-adventure",
         name: "Universal's Islands of Adventure",
         icon: "target",
-        time: "18:50",
+        time: "18:00",
         sections: [
           {
             color: "navy",
@@ -209,7 +210,7 @@ export default {
             list: [
               "The Incredible Hulk Coaster — altura mínima 54\" (137 cm). Fica mais perto da entrada e tem fila de single rider, geralmente rápida.",
               "Hagrid's Magical Creatures Motorbike Adventure — altura mínima 48\" (122 cm). Fica em Hogsmeade. A fila de single rider é inconsistente.",
-              "Sugestão de ordem: Hulk primeiro (19h00), depois caminhar até Hogsmeade e entrar na fila do Hagrid's antes das 20h.",
+              "Hagrid's primeiro.",
             ],
           },
           {
@@ -225,7 +226,7 @@ export default {
             icon: "alert",
             title: "Atenção",
             paragraphs: [
-              "Fechamento do parque previsto para 20h (horário oficial de 10/12 ainda a confirmar). O parque rende cerca de 1h10, então se a fila do Hulk estiver grande, vá direto ao Hagrid's. O ingresso multi-dia começa a valer em 10/12. Confirme as alturas de todos antes de entrar na fila.",
+              "Fechamento do parque às 19h nesse dia. A visita rende cerca de 1h, então se a fila do Hulk estiver grande, vá direto ao Hagrid's. O ingresso multi-dia começa a valer em 10/12. Confirme as alturas de todos antes de entrar na fila.",
             ],
           },
         ],
@@ -234,7 +235,7 @@ export default {
         id: "hogwarts-lights",
         name: "Castelo de Hogwarts iluminado",
         icon: "camera",
-        time: "19:30",
+        time: "20:00",
         sections: [
           {
             color: "navy",
@@ -266,7 +267,7 @@ export default {
         id: "citywalk",
         name: "CityWalk",
         icon: "tree",
-        time: "20:15",
+        time: "20:30",
         sections: [
           {
             color: "navy",

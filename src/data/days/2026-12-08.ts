@@ -18,9 +18,11 @@ export default {
     summary: "Manhã toda no Loop West, tarde no núcleo do The Loop, fim de tarde no The Crosslands e noite no Disney Springs.",
     group: "Grupo completo · 10 pessoas · 2 carros",
     journey: {
-      tiles: [],
-      notes: [
+      tiles: [
+        { label: "Acordar", value: "8h00" },
+        { label: "Sair de casa", value: "9h00" },
       ],
+      notes: [],
       alerts: [],
     },
     periods: [
@@ -29,7 +31,7 @@ export default {
         steps: [
           {
             kind: "stop",
-            time: "07:30",
+            time: "08:15", // REVISAR: antes 07:30, antes do novo horário de acordar (8h00)
             stopId: "",
             name: "Café da manhã em casa",
             icon: "house",
@@ -42,14 +44,7 @@ export default {
           },
           {
             kind: "stop",
-            time: "09:30",
-            stopId: "loop-west",
-            name: "TJ Maxx",
-            icon: "bag",
-          },
-          {
-            kind: "stop",
-            time: "10:00",
+            time: "09:30", // REVISAR: sem a parada duplicada do TJ Maxx, o Loop West começa na chegada
             stopId: "loop-west",
             name: "Loop West",
             icon: "bag",
@@ -60,11 +55,17 @@ export default {
         title: "Tarde",
         steps: [
           {
+            kind: "transit",
+            time: "12:45", // REVISAR: trajeto até o Olive Garden, duração copiada dos trajetos vizinhos
+            duration: "10–15 min",
+            destinationName: "Olive Garden",
+          },
+          {
             kind: "stop",
             time: "13:00",
-            stopId: "",
-            name: "Almoço em casa",
-            icon: "house",
+            stopId: "olive-garden",
+            name: "Olive Garden (almoço)",
+            icon: "burger",
           },
           {
             kind: "transit",
@@ -105,17 +106,10 @@ export default {
           },
           {
             kind: "stop",
-            time: "18:00",
+            time: "18:00", // REVISAR: horário derivado do antigo "Jantar em casa"
             stopId: "",
-            name: "Jantar em casa",
+            name: "Em casa: lanche rápido e descarregar as compras",
             icon: "house",
-          },
-          {
-            kind: "stop",
-            time: "18:30",
-            stopId: "",
-            name: "Preparar lanches para o dia 09 (Epcot)",
-            icon: "burger",
           },
           {
             kind: "transit",
@@ -136,15 +130,42 @@ export default {
             duration: "20–25 min",
             destinationName: "Storey Lake Resort",
           },
+          {
+            kind: "stop",
+            time: "23:00", // REVISAR: derivado da volta de Disney Springs (22:30 + ~25 min)
+            stopId: "",
+            name: "Preparar lanches para o dia 09 (Epcot)",
+            icon: "house",
+          },
         ],
       },
     ],
     cards: [
       {
+        id: "olive-garden",
+        name: "Olive Garden (almoço)",
+        icon: "burger",
+        time: "13:00",
+        sections: [
+          {
+            color: "navy",
+            icon: "parking",
+            title: "Endereço",
+            paragraphs: ["A definir."],
+          },
+          {
+            color: "gold",
+            icon: "lightbulb",
+            title: "Horário de funcionamento",
+            paragraphs: ["A definir."],
+          },
+        ],
+      },
+      {
         id: "loop-west",
         name: "Loop West",
         icon: "bag",
-        time: "10:00",
+        time: "09:30",
         shopRegionId: "loop-west",
         sections: [
           {
@@ -274,6 +295,12 @@ export default {
             paragraphs: [
               "Christmas Tree Stroll roda de 13/nov/2026 a 6/jan/2027.",
             ],
+          },
+          {
+            color: "navy",
+            icon: "lightbulb",
+            title: "Horário de funcionamento",
+            paragraphs: ["Em geral até 23h (sexta e sábado até 23h30)."], // REVISAR: informado pelo Thiago, não consta nos dados
           },
         ],
       },
