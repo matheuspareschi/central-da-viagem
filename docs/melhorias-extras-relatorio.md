@@ -28,7 +28,7 @@ Dois commits: (a) grade e subpáginas; (b) testes das funções puras. `npm run 
 ## Quadradinho Pedágio (Visitor Toll Pass)
 
 - Conteúdo em `src/data/pedagio.ts` (3 etapas, 6 passos `pedagio-1` a `pedagio-6`, dica no passo 3), textos do Thiago sem acréscimos. Marcação em `pedagio:passos`; hook `usePedagio`.
-- Quadradinho em 5º lugar na grade, antes de "Calçados" (que passa a ser o 7º). Apoio fixo "Visitor Toll Pass", sem contador.
+- Quadradinho em 6º lugar na grade, antes de "Calçados" (que passa a ser o 7º). Apoio fixo "Visitor Toll Pass", sem contador.
 - A rota segue o padrão atual, `#/informacoes-extra/pedagio` (o prompt citava `#/extras/pedagio`).
 - A subpágina usa o cabeçalho padrão das outras (título 28 px), não 22 px.
 - "Antes de viajar" ganhou o item "Visitor Toll Pass…" sem estado próprio: lê os passos 1 e 2, abre o Pedágio e entra na contagem "n itens a fazer". Aparece nas duas telas que usam a lista (Essenciais e a subpágina).
