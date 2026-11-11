@@ -2,6 +2,8 @@ import { useState, type FormEvent } from "react";
 import { Plus, X } from "lucide-react";
 import { TapCheckbox } from "../../components";
 import { useGroceryList } from "../../hooks/useGroceryList";
+import { CheckProgress } from "./CheckProgress";
+import { ConfirmClearButton } from "./ConfirmClearButton";
 
 const secondaryButtonClasses =
   "min-h-11 rounded-xl border border-line px-3.5 text-sm font-semibold text-ink focus-visible:outline-2 focus-visible:outline-citrus";
@@ -9,16 +11,14 @@ const secondaryButtonClasses =
 /** Compras básicas de mercado: marcar o que já foi comprado e incluir itens próprios. */
 export function GroceryList() {
   const list = useGroceryList();
-  const [isConfirmingClear, setIsConfirmingClear] = useState(false);
-
-  function clearAll() {
-    list.checked.replace([]);
-    setIsConfirmingClear(false);
-  }
-
   return (
     <div>
-      <GroceryProgress checkedCount={list.checkedCount} totalCount={list.items.length} />
+      <CheckProgress
+        checkedCount={list.checkedCount}
+        totalCount={list.items.length}
+        summary={`${list.checkedCount} de ${list.items.length} itens no carrinho`}
+        ariaLabel="Itens no carrinho"
+      />
       <ul>
         {list.items.map((item) => {
           const isChecked = list.checked.set.has(item.id);
@@ -43,41 +43,7 @@ export function GroceryList() {
       </ul>
       <AddGroceryItemForm onAdd={list.addItem} />
       <div className="mt-3 flex flex-wrap items-center gap-2">
-        {isConfirmingClear ? (
-          <>
-            <span className="text-sm text-ink">Desmarcar todos os itens?</span>
-            <button type="button" onClick={clearAll} className={secondaryButtonClasses}>
-              Desmarcar
-            </button>
-            <button type="button" onClick={() => setIsConfirmingClear(false)} className={secondaryButtonClasses}>
-              Cancelar
-            </button>
-          </>
-        ) : (
-          <button
-            type="button"
-            onClick={() => setIsConfirmingClear(true)}
-            disabled={list.checkedCount === 0}
-            className={`${secondaryButtonClasses} text-ink-soft disabled:opacity-40`}
-          >
-            Desmarcar tudo
-          </button>
-        )}
-      </div>
-    </div>
-  );
-}
-
-function GroceryProgress({ checkedCount, totalCount }: { checkedCount: number; totalCount: number }) {
-  const percent = totalCount === 0 ? 0 : (checkedCount / totalCount) * 100;
-
-  return (
-    <div className="mb-2">
-      <p className="text-sm font-semibold text-ink">
-        {checkedCount} de {totalCount} itens no carrinho
-      </p>
-      <div role="progressbar" aria-label="Itens no carrinho" aria-valuemin={0} aria-valuemax={totalCount} aria-valuenow={checkedCount} className="mt-1.5 h-1.5 overflow-hidden rounded-full bg-line">
-        <div className="h-full rounded-full bg-[#1f5a40] transition-[width]" style={{ width: `${percent}%` }} />
+        <ConfirmClearButton onConfirm={() => list.checked.replace([])} disabled={list.checkedCount === 0} question="Desmarcar todos os itens?" />
       </div>
     </div>
   );

@@ -8,6 +8,6 @@ export { SectionCard } from "./ui/SectionCard";
 export { BackButton, type BackTarget } from "./ui/PageChrome";
 export { TrackTabs } from "./ui/TrackTabs";
 export { BottomSheet } from "./ui/BottomSheet";
-export { TapCheckbox } from "./ui/TapCheckbox";
+export { TapCheckbox, CheckMark } from "./ui/TapCheckbox";
 export { DetailSections } from "./ui/DetailSections";
 export { IconBadge } from "./ui/IconBadge";

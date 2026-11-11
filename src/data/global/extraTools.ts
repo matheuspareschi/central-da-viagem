@@ -1,6 +1,6 @@
-import { Calculator, Footprints, ListChecks, Scale, ShoppingCart, Trash2, type LucideIcon } from "lucide-react";
+import { Calculator, Car, Footprints, ListChecks, Scale, ShoppingCart, Trash2, type LucideIcon } from "lucide-react";
 
-export type ExtraToolId = "conversor" | "desconto-imposto" | "mercado" | "lixo" | "antes-de-viajar" | "calcado";
+export type ExtraToolId = "conversor" | "desconto-imposto" | "mercado" | "lixo" | "antes-de-viajar" | "pedagio" | "calcado";
 
 export interface ExtraTool {
   id: ExtraToolId;
@@ -17,6 +17,8 @@ export interface ExtraTool {
   icon: LucideIcon;
   /** Fundo e cor do ícone circular. */
   iconClasses: string;
+  /** A ferramenta desenha os próprios cartões, sem o cartão-moldura da subpágina. */
+  hasOwnCards?: boolean;
 }
 
 /** Ferramentas da aba Extras, na ordem em que aparecem na grade. */
@@ -68,6 +70,17 @@ export const extraTools: ExtraTool[] = [
     tileAriaLabel: "Abrir Antes de viajar",
     icon: ListChecks,
     iconClasses: "bg-gold-tint text-[#6b4a0b]",
+  },
+  {
+    id: "pedagio",
+    tileTitle: "Pedágio",
+    pageTitle: "Visitor Toll Pass",
+    tileSupport: "Visitor Toll Pass",
+    description: "Recomendado para turistas em Orlando.",
+    tileAriaLabel: "Abrir Pedágio, Visitor Toll Pass",
+    icon: Car,
+    iconClasses: "bg-[#d9ecee] text-[#1d5560]",
+    hasOwnCards: true,
   },
   {
     id: "calcado",

@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { allTollSteps, tollStages } from "../src/data/pedagio.ts";
 import { formatDecimal, formatFixedDecimal, parseDecimal } from "../src/utils/decimal.ts";
 import { calcularPreco, readPercent } from "../src/utils/price.ts";
 import { convertTyped, kgParaLb, lbParaKg } from "../src/utils/weight.ts";
@@ -33,6 +34,14 @@ const tests: Array<[string, () => void]> = [
     for (const text of ["101", "-1", "abc"]) assert.deepEqual(readPercent(text), { kind: "invalid" });
   }],
   ["percentual 100 é válido", () => assert.deepEqual(readPercent("100"), { kind: "value", value: 100 })],
+  ["pedágio: 3 etapas, 6 passos, ids únicos e sem campo vazio", () => {
+    assert.equal(tollStages.length, 3);
+    assert.equal(allTollSteps.length, 6);
+    assert.equal(new Set(allTollSteps.map((step) => step.id)).size, 6);
+    assert.deepEqual(allTollSteps.map((step) => step.id), [1, 2, 3, 4, 5, 6].map((n) => `pedagio-${n}`));
+    for (const step of allTollSteps) assert.ok(step.titulo.trim() && step.texto.trim() && (step.dica === undefined || step.dica.trim()));
+    for (const stage of tollStages) assert.ok(stage.titulo.trim() && stage.passos.length > 0);
+  }],
   ["nenhum resultado vira NaN", () => {
     const result = calcularPreco({ preco: 0, d1: 100, d2: 100, imposto: 100 });
     for (const value of Object.values(result)) assert.ok(Number.isFinite(value));

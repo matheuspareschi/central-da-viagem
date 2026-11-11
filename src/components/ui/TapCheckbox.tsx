@@ -8,7 +8,7 @@ interface TapCheckboxProps {
   children?: ReactNode;
 }
 
-function CheckMark({ checked }: { checked: boolean }) {
+export function CheckMark({ checked }: { checked: boolean }) {
   return (
     <span
       className={`flex h-[26px] w-[26px] items-center justify-center rounded-[9px] border-[1.5px] ${

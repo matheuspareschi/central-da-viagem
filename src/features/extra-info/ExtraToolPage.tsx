@@ -6,6 +6,7 @@ import { findExtraTool, type ExtraToolId } from "../../data/global/extraTools";
 import { BeforeTravelList } from "./BeforeTravelList";
 import { DiscountTaxCalculator } from "./DiscountTaxCalculator";
 import { GroceryList } from "./GroceryList";
+import { TollPassSteps } from "./TollPassSteps";
 import { ShoeSizeChart } from "./ShoeSizeChart";
 import { TrashInstructions } from "./TrashInstructions";
 import { WeightConverter } from "./WeightConverter";
@@ -16,6 +17,7 @@ const toolBodies: Record<ExtraToolId, () => React.JSX.Element> = {
   mercado: GroceryList,
   lixo: TrashInstructions,
   "antes-de-viajar": BeforeTravelList,
+  pedagio: TollPassSteps,
   calcado: ShoeSizeChart,
 };
 
@@ -45,9 +47,13 @@ export function ExtraToolPage() {
         {tool.pageTitle}
       </h1>
       <p className="mb-4 mt-1 text-[13.5px] text-ink-soft">{tool.description}</p>
-      <section className="rounded-[20px] border border-line bg-cardbg p-[18px]">
+      {tool.hasOwnCards ? (
         <ToolBody />
-      </section>
+      ) : (
+        <section className="rounded-[20px] border border-line bg-cardbg p-[18px]">
+          <ToolBody />
+        </section>
+      )}
     </div>
   );
 }

@@ -24,3 +24,12 @@ Dois commits: (a) grade e subpáginas; (b) testes das funções puras. `npm run 
 - Fornecer o HTML de referência, se as medidas finas (sombra, espaçamentos internos) precisarem bater.
 - O subtítulo "O que resolver ainda no Brasil." da subpágina Antes de viajar é meu; trocar se preferir outro.
 - Tamanhos de texto: rótulos dos campos usam 14 px e dicas 12 px (mínimo respeitado).
+
+## Quadradinho Pedágio (Visitor Toll Pass)
+
+- Conteúdo em `src/data/pedagio.ts` (3 etapas, 6 passos `pedagio-1` a `pedagio-6`, dica no passo 3), textos do Thiago sem acréscimos. Marcação em `pedagio:passos`; hook `usePedagio`.
+- Quadradinho em 5º lugar na grade, antes de "Calçados" (que passa a ser o 7º). Apoio fixo "Visitor Toll Pass", sem contador.
+- A rota segue o padrão atual, `#/informacoes-extra/pedagio` (o prompt citava `#/extras/pedagio`).
+- A subpágina usa o cabeçalho padrão das outras (título 28 px), não 22 px.
+- "Antes de viajar" ganhou o item "Visitor Toll Pass…" sem estado próprio: lê os passos 1 e 2, abre o Pedágio e entra na contagem "n itens a fazer". Aparece nas duas telas que usam a lista (Essenciais e a subpágina).
+- `CheckProgress` e `ConfirmClearButton` foram extraídos e agora servem ao Mercado e ao Pedágio. Teste dos dados em `testar:funcoes`.
