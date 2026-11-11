@@ -1,26 +1,6 @@
 import { useState } from "react";
 import { convertTyped, kgParaLb, lbParaKg } from "../../utils/weight";
-
-const fieldClasses =
-  "mt-1 min-h-11 w-full rounded-xl border border-line bg-paper-inset px-3 text-base text-ink focus-visible:outline-2 focus-visible:outline-citrus";
-
-interface WeightFieldProps {
-  id: string;
-  label: string;
-  value: string;
-  onChange: (text: string) => void;
-}
-
-function WeightField({ id, label, value, onChange }: WeightFieldProps) {
-  return (
-    <div className="min-w-0 flex-1">
-      <label htmlFor={id} className="text-sm font-semibold text-ink">
-        {label}
-      </label>
-      <input id={id} type="text" inputMode="decimal" autoComplete="off" value={value} onChange={(event) => onChange(event.target.value)} className={fieldClasses} />
-    </div>
-  );
-}
+import { ClearButton, NumberField } from "./NumberField";
 
 /** Libras e quilos lado a lado: digitar em um calcula o outro na hora. */
 export function WeightConverter() {
@@ -44,17 +24,15 @@ export function WeightConverter() {
 
   return (
     <div>
-      <div className="flex gap-3">
-        <WeightField id="weight-pounds" label="Libras (lb)" value={pounds} onChange={typePounds} />
-        <WeightField id="weight-kilograms" label="Quilos (kg)" value={kilograms} onChange={typeKilograms} />
+      <div className="flex items-end gap-2">
+        <NumberField id="weight-pounds" label="Libras (lb)" value={pounds} onChange={typePounds} unit="lb" />
+        <span aria-hidden="true" className="flex h-13 shrink-0 items-center text-xl text-ink-soft">
+          ⇄
+        </span>
+        <NumberField id="weight-kilograms" label="Quilos (kg)" value={kilograms} onChange={typeKilograms} unit="kg" />
       </div>
-      <button
-        type="button"
-        onClick={clear}
-        className="mt-3 min-h-11 rounded-xl border border-line px-4 text-sm font-semibold text-ink focus-visible:outline-2 focus-visible:outline-citrus"
-      >
-        Limpar
-      </button>
+      <ClearButton onClick={clear} />
+      <p className="mt-3 text-xs text-ink-soft">Referência: 50 lb ≈ 22,7 kg</p>
     </div>
   );
 }

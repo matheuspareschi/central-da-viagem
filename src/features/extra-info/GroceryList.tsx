@@ -1,54 +1,36 @@
 import { useState, type FormEvent } from "react";
 import { Plus, X } from "lucide-react";
 import { TapCheckbox } from "../../components";
-import { baseGroceryItems, GROCERY_CHECKED_STORAGE_KEY, GROCERY_CUSTOM_STORAGE_KEY, type GroceryItem } from "../../data/listaMercado";
-import { useLocalStorageSet } from "../../hooks/useLocalStorageSet";
-import { readStorage, writeStorage } from "../../lib/storage";
+import { useGroceryList } from "../../hooks/useGroceryList";
 
 const secondaryButtonClasses =
   "min-h-11 rounded-xl border border-line px-3.5 text-sm font-semibold text-ink focus-visible:outline-2 focus-visible:outline-citrus";
 
-function useCustomGroceryItems() {
-  const [items, setItems] = useState<GroceryItem[]>(() => readStorage(GROCERY_CUSTOM_STORAGE_KEY, []));
-
-  function save(next: GroceryItem[]) {
-    setItems(next);
-    writeStorage(GROCERY_CUSTOM_STORAGE_KEY, next);
-  }
-
-  return {
-    items,
-    add: (name: string) => save([...items, { id: `custom-${Date.now()}`, name }]),
-    remove: (id: string) => save(items.filter((item) => item.id !== id)),
-  };
-}
-
 /** Compras básicas de mercado: marcar o que já foi comprado e incluir itens próprios. */
 export function GroceryList() {
-  const checked = useLocalStorageSet(GROCERY_CHECKED_STORAGE_KEY);
-  const custom = useCustomGroceryItems();
+  const list = useGroceryList();
   const [isConfirmingClear, setIsConfirmingClear] = useState(false);
-  const allItems = [...baseGroceryItems, ...custom.items];
-  const customIds = new Set(custom.items.map((item) => item.id));
 
   function clearAll() {
-    checked.replace([]);
+    list.checked.replace([]);
     setIsConfirmingClear(false);
   }
 
   return (
     <div>
+      <GroceryProgress checkedCount={list.checkedCount} totalCount={list.items.length} />
       <ul>
-        {allItems.map((item) => {
-          const isChecked = checked.set.has(item.id);
+        {list.items.map((item) => {
+          const isChecked = list.checked.set.has(item.id);
           return (
-            <li key={item.id} className="flex items-center gap-1 border-b border-dashed border-line py-0.5 last:border-b-0">
-              <TapCheckbox checked={isChecked} onToggle={() => checked.toggle(item.id)} label={isChecked ? `Desmarcar ${item.name}` : `Marcar ${item.name}`} />
-              <span className={`min-w-0 flex-1 text-[15px] text-ink ${isChecked ? "line-through" : ""}`}>{item.name}</span>
-              {customIds.has(item.id) && (
+            <li key={item.id} className="flex items-center border-b border-dashed border-line last:border-b-0">
+              <TapCheckbox checked={isChecked} onToggle={() => list.checked.toggle(item.id)} label={isChecked ? `Desmarcar ${item.name}` : `Marcar ${item.name}`}>
+                <span className={`min-w-0 flex-1 text-[15px] ${isChecked ? "text-ink-soft line-through" : "text-ink"}`}>{item.name}</span>
+              </TapCheckbox>
+              {list.customIds.has(item.id) && (
                 <button
                   type="button"
-                  onClick={() => custom.remove(item.id)}
+                  onClick={() => list.removeItem(item.id)}
                   aria-label={`Remover ${item.name} da lista`}
                   className="flex h-11 w-11 shrink-0 items-center justify-center text-ink-soft focus-visible:outline-2 focus-visible:outline-citrus"
                 >
@@ -59,7 +41,7 @@ export function GroceryList() {
           );
         })}
       </ul>
-      <AddGroceryItemForm onAdd={custom.add} />
+      <AddGroceryItemForm onAdd={list.addItem} />
       <div className="mt-3 flex flex-wrap items-center gap-2">
         {isConfirmingClear ? (
           <>
@@ -75,12 +57,27 @@ export function GroceryList() {
           <button
             type="button"
             onClick={() => setIsConfirmingClear(true)}
-            disabled={checked.items.length === 0}
+            disabled={list.checkedCount === 0}
             className={`${secondaryButtonClasses} text-ink-soft disabled:opacity-40`}
           >
             Desmarcar tudo
           </button>
         )}
+      </div>
+    </div>
+  );
+}
+
+function GroceryProgress({ checkedCount, totalCount }: { checkedCount: number; totalCount: number }) {
+  const percent = totalCount === 0 ? 0 : (checkedCount / totalCount) * 100;
+
+  return (
+    <div className="mb-2">
+      <p className="text-sm font-semibold text-ink">
+        {checkedCount} de {totalCount} itens no carrinho
+      </p>
+      <div role="progressbar" aria-label="Itens no carrinho" aria-valuemin={0} aria-valuemax={totalCount} aria-valuenow={checkedCount} className="mt-1.5 h-1.5 overflow-hidden rounded-full bg-line">
+        <div className="h-full rounded-full bg-[#1f5a40] transition-[width]" style={{ width: `${percent}%` }} />
       </div>
     </div>
   );

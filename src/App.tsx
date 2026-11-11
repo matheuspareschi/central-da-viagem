@@ -1,5 +1,5 @@
 import { HashRouter, Routes, Route } from "react-router-dom";
-import { ItineraryPage, ExtraInfoPage, CalendarPage, HomePage, CasaPage } from "./features";
+import { ItineraryPage, ExtrasPage, ExtraToolPage, CalendarPage, HomePage, CasaPage } from "./features";
 import { BottomNav, OfflineNotice, useShowsBottomNav } from "./components";
 
 function AppShell() {
@@ -16,7 +16,8 @@ function AppShell() {
         <Route path="/" element={<HomePage />} />
         <Route path="/calendario" element={<CalendarPage />} />
         <Route path="/casa" element={<CasaPage />} />
-        <Route path="/informacoes-extra" element={<ExtraInfoPage />} />
+        <Route path="/informacoes-extra" element={<ExtrasPage />} />
+        <Route path="/informacoes-extra/:toolId" element={<ExtraToolPage />} />
         <Route path="/roteiro/:day" element={<ItineraryPage />} />
       </Routes>
       {showsBottomNav && <BottomNav />}
