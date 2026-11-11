@@ -1,4 +1,3 @@
-import { mapSearchUrl } from "../../lib/maps";
 import type { DayData } from "../../types";
 
 export default {
@@ -16,10 +15,15 @@ export default {
   },
   itinerary: {
     kind: "schedule",
-    summary: "Dia único com o grupo completo. Jantar na praça de alimentação do Florida Mall.",
+    summary: "Dia único com o grupo completo. Jantar no Florida Mall.",
     group: "Grupo completo · 10 pessoas",
     journey: {
-      tiles: [],
+      tiles: [
+        { label: "Pouso em MCO", value: "15h40" },
+        { label: "Saída do aeroporto", value: "A definir" },
+        { label: "Chegada na casa", value: "A definir" },
+        { label: "Tempo de deslocamento", value: "A definir" },
+      ],
       notes: [
         { icon: "car", text: "Deslocamento: ~1h10–1h15 de carro no total (aeroporto → Florida Mall → Storey Lake Resort → Walmart e volta)." },
         { icon: "info", text: "Aproveitar o wi-fi do shopping para ativar o eSIM/chip digital durante a refeição." },
@@ -33,15 +37,8 @@ export default {
           {
             kind: "stop",
             time: "15:40", // REVISAR: chegada pedida 15h40 (antes 15:15, diferença de +25 min, não +20)
-            stopId: "",
+            stopId: "pouso-mco",
             name: "Pouso em MCO",
-            icon: "target",
-          },
-          {
-            kind: "stop",
-            time: "15:40", // REVISAR: segue a chegada
-            stopId: "",
-            name: "Desembarque, imigração e bagagem",
             icon: "target",
           },
           {
@@ -59,6 +56,13 @@ export default {
           },
           {
             kind: "stop",
+            time: "A definir",
+            stopId: "florida-mall",
+            name: "The Florida Mall",
+            icon: "bag",
+          },
+          {
+            kind: "stop",
             time: "17:35", // REVISAR: +20 min
             stopId: "apple-store",
             name: "Apple Store (Florida Mall)",
@@ -72,8 +76,8 @@ export default {
           {
             kind: "stop",
             time: "18:20", // REVISAR: +20 min
-            stopId: "jantar-florida-mall",
-            name: "Jantar no Florida Mall (praça de alimentação)",
+            stopId: "",
+            name: "Jantar no Florida Mall",
             icon: "burger",
           },
           {
@@ -99,7 +103,7 @@ export default {
             kind: "stop",
             time: "20:20", // REVISAR: +20 min
             stopId: "walmart-chegada",
-            name: "Walmart Supercenter — Compras da Semana",
+            name: "Walmart Supercenter",
             icon: "bag",
           },
           {
@@ -113,7 +117,38 @@ export default {
     ],
     cards: [
       {
+        id: "pouso-mco",
+        name: "Pouso em MCO",
+        icon: "target",
+        time: "15:40",
+        sections: [
+          {
+            color: "gold",
+            icon: "lightbulb",
+            title: "Informação",
+            paragraphs: ["Imigração, desembarque e bagagem."],
+          },
+          {
+            color: "gold",
+            icon: "sparkle",
+            title: "Curiosidades e fotos",
+            paragraphs: [
+              "A sigla MCO vem da antiga base militar McCoy Air Force Base. Para fotos, aproveite os átrios internos com jardins tropicais e fontes naturais, ou a arquitetura futurista e envidraçada do novo Terminal C.",
+            ],
+          },
+          {
+            color: "palm",
+            icon: "lightbulb",
+            title: "Dica para aproveitar",
+            paragraphs: [
+              "Use o serviço gratuito MCO Reserve para agendar horário e furar a fila da segurança na volta, além de conferir as lojas temáticas da Disney, Universal e NASA ainda dentro do terminal.",
+            ],
+          },
+        ],
+      },
+      {
         id: "retirada-carros",
+        goTo: "/informacoes-extra/pedagio",
         name: "Retirada dos carros e pedágio",
         icon: "target",
         time: "16:35",
@@ -145,7 +180,31 @@ export default {
         ],
       },
       {
+        id: "florida-mall",
+        name: "The Florida Mall",
+        icon: "bag",
+        sections: [
+          {
+            color: "gold",
+            icon: "sparkle",
+            title: "Curiosidades e fotos",
+            paragraphs: [
+              "Maior shopping tradicional de Orlando, rende ótimas fotos na colorida parede de chocolates da M&M's World, na vitrine interativa da Crayola Experience e ao lado dos carros elétricos expostos na loja da Tesla.",
+            ],
+          },
+          {
+            color: "palm",
+            icon: "lightbulb",
+            title: "Dica para aproveitar",
+            paragraphs: [
+              "Vá direto à Primark (dois andares) para comprar itens oficiais da Disney e malas baratas, passe nas máquinas de pelúcia da Gatcha e retire o livro de cupons de desconto gratuitos no balcão de atendimento ao cliente (Guest Services).",
+            ],
+          },
+        ],
+      },
+      {
         id: "apple-store",
+        address: "8001 S Orange Blossom Trail, Orlando, FL 32809",
         name: "Apple Store (Florida Mall)",
         icon: "bag",
         time: "17:35",
@@ -153,9 +212,8 @@ export default {
           {
             color: "navy",
             icon: "parking",
-            title: "Endereço e Estacionamento",
+            title: "Estacionamento",
             paragraphs: [
-              "8001 S Orange Blossom Trail, Orlando, FL 32809.",
               "Estacionamento do Florida Mall, gratuito.",
             ],
           },
@@ -169,77 +227,29 @@ export default {
           },
           {
             color: "gold",
+            icon: "sparkle",
+            title: "Curiosidades e fotos",
+            paragraphs: [
+              "É uma das unidades mais procuradas por turistas graças ao imposto menor de Orlando (6,5%, contra 7% de Miami). Em dias de lançamento de iPhone, a equipe faz um corredor de aplausos na entrada para receber os compradores.",
+            ],
+          },
+          {
+            color: "palm",
             icon: "lightbulb",
-            title: "Dica",
+            title: "Dica para aproveitar",
             paragraphs: [
-              "Fazer essa parada antes do jantar garante folga do horário de fechamento (19h aos domingos) — é a única janela do dia, já que nem Apple Millenia nem Apple Florida Mall abrem além disso no domingo.",
-            ],
-          },
-          {
-            color: "attn",
-            icon: "alert",
-            title: "Atenção",
-            paragraphs: [
-              "Confirmar no site oficial da Apple se a loja mantém 11h–19h no domingo específico da viagem.",
-            ],
-          },
-        ],
-      },
-      {
-        id: "jantar-florida-mall",
-        link: mapSearchUrl("Jantar no Florida Mall", "8001 S Orange Blossom Trail, Orlando, FL 32809"),
-        name: "Jantar no Florida Mall (praça de alimentação)",
-        icon: "burger",
-        time: "18:20",
-        sections: [
-          {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: [
-              "8001 S Orange Blossom Trail, Orlando, FL 32809.",
-            ],
-          },
-          {
-            color: "citrus",
-            icon: "burger",
-            title: "Sobre",
-            paragraphs: [
-              "Praça de alimentação do shopping — várias opções rápidas, sem reserva.",
-            ],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Dica",
-            paragraphs: [
-              "Aproveitar o wi-fi do mall para ativar o eSIM/chip digital durante a refeição, sem precisar de loja física.",
-            ],
-          },
-          {
-            color: "attn",
-            icon: "alert",
-            title: "Atenção",
-            paragraphs: [
-              "Confirmar horário do restaurante escolhido — praça de alimentação costuma abrir mais tarde que as lojas.",
+              "Compre pelo site ou aplicativo antes da viagem e escolha a opção de retirada rápida (Pick Up) para pegar seu aparelho sem enfrentar filas e sem risco de estoque esgotado.",
             ],
           },
         ],
       },
       {
         id: "chegada-resort",
+        address: "4715 Kings Castle Circle, Kissimmee, FL 34746",
         name: "Chegada ao Storey Lake Resort",
         icon: "house",
         time: "20:05",
         sections: [
-          {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: [
-              "4715 Kings Castle Circle, Kissimmee, FL 34746.",
-            ],
-          },
           {
             color: "citrus",
             icon: "target",
@@ -260,19 +270,12 @@ export default {
       },
       {
         id: "walmart-chegada",
-        action: "groceryList",
-        name: "Walmart Supercenter — Compras da Semana",
+        goTo: "/informacoes-extra/mercado",
+        address: "4444 W Vine St, Kissimmee, FL 34746",
+        name: "Walmart Supercenter",
         icon: "bag",
         time: "20:20",
         sections: [
-          {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: [
-              "4444 W Vine St, Kissimmee, FL 34746.",
-            ],
-          },
           {
             color: "navy",
             icon: "lightbulb",
@@ -285,22 +288,6 @@ export default {
             title: "Lojas",
             paragraphs: [
               "Walmart Supercenter.",
-            ],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Dica",
-            paragraphs: [
-              "Mesmo eixo do resort, sem desviar da rota. Compras rápidas de mercado/essenciais da semana (~30 min).",
-            ],
-          },
-          {
-            color: "palm",
-            icon: "target",
-            title: "Dica de desconto",
-            paragraphs: [
-              "Walmart costuma sair 22–28% mais barato que o Publix em cesta básica comparável — bom como mercado principal da semana. Publix vale pontualmente para promoções BOGO ou frescos, se topar um no caminho em outro dia.",
             ],
           },
         ],

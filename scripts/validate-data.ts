@@ -164,17 +164,19 @@ function checkParkTimes(where: string, { category, extras }: DayTrack): string[]
 const warnings: string[] = [];
 
 const STEP_TIME_FORMAT = /^\d{2}:\d{2}$/;
+const UNDEFINED_STEP_TIME = "A definir";
 
 /** Horários dos passos no formato do app (HH:MM) e em ordem crescente dentro de cada período. */
 function checkStepTimes(where: string, { content }: DayTrack): string[] {
   if (content.mode !== "schedule") return [];
   return content.periods.flatMap((period) => {
-    const invalid = period.steps.filter((step) => !STEP_TIME_FORMAT.test(step.time));
+    const timedSteps = period.steps.filter((step) => step.time !== UNDEFINED_STEP_TIME);
+    const invalid = timedSteps.filter((step) => !STEP_TIME_FORMAT.test(step.time));
     if (invalid.length > 0) {
       invalid.forEach((step) => warnings.push(`${where}, período "${period.title}": horário "${step.time}" fora do formato HH:MM`));
       return [];
     }
-    const minutes = period.steps.map((step) => toMinutes(step.time));
+    const minutes = timedSteps.map((step) => toMinutes(step.time));
     const isOutOfOrder = minutes.some((value, index) => index > 0 && value < minutes[index - 1]);
     return isOutOfOrder ? [`${where}, período "${period.title}": horários fora de ordem crescente`] : [];
   });

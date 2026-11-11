@@ -63,6 +63,10 @@ export interface StopCard {
   link?: string;
   /** Site oficial, só quando os dados já informam. */
   siteUrl?: string;
+  /** Endereço mostrado na linha do cronograma, fora do cartão, como link para o mapa. */
+  address?: string;
+  /** Rota interna: tocar na linha leva para lá em vez de abrir a folha de detalhe. */
+  goTo?: string;
   /** Botão extra na folha de detalhe. */
   action?: "groceryList";
   sections: DetailSection[];
