@@ -22,7 +22,7 @@ export const usefulContacts: UsefulContact[] = [
   { name: "Lu Viagens", detail: "Gestora da viagem", phone: "+55 (14) 99752-9709" },
   { name: "Consulado-Geral do Brasil em Orlando", phone: "+1 (321) 758-7050" },
   // Valores de exemplo: trocar pelos dados reais do seguro.
-  { name: "Seguro de viagem · 24h", detail: "Apólice AX-2026-004821", phone: "+1 (800) 555-0199" },
+  { name: "Seguro de viagem · 24h", detail: "Apólice AX-2026-004821", phone: "+55 11 5039-9039" },
 ];
 
 export const tripBadge = "Pareschi · Nunes · Narcizo";
