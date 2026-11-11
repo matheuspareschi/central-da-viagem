@@ -7,7 +7,7 @@ export default {
   weekday: "Dom",
   liturgicalWeekday: "4º Domingo do Advento",
   category: "compras",
-  title: "Vineland, Walmart, Super Target Millenia e CityWalk",
+  title: "Vineland, Walmart, Super Target Millenia e Universal Studios",
   reading: {
     label: "4º Domingo do Advento",
     oldTestamentReading: "2 Samuel 7:1–11, 16",
@@ -15,7 +15,7 @@ export default {
   },
   itinerary: {
     kind: "schedule",
-    summary: "Dia de compras em ordem de proximidade: Vineland (manhã), Walmart (mais perto do Vineland), Super Target Millenia (mais longe) e CityWalk à noite.",
+    summary: "Dia de compras em ordem de proximidade: Vineland (manhã), Walmart (mais perto do Vineland), Super Target Millenia (mais longe) e Universal Studios Florida à noite.",
     journey: {
       tiles: [],
       notes: [
@@ -61,12 +61,12 @@ export default {
       {
         title: "Noite",
         steps: [
-          { kind: "transit", time: "18:00", destinationName: "Universal CityWalk" },
+          { kind: "transit", time: "18:00", destinationName: "Universal Studios Florida" }, // REVISAR: trocado de CityWalk, mesmo horário
           {
             kind: "stop",
             time: "18:30",
-            stopId: "citywalk",
-            name: "Universal CityWalk",
+            stopId: "universal-studios-florida",
+            name: "Universal Studios Florida (fecha às 21h00)",
             icon: "target",
           },
         ],
@@ -189,11 +189,23 @@ export default {
         ],
       },
       {
-        id: "citywalk",
-        name: "Universal CityWalk",
+        id: "universal-studios-florida",
+        name: "Universal Studios Florida",
         icon: "target",
         time: "18:30",
         sections: [
+          {
+            color: "navy",
+            icon: "parking",
+            title: "Endereço",
+            paragraphs: ["6000 Universal Blvd, Orlando, FL 32819."],
+          },
+          {
+            color: "gold",
+            icon: "lightbulb",
+            title: "Horário",
+            paragraphs: ["Fecha às 21h00."],
+          },
           {
             color: "gold",
             icon: "lightbulb",
@@ -207,7 +219,7 @@ export default {
             icon: "alert",
             title: "Atenção",
             paragraphs: [
-              "Sem refeição planejada aqui. Se o grupo quiser, dá para trocar o CityWalk por um dos parques à noite, conforme o ritmo.",
+              "Sem refeição planejada aqui.",
             ],
           },
         ],

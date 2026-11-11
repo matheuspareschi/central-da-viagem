@@ -6,8 +6,8 @@ export default {
   day: 22,
   park: {
     name: "Epic Universe",
-    departure: "8h",
-    opening: "9h",
+    departure: "9h",
+    opening: "10h",
     closing: "21h",
   },
   weekday: "Ter",
@@ -24,10 +24,16 @@ export default {
     parkId: "epic-universe",
     summary: "Dia inteiro no Epic, da abertura ao fechamento, em ritmo tranquilo: favoritas, pausas, lojas de Natal, Power-Up Band e jantar sentado.",
     journey: {
-      tiles: [{ label: "Parque aberto", value: "9h–21h" }],
-      notes: [
+      tiles: [
+        { label: "Acordar", value: "8h00" },
+        { label: "Sair de casa", value: "9h00" },
+        { label: "Entrar", value: "9h30" }, // REVISAR: lido como entrada no complexo/estacionamento
+        { label: "Chegar ao parque", value: "10h00" },
       ],
-      alerts: ["Confirmar no app: horário do parque assumido das 09h às 21h. Deslocar tudo pela diferença."],
+      notes: [
+        { icon: "info", text: "O Epic Universe abre às 10h (entrada antecipada às 9h). Fecha às 21h." },
+      ],
+      alerts: ["Confirmar no app: horário do parque assumido das 10h às 21h. Deslocar tudo pela diferença."],
     },
     attractions: [
       {
@@ -48,10 +54,10 @@ export default {
             icon: "lightbulb",
             title: "Horários",
             list: [
-              "07h00 acordar",
-              "08h00 sair de Storey Lake",
-              "~08h30 estacionar",
-              "~08h50 no portão; 09h00 abertura",
+              "08h00 acordar",
+              "09h00 sair de Storey Lake",
+              "09h30 entrar",
+              "10h00 chegar ao parque; abertura 10h (entrada antecipada 9h)", // REVISAR: horários substituídos conforme o novo pedido
               "~21h00 fechamento",
             ],
           },

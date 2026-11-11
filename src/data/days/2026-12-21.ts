@@ -25,8 +25,15 @@ export default {
     summary: "Todas as montanhas-russas. Circuito anti-horário: Edge of Africa → Egypt → Nairobi → Pantopia → Congo → Wild Oasis → Stanleyville → Bird Gardens → Morocco, com a Montu por último.",
     group: "Grupo só de radicais (acima de 1,38 m)",
     journey: {
-      tiles: [{ label: "Parque aberto", value: "9h–21h" }],
+      tiles: [
+        { label: "Acordar", value: "6h00" },
+        { label: "Sair de casa", value: "7h00" },
+        { label: "Sair de Tampa", value: "A definir" },
+        { label: "Chegar em casa", value: "A definir" },
+      ],
       notes: [
+        { icon: "car", text: "De carro: Storey Lake → Busch Gardens, cerca de 1h30 a 1h45 (~100 km)." },
+        { icon: "info", text: "Parque aberto das 9h às 21h." },
         { icon: "info", text: "Quem não quiser fazer a Montu espera na saída ou usa o Rider Switch." },
         { icon: "info", text: "O roteiro completo termina por volta das 19h, então o Tampa Outlet só cabe saindo do parque até ~17h e cortando os extras (Lory Land, Habitat Hideaway, Ubanga-Banga, teatros, Walkabout Way, Congo River Rapids)." },
       ],

@@ -25,3 +25,21 @@ Trechos migrados da `note` antiga (e do item "Chegada e preparação") para `sum
 - Dia 12: a parada `lbv-factory-stores` apontava para um cartão que não existe; corrigido para `lake-buena-vista-factory-stores`.
 - Paradas com `stopId: ""` (por exemplo "Café da manhã em casa", "Universal CityWalk") não têm cartão de propósito. O validador as ignora.
 - Paradas que visitam o mesmo cartão duas vezes (dia 8, `loop-west`; dia 16, `outlet-international-premium` e `kia-center`) são aceitas. A unicidade vale para os cartões, não para os passos.
+
+
+## Melhorias dos dias 6 a 22
+
+Todos têm `// REVISAR` nos arquivos. Detalhes em `melhorias-relatorio.md`.
+
+| Dia | Campo | Motivo |
+| --- | --- | --- |
+| 6 | horários dos passos | Chegada 15:40 e demais +20 min; a chegada antiga era 15:15. |
+| 8 | café, trajeto e parada do Olive Garden, noite | Horários derivados; Olive Garden com endereço e horário a definir. |
+| 10 | Islands, McDonald's, Hogwarts, CityWalk | Parque fecha 19h, mas os passos de Hogwarts e CityWalk seguem depois. |
+| 12 | horários após a doceria | 45 min antes; texto do Lake Eola cita 17h30. |
+| 13 | textos "Por volta das…" | Deslocados +1 h por causa da abertura às 10h. |
+| 14 | tiles | Acordar a definir; saída e chegada derivadas. |
+| 16 | trajeto até o IHOP | A definir; saída 07:30 mantém os 30 min antigos. |
+| 17 | guide "Chegada" | Ainda cita abertura às 09h00. |
+| 18 | variante "sem" | "Sair de casa ~12h00" derivado. |
+| 21 | Sair de Tampa, Chegar em casa | A definir. |

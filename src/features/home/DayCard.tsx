@@ -6,13 +6,15 @@ import { useSelectedTrack } from "../../hooks/useSelectedTrack";
 import { describeParkSchedule, getDayCardContent, getTrackCardContent, type DayCardContent, type DayCardStop } from "../../lib/dayCard";
 import { getDayCategories } from "../../lib/dayCategories";
 import { formatCardDate } from "../../lib/date";
+import { applySelectedVariant } from "../../lib/dayVariant";
 import type { DayCategory, DayData, ParkVisit, SplitTrack } from "../../types";
 
 const focusRing = "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-citrus";
 const cardClasses = "rounded-[22px] border border-line bg-cardbg p-5 text-ink shadow-card";
 
 /** Cartão do dia na Home: o cartão inteiro leva ao roteiro do dia (no dia dividido, só a parte abaixo das abas). */
-export function DayCard({ day }: { day: DayData }) {
+export function DayCard({ day: scheduledDay }: { day: DayData }) {
+  const day = applySelectedVariant(scheduledDay);
   return day.itinerary?.kind === "split" ? (
     <SplitDayCard day={day} tracks={day.itinerary.tracks} />
   ) : (

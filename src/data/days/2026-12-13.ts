@@ -6,8 +6,8 @@ export default {
   day: 13,
   park: {
     name: "Universal Studios Florida",
-    departure: "7h15",
-    opening: "9h",
+    departure: "8h15",
+    opening: "10h", // REVISAR: abre às 10h (antes 9h); confirmar no app
   },
   weekday: "Dom",
   liturgicalWeekday: "3º Domingo do Advento (Gaudete)",
@@ -25,13 +25,13 @@ export default {
     // REVISAR (notes): Item "Chegada e preparação" dividido entre tiles e notes; conferir agrupamento.
     summary: "Visita única ao Universal Studios (não haverá segunda visita). Domingo costuma ser mais cheio.",
     journey: {
-      tiles: [{ label: "Acordar", value: "6h15" }, { label: "Sair de casa", value: "7h15" }, { label: "Estacionamento e portão", value: "8h15" }, { label: "Beco Diagonal", value: "9h" }],
+      tiles: [{ label: "Acordar", value: "7h30" }, { label: "Sair de casa", value: "8h15" }, { label: "Estacionamento e portão", value: "9h15" }, { label: "Beco Diagonal", value: "10h" }],
       notes: [
         { icon: "car", text: "~15 min até os portões." },
-        { icon: "info", text: "Às 9h00, seguir a pé para o Beco Diagonal via New York e San Francisco (~12 min)." },
+        { icon: "info", text: "Às 10h00, seguir a pé para o Beco Diagonal via New York e San Francisco (~12 min)." },
         { icon: "info", text: "6000 Universal Blvd, Orlando, FL 32819. Estacionamento a partir de US$35 por dia (2026). São duas garagens enormes: anote o setor e o andar." },
         { icon: "info", text: "Da garagem ao portão pelo CityWalk são cerca de 15–20 min a pé." },
-        { icon: "info", text: "Horários sugeridos assumem abertura às 09h; se o app mostrar outro horário, desloque tudo pela mesma diferença." },
+        { icon: "info", text: "Horários sugeridos assumem abertura às 10h; se o app mostrar outro horário, desloque tudo pela mesma diferença." },
         { icon: "info", text: "Prioridade de corte se apertar: Horror Make-Up, E.T., Villain-Con, Race Through New York. Nunca cortar: Gringotts (2x), Mummy, Transformers, Ollivanders e Bourne." },
         { icon: "info", text: "Ingresso já cadastrado no app Universal Orlando Resort antes de sair." },
         { icon: "info", text: "Levar só bolsa pequena (armários), carregador portátil e protetor solar." },
@@ -52,7 +52,7 @@ export default {
             icon: "lightbulb",
             title: "Horário sugerido",
             paragraphs: [
-              "Por volta das 12h00. Meio do dia: brinquedos de fila menor, shows com ar-condicionado e almoço fora do pico.",
+              "Por volta das 13h00. Meio do dia: brinquedos de fila menor, shows com ar-condicionado e almoço fora do pico.",
             ],
           },
           {
@@ -68,7 +68,7 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "Fazer antes das 13h. Tem single rider. Depois, Race Through New York (Jimmy Fallon, ~18 min, com ar-condicionado) para aliviar o calor.",
+              "Fazer antes das 14h. Tem single rider. Depois, Race Through New York (Jimmy Fallon, ~18 min, com ar-condicionado) para aliviar o calor.",
             ],
           },
         ],
@@ -82,7 +82,7 @@ export default {
             color: "gold",
             icon: "lightbulb",
             title: "Horário sugerido",
-            paragraphs: ["Por volta das 10h00. Depois, ~10 min a pé até New York."],
+            paragraphs: ["Por volta das 11h00. Depois, ~10 min a pé até New York."],
           },
           {
             color: "citrus",
@@ -103,7 +103,7 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "Não compre varinha agora: a loja lota. A escolha da varinha é melhor à noite (Ollivanders, 18:00). Decoração de Natal do Universal Holidays no Beco Diagonal.",
+              "Não compre varinha agora: a loja lota. A escolha da varinha é melhor à noite (Ollivanders, 19:00). Decoração de Natal do Universal Holidays no Beco Diagonal.",
             ],
           },
         ],
@@ -118,7 +118,7 @@ export default {
             icon: "lightbulb",
             title: "Horário sugerido",
             paragraphs: [
-              "Por volta das 18h00. Noite de Harry Potter: Ollivanders mais vazio, jantar temático e segunda volta no Gringotts.",
+              "Por volta das 19h00. Noite de Harry Potter: Ollivanders mais vazio, jantar temático e segunda volta no Gringotts.",
             ],
           },
           {
@@ -154,7 +154,7 @@ export default {
             color: "gold",
             icon: "lightbulb",
             title: "Horário sugerido",
-            paragraphs: ["Por volta das 9h15. Beco Diagonal vazio e Gringotts com fila baixa antes das 11h."],
+            paragraphs: ["Por volta das 10h15. Beco Diagonal vazio e Gringotts com fila baixa antes das 12h."],
           },
           {
             color: "navy",
@@ -200,7 +200,7 @@ export default {
             color: "gold",
             icon: "lightbulb",
             title: "Horário sugerido",
-            paragraphs: ["Por volta das 17h15. Depois, ~10 min a pé de volta ao Beco Diagonal."],
+            paragraphs: ["Por volta das 18h15. Depois, ~10 min a pé de volta ao Beco Diagonal."],
           },
           {
             color: "navy",
@@ -233,7 +233,7 @@ export default {
             color: "gold",
             icon: "lightbulb",
             title: "Horário sugerido",
-            paragraphs: ["Por volta das 16h40."],
+            paragraphs: ["Por volta das 17h40."],
           },
           {
             color: "citrus",
@@ -262,7 +262,7 @@ export default {
             color: "gold",
             icon: "lightbulb",
             title: "Horário sugerido",
-            paragraphs: ["Por volta das 14h30."],
+            paragraphs: ["Por volta das 15h30."],
           },
           {
             color: "gold",
@@ -294,7 +294,7 @@ export default {
             color: "gold",
             icon: "lightbulb",
             title: "Horário sugerido",
-            paragraphs: ["Por volta das 15h50. Opcional, fila de ~28 min."],
+            paragraphs: ["Por volta das 16h50. Opcional, fila de ~28 min."],
           },
         ],
       },
@@ -308,7 +308,7 @@ export default {
             color: "gold",
             icon: "lightbulb",
             title: "Horário sugerido",
-            paragraphs: ["Por volta das 15h15."],
+            paragraphs: ["Por volta das 16h15."],
           },
           {
             color: "navy",
@@ -344,7 +344,7 @@ export default {
             color: "gold",
             icon: "lightbulb",
             title: "Horário sugerido",
-            paragraphs: ["Por volta das 10h45."],
+            paragraphs: ["Por volta das 11h45."],
           },
           {
             color: "navy",
@@ -367,7 +367,7 @@ export default {
             list: [
               "Fila fica em torno de 44 min o dia todo: não adianta esperar.",
               "Armário obrigatório; tem single rider.",
-              "Se bater fome antes das 12h, lanche rápido no Louie's Italian e deixe o almoço para as 14h30.",
+              "Se bater fome antes das 13h, lanche rápido no Louie's Italian e deixe o almoço para as 15h30.",
               "Se passar show de rua (Blues Brothers, Beat Builders, Vamos! Báilalo), pare 10 min: não tem fila.",
             ],
           },
@@ -383,7 +383,7 @@ export default {
             color: "gold",
             icon: "lightbulb",
             title: "Horário sugerido",
-            paragraphs: ["Por volta das 12h40. Depois, ~10 min a pé até a Minion Land."],
+            paragraphs: ["Por volta das 13h40. Depois, ~10 min a pé até a Minion Land."],
           },
         ],
       },
@@ -396,7 +396,7 @@ export default {
             color: "gold",
             icon: "lightbulb",
             title: "Horário sugerido",
-            paragraphs: ["Por volta das 13h15."],
+            paragraphs: ["Por volta das 14h15."],
           },
           {
             color: "citrus",
@@ -425,7 +425,7 @@ export default {
             color: "gold",
             icon: "lightbulb",
             title: "Horário sugerido",
-            paragraphs: ["Por volta das 18h50."],
+            paragraphs: ["Por volta das 19h50."],
           },
           {
             color: "citrus",
@@ -454,7 +454,7 @@ export default {
             color: "gold",
             icon: "lightbulb",
             title: "Horário sugerido",
-            paragraphs: ["Por volta das 19h30. Depois das 19h a fila costuma cair para ~35 min."],
+            paragraphs: ["Por volta das 20h30. Depois das 19h a fila costuma cair para ~35 min."],
           },
         ],
       },
@@ -467,7 +467,7 @@ export default {
             color: "gold",
             icon: "lightbulb",
             title: "Horário sugerido",
-            paragraphs: ["Por volta das 20h00."],
+            paragraphs: ["Por volta das 21h00."],
           },
           {
             color: "citrus",
@@ -482,8 +482,27 @@ export default {
             icon: "alert",
             title: "Atenção",
             paragraphs: [
-              "O horário exato só aparece no app. Chegar 30–40 min antes para ter lugar. Sair do parque por volta das 21h30 para evitar a multidão final.",
+              "O horário exato só aparece no app. Chegar 30–40 min antes para ter lugar. Sair do parque por volta das 22h30 para evitar a multidão final.",
             ],
+          },
+        ],
+      },
+      {
+        id: "fogos",
+        name: "Show de fogos",
+        icon: "sparkle",
+        sections: [
+          {
+            color: "gold",
+            icon: "lightbulb",
+            title: "Horário sugerido",
+            paragraphs: ["Noite, no fim do dia."],
+          },
+          {
+            color: "citrus",
+            icon: "sparkle",
+            title: "Observação",
+            paragraphs: ["Verificar no app se há show neste dia."],
           },
         ],
       },

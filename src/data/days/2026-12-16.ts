@@ -20,13 +20,18 @@ itinerary: {
       {
         key: "international-premium-outlets",
         category: "compras",
-        title: "IHOP e International Premium Outlets",
+        title: "Orlando International Premium Outlets",
+        tabLabel: "Dia",
         mode: "schedule",
         summary: "Café da manhã no IHOP e depois compras até o fim da tarde.",
         group: "Grupo todo",
         journey: {
-          tiles: [],
+          tiles: [
+            { label: "Acordar", value: "7h00" },
+            { label: "IHOP", value: "~8h00" },
+          ],
           notes: [
+            { icon: "car", text: "De carro: tempo da casa até o IHOP (6005 International Dr) a definir." },
           ],
           alerts: [],
         },
@@ -34,8 +39,8 @@ itinerary: {
           {
             title: "Manhã",
             steps: [
-              { kind: "transit", time: "08:00", destinationName: "IHOP (International Dr)" },
-              { kind: "stop", time: "08:30", stopId: "ihop-6005-international-dr", name: "Café da manhã no IHOP", icon: "burger" },
+              { kind: "transit", time: "07:30", destinationName: "IHOP (International Dr)" }, // REVISAR: tempo de deslocamento não informado; mantidos os 30 min até a chegada
+              { kind: "stop", time: "08:00", stopId: "ihop-6005-international-dr", name: "Café da manhã no IHOP", icon: "burger" },
               { kind: "transit", time: "09:45", destinationName: "Orlando International Premium Outlets" },
               { kind: "stop", time: "10:00", stopId: "outlet-international-premium", name: "Outlet: compras (bloco 1)", icon: "bag" },
             ],
@@ -55,7 +60,7 @@ itinerary: {
             link: mapSearchUrl("IHOP", "6005 International Dr, Orlando, FL 32819"),
             name: "IHOP",
             icon: "burger",
-            time: "08:30",
+            time: "08:00",
             sections: [
               {
                 color: "navy",
@@ -146,35 +151,32 @@ itinerary: {
         ],
       },
       {
-        key: "downtown-orlando-noite",
+        key: "noite-jogo",
         category: "turismo",
-        title: "Noite no centro de Orlando",
+        title: "Orlando Magic no Kia Center",
+        tabLabel: "Noite · Jogo",
         mode: "schedule",
-        summary: "Noite dividida: os meninos vão ao jogo do Magic e o outro grupo vai à decoração de Natal do Dr. Phillips Center.",
+        summary: "Jogo do Orlando Magic x Cleveland Cavaliers no Kia Center (400 W Church St), às 19h (horário de Orlando).",
+        group: "Os meninos",
         journey: {
-          tiles: [],
+          tiles: [
+            { label: "Chegada", value: "17h00" },
+            { label: "Início do jogo", value: "19h00" },
+            { label: "Volta", value: "22h00" },
+          ],
           notes: [
-            { icon: "info", text: "Os dois locais ficam a poucos quarteirões um do outro." },
+            { icon: "info", text: "Os dois locais da noite (Kia Center e Dr. Phillips Center) ficam a poucos quarteirões um do outro." },
           ],
           alerts: [],
         },
         periods: [
           {
-            title: "Noite: Jogo do Magic",
-            note: "Orlando Magic x Cleveland Cavaliers, às 19h (horário de Orlando).",
+            title: "Noite",
             steps: [
               { kind: "stop", time: "17:00", stopId: "kia-center", name: "Chegada e estacionamento (GEICO Garage)", icon: "parking" },
               { kind: "stop", time: "17:30", stopId: "", name: "Jantar antes do jogo", icon: "burger" },
               { kind: "stop", time: "18:30", stopId: "kia-center", name: "Entrada na arena", icon: "target" },
               { kind: "stop", time: "19:00", stopId: "kia-center", name: "Início do jogo: Magic x Cavaliers", icon: "target" },
-              { kind: "transit", time: "22:00", destinationName: "Storey Lake Resort (volta)" },
-            ],
-          },
-          {
-            title: "Noite: Decoração de Natal",
-            note: "Frontyard Holiday Festival no Dr. Phillips Center, gratuito.",
-            steps: [
-              { kind: "stop", time: "17:30", stopId: "dr-phillips-center", name: "Frontyard Holiday Festival", icon: "tree" },
               { kind: "transit", time: "22:00", destinationName: "Storey Lake Resort (volta)" },
             ],
           },
@@ -225,6 +227,36 @@ itinerary: {
               },
             ],
           },
+        ],
+      },
+      {
+        key: "noite-natal",
+        category: "turismo",
+        title: "Decoração de Natal no Dr. Phillips Center",
+        tabLabel: "Noite · Natal",
+        mode: "schedule",
+        summary: "Decoração de Natal (Frontyard Holiday Festival, gratuito) no Dr. Phillips Center (445 S Magnolia Ave).",
+        group: "Outro grupo",
+        journey: {
+          tiles: [
+            { label: "Chegada", value: "17h30" },
+            { label: "Volta", value: "22h00" },
+          ],
+          notes: [
+            { icon: "info", text: "Os dois locais da noite (Kia Center e Dr. Phillips Center) ficam a poucos quarteirões um do outro." },
+          ],
+          alerts: [],
+        },
+        periods: [
+          {
+            title: "Noite",
+            steps: [
+              { kind: "stop", time: "17:30", stopId: "dr-phillips-center", name: "Frontyard Holiday Festival", icon: "tree" },
+              { kind: "transit", time: "22:00", destinationName: "Storey Lake Resort (volta)" },
+            ],
+          },
+        ],
+        cards: [
           {
             id: "dr-phillips-center",
             name: "Dr. Phillips Center: Frontyard Holiday Festival",

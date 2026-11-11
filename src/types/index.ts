@@ -100,11 +100,23 @@ export interface JourneyNote {
   text: string;
 }
 
+export interface JourneyGuideItem {
+  label: string;
+  text: string;
+}
+
+/** Aba "Regras do dia" do cartão "Horários e trajeto" (chegada, estacionamento, filas...). */
+export interface JourneyGuide {
+  title: string;
+  items: JourneyGuideItem[];
+}
+
 /** Conteúdo do cartão "Horários e trajeto". */
 export interface Journey {
   tiles: JourneyTile[];
   notes: JourneyNote[];
   alerts: string[];
+  guide?: JourneyGuide;
 }
 
 /**
@@ -142,6 +154,8 @@ interface SplitTrackBase extends TrackExtras {
   /** Horários da trilha quando ela é uma visita a parque (aparece no cartão da Home). */
   park?: ParkVisit;
   title: string;
+  /** Rótulo curto da aba (e do cartão da Home), quando o título completo não cabe. */
+  tabLabel?: string;
 }
 
 export type SplitTrack =
@@ -183,6 +197,20 @@ export interface ParkVisit {
   closing?: string;
 }
 
+/** Uma versão completa do roteiro do dia (ex.: com ou sem uma parada opcional). */
+export interface ItineraryVariant {
+  key: string;
+  label: string;
+  itinerary: DayItinerary;
+  /** Campos do dia que mudam nesta versão (título, categoria, parque...). */
+  overrides?: Partial<DayData>;
+}
+
+export interface DayVariants {
+  defaultKey: string;
+  options: ItineraryVariant[];
+}
+
 export interface DayData {
   dateISO: string;
   day: number;
@@ -196,4 +224,6 @@ export interface DayData {
   split?: [DayCategory, DayCategory];
   reading?: AdventReading;
   itinerary?: DayItinerary;
+  /** Dia com versões alternativas do roteiro; `itinerary` e `overrides` da versão padrão valem quando nada foi escolhido. */
+  variants?: DayVariants;
 }

@@ -1,6 +1,6 @@
 const focusRing = "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-citrus";
 
-interface TrackTabsProps<Track extends { key: string; title: string }> {
+interface TrackTabsProps<Track extends { key: string; title: string; tabLabel?: string }> {
   tracks: Track[];
   selected: Track;
   onSelect: (track: Track) => void;
@@ -8,7 +8,7 @@ interface TrackTabsProps<Track extends { key: string; title: string }> {
 }
 
 /** Controle segmentado que alterna entre as trilhas de um dia dividido. */
-export function TrackTabs<Track extends { key: string; title: string }>({
+export function TrackTabs<Track extends { key: string; title: string; tabLabel?: string }>({
   tracks,
   selected,
   onSelect,
@@ -28,7 +28,7 @@ export function TrackTabs<Track extends { key: string; title: string }>({
             track === selected ? "bg-ink text-paper" : "text-ink"
           }`}
         >
-          <span className="line-clamp-3">{track.title}</span>
+          <span className="line-clamp-3">{track.tabLabel ?? track.title}</span>
         </button>
       ))}
     </div>

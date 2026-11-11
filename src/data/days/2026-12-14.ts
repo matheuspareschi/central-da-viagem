@@ -19,7 +19,12 @@ export default {
     summary: "Almoço no Harry's Seafood Bar & Grille (bayfront); jantar rápido no Chick-fil-A já na saída da cidade.",
     group: "Grupo completo, exceto Rafael Narcizo (chega dia 20)",
     journey: {
-      tiles: [],
+      tiles: [
+        { label: "Acordar", value: "A definir" },
+        { label: "Sair de casa", value: "7h30" }, // REVISAR: horário do primeiro trajeto
+        { label: "Sair de Saint Augustine", value: "19h10" }, // REVISAR: horário do trajeto de volta
+        { label: "Chegar em casa", value: "~20h55" }, // REVISAR: 19h10 + ~1h45
+      ],
       notes: [
         { icon: "car", text: "Deslocamento: ~1h45 cada trecho, ~3h30 de carro no total." },
       ],

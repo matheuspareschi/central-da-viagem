@@ -7,6 +7,7 @@ import { categoryStyles } from "../../data/presentation/categoryStyles";
 import { useNow } from "../../hooks/useNow";
 import { getDayCategories } from "../../lib/dayCategories";
 import { formatWeekdayAbbreviation, toISODate } from "../../lib/date";
+import { applySelectedVariant } from "../../lib/dayVariant";
 import type { DayCategory, DayData } from "../../types";
 
 const calendarBackTarget: BackTarget = { path: "/calendario", label: "Voltar para o Calendário" };
@@ -53,7 +54,8 @@ function scrollToCenter(element: HTMLElement | null) {
   element?.scrollIntoView({ block: "center" });
 }
 
-function DayTile({ day, isToday }: { day: DayData; isToday: boolean }) {
+function DayTile({ day: scheduledDay, isToday }: { day: DayData; isToday: boolean }) {
+  const day = applySelectedVariant(scheduledDay);
   return (
     <Link
       ref={isToday ? scrollToCenter : undefined}
@@ -71,8 +73,8 @@ function DayTile({ day, isToday }: { day: DayData; isToday: boolean }) {
         {isToday && <TodayBadge />}
         <DayTileIcon categories={getDayCategories(day)} />
       </div>
-      <p className="text-sm font-semibold leading-[1.3]">{day.calendarTitle}</p>
-      {day.split && <p className="text-xs text-ink-soft">2 roteiros</p>}
+      <p className="text-sm font-semibold leading-[1.3] [overflow-wrap:anywhere]">{day.calendarTitle}</p>
+      {day.itinerary?.kind === "split" && <p className="text-xs text-ink-soft">{day.itinerary.tracks.length} roteiros</p>}
     </Link>
   );
 }

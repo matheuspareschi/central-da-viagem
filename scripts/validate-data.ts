@@ -3,6 +3,7 @@ import { pathToFileURL } from "node:url";
 import { resolve } from "node:path";
 import { parkCatalogs } from "../src/data/parks/index.ts";
 import { shopRegions } from "../src/data/shopping/index.ts";
+import { applyVariant } from "../src/lib/dayVariant.ts";
 import { listDayTracks, type DayTrack } from "../src/lib/dayTracks.ts";
 import { toMinutes } from "../src/lib/schedule.ts";
 import type { DayData, JourneyTile, ParkAttraction, StopStep, TransitStep } from "../src/types";
@@ -159,6 +160,76 @@ function checkParkTimes(where: string, { category, extras }: DayTrack): string[]
   return errors;
 }
 
+/** Avisos não derrubam o build: apontam dados fora do padrão que ainda não foram pedidos para corrigir. */
+const warnings: string[] = [];
+
+const STEP_TIME_FORMAT = /^\d{2}:\d{2}$/;
+
+/** Horários dos passos no formato do app (HH:MM) e em ordem crescente dentro de cada período. */
+function checkStepTimes(where: string, { content }: DayTrack): string[] {
+  if (content.mode !== "schedule") return [];
+  return content.periods.flatMap((period) => {
+    const invalid = period.steps.filter((step) => !STEP_TIME_FORMAT.test(step.time));
+    if (invalid.length > 0) {
+      invalid.forEach((step) => warnings.push(`${where}, período "${period.title}": horário "${step.time}" fora do formato HH:MM`));
+      return [];
+    }
+    const minutes = period.steps.map((step) => toMinutes(step.time));
+    const isOutOfOrder = minutes.some((value, index) => index > 0 && value < minutes[index - 1]);
+    return isOutOfOrder ? [`${where}, período "${period.title}": horários fora de ordem crescente`] : [];
+  });
+}
+
+const DOES_NOT_COUNT_AS_STORE_NAME = /\s*\([^)]*\)\s*$/;
+
+/** Um passo solto com o nome de uma loja de uma região visitada no dia duplica a loja (ex.: "TJ Maxx" no Loop West). */
+function checkDuplicatedStoreStops(where: string, { content }: DayTrack): string[] {
+  if (content.mode !== "schedule") return [];
+  const regions = content.cards.flatMap((card) => (card.shopRegionId ? [shopRegions[card.shopRegionId]] : [])).filter(Boolean);
+  const storeNames = new Set(regions.flatMap((region) => region.stores.map((store) => store.name.toLowerCase())));
+  content.periods
+    .flatMap((period) => period.steps)
+    .filter((step): step is StopStep => step.kind === "stop")
+    .filter((step) => storeNames.has(step.name.replace(DOES_NOT_COUNT_AS_STORE_NAME, "").toLowerCase()))
+    .forEach((step) => warnings.push(`${where}: passo "${step.name}" duplica uma loja que já está na lista de lojas de uma parada`));
+  return [];
+}
+
+/** Ids de cartões e de itens de checklist não se repetem em nenhuma trilha do dia. */
+function checkDayIds(day: DayData): string[] {
+  const ids = listDayTracks(day).flatMap(({ content }) =>
+    content.mode === "checklist" ? content.attractions.map((item) => item.id) : content.cards.map((card) => card.id),
+  );
+  return checkUniqueIds(`dia ${day.day} (todas as trilhas)`, ids);
+}
+
+function checkGuide(where: string, { extras }: DayTrack): string[] {
+  const guide = extras.journey.guide;
+  if (!guide) return [];
+  const errors: string[] = [];
+  if (!guide.title.trim()) errors.push(`${where}: journey.guide sem title`);
+  if (guide.items.length === 0) errors.push(`${where}: journey.guide sem itens`);
+  guide.items.forEach((item, index) => {
+    if (!item.label.trim() || !item.text.trim()) errors.push(`${where}: journey.guide item ${index + 1} com label ou text vazio`);
+  });
+  return errors;
+}
+
+function checkVariants(day: DayData): string[] {
+  const variants = day.variants;
+  if (!variants) return [];
+  const scope = `dia ${day.day} (variantes)`;
+  const keys = variants.options.map((option) => option.key);
+  return [
+    ...(keys.includes(variants.defaultKey) ? [] : [`${scope}: defaultKey "${variants.defaultKey}" não existe nas opções`]),
+    ...(keys.length >= 2 ? [] : [`${scope}: precisa de pelo menos duas variantes`]),
+    ...checkUniqueIds(scope, keys),
+    ...variants.options
+      .filter((option) => !option.label.trim() || listDayTracks(applyVariant(day, option.key)).length === 0)
+      .map((option) => `${scope}: variante "${option.key}" incompleta (sem label ou sem trilhas)`),
+  ];
+}
+
 function checkCatalogs(): string[] {
   return Object.entries(parkCatalogs).flatMap(([parkId, { areas, attractions }]) => {
     const scope = `catálogo "${parkId}"`;
@@ -177,21 +248,41 @@ function checkCatalogs(): string[] {
 }
 
 function checkDay(day: DayData): string[] {
-  return listDayTracks(day).flatMap((track) => {
+  const trackErrors = listDayTracks(day).flatMap((track) => {
     const where = describeTrack(day, track);
-    return [...checkRequiredFields(where, track), ...checkChecklist(where, track), ...checkSchedule(where, track), ...checkDerivedTiles(where, track), ...checkParkTimes(where, track)];
+    return [
+      ...checkRequiredFields(where, track),
+      ...checkChecklist(where, track),
+      ...checkSchedule(where, track),
+      ...checkStepTimes(where, track),
+      ...checkDuplicatedStoreStops(where, track),
+      ...checkDerivedTiles(where, track),
+      ...checkParkTimes(where, track),
+      ...checkGuide(where, track),
+    ];
   });
+  return [...trackErrors, ...checkDayIds(day)];
+}
+
+/** Cada variante é validada como um dia inteiro, com a mensagem dizendo de qual versão veio o erro. */
+function checkDayAndVariants(day: DayData): string[] {
+  if (!day.variants) return checkDay(day);
+  const variantErrors = day.variants.options.flatMap((option) =>
+    checkDay(applyVariant(day, option.key)).map((error) => `[variante ${option.key}] ${error}`),
+  );
+  return [...checkVariants(day), ...variantErrors];
 }
 
 const days = await loadDays();
 const errors = [
   ...checkUniqueIds("dias", days.map((day) => day.dateISO)),
   ...checkCatalogs(),
-  ...days.flatMap(checkDay),
+  ...days.flatMap(checkDayAndVariants),
 ];
 
 if (errors.length > 0) {
   console.error(`validar:dados falhou com ${errors.length} erro(s):\n${errors.map((error) => `  - ${error}`).join("\n")}`);
   process.exit(1);
 }
+if (warnings.length > 0) console.warn(`avisos (${warnings.length}):\n${warnings.map((warning) => `  - ${warning}`).join("\n")}`);
 console.log(`validar:dados ok (${days.length} dias, ${Object.keys(parkCatalogs).length} catálogo(s)).`);

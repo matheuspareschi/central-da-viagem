@@ -7,7 +7,7 @@ export default {
   park: {
     name: "Epic Universe",
     departure: "7h15",
-    opening: "9h",
+    opening: "10h",
     closing: "21h",
   },
   weekday: "Qui",
@@ -24,69 +24,40 @@ export default {
     parkId: "epic-universe",
     summary: "Visita intensa, na ordem do dia. Sem Express Pass, com Single Rider nas filas acima de 75 min.",
     journey: {
-      tiles: [{ label: "Parque aberto", value: "9h–21h" }],
+      tiles: [
+        { label: "Acordar", value: "6h15" },
+        { label: "Sair de casa", value: "7h15" },
+        { label: "Entrada antecipada", value: "9h" },
+        { label: "Parque aberto", value: "10h–21h" },
+      ],
       notes: [
         { icon: "info", text: "Regra de ouro: não começar pelo Harry Potter, começar pela Isle of Berk." },
       ],
-      alerts: ["Confirmar no app: horário de 17/12 não publicado; assumido das 09h às 21h. Deslocar tudo pela diferença."],
+      alerts: ["Confirmar no app: horário de 17/12 não publicado; assumido das 10h às 21h. Deslocar tudo pela diferença."],
+      // REVISAR: texto movido sem reescrever; "09h00 abertura" em Chegada ainda cita a abertura antiga (agora 10h, entrada antecipada 9h).
+      guide: {
+        title: "Regras do dia",
+        items: [
+          {
+            label: "Chegada",
+            text: "06h15 acordar\n07h15 sair de Storey Lake (~30 min de carro; rota I-4 oeste, saída Kirkman Rd/International Dr)\n~07h45 estacionar\n~08h15 no portão, com o ingresso já aberto no app\n09h00 abertura",
+          },
+          {
+            label: "Estacionamento",
+            text: "1001 Epic Blvd, Orlando, FL 32819. Entrada e estacionamento próprios, a ~3,5 km do CityWalk (não dá para ir a pé até lá).\nEstacionamento: US$ 32 a 35 por dia. Caminhada do carro ao portão: ~5 a 7 min. Tirar foto da placa e da fileira.",
+          },
+          {
+            label: "Filas",
+            text: "• App Universal Orlando Resort: criar alerta de fila (≤30 min) para Mario Kart, Battle at the Ministry, Stardust e Monsters Unchained.\n• Single Rider: Mario Kart, Stardust, Battle at the Ministry e Monsters Unchained. O tempo não aparece no app: perguntar ao funcionário. O grupo se divide e a fila fecha quando lota.\n• Armários grátis nas atrações (reconhecimento facial); na Stardust é obrigatório.\n• O parque ainda é instável: não deixar brinquedo importante para o fim do dia.",
+          },
+          {
+            label: "Atenção",
+            text: "• Confirmar no voucher que o ingresso de 14 dias vale no Epic nos dois dias (17 e 22).\n• Dia 16 termina tarde para parte do grupo (jogo do Magic): se voltarem depois das 23h, empurrar o despertar em 30 min.\n• Mais da metade das atrações fecha com chuva forte ou raio.",
+          },
+        ],
+      },
     },
     attractions: [
-      {
-        id: "chegada-epic",
-        name: "Chegada e estacionamento",
-        icon: "parking",
-        sections: [
-          {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço e estacionamento",
-            paragraphs: [
-              "1001 Epic Blvd, Orlando, FL 32819. Entrada e estacionamento próprios, a ~3,5 km do CityWalk (não dá para ir a pé até lá).",
-              "Estacionamento: US$ 32 a 35 por dia. Caminhada do carro ao portão: ~5 a 7 min. Tirar foto da placa e da fileira.",
-            ],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Horários",
-            list: [
-              "06h15 acordar",
-              "07h15 sair de Storey Lake (~30 min de carro; rota I-4 oeste, saída Kirkman Rd/International Dr)",
-              "~07h45 estacionar",
-              "~08h15 no portão, com o ingresso já aberto no app",
-              "09h00 abertura",
-            ],
-          },
-          {
-            color: "attn",
-            icon: "alert",
-            title: "Atenção",
-            list: [
-              "Confirmar no voucher que o ingresso de 14 dias vale no Epic nos dois dias (17 e 22).",
-              "Dia 16 termina tarde para parte do grupo (jogo do Magic): se voltarem depois das 23h, empurrar o despertar em 30 min.",
-              "Mais da metade das atrações fecha com chuva forte ou raio.",
-            ],
-          },
-        ],
-      },
-      {
-        id: "regras-de-fila",
-        name: "Regras de fila do dia",
-        icon: "lightbulb",
-        sections: [
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Dica",
-            list: [
-              "App Universal Orlando Resort: criar alerta de fila (≤30 min) para Mario Kart, Battle at the Ministry, Stardust e Monsters Unchained.",
-              "Single Rider: Mario Kart, Stardust, Battle at the Ministry e Monsters Unchained. O tempo não aparece no app: perguntar ao funcionário. O grupo se divide e a fila fecha quando lota.",
-              "Armários grátis nas atrações (reconhecimento facial); na Stardust é obrigatório.",
-              "O parque ainda é instável: não deixar brinquedo importante para o fim do dia.",
-            ],
-          },
-        ],
-      },
       {
         id: "mario-kart",
         attractionId: "mario-kart-bowsers-challenge",
