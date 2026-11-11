@@ -1,3 +1,4 @@
+import { mapSearchUrl } from "../../lib/maps";
 import type { DayData } from "../../types";
 
 export default {
@@ -297,6 +298,7 @@ export default {
       },
       {
         id: "harrys",
+        link: mapSearchUrl("Harry's Seafood Bar & Grille", "46 Avenida Menéndez, St. Augustine, FL"),
         name: "Harry's Seafood Bar & Grille (almoço)",
         icon: "burger",
         time: "12:30",
@@ -585,6 +587,7 @@ export default {
       },
       {
         id: "chick-fil-a",
+        link: mapSearchUrl("Chick-fil-A", "1752 US Hwy 1 S, St. Augustine, FL 32084"),
         name: "Chick-fil-A (jantar)",
         icon: "burger",
         time: "18:40",

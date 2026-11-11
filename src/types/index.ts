@@ -59,6 +59,12 @@ export interface StopCard {
   icon: IconName;
   time?: string;
   shopRegionId?: string;
+  /** Link "Abrir no mapa", montado com `mapSearchUrl` a partir do nome e do endereço dos dados. */
+  link?: string;
+  /** Site oficial, só quando os dados já informam. */
+  siteUrl?: string;
+  /** Botão extra na folha de detalhe. */
+  action?: "groceryList";
   sections: DetailSection[];
 }
 

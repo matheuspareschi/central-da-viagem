@@ -3,6 +3,7 @@ import { Plus } from "lucide-react";
 import { BottomSheet } from "../../../components";
 import type { ParkCatalog } from "../../../data/parks";
 import { describeAttraction } from "../../../lib/parkChecklist";
+import type { ChecklistEntry } from "../../../lib/parkChecklist";
 import type { ParkAttraction } from "../../../types";
 
 const ALL_AREAS = "Todas";
@@ -13,13 +14,15 @@ const actionClasses =
 interface AddAttractionSheetProps {
   catalog: ParkCatalog;
   options: ParkAttraction[];
+  removedEntries: ChecklistEntry[];
+  onRestoreEntry: (entryId: string) => void;
   isIncluded: (attraction: ParkAttraction) => boolean;
   onInclude: (attraction: ParkAttraction) => void;
   onExclude: (attraction: ParkAttraction) => void;
   onClose: () => void;
 }
 
-export function AddAttractionSheet({ catalog, options, isIncluded, onInclude, onExclude, onClose }: AddAttractionSheetProps) {
+export function AddAttractionSheet({ catalog, options, removedEntries, onRestoreEntry, isIncluded, onInclude, onExclude, onClose }: AddAttractionSheetProps) {
   const [areaKey, setAreaKey] = useState(ALL_AREAS);
   const visibleOptions = options.filter((attraction) => areaKey === ALL_AREAS || attraction.area === areaKey);
   const notIncludedCount = options.filter((attraction) => !isIncluded(attraction)).length;
@@ -40,6 +43,22 @@ export function AddAttractionSheet({ catalog, options, isIncluded, onInclude, on
         selectedKey={areaKey}
         onSelect={setAreaKey}
       />
+      {removedEntries.length > 0 && (
+        <div className="mb-2">
+          <h4 className="text-xs font-bold uppercase tracking-wider text-ink-soft">Removidas do roteiro</h4>
+          <ul>
+            {removedEntries.map((entry) => (
+              <li key={entry.id} className="flex items-center gap-3 border-b border-dashed border-line py-3">
+                <p className="min-w-0 flex-1 text-[15px] font-semibold text-ink">{entry.name}</p>
+                <button type="button" onClick={() => onRestoreEntry(entry.id)} className={`${actionClasses} border-citrus text-citrus-text`}>
+                  <Plus className="h-4 w-4" aria-hidden="true" />
+                  Incluir
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
       <ul>
         {visibleOptions.map((attraction) => (
           <li key={attraction.id} className="flex items-center gap-3 border-b border-dashed border-line py-3 last:border-b-0">

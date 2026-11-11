@@ -1,7 +1,9 @@
 import { ExternalLink as ExternalLinkIcon } from "lucide-react";
 import type { ExtraInfoItem, ExtraInfoContent } from "../../data/global/extraInfo";
 import { ShoeSizeChart } from "./ShoeSizeChart";
+import { GroceryList } from "./GroceryList";
 import { TrashInstructions } from "./TrashInstructions";
+import { WeightConverter } from "./WeightConverter";
 
 export function ExtraInfoCard({ item }: { item: ExtraInfoItem }) {
   const Icon = item.icon;
@@ -36,5 +38,9 @@ function CardContent({ content }: { content: ExtraInfoContent }) {
       return <ShoeSizeChart />;
     case "trashInstructions":
       return <TrashInstructions />;
+    case "weightConverter":
+      return <WeightConverter />;
+    case "groceryList":
+      return <GroceryList />;
   }
 }

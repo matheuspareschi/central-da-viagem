@@ -85,7 +85,7 @@ function ParkSummary({ park }: { park: ParkVisit }) {
 
   return (
     <div className="flex min-w-0 flex-1 flex-col gap-1.5 self-center">
-      <span className="font-serif text-[38px] font-bold leading-none tracking-tight">{park.name}</span>
+      <span className="min-w-0 font-serif text-[38px] font-bold leading-none tracking-tight [overflow-wrap:anywhere]">{park.name}</span>
       {schedule && <span className="text-sm leading-[1.35] text-ink-soft">{schedule}</span>}
     </div>
   );
@@ -100,7 +100,7 @@ function StopList({ stops }: { stops: DayCardStop[] }) {
             {index + 1}
           </span>
           <span className="flex min-w-0 flex-col gap-px">
-            <span className="text-base font-semibold leading-tight">{stop.name}</span>
+            <span className="text-base font-semibold leading-tight [overflow-wrap:anywhere]">{stop.name}</span>
             {stop.note && <span className="text-[13px] leading-snug text-ink-soft">{stop.note}</span>}
           </span>
         </li>

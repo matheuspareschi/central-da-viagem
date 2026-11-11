@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ArrowDown, ArrowUp, ArrowUpDown, ChevronRight, Plus } from "lucide-react";
 import { IconBadge, TapCheckbox } from "../../../components";
 import type { ChecklistEntry } from "../../../lib/parkChecklist";
@@ -9,9 +9,13 @@ import { useParkChecklist } from "./useParkChecklist";
 
 interface ParkChecklistProps {
   storageId: string;
+  dateISO: string;
+  trackKey: string;
   items: ChecklistItem[];
   parkId?: string;
 }
+
+const UNDO_WINDOW_MS = 5000;
 
 const toolbarButtonClasses =
   "flex min-h-11 items-center gap-1.5 rounded-xl border-[1.5px] bg-transparent px-3.5 text-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-citrus";
@@ -20,8 +24,9 @@ const toolbarButtonClasses =
  * Checklist de atrações de um dia de parque: marcar o que foi feito, abrir detalhes,
  * reordenar e incluir atrações do catálogo do parque.
  */
-export function ParkChecklist({ storageId, items, parkId }: ParkChecklistProps) {
-  const checklist = useParkChecklist({ storageId, items, parkId });
+export function ParkChecklist({ storageId, dateISO, trackKey, items, parkId }: ParkChecklistProps) {
+  const checklist = useParkChecklist({ storageId, dateISO, trackKey, items, parkId });
+  const [justRemoved, setJustRemoved] = useState<{ id: string; name: string } | null>(null);
   const [isReordering, setIsReordering] = useState(false);
   const [detailsEntryId, setDetailsEntryId] = useState<string | null>(null);
   const [isAddSheetOpen, setIsAddSheetOpen] = useState(false);
@@ -29,6 +34,23 @@ export function ParkChecklist({ storageId, items, parkId }: ParkChecklistProps) 
   const { entries, doneIds } = checklist;
   const doneCount = entries.filter((entry) => doneIds.has(entry.id)).length;
   const detailsEntry = entries.find((entry) => entry.id === detailsEntryId);
+
+  useEffect(() => {
+    if (!justRemoved) return;
+    const timer = setTimeout(() => setJustRemoved(null), UNDO_WINDOW_MS);
+    return () => clearTimeout(timer);
+  }, [justRemoved]);
+
+  function removeEntry(entry: ChecklistEntry) {
+    checklist.removeFromItinerary(entry.id);
+    setDetailsEntryId(null);
+    setJustRemoved({ id: entry.id, name: entry.name });
+  }
+
+  function undoRemoval() {
+    if (justRemoved) checklist.restoreToItinerary(justRemoved.id);
+    setJustRemoved(null);
+  }
 
   return (
     <section aria-labelledby="checklist-title" className="rounded-[20px] border border-line bg-cardbg p-4">
@@ -84,6 +106,7 @@ export function ParkChecklist({ storageId, items, parkId }: ParkChecklistProps) 
           entry={detailsEntry}
           isDone={doneIds.has(detailsEntry.id)}
           onToggleDone={() => checklist.toggleDone(detailsEntry.id)}
+          onRemove={() => removeEntry(detailsEntry)}
           onClose={() => setDetailsEntryId(null)}
         />
       )}
@@ -91,11 +114,21 @@ export function ParkChecklist({ storageId, items, parkId }: ParkChecklistProps) 
         <AddAttractionSheet
           catalog={checklist.catalog}
           options={checklist.addableAttractions}
+          removedEntries={checklist.removedEntries}
+          onRestoreEntry={checklist.restoreToItinerary}
           isIncluded={checklist.isIncluded}
           onInclude={checklist.include}
           onExclude={checklist.exclude}
           onClose={() => setIsAddSheetOpen(false)}
         />
+      )}
+      {justRemoved && (
+        <div role="status" className="fixed inset-x-4 bottom-[calc(var(--spacing-bottom-nav)+env(safe-area-inset-bottom)+0.75rem)] z-40 mx-auto flex max-w-[448px] items-center justify-between gap-3 rounded-xl bg-ink px-4 py-2 text-sm text-paper shadow-sheet">
+          <span className="min-w-0 [overflow-wrap:anywhere]">{justRemoved.name} saiu do roteiro.</span>
+          <button type="button" onClick={undoRemoval} className="min-h-11 shrink-0 px-2 font-bold text-advent-gold focus-visible:outline-2 focus-visible:outline-citrus">
+            Desfazer
+          </button>
+        </div>
       )}
     </section>
   );

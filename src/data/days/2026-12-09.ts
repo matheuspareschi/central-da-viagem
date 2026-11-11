@@ -30,6 +30,7 @@ export default {
         { icon: "info", text: "Utilizar early entry (não hóspedes)." },
         { icon: "info", text: "Café da manhã leve em casa antes de sair; levar lanches próprios (queijo, frutas, snacks) para o meio da manhã." },
         { icon: "info", text: "No World Showcase, preferir quiosques baratos a restaurantes table-service." },
+        { icon: "info", text: "Fotos da Disney: compradas antes da viagem, no Brasil." },
       ],
       alerts: [],
     },

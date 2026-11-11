@@ -24,11 +24,11 @@ export function TrackTabs<Track extends { key: string; title: string }>({
           id={`tab-${track.key}`}
           aria-selected={track === selected}
           onClick={() => onSelect(track)}
-          className={`min-h-11 flex-1 rounded-[11px] px-2 text-sm font-semibold ${focusRing} ${
+          className={`min-h-11 min-w-0 flex-1 rounded-[11px] px-2 py-1 text-sm font-semibold leading-tight [overflow-wrap:anywhere] ${focusRing} ${
             track === selected ? "bg-ink text-paper" : "text-ink"
           }`}
         >
-          {track.title}
+          <span className="line-clamp-3">{track.title}</span>
         </button>
       ))}
     </div>

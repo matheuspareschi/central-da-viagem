@@ -1,3 +1,4 @@
+import { mapSearchUrl } from "../../lib/maps";
 import type { DayData } from "../../types";
 
 export default {
@@ -186,6 +187,7 @@ export default {
       },
       {
         id: "jantar-florida-mall",
+        link: mapSearchUrl("Jantar no Florida Mall", "8001 S Orange Blossom Trail, Orlando, FL 32809"),
         name: "Jantar no Florida Mall (praça de alimentação)",
         icon: "burger",
         time: "18:00",
@@ -258,6 +260,7 @@ export default {
       },
       {
         id: "walmart-chegada",
+        action: "groceryList",
         name: "Walmart Supercenter — Compras da Semana",
         icon: "bag",
         time: "20:00",

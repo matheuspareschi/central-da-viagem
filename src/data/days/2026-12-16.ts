@@ -1,3 +1,4 @@
+import { mapSearchUrl } from "../../lib/maps";
 import type { DayData } from "../../types";
 
 export default {
@@ -51,6 +52,7 @@ itinerary: {
         cards: [
           {
             id: "ihop-6005-international-dr",
+            link: mapSearchUrl("IHOP", "6005 International Dr, Orlando, FL 32819"),
             name: "IHOP",
             icon: "burger",
             time: "08:30",

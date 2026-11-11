@@ -31,6 +31,7 @@ export default {
           notes: [
             { icon: "car", text: "Ida até os portões ~20 min." },
             { icon: "info", text: "Deixar os lanches do parque separados no dia anterior. Mochilas com filtro solar, remédios etc." },
+            { icon: "info", text: "Fotos da Disney: compradas antes da viagem, no Brasil." },
           ],
           alerts: [],
         },

@@ -1,3 +1,4 @@
+import { mapSearchUrl } from "../../lib/maps";
 import type { DayData } from "../../types";
 
 export default {
@@ -38,8 +39,9 @@ export default {
             { icon: "car", text: "De carro: ~20–25 min até o estacionamento." },
             { icon: "info", text: "Chegada para entrar no early entry (para não hóspedes)." },
             { icon: "transit", text: "Até a entrada: tram, depois monorail ou balsa (~20–30 min a mais). Pegue o mapa em português (pt-br) ao chegar." },
+            { icon: "info", text: "Fotos da Disney: compradas antes da viagem, no Brasil." },
           ],
-          alerts: ["Confirmar no app: em dezembro pode haver festa de Natal com ingresso separado e fechamento antecipado. Veja se o dia 7 é uma dessas noites."],
+          alerts: [],
         },
         attractions: [
           {
@@ -226,6 +228,7 @@ export default {
           },
           {
             id: "black-bean-deli",
+            link: mapSearchUrl("Black Bean Deli", "Mills 50 District (Mills Ave & Colonial Dr / SR 50), Orlando, FL"),
             name: "Black Bean Deli (almoço)",
             icon: "burger",
             time: "11:55",

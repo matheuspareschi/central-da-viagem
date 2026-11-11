@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { Car, ChevronRight, House, Moon, Sun, Sunrise, type LucideIcon } from "lucide-react";
+import { Car, ChevronRight, House, MapPin, Moon, Sun, Sunrise, type LucideIcon } from "lucide-react";
 import { IconBadge } from "../../../components";
 import { shopRegions } from "../../../data/shopping";
 import { useCurrentAgenda } from "../../../hooks/useCurrentAgenda";
 import { formatPeriodRange, isHomeDestination, splitStopName } from "../../../lib/schedule";
 import { describeShopStop } from "../../../lib/stores";
 import type { DayPeriod, ScheduleDay, ShopRegion, StopCard, StopStep, TransitStep } from "../../../types";
+import { GroceryListSheet } from "./GroceryListSheet";
 import { StopSheet } from "./StopSheets";
 import { useStoreMarks } from "./useStoreMarks";
 
@@ -20,6 +21,7 @@ export function ScheduleView({ dateISO, periods, cards }: ScheduleViewProps) {
   const day: ScheduleDay = { dateISO, periods, cards };
   const { currentStepKey } = useCurrentAgenda(day);
   const [openStopId, setOpenStopId] = useState<string | null>(null);
+  const [isGroceryListOpen, setIsGroceryListOpen] = useState(false);
   const openCard = cards.find((card) => card.id === openStopId);
 
   return (
@@ -48,7 +50,17 @@ export function ScheduleView({ dateISO, periods, cards }: ScheduleViewProps) {
           </ul>
         </div>
       ))}
-      {openCard && <StopSheet card={openCard} onClose={() => setOpenStopId(null)} />}
+      {openCard && (
+        <StopSheet
+          card={openCard}
+          onClose={() => setOpenStopId(null)}
+          onOpenGroceryList={() => {
+            setOpenStopId(null);
+            setIsGroceryListOpen(true);
+          }}
+        />
+      )}
+      {isGroceryListOpen && <GroceryListSheet onClose={() => setIsGroceryListOpen(false)} />}
     </section>
   );
 }
@@ -101,25 +113,26 @@ interface StopRowProps {
 function StopRow({ step, card, isCurrent, onOpen }: StopRowProps) {
   const region = card?.shopRegionId ? shopRegions[card.shopRegionId] : undefined;
   return region ? (
-    <ShopStopRow step={step} region={region} isCurrent={isCurrent} onOpen={onOpen} />
+    <ShopStopRow step={step} region={region} mapLink={card?.link} isCurrent={isCurrent} onOpen={onOpen} />
   ) : (
-    <StopRowLayout step={step} isCurrent={isCurrent} onOpen={card ? onOpen : undefined} />
+    <StopRowLayout step={step} mapLink={card?.link} isCurrent={isCurrent} onOpen={card ? onOpen : undefined} />
   );
 }
 
-function ShopStopRow({ step, region, isCurrent, onOpen }: Omit<StopRowProps, "card"> & { region: ShopRegion }) {
+function ShopStopRow({ step, region, mapLink, isCurrent, onOpen }: Omit<StopRowProps, "card"> & { region: ShopRegion; mapLink?: string }) {
   const marks = useStoreMarks(region);
-  return <StopRowLayout step={step} subtitle={describeShopStop(marks.summary)} isCurrent={isCurrent} onOpen={onOpen} />;
+  return <StopRowLayout step={step} subtitle={describeShopStop(marks.summary)} mapLink={mapLink} isCurrent={isCurrent} onOpen={onOpen} />;
 }
 
 interface StopRowLayoutProps {
   step: StopStep;
   subtitle?: string;
+  mapLink?: string;
   isCurrent: boolean;
   onOpen?: () => void;
 }
 
-function StopRowLayout({ step, subtitle, isCurrent, onOpen }: StopRowLayoutProps) {
+function StopRowLayout({ step, subtitle, mapLink, isCurrent, onOpen }: StopRowLayoutProps) {
   const { title, subtitle: nameDetail } = splitStopName(step.name);
   const content = (
     <>
@@ -135,16 +148,27 @@ function StopRowLayout({ step, subtitle, isCurrent, onOpen }: StopRowLayoutProps
       {onOpen && <ChevronRight className="h-5 w-5 shrink-0 text-ink-soft" aria-hidden="true" />}
     </>
   );
-  const rowClasses = "flex min-h-[62px] w-full items-center gap-2.5 border-b border-dashed border-line py-2 text-left";
+  const rowClasses = "flex min-h-[62px] min-w-0 flex-1 items-center gap-2.5 py-2 text-left";
 
   return (
-    <li>
+    <li className="flex items-center border-b border-dashed border-line">
       {onOpen ? (
         <button type="button" onClick={onOpen} className={`${rowClasses} focus-visible:outline-2 focus-visible:outline-citrus`}>
           {content}
         </button>
       ) : (
         <div className={rowClasses}>{content}</div>
+      )}
+      {mapLink && (
+        <a
+          href={mapLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Abrir ${splitStopName(step.name).title} no mapa (nova aba)`}
+          className="flex h-11 w-11 shrink-0 items-center justify-center text-ink-soft focus-visible:outline-2 focus-visible:outline-citrus"
+        >
+          <MapPin className="h-5 w-5" aria-hidden="true" />
+        </a>
       )}
     </li>
   );

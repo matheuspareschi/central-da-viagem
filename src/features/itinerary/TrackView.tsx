@@ -18,7 +18,7 @@ export function TrackView({ dateISO, track }: TrackViewProps) {
       <JourneyCard journey={extras.journey} category={category} />
       <div className="mt-5">
         {content.mode === "checklist" ? (
-          <ParkChecklist key={storageId} storageId={storageId} items={content.attractions} parkId={extras.parkId} />
+          <ParkChecklist key={storageId} storageId={storageId} dateISO={dateISO} trackKey={track.key} items={content.attractions} parkId={extras.parkId} />
         ) : (
           <ScheduleView key={storageId} dateISO={dateISO} periods={content.periods} cards={content.cards} />
         )}

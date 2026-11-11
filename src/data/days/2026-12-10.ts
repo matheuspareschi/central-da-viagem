@@ -1,3 +1,4 @@
+import { mapSearchUrl } from "../../lib/maps";
 import type { DayData } from "../../types";
 
 export default {
@@ -153,6 +154,7 @@ export default {
       },
       {
         id: "epic-mcdonalds",
+        link: mapSearchUrl("Epic McDonald's", "6875 Sand Lake Rd, Orlando, FL 32819"),
         name: "Epic McDonald's",
         icon: "burger",
         time: "17:10",
