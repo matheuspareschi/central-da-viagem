@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "validar:dados": "tsx scripts/validate-data.ts",
+    "testar:funcoes": "tsx scripts/test-utils.ts",
     "dev": "vite",
-    "build": "npm run validar:dados && tsc -b && vite build",
+    "build": "npm run testar:funcoes && npm run validar:dados && tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview"
   },
