@@ -21,7 +21,6 @@ itinerary: {
         key: "international-premium-outlets",
         category: "compras",
         title: "Orlando International Premium Outlets",
-        tabLabel: "Dia",
         mode: "schedule",
         summary: "Café da manhã no IHOP e depois compras até o fim da tarde.",
         group: "Grupo todo",
@@ -154,7 +153,6 @@ itinerary: {
         key: "noite-jogo",
         category: "turismo",
         title: "Orlando Magic no Kia Center",
-        tabLabel: "Noite · Jogo",
         mode: "schedule",
         summary: "Jogo do Orlando Magic x Cleveland Cavaliers no Kia Center (400 W Church St), às 19h (horário de Orlando).",
         group: "Os meninos",
@@ -233,7 +231,6 @@ itinerary: {
         key: "noite-natal",
         category: "turismo",
         title: "Decoração de Natal no Dr. Phillips Center",
-        tabLabel: "Noite · Natal",
         mode: "schedule",
         summary: "Decoração de Natal (Frontyard Holiday Festival, gratuito) no Dr. Phillips Center (445 S Magnolia Ave).",
         group: "Outro grupo",
@@ -301,4 +298,19 @@ itinerary: {
       },
     ],
   },
+  options: [
+    {
+      id: "noite-do-jogo",
+      label: "Noite do jogo",
+      supportLine: "Grupo todo de dia · os meninos no jogo à noite",
+      trackKeys: ["international-premium-outlets", "noite-jogo"],
+      isDefault: true,
+    },
+    {
+      id: "noite-de-natal",
+      label: "Noite de Natal",
+      supportLine: "Grupo todo de dia · outro grupo na decoração à noite",
+      trackKeys: ["international-premium-outlets", "noite-natal"],
+    },
+  ],
 } satisfies DayData;

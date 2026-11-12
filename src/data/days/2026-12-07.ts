@@ -302,4 +302,19 @@ export default {
       },
     ],
   },
+  options: [
+    {
+      id: "magic-kingdom",
+      label: "Magic Kingdom",
+      supportLine: "Dia inteiro no parque, com desfile e fogos", // REVISAR: dados não dizem quem vai ao parque
+      trackKeys: ["magic-kingdom"],
+      isDefault: true,
+    },
+    {
+      id: "compras-e-jardins",
+      label: "Compras e Jardins",
+      supportLine: "Matheus, Jairo e Sandra · 1 carro",
+      trackKeys: ["compras-orlando"],
+    },
+  ],
 } satisfies DayData;

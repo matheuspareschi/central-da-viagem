@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useId, useState } from "react";
 import { ArrowDown, ArrowUp, ArrowUpDown, ChevronRight, Plus } from "lucide-react";
 import { IconBadge, TapCheckbox } from "../../../components";
 import type { ChecklistEntry } from "../../../lib/parkChecklist";
@@ -25,6 +25,7 @@ const toolbarButtonClasses =
  * reordenar e incluir atrações do catálogo do parque.
  */
 export function ParkChecklist({ storageId, dateISO, trackKey, items, parkId }: ParkChecklistProps) {
+  const titleId = useId();
   const checklist = useParkChecklist({ storageId, dateISO, trackKey, items, parkId });
   const [justRemoved, setJustRemoved] = useState<{ id: string; name: string } | null>(null);
   const [isReordering, setIsReordering] = useState(false);
@@ -53,9 +54,9 @@ export function ParkChecklist({ storageId, dateISO, trackKey, items, parkId }: P
   }
 
   return (
-    <section aria-labelledby="checklist-title" className="rounded-[20px] border border-line bg-cardbg p-4">
+    <section aria-labelledby={titleId} className="rounded-[20px] border border-line bg-cardbg p-4">
       <div className="flex items-baseline justify-between gap-2">
-        <h3 id="checklist-title" className="font-serif text-[22px] font-bold text-ink">
+        <h3 id={titleId} className="font-serif text-[22px] font-bold text-ink">
           Roteiro do dia
         </h3>
         <span className="text-sm font-semibold text-citrus-text">

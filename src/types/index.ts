@@ -53,6 +53,13 @@ export interface DetailSection {
   list?: string[];
 }
 
+export interface ExtraLink {
+  label: string;
+  /** Rota interna da ferramenta, ex.: "/informacoes-extra/pedagio". */
+  route: string;
+  icon: "car" | "cart";
+}
+
 export interface StopCard {
   id: string;
   name: string;
@@ -65,8 +72,8 @@ export interface StopCard {
   siteUrl?: string;
   /** Endereço mostrado na linha do cronograma, fora do cartão, como link para o mapa. */
   address?: string;
-  /** Rota interna: tocar na linha leva para lá em vez de abrir a folha de detalhe. */
-  goTo?: string;
+  /** Botão no fim da folha de detalhe que leva a uma ferramenta de Extras. */
+  extraLink?: ExtraLink;
   /** Botão extra na folha de detalhe. */
   action?: "groceryList";
   sections: DetailSection[];
@@ -158,8 +165,6 @@ interface SplitTrackBase extends TrackExtras {
   /** Horários da trilha quando ela é uma visita a parque (aparece no cartão da Home). */
   park?: ParkVisit;
   title: string;
-  /** Rótulo curto da aba (e do cartão da Home), quando o título completo não cabe. */
-  tabLabel?: string;
 }
 
 export type SplitTrack =
@@ -201,18 +206,17 @@ export interface ParkVisit {
   closing?: string;
 }
 
-/** Uma versão completa do roteiro do dia (ex.: com ou sem uma parada opcional). */
-export interface ItineraryVariant {
-  key: string;
+/** Um jeito de seguir um dia com mais de uma trilha (ex.: Magic Kingdom ou Compras e Jardins). */
+export interface DayOption {
+  id: string;
+  /** Rótulo curto, usado no botão de variação, na folha de escolha e no Calendário. */
   label: string;
-  itinerary: DayItinerary;
-  /** Campos do dia que mudam nesta versão (título, categoria, parque...). */
-  overrides?: Partial<DayData>;
-}
-
-export interface DayVariants {
-  defaultKey: string;
-  options: ItineraryVariant[];
+  /** Linha de apoio: quem vai. */
+  supportLine: string;
+  /** Trilhas do dia que compõem a opção; uma trilha pode entrar em mais de uma opção. */
+  trackKeys: string[];
+  /** A opção mostrada enquanto o dia não tem escolha; exatamente uma por dia. */
+  isDefault?: boolean;
 }
 
 export interface DayData {
@@ -228,6 +232,6 @@ export interface DayData {
   split?: [DayCategory, DayCategory];
   reading?: AdventReading;
   itinerary?: DayItinerary;
-  /** Dia com versões alternativas do roteiro; `itinerary` e `overrides` da versão padrão valem quando nada foi escolhido. */
-  variants?: DayVariants;
+  /** Dia dividido em trilhas: as opções de roteiro entre as quais se escolhe (pelo menos duas). */
+  options?: DayOption[];
 }

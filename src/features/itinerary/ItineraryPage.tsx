@@ -1,15 +1,21 @@
-import { useParams } from "react-router-dom";
+import { useLayoutEffect } from "react";
+import { useNavigationType, useParams } from "react-router-dom";
 import type { DayData } from "../../types";
-import { useDayVariant } from "../../hooks/useDayVariant";
 import { useDayNavigation } from "../../hooks/useDayNavigation";
-import { formatCardDate } from "../../lib/date";
+import { useDayOption } from "../../hooks/useDayOption";
+import { useNow } from "../../hooks/useNow";
+import { formatCardDate, toISODate } from "../../lib/date";
+import { optionQuestion } from "../../lib/dayOption";
+import { takeScrollForReturn } from "../../lib/scrollReturn";
+import { DayOptionControl } from "../day-option";
 import { ItineraryTopBar } from "./components";
-import { VariantPicker } from "./components/VariantPicker";
 import { ItineraryBody } from "./ItineraryBody";
 
 export function ItineraryPage() {
   const { day } = useParams<{ day: string }>();
   const { dayInfo, prevDay, nextDay, navigateToDay } = useDayNavigation(day);
+
+  useRestoredScroll(dayInfo?.dateISO);
 
   if (!dayInfo) return null; // redirecionando pra Home, ver useDayNavigation
 
@@ -23,14 +29,35 @@ export function ItineraryPage() {
   );
 }
 
-/** Corpo do dia; em dia com variantes, o seletor de versão fica logo abaixo do título. */
+/** Voltando de um atalho (ex.: Extras), devolve a rolagem em que o dia estava. */
+function useRestoredScroll(dateISO: string | undefined) {
+  const isReturning = useNavigationType() === "POP";
+  useLayoutEffect(() => {
+    if (!isReturning || !dateISO) return;
+    const scrollY = takeScrollForReturn(`/roteiro/${dateISO}`);
+    if (scrollY !== undefined) window.scrollTo(0, scrollY);
+  }, [isReturning, dateISO]);
+}
+
+/** Corpo do dia; em dia com opções, o botão de variação fica logo abaixo do título. */
 function DayBody({ day }: { day: DayData }) {
-  const { options, selectedVariant, effectiveDay, select } = useDayVariant(day);
+  return day.options ? <DayWithOptions day={day} /> : <ItineraryBody dayInfo={day} />;
+}
+
+function DayWithOptions({ day }: { day: DayData }) {
+  const { options, currentOption, hasChosen, effectiveDay, choose } = useDayOption(day);
+  const todayISO = toISODate(useNow());
 
   return (
     <>
-      {selectedVariant && options.length > 1 && <VariantPicker options={options} selected={selectedVariant} onSelect={select} />}
-      <ItineraryBody key={selectedVariant?.key} dayInfo={effectiveDay} />
+      <DayOptionControl
+        options={options}
+        currentOption={currentOption}
+        openingQuestion={hasChosen ? undefined : optionQuestion(day.dateISO, todayISO)}
+        onChoose={choose}
+        className="mt-3"
+      />
+      <ItineraryBody key={currentOption.id} dayInfo={effectiveDay} />
     </>
   );
 }

@@ -20,12 +20,11 @@ export default {
     journey: {
       tiles: [
         { label: "Pouso em MCO", value: "15h40" },
-        { label: "Saída do aeroporto", value: "A definir" },
-        { label: "Chegada na casa", value: "A definir" },
-        { label: "Tempo de deslocamento", value: "A definir" },
+        { label: "Saída do aeroporto", value: "17h10" },
+        { label: "Chegada na casa", value: "20h05" },
+        { label: "Tempo de deslocamento", value: "1h15" },
       ],
       notes: [
-        { icon: "car", text: "Deslocamento: ~1h10–1h15 de carro no total (aeroporto → Florida Mall → Storey Lake Resort → Walmart e volta)." },
         { icon: "info", text: "Aproveitar o wi-fi do shopping para ativar o eSIM/chip digital durante a refeição." },
       ],
       alerts: [],
@@ -36,34 +35,27 @@ export default {
         steps: [
           {
             kind: "stop",
-            time: "15:40", // REVISAR: chegada pedida 15h40 (antes 15:15, diferença de +25 min, não +20)
+            time: "15:40", 
             stopId: "pouso-mco",
             name: "Pouso em MCO",
             icon: "target",
           },
           {
             kind: "stop",
-            time: "16:35", // REVISAR: +20 min
+            time: "16:35",
             stopId: "retirada-carros",
             name: "Retirada dos carros e pedágio",
             icon: "target",
           },
           {
             kind: "transit",
-            time: "17:10", // REVISAR: +20 min
+            time: "17:10",
             duration: "~20–25 min",
             destinationName: "Florida Mall",
           },
           {
             kind: "stop",
-            time: "A definir",
-            stopId: "florida-mall",
-            name: "The Florida Mall",
-            icon: "bag",
-          },
-          {
-            kind: "stop",
-            time: "17:35", // REVISAR: +20 min
+            time: "17:35", 
             stopId: "apple-store",
             name: "Apple Store (Florida Mall)",
             icon: "bag",
@@ -75,40 +67,40 @@ export default {
         steps: [
           {
             kind: "stop",
-            time: "18:20", // REVISAR: +20 min
-            stopId: "",
+            time: "18:20",
+            stopId: "florida-mall",
             name: "Jantar no Florida Mall",
             icon: "burger",
           },
           {
             kind: "transit",
-            time: "19:35", // REVISAR: +20 min
+            time: "19:35",
             duration: "~30 min",
             destinationName: "Storey Lake Resort, Kissimmee",
           },
           {
             kind: "stop",
-            time: "20:05", // REVISAR: +20 min
+            time: "20:05",
             stopId: "chegada-resort",
-            name: "Chegada ao Storey Lake Resort — acomodação",
+            name: "Chegada na casa",
             icon: "house",
           },
           {
             kind: "transit",
-            time: "20:05", // REVISAR: +20 min
+            time: "20:20",
             duration: "~15 min",
             destinationName: "Walmart Supercenter (só quem for)",
           },
           {
             kind: "stop",
-            time: "20:20", // REVISAR: +20 min
+            time: "20:35",
             stopId: "walmart-chegada",
             name: "Walmart Supercenter",
             icon: "bag",
           },
           {
             kind: "transit",
-            time: "20:50", // REVISAR: +20 min
+            time: "22:00",
             duration: "~15 min",
             destinationName: "Storey Lake Resort, Kissimmee",
           },
@@ -148,7 +140,7 @@ export default {
       },
       {
         id: "retirada-carros",
-        goTo: "/informacoes-extra/pedagio",
+        extraLink: { label: "Ver passo a passo do pedágio", route: "/informacoes-extra/pedagio", icon: "car" },
         name: "Retirada dos carros e pedágio",
         icon: "target",
         time: "16:35",
@@ -166,15 +158,7 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "Resolver o transponder de pedágio (PlatePass/E-Pass da locadora, ou SunPass) já no balcão, para não precisar parar depois.",
-            ],
-          },
-          {
-            color: "attn",
-            icon: "alert",
-            title: "Atenção",
-            paragraphs: [
-              "Confirmar disponibilidade na locadora — ou levar/comprar SunPass à parte.",
+              "Conferir passo a passo na seção extra"
             ],
           },
         ],
@@ -245,8 +229,8 @@ export default {
       },
       {
         id: "chegada-resort",
-        address: "4715 Kings Castle Circle, Kissimmee, FL 34746",
-        name: "Chegada ao Storey Lake Resort",
+        address: "4801 Dedication St, Kissimmee, FL 34746",
+        name: "Chegada na casa",
         icon: "house",
         time: "20:05",
         sections: [
@@ -270,7 +254,7 @@ export default {
       },
       {
         id: "walmart-chegada",
-        goTo: "/informacoes-extra/mercado",
+        extraLink: { label: "Abrir lista de Mercado", route: "/informacoes-extra/mercado", icon: "cart" },
         address: "4444 W Vine St, Kissimmee, FL 34746",
         name: "Walmart Supercenter",
         icon: "bag",

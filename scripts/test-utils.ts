@@ -1,5 +1,8 @@
 import assert from "node:assert/strict";
 import { allTollSteps, tollStages } from "../src/data/pedagio.ts";
+import day18 from "../src/data/days/2026-12-18.ts";
+import day16 from "../src/data/days/2026-12-16.ts";
+import { applyOption, findOption, optionQuestion } from "../src/lib/dayOption.ts";
 import { formatDecimal, formatFixedDecimal, parseDecimal } from "../src/utils/decimal.ts";
 import { calcularPreco, readPercent } from "../src/utils/price.ts";
 import { convertTyped, kgParaLb, lbParaKg } from "../src/utils/weight.ts";
@@ -41,6 +44,24 @@ const tests: Array<[string, () => void]> = [
     assert.deepEqual(allTollSteps.map((step) => step.id), [1, 2, 3, 4, 5, 6].map((n) => `pedagio-${n}`));
     for (const step of allTollSteps) assert.ok(step.titulo.trim() && step.texto.trim() && (step.dica === undefined || step.dica.trim()));
     for (const stage of tollStages) assert.ok(stage.titulo.trim() && stage.passos.length > 0);
+  }],
+  ["pergunta da escolha: hoje, futuro e passado", () => {
+    assert.equal(optionQuestion("2026-12-18", "2026-12-18"), "Hoje você vai seguir qual roteiro?");
+    assert.equal(optionQuestion("2026-12-19", "2026-12-18"), "Qual roteiro você quer seguir neste dia?");
+    assert.equal(optionQuestion("2026-12-17", "2026-12-18"), "Qual roteiro você fez neste dia?");
+  }],
+  ["dia 18: 'Só Islands' fica sem o Daily Dealz e com categoria só de parque", () => {
+    const option = findOption(day18, "so-islands");
+    assert.ok(option);
+    const day = applyOption(day18, option);
+    assert.equal(day.itinerary?.kind === "split" && day.itinerary.tracks.length, 1);
+    assert.equal(day.category, "parque");
+    assert.equal(day.split, undefined);
+  }],
+  ["dia 16: a trilha do dia entra nas duas opções, só a noite muda", () => {
+    const keysOf = (id: string) => day16.options.find((option) => option.id === id)?.trackKeys;
+    assert.deepEqual(keysOf("noite-do-jogo"), ["international-premium-outlets", "noite-jogo"]);
+    assert.deepEqual(keysOf("noite-de-natal"), ["international-premium-outlets", "noite-natal"]);
   }],
   ["nenhum resultado vira NaN", () => {
     const result = calcularPreco({ preco: 0, d1: 100, d2: 100, imposto: 100 });

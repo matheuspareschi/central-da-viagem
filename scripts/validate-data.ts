@@ -3,7 +3,7 @@ import { pathToFileURL } from "node:url";
 import { resolve } from "node:path";
 import { parkCatalogs } from "../src/data/parks/index.ts";
 import { shopRegions } from "../src/data/shopping/index.ts";
-import { applyVariant } from "../src/lib/dayVariant.ts";
+import { applyOption } from "../src/lib/dayOption.ts";
 import { listDayTracks, type DayTrack } from "../src/lib/dayTracks.ts";
 import { toMinutes } from "../src/lib/schedule.ts";
 import type { DayData, JourneyTile, ParkAttraction, StopStep, TransitStep } from "../src/types";
@@ -217,18 +217,29 @@ function checkGuide(where: string, { extras }: DayTrack): string[] {
   return errors;
 }
 
-function checkVariants(day: DayData): string[] {
-  const variants = day.variants;
-  if (!variants) return [];
-  const scope = `dia ${day.day} (variantes)`;
-  const keys = variants.options.map((option) => option.key);
+function checkOptions(day: DayData): string[] {
+  const scope = `dia ${day.day} (opções)`;
+  const options = day.options ?? [];
+  const trackKeys = day.itinerary?.kind === "split" ? day.itinerary.tracks.map((track) => track.key) : [];
+  if (options.length === 0) {
+    return trackKeys.length > 1 ? [`${scope}: dia com ${trackKeys.length} trilhas precisa de \`options\``] : [];
+  }
+
+  const defaultCount = options.filter((option) => option.isDefault).length;
+  const usedTrackKeys = new Set(options.flatMap((option) => option.trackKeys));
   return [
-    ...(keys.includes(variants.defaultKey) ? [] : [`${scope}: defaultKey "${variants.defaultKey}" não existe nas opções`]),
-    ...(keys.length >= 2 ? [] : [`${scope}: precisa de pelo menos duas variantes`]),
-    ...checkUniqueIds(scope, keys),
-    ...variants.options
-      .filter((option) => !option.label.trim() || listDayTracks(applyVariant(day, option.key)).length === 0)
-      .map((option) => `${scope}: variante "${option.key}" incompleta (sem label ou sem trilhas)`),
+    ...(trackKeys.length > 0 ? [] : [`${scope}: \`options\` só vale em dia com trilhas`]),
+    ...(options.length >= 2 ? [] : [`${scope}: precisa de pelo menos duas opções`]),
+    ...(defaultCount === 1 ? [] : [`${scope}: precisa de exatamente uma opção padrão (tem ${defaultCount})`]),
+    ...checkUniqueIds(scope, options.map((option) => option.id)),
+    ...options.flatMap((option) => [
+      ...(option.label.trim() && option.supportLine.trim() ? [] : [`${scope}: opção "${option.id}" sem label ou sem linha de apoio`]),
+      ...(option.trackKeys.length > 0 ? [] : [`${scope}: opção "${option.id}" sem trilhas`]),
+      ...option.trackKeys
+        .filter((key) => !trackKeys.includes(key))
+        .map((key) => `${scope}: opção "${option.id}" usa a trilha inexistente "${key}"`),
+    ]),
+    ...trackKeys.filter((key) => !usedTrackKeys.has(key)).map((key) => `${scope}: trilha "${key}" não está em nenhuma opção`),
   ];
 }
 
@@ -266,20 +277,21 @@ function checkDay(day: DayData): string[] {
   return [...trackErrors, ...checkDayIds(day)];
 }
 
-/** Cada variante é validada como um dia inteiro, com a mensagem dizendo de qual versão veio o erro. */
-function checkDayAndVariants(day: DayData): string[] {
-  if (!day.variants) return checkDay(day);
-  const variantErrors = day.variants.options.flatMap((option) =>
-    checkDay(applyVariant(day, option.key)).map((error) => `[variante ${option.key}] ${error}`),
+/** Cada opção é validada como um dia inteiro (só com as trilhas dela), com a mensagem dizendo de qual opção veio o erro. */
+function checkDayAndOptions(day: DayData): string[] {
+  const options = day.options;
+  if (!options) return [...checkOptions(day), ...checkDay(day)];
+  const optionErrors = options.flatMap((option) =>
+    checkDay(applyOption(day, option)).map((error) => `[opção ${option.id}] ${error}`),
   );
-  return [...checkVariants(day), ...variantErrors];
+  return [...checkOptions(day), ...optionErrors];
 }
 
 const days = await loadDays();
 const errors = [
   ...checkUniqueIds("dias", days.map((day) => day.dateISO)),
   ...checkCatalogs(),
-  ...days.flatMap(checkDayAndVariants),
+  ...days.flatMap(checkDayAndOptions),
 ];
 
 if (errors.length > 0) {

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useId, useState } from "react";
 import { AlertTriangle, Car, Clock, Info, TrainFront, type LucideIcon } from "lucide-react";
 import { categoryStyles } from "../../../data/presentation/categoryStyles";
 import type { DayCategory, Journey, JourneyGuide, JourneyNote } from "../../../types";
@@ -118,12 +118,13 @@ function JourneyGuideList({ guide }: { guide: JourneyGuide }) {
 export function JourneyCard({ journey, category }: { journey: Journey; category?: DayCategory }) {
   const { tiles, notes, alerts, guide } = journey;
   const [view, setView] = useState<JourneyView>("horarios");
+  const titleId = useId();
   const clockColor = category ? categoryStyles[category].iconColor : "text-ink-soft";
   const showsGuide = guide !== undefined && view === "guia";
 
   return (
-    <section aria-labelledby="journey-title" className="mt-5 flex flex-col gap-3.5 rounded-[20px] border border-line bg-cardbg p-4">
-      <h3 id="journey-title" className="flex items-center gap-2 font-serif text-[22px] font-bold text-ink">
+    <section aria-labelledby={titleId} className="mt-5 flex flex-col gap-3.5 rounded-[20px] border border-line bg-cardbg p-4">
+      <h3 id={titleId} className="flex items-center gap-2 font-serif text-[22px] font-bold text-ink">
         <Clock className={`h-5 w-5 ${clockColor}`} aria-hidden="true" />
         Horários e trajeto
       </h3>

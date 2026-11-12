@@ -1,6 +1,5 @@
-import { useState, type ReactNode } from "react";
+import { useId, useState, type ReactNode } from "react";
 import { Car, ChevronRight, House, MapPin, Moon, Sun, Sunrise, type LucideIcon } from "lucide-react";
-import { Link } from "react-router-dom";
 import { IconBadge } from "../../../components";
 import { shopRegions } from "../../../data/shopping";
 import { useCurrentAgenda } from "../../../hooks/useCurrentAgenda";
@@ -20,6 +19,7 @@ interface ScheduleViewProps {
 
 /** Cronograma do dia: faixas de período, trajetos entre paradas e paradas que abrem uma folha. */
 export function ScheduleView({ dateISO, periods, cards }: ScheduleViewProps) {
+  const titleId = useId();
   const day: ScheduleDay = { dateISO, periods, cards };
   const { currentStepKey } = useCurrentAgenda(day);
   const [openStopId, setOpenStopId] = useState<string | null>(null);
@@ -27,8 +27,8 @@ export function ScheduleView({ dateISO, periods, cards }: ScheduleViewProps) {
   const openCard = cards.find((card) => card.id === openStopId);
 
   return (
-    <section aria-labelledby="schedule-title" className="rounded-[20px] border border-line bg-cardbg p-4 pb-2">
-      <h3 id="schedule-title" className="font-serif text-[22px] font-bold text-ink">
+    <section aria-labelledby={titleId} className="rounded-[20px] border border-line bg-cardbg p-4 pb-2">
+      <h3 id={titleId} className="font-serif text-[22px] font-bold text-ink">
         Cronograma
       </h3>
       {periods.map((period) => (
@@ -114,7 +114,7 @@ interface StopRowProps {
 
 function StopRow({ step, card, isCurrent, onOpen }: StopRowProps) {
   const region = card?.shopRegionId ? shopRegions[card.shopRegionId] : undefined;
-  const destination = { mapLink: card?.link, address: card?.address, goTo: card?.goTo };
+  const destination = { mapLink: card?.link, address: card?.address };
   return region ? (
     <ShopStopRow step={step} region={region} {...destination} isCurrent={isCurrent} onOpen={onOpen} />
   ) : (
@@ -130,7 +130,6 @@ function ShopStopRow({ step, region, isCurrent, onOpen, ...destination }: Omit<S
 interface RowDestination {
   mapLink?: string;
   address?: string;
-  goTo?: string;
 }
 
 const CLOCK_TIME = /^\d{1,2}:\d{2}$/;
@@ -145,7 +144,7 @@ interface StopRowLayoutProps extends RowDestination {
   onOpen?: () => void;
 }
 
-function StopRowLayout({ step, subtitle, mapLink, address, goTo, isCurrent, onOpen }: StopRowLayoutProps) {
+function StopRowLayout({ step, subtitle, mapLink, address, isCurrent, onOpen }: StopRowLayoutProps) {
   const { title, subtitle: nameDetail } = splitStopName(step.name);
   const content = (
     <>
@@ -158,65 +157,53 @@ function StopRowLayout({ step, subtitle, mapLink, address, goTo, isCurrent, onOp
         </span>
         {(subtitle ?? nameDetail) && <span className="block text-xs text-ink-soft">{subtitle ?? nameDetail}</span>}
       </span>
-      {(onOpen || goTo) && <ChevronRight className="h-5 w-5 shrink-0 text-ink-soft" aria-hidden="true" />}
+      {onOpen && <ChevronRight className="h-5 w-5 shrink-0 text-ink-soft" aria-hidden="true" />}
     </>
   );
   const rowClasses = "flex min-h-[62px] min-w-0 flex-1 items-center gap-2.5 py-2 text-left focus-visible:outline-2 focus-visible:outline-citrus";
   const stopTitle = splitStopName(step.name).title;
+  const mapHref = mapLink ?? (address ? mapSearchUrl(addressSearchName(step), address) : undefined);
 
   return (
     <li className="border-b border-dashed border-line">
       <div className="flex items-center">
-        <StopRowTarget goTo={goTo} onOpen={onOpen} className={rowClasses}>
+        <StopRowTarget onOpen={onOpen} className={mapHref ? rowClasses : `${rowClasses} ${CHEVRON_INSET_WITHOUT_MAP}`}>
           {content}
         </StopRowTarget>
-        {mapLink && !address && <MapIconLink href={mapLink} stopTitle={stopTitle} />}
+        {mapHref && <MapPinLink href={mapHref} stopTitle={stopTitle} />}
       </div>
-      {address && <AddressLink stopTitle={stopTitle} address={address} />}
     </li>
   );
 }
 
 interface StopRowTargetProps {
-  goTo?: string;
   onOpen?: () => void;
   className: string;
   children: ReactNode;
 }
 
-/** A linha leva a outra tela (`goTo`), abre a folha (`onOpen`) ou só mostra a parada. */
-function StopRowTarget({ goTo, onOpen, className, children }: StopRowTargetProps) {
-  if (goTo) return <Link to={goTo} className={className}>{children}</Link>;
+/** A linha abre a folha de detalhes (`onOpen`) ou só mostra a parada. */
+function StopRowTarget({ onOpen, className, children }: StopRowTargetProps) {
   if (onOpen) return <button type="button" onClick={onOpen} className={className}>{children}</button>;
   return <div className={className}>{children}</div>;
 }
 
-function MapIconLink({ href, stopTitle }: { href: string; stopTitle: string }) {
+/** "Chegada na casa" não é um lugar no mapa: a busca da casa usa só o endereço. */
+const addressSearchName = (step: StopStep): string => (step.icon === "house" ? "" : splitStopName(step.name).title);
+
+/** Sem o pino, a seta › ocupa o lugar dele: 12px de folga centralizam os 20px da seta na área de 44px. */
+const CHEVRON_INSET_WITHOUT_MAP = "pr-3";
+
+function MapPinLink({ href, stopTitle }: { href: string; stopTitle: string }) {
   return (
     <a
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label={`Abrir ${stopTitle} no mapa (nova aba)`}
-      className="flex h-11 w-11 shrink-0 items-center justify-center text-ink-soft focus-visible:outline-2 focus-visible:outline-citrus"
+      aria-label={`Abrir ${stopTitle} no mapa`}
+      className="ml-1 flex h-11 w-11 shrink-0 items-center justify-center text-citrus-text focus-visible:outline-2 focus-visible:outline-citrus"
     >
       <MapPin className="h-5 w-5" aria-hidden="true" />
-    </a>
-  );
-}
-
-/** Endereço da parada como link para o Google Maps, abaixo da linha e alinhado ao título. */
-function AddressLink({ stopTitle, address }: { stopTitle: string; address: string }) {
-  return (
-    <a
-      href={mapSearchUrl(stopTitle, address)}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label={`Abrir o endereço de ${stopTitle} no mapa (nova aba)`}
-      className="-mt-1 mb-1 ml-[46px] flex min-h-11 items-center gap-1.5 pl-[42px] text-xs font-semibold text-citrus-text underline focus-visible:outline-2 focus-visible:outline-citrus"
-    >
-      <MapPin className="h-4 w-4 shrink-0" aria-hidden="true" />
-      <span className="min-w-0 [overflow-wrap:anywhere]">{address}</span>
     </a>
   );
 }

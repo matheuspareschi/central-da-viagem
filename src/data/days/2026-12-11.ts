@@ -627,4 +627,19 @@ export default {
       },
     ],
   },
+  options: [
+    {
+      id: "hollywood-studios",
+      label: "Hollywood Studios",
+      supportLine: "Sandra, Thiago, Silvana, Gabriel, Renata e Isabela",
+      trackKeys: ["hollywood-studios"],
+      isDefault: true,
+    },
+    {
+      id: "dia-livre",
+      label: "Dia livre",
+      supportLine: "Matheus e Jairo · de carro",
+      trackKeys: ["matheus-jairo"],
+    },
+  ],
 } satisfies DayData;

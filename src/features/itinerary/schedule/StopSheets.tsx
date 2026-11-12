@@ -1,9 +1,11 @@
 import { useState, type ReactNode } from "react";
-import { ExternalLink, ListChecks, MapPin } from "lucide-react";
+import { Car, ChevronRight, ExternalLink, ListChecks, MapPin, ShoppingCart, type LucideIcon } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 import { BottomSheet, DetailSections, IconBadge } from "../../../components";
 import { shopRegions } from "../../../data/shopping";
+import { rememberScrollForReturn } from "../../../lib/scrollReturn";
 import { describeShopStop } from "../../../lib/stores";
-import type { ShopRegion, StopCard } from "../../../types";
+import type { ExtraLink, ShopRegion, StopCard } from "../../../types";
 import { StoreList } from "./StoreList";
 import { useStoreMarks } from "./useStoreMarks";
 
@@ -48,6 +50,31 @@ function ExternalActionLink({ href, label, icon }: { href: string; label: string
   );
 }
 
+const extraLinkIcons: Record<ExtraLink["icon"], LucideIcon> = { car: Car, cart: ShoppingCart };
+
+/**
+ * Atalho secundário para uma ferramenta de Extras, no fim dos detalhes. Substitui a entrada da folha no
+ * histórico, então o "voltar" devolve ao dia com a folha fechada; a rolagem do dia é guardada para o retorno.
+ */
+function ExtraLinkButton({ extraLink }: { extraLink: ExtraLink }) {
+  const { pathname } = useLocation();
+  const Icon = extraLinkIcons[extraLink.icon];
+
+  return (
+    <Link
+      to={extraLink.route}
+      replace
+      state={{ returnToPreviousPage: true }}
+      onClick={() => rememberScrollForReturn(pathname)}
+      className="mt-4 flex min-h-[50px] w-full items-center gap-2.5 rounded-[14px] border-[1.5px] border-citrus-text bg-cardbg px-4 text-[15px] font-semibold text-citrus-text focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-citrus"
+    >
+      <Icon className="h-5 w-5 shrink-0" aria-hidden="true" />
+      <span className="min-w-0 flex-1 text-left [overflow-wrap:anywhere]">{extraLink.label}</span>
+      <ChevronRight className="h-5 w-5 shrink-0" aria-hidden="true" />
+    </Link>
+  );
+}
+
 function StopHeader({ card, subtitle }: { card: StopCard; subtitle?: string }) {
   return (
     <div className="flex items-center gap-2.5">
@@ -79,6 +106,7 @@ function PlainStopSheet({ card, onClose, onOpenGroceryList }: StopSheetProps) {
       footer={<StopActions card={card} onOpenGroceryList={onOpenGroceryList} />}
     >
       <DetailSections sections={card.sections} />
+      {card.extraLink && <ExtraLinkButton extraLink={card.extraLink} />}
     </BottomSheet>
   );
 }
@@ -101,6 +129,7 @@ function ShopStopSheet({ card, region, onClose, onOpenGroceryList }: StopSheetPr
       footer={<StopActions card={card} onOpenGroceryList={onOpenGroceryList} />}
     >
       {tab === "lojas" ? <StoreList region={region} marks={marks} /> : <DetailSections sections={infoSections} />}
+      {card.extraLink && <ExtraLinkButton extraLink={card.extraLink} />}
     </BottomSheet>
   );
 }

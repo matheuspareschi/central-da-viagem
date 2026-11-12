@@ -11,7 +11,7 @@ export function TodaySection({ now }: { now: Date }) {
   const day = daysByDate[toISODate(now)];
   const phase = getTripPhase(now);
 
-  if (day) return <DayCard day={day} />;
+  if (day) return <DayCard key={day.dateISO} day={day} />;
   if (phase === "before") return <Countdown days={daysUntilTrip(now)} />;
   if (phase === "after") return <TripCompleted />;
   return <p className={`${cardClasses} text-[15px] font-semibold text-ink-soft`}>Roteiro deste dia ainda não fechado</p>;

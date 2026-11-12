@@ -27,10 +27,6 @@ function outingStops(day: DayData): DayCardStop[] {
   }
 }
 
-export function getDayCardContent(day: DayData): DayCardContent {
-  return day.park ? { kind: "park", park: day.park } : { kind: "outing", stops: outingStops(day) };
-}
-
 function trackStops(track: SplitTrack): DayCardStop[] {
   const names = track.mode === "schedule" ? track.cards.map((card) => card.name) : track.attractions.map((attraction) => attraction.name);
   return namesToStops(names);
@@ -41,6 +37,14 @@ export function getTrackCardContent(track: SplitTrack): DayCardContent {
   return track.category === "parque"
     ? { kind: "park", park: track.park ?? { name: track.title } }
     : { kind: "outing", stops: trackStops(track) };
+}
+
+/** Dia com uma trilha só (ex.: uma opção escolhida) mostra a trilha; com várias, o título de cada uma. */
+export function getDayCardContent(day: DayData): DayCardContent {
+  if (day.park) return { kind: "park", park: day.park };
+  const itinerary = day.itinerary;
+  if (itinerary?.kind === "split" && itinerary.tracks.length === 1) return getTrackCardContent(itinerary.tracks[0]);
+  return { kind: "outing", stops: outingStops(day) };
 }
 
 /** Ex.: "Saída 7h30 · parque 9h–21h"; vazio quando o dia não tem horários cadastrados. */

@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { ChevronLeft } from "lucide-react";
-import { Link, Navigate, useParams } from "react-router-dom";
+import { Link, Navigate, useLocation, useNavigate, useParams } from "react-router-dom";
 import { EXTRAS_PATH } from "../../components/navigationDestinations";
 import { findExtraTool, type ExtraToolId } from "../../data/global/extraTools";
 import { BeforeTravelList } from "./BeforeTravelList";
@@ -25,6 +25,15 @@ const toolBodies: Record<ExtraToolId, () => React.JSX.Element> = {
 export function ExtraToolPage() {
   const tool = findExtraTool(useParams().toolId);
   const titleRef = useRef<HTMLHeadingElement>(null);
+  const navigate = useNavigate();
+  const cameFromAnotherPage = Boolean((useLocation().state as { returnToPreviousPage?: boolean } | null)?.returnToPreviousPage);
+
+  /** Aberta por um atalho de outra tela (ex.: uma parada do dia), a seta volta para lá em vez de ir à lista de Extras. */
+  function goBack(event: React.MouseEvent) {
+    if (!cameFromAnotherPage) return;
+    event.preventDefault();
+    navigate(-1);
+  }
 
   useEffect(() => {
     titleRef.current?.focus();
@@ -38,10 +47,11 @@ export function ExtraToolPage() {
     <div>
       <Link
         to={EXTRAS_PATH}
+        onClick={goBack}
         className="-mx-2 flex min-h-14 items-center gap-1 px-2 font-mono text-sm font-semibold text-citrus-text focus-visible:outline-2 focus-visible:outline-citrus"
       >
         <ChevronLeft className="h-5 w-5" aria-hidden="true" />
-        Extras
+        Voltar
       </Link>
       <h1 ref={titleRef} tabIndex={-1} className="font-serif text-[28px] font-bold leading-tight tracking-tight outline-none">
         {tool.pageTitle}

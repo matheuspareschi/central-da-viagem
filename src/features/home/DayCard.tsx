@@ -1,25 +1,21 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { CategoryIcon } from "../../components";
-import { TrackTabs } from "../../components/ui/TrackTabs";
-import { useSelectedTrack } from "../../hooks/useSelectedTrack";
-import { describeParkSchedule, getDayCardContent, getTrackCardContent, type DayCardContent, type DayCardStop } from "../../lib/dayCard";
+import { useDayOption } from "../../hooks/useDayOption";
+import { useNow } from "../../hooks/useNow";
+import { describeParkSchedule, getDayCardContent, type DayCardContent, type DayCardStop } from "../../lib/dayCard";
 import { getDayCategories } from "../../lib/dayCategories";
-import { formatCardDate } from "../../lib/date";
-import { applySelectedVariant } from "../../lib/dayVariant";
-import type { DayCategory, DayData, ParkVisit, SplitTrack } from "../../types";
+import { formatCardDate, toISODate } from "../../lib/date";
+import { optionQuestion } from "../../lib/dayOption";
+import type { DayCategory, DayData, ParkVisit } from "../../types";
+import { DayOptionControl, OptionQuestionCard } from "../day-option";
 
 const focusRing = "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-citrus";
 const cardClasses = "rounded-[22px] border border-line bg-cardbg p-5 text-ink shadow-card";
 
-/** Cartão do dia na Home: o cartão inteiro leva ao roteiro do dia (no dia dividido, só a parte abaixo das abas). */
-export function DayCard({ day: scheduledDay }: { day: DayData }) {
-  const day = applySelectedVariant(scheduledDay);
-  return day.itinerary?.kind === "split" ? (
-    <SplitDayCard day={day} tracks={day.itinerary.tracks} />
-  ) : (
-    <SingleDayCard day={day} />
-  );
+/** Cartão do dia na Home: o cartão inteiro leva ao roteiro do dia. */
+export function DayCard({ day }: { day: DayData }) {
+  return day.options ? <DayWithOptionsCard day={day} /> : <SingleDayCard day={day} />;
 }
 
 function SingleDayCard({ day }: { day: DayData }) {
@@ -34,20 +30,22 @@ function SingleDayCard({ day }: { day: DayData }) {
   );
 }
 
-function SplitDayCard({ day, tracks }: { day: DayData; tracks: SplitTrack[] }) {
-  const { selectedTrack, select } = useSelectedTrack(day.dateISO, tracks);
+/** Dia com opções: a pergunta enquanto não há escolha; depois, o roteiro da opção com o botão de variação no alto. */
+function DayWithOptionsCard({ day }: { day: DayData }) {
+  const { options, currentOption, hasChosen, effectiveDay, choose } = useDayOption(day);
+  const todayISO = toISODate(useNow());
 
+  if (!hasChosen) {
+    return <OptionQuestionCard question={optionQuestion(day.dateISO, todayISO)} options={options} onChoose={(optionId) => choose(optionId, true)} />;
+  }
+
+  const [category] = getDayCategories(effectiveDay);
   return (
     <section aria-label="Hoje" className={cardClasses}>
-      <DateLine dateISO={day.dateISO} category={selectedTrack.category} />
-      <TrackTabs tracks={tracks} selected={selectedTrack} onSelect={select} className="mt-3" />
-      <Link
-        to={`/roteiro/${day.dateISO}`}
-        role="tabpanel"
-        aria-labelledby={`tab-${selectedTrack.key}`}
-        className={`block ${focusRing}`}
-      >
-        <DayContent dayNumber={day.day} content={getTrackCardContent(selectedTrack)} />
+      <DateLine dateISO={day.dateISO} category={category} />
+      <DayOptionControl options={options} currentOption={currentOption} onChoose={choose} className="mt-3" />
+      <Link to={`/roteiro/${day.dateISO}`} className={`block ${focusRing}`}>
+        <DayContent dayNumber={day.day} content={getDayCardContent(effectiveDay)} />
         <OpenItineraryButton />
       </Link>
     </section>

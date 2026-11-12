@@ -7,7 +7,7 @@ import { categoryStyles } from "../../data/presentation/categoryStyles";
 import { useNow } from "../../hooks/useNow";
 import { getDayCategories } from "../../lib/dayCategories";
 import { formatWeekdayAbbreviation, toISODate } from "../../lib/date";
-import { applySelectedVariant } from "../../lib/dayVariant";
+import { applyOption, readSavedOption } from "../../lib/dayOption";
 import type { DayCategory, DayData } from "../../types";
 
 const calendarBackTarget: BackTarget = { path: "/calendario", label: "Voltar para o Calendário" };
@@ -54,8 +54,12 @@ function scrollToCenter(element: HTMLElement | null) {
   element?.scrollIntoView({ block: "center" });
 }
 
+const CHOOSE_OPTION_HINT = "Escolha o roteiro";
+
+/** Dia com opções mostra a opção escolhida (guardada com "Usar sempre"); sem escolha, pede para escolher. */
 function DayTile({ day: scheduledDay, isToday }: { day: DayData; isToday: boolean }) {
-  const day = applySelectedVariant(scheduledDay);
+  const savedOption = scheduledDay.options && readSavedOption(scheduledDay);
+  const day = savedOption ? applyOption(scheduledDay, savedOption) : scheduledDay;
   return (
     <Link
       ref={isToday ? scrollToCenter : undefined}
@@ -73,8 +77,8 @@ function DayTile({ day: scheduledDay, isToday }: { day: DayData; isToday: boolea
         {isToday && <TodayBadge />}
         <DayTileIcon categories={getDayCategories(day)} />
       </div>
-      <p className="text-sm font-semibold leading-[1.3] [overflow-wrap:anywhere]">{day.calendarTitle}</p>
-      {day.itinerary?.kind === "split" && <p className="text-xs text-ink-soft">{day.itinerary.tracks.length} roteiros</p>}
+      <p className="text-sm font-semibold leading-[1.3] [overflow-wrap:anywhere]">{savedOption?.label ?? day.calendarTitle}</p>
+      {day.options && !savedOption && <p className="text-xs text-ink-soft">{CHOOSE_OPTION_HINT}</p>}
     </Link>
   );
 }
