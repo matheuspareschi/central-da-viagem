@@ -91,6 +91,8 @@ export interface ChecklistItem {
   id: string;
   attractionId?: string;
   name: string;
+  /** Área ou pavilhão do parque, exibido sob o título na lista. */
+  area?: string;
   icon: IconName;
   sections: DetailSection[];
 }
@@ -107,7 +109,7 @@ export interface JourneyTile {
 }
 
 export interface JourneyNote {
-  icon: "car" | "transit" | "info";
+  icon: "car" | "transit" | "return" | "info";
   text: string;
 }
 

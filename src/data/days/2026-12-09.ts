@@ -38,6 +38,7 @@ export default {
       {
         id: "guardians-cosmic-rewind",
         name: "Guardiões da Galáxia: Cosmic Rewind",
+        area: "World Discovery",
         icon: "target",
         sections: [
           {
@@ -80,6 +81,7 @@ export default {
         id: "spaceship-earth",
         attractionId: "spaceship-earth",
         name: "Spaceship Earth",
+        area: "World Celebration",
         icon: "target",
         sections: [
           {
@@ -123,6 +125,7 @@ export default {
       {
         id: "spaceship-earth-photo",
         name: "Foto com a Bola (Dreamers Point)",
+        area: "World Celebration",
         icon: "camera",
         sections: [
           {
@@ -152,6 +155,7 @@ export default {
       {
         id: "mickey-friends",
         name: "Mickey and Friends (meet & greet)",
+        area: "World Celebration",
         icon: "camera",
         sections: [
           {
@@ -188,6 +192,7 @@ export default {
         id: "mission-space",
         attractionId: "mission-space",
         name: "Mission: Space",
+        area: "World Discovery",
         icon: "target",
         sections: [
           {
@@ -232,6 +237,7 @@ export default {
         id: "test-track",
         attractionId: "test-track",
         name: "Test Track",
+        area: "World Discovery",
         icon: "target",
         sections: [
           {
@@ -276,6 +282,7 @@ export default {
         id: "soarin",
         attractionId: "soarin-around-the-world",
         name: "Soarin' Around the World",
+        area: "World Nature",
         icon: "target",
         sections: [
           {
@@ -311,6 +318,7 @@ export default {
       {
         id: "coca-cola-store",
         name: "Loja da Coca-Cola (Coca-Cola Club)",
+        area: "World Nature",
         icon: "bag",
         sections: [
           {
@@ -338,6 +346,7 @@ export default {
       {
         id: "moana-photo",
         name: "Fotos na área temática de Moana",
+        area: "World Nature",
         icon: "camera",
         sections: [
           {
@@ -367,6 +376,7 @@ export default {
       {
         id: "showcase-canada",
         name: "World Showcase — Canadá",
+        area: "World Showcase",
         icon: "target",
         sections: [
           {
@@ -394,6 +404,7 @@ export default {
       {
         id: "showcase-uk",
         name: "World Showcase — Reino Unido",
+        area: "World Showcase",
         icon: "target",
         sections: [
           {
@@ -429,6 +440,7 @@ export default {
       {
         id: "showcase-france",
         name: "World Showcase — França (Remy's Ratatouille Adventure)",
+        area: "World Showcase",
         icon: "target",
         sections: [
           {
@@ -464,6 +476,7 @@ export default {
       {
         id: "showcase-morocco",
         name: "World Showcase — Marrocos",
+        area: "World Showcase",
         icon: "target",
         sections: [
           {
@@ -499,6 +512,7 @@ export default {
       {
         id: "showcase-japan",
         name: "World Showcase — Japão",
+        area: "World Showcase",
         icon: "target",
         sections: [
           {
@@ -534,6 +548,7 @@ export default {
       {
         id: "showcase-usa",
         name: "World Showcase — EUA (The American Adventure)",
+        area: "World Showcase",
         icon: "target",
         sections: [
           {
@@ -553,6 +568,7 @@ export default {
       {
         id: "showcase-italy",
         name: "World Showcase — Itália",
+        area: "World Showcase",
         icon: "bag",
         sections: [
           {
@@ -588,6 +604,7 @@ export default {
       {
         id: "showcase-germany",
         name: "World Showcase — Alemanha",
+        area: "World Showcase",
         icon: "target",
         sections: [
           {
@@ -613,6 +630,7 @@ export default {
       {
         id: "showcase-china",
         name: "World Showcase — China",
+        area: "World Showcase",
         icon: "target",
         sections: [
           {
@@ -648,6 +666,7 @@ export default {
       {
         id: "showcase-norway",
         name: "World Showcase — Noruega (Frozen Ever After)",
+        area: "World Showcase",
         icon: "target",
         sections: [
           {
@@ -683,6 +702,7 @@ export default {
       {
         id: "showcase-mexico",
         name: "World Showcase — México (Gran Fiesta Tour)",
+        area: "World Showcase",
         icon: "target",
         sections: [
           {
@@ -718,6 +738,7 @@ export default {
       {
         id: "epcot-fireworks",
         name: "Fogos (show noturno)",
+        area: "World Showcase",
         icon: "tree",
         sections: [
           {

@@ -39,6 +39,8 @@ export default {
       {
         id: "chegada-epic-22",
         name: "Chegada e estacionamento",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "parking",
         sections: [
           {
@@ -77,6 +79,7 @@ export default {
         id: "wing-gliders-22",
         attractionId: "hiccups-wing-gliders",
         name: "Hiccup's Wing Gliders (repetição)",
+        area: "Isle of Berk",
         icon: "target",
         sections: [
           {
@@ -96,6 +99,8 @@ export default {
       {
         id: "toothless-treasures",
         name: "Adotar um dragão e decoração Snoggletog",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "bag",
         sections: [
           {
@@ -117,6 +122,7 @@ export default {
       {
         id: "ministry-viewing",
         name: "Ministry Viewing",
+        area: "Ministry of Magic",
         icon: "camera",
         sections: [
           {
@@ -138,6 +144,8 @@ export default {
       {
         id: "cirque-varinhas-quadros",
         name: "Le Cirque Arcanus, varinhas e quadros falantes",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "camera",
         sections: [
           {
@@ -159,6 +167,7 @@ export default {
       {
         id: "toadstool-cafe",
         name: "Almoço no Toadstool Café",
+        area: "Super Nintendo World",
         icon: "burger",
         sections: [
           {
@@ -180,6 +189,8 @@ export default {
       {
         id: "power-up-band",
         name: "Power-Up Band e Key Challenges (opcional)",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "target",
         sections: [
           {
@@ -203,6 +214,7 @@ export default {
       {
         id: "dark-universe-22",
         name: "Dark Universe: Monsters Unchained e Das Stakehaus",
+        area: "Dark Universe",
         icon: "target",
         sections: [
           {
@@ -232,6 +244,7 @@ export default {
       {
         id: "mead-hall",
         name: "Jantar no Mead Hall",
+        area: "Isle of Berk",
         icon: "burger",
         sections: [
           {
@@ -253,6 +266,7 @@ export default {
       {
         id: "celestial-park-natal",
         name: "Celestial Park de Natal e compras finais",
+        area: "Celestial Park",
         icon: "tree",
         sections: [
           {
@@ -279,6 +293,8 @@ export default {
       {
         id: "favoritas-noite",
         name: "As 2 favoritas à noite",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "target",
         sections: [
           {
@@ -294,6 +310,7 @@ export default {
       {
         id: "celestial-goodnight-22",
         name: "Universal Celestial Goodnight",
+        area: "Celestial Park",
         icon: "camera",
         sections: [
           {

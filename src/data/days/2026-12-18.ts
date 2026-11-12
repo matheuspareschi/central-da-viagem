@@ -4,6 +4,7 @@ const islandsAttractions: ChecklistItem[] = [
           {
             id: "marvel",
             name: "Marvel: Hulk e Spider-Man",
+            area: "Marvel Super Hero Island",
             icon: "target",
             sections: [
               { color: "gold", icon: "lightbulb", title: "Horário sugerido", paragraphs: ["Por volta das 13h00."] },
@@ -16,6 +17,7 @@ const islandsAttractions: ChecklistItem[] = [
             id: "river-adventure",
             attractionId: "jurassic-park-river-adventure",
             name: "Jurassic Park River Adventure (se reaberto)",
+            area: "Jurassic Park",
             icon: "target",
             sections: [
               { color: "gold", icon: "lightbulb", title: "Horário sugerido", paragraphs: ["Por volta das 14h30."] },
@@ -28,6 +30,7 @@ const islandsAttractions: ChecklistItem[] = [
             id: "velocicoaster",
             attractionId: "jurassic-world-velocicoaster",
             name: "Jurassic World VelociCoaster",
+            area: "Jurassic Park",
             icon: "target",
             sections: [
               { color: "gold", icon: "lightbulb", title: "Horário sugerido", paragraphs: ["Por volta das 15h15."] },
@@ -38,6 +41,7 @@ const islandsAttractions: ChecklistItem[] = [
           {
             id: "hagrids",
             name: "Hagrid's Motorbike Adventure",
+            area: "The Wizarding World of Harry Potter - Hogsmeade",
             icon: "target",
             sections: [
               { color: "gold", icon: "lightbulb", title: "Horário sugerido", paragraphs: ["Por volta das 16h30."] },
@@ -48,6 +52,8 @@ const islandsAttractions: ChecklistItem[] = [
           {
             id: "por-do-sol",
             name: "Pôr do sol e foto do castelo",
+            // REVISAR (área a definir)
+            area: "a definir",
             icon: "camera",
             sections: [
               { color: "gold", icon: "lightbulb", title: "Horário sugerido", paragraphs: ["Por volta das 17h30."] },
@@ -57,6 +63,8 @@ const islandsAttractions: ChecklistItem[] = [
           {
             id: "hogwarts-express",
             name: "Hogwarts Express: ida a King's Cross",
+            // REVISAR (área a definir)
+            area: "a definir",
             icon: "target",
             sections: [
               { color: "gold", icon: "lightbulb", title: "Horário sugerido", paragraphs: ["Por volta das 17h45."] },
@@ -68,6 +76,8 @@ const islandsAttractions: ChecklistItem[] = [
           {
             id: "studios-diagon",
             name: "Plataforma 9¾ e Beco Diagonal (Studios)",
+            // REVISAR (área a definir)
+            area: "a definir",
             icon: "camera",
             sections: [
               { color: "gold", icon: "lightbulb", title: "Horário sugerido", paragraphs: ["Por volta das 18h15."] },
@@ -78,6 +88,8 @@ const islandsAttractions: ChecklistItem[] = [
           {
             id: "hogwarts-express-volta",
             name: "Hogwarts Express: volta a Hogsmeade",
+            // REVISAR (área a definir)
+            area: "a definir",
             icon: "target",
             sections: [
               { color: "gold", icon: "lightbulb", title: "Horário sugerido", paragraphs: ["Por volta das 18h45."] },
@@ -87,6 +99,8 @@ const islandsAttractions: ChecklistItem[] = [
           {
             id: "projecao-natal",
             name: "Projeção de Natal e últimas compras",
+            // REVISAR (área a definir)
+            area: "a definir",
             icon: "bag",
             sections: [
               { color: "gold", icon: "lightbulb", title: "Horário", paragraphs: ["Por volta das 19h15. \"The Magic of Christmas at Hogwarts Castle\": horário só no app; chegar 20–30 min antes para ter lugar."] },
@@ -96,6 +110,8 @@ const islandsAttractions: ChecklistItem[] = [
           {
             id: "citywalk",
             name: "CityWalk (opcional)",
+            // REVISAR (área a definir)
+            area: "a definir",
             icon: "burger",
             sections: [
               { color: "gold", icon: "lightbulb", title: "Horário sugerido", paragraphs: ["A partir das 20h00."] },

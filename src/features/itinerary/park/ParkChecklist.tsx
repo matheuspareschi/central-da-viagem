@@ -152,17 +152,17 @@ function ChecklistRow({ entry, isDone, isReordering, isFirst, isLast, onToggleDo
       <IconBadge name={entry.icon} />
       <span className="min-w-0 flex-1">
         <span className={`block text-base font-semibold text-ink ${isDone ? "line-through" : ""}`}>{entry.name}</span>
-        {entry.subtitle && <span className="block text-xs text-ink-soft">{entry.subtitle}</span>}
+        {entry.areaLabel && <span className="mt-0.5 block truncate text-xs text-ink-soft">{entry.areaLabel}</span>}
       </span>
     </>
   );
 
   return (
-    <li className="flex items-center gap-1 border-b border-dashed border-line py-1 last:border-b-0">
+    <li className="flex min-h-15 items-center gap-3 border-b border-dashed border-line py-2.5 last:border-b-0">
       <TapCheckbox checked={isDone} onToggle={onToggleDone} label={isDone ? `Desmarcar ${entry.name}` : `Marcar ${entry.name}`} />
       {isReordering ? (
         <>
-          <div className="flex min-h-11 min-w-0 flex-1 items-center gap-2.5 text-left">{label}</div>
+          <div className="flex min-h-11 min-w-0 flex-1 items-center gap-3 text-left">{label}</div>
           <MoveButton direction="up" disabled={isFirst} name={entry.name} onClick={() => onMove(-1)} />
           <MoveButton direction="down" disabled={isLast} name={entry.name} onClick={() => onMove(1)} />
         </>
@@ -170,7 +170,7 @@ function ChecklistRow({ entry, isDone, isReordering, isFirst, isLast, onToggleDo
         <button
           type="button"
           onClick={onOpenDetails}
-          className="flex min-h-11 min-w-0 flex-1 items-center gap-2.5 text-left focus-visible:outline-2 focus-visible:outline-citrus"
+          className="flex min-h-11 min-w-0 flex-1 items-center gap-3 text-left focus-visible:outline-2 focus-visible:outline-citrus"
         >
           {label}
           <ChevronRight className="h-5 w-5 shrink-0 text-ink-soft" aria-hidden="true" />

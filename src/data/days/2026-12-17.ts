@@ -62,6 +62,7 @@ export default {
         id: "mario-kart",
         attractionId: "mario-kart-bowsers-challenge",
         name: "Mario Kart: Bowser's Challenge",
+        area: "Super Nintendo World",
         icon: "target",
         sections: [
           {
@@ -91,6 +92,8 @@ export default {
       {
         id: "mine-cart-madness",
         name: "Mine-Cart Madness e fotos com personagens",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "target",
         sections: [
           {
@@ -114,6 +117,7 @@ export default {
       {
         id: "battle-at-the-ministry",
         name: "Harry Potter and the Battle at the Ministry",
+        area: "Ministry of Magic",
         icon: "target",
         sections: [
           {
@@ -143,6 +147,8 @@ export default {
       {
         id: "ministry-paris-lojas",
         name: "Ruas de Paris: varinhas, doces e crepe",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "bag",
         sections: [
           {
@@ -168,6 +174,7 @@ export default {
       {
         id: "untrainable-dragon",
         name: "The Untrainable Dragon",
+        area: "Isle of Berk",
         icon: "camera",
         sections: [
           {
@@ -195,6 +202,7 @@ export default {
       {
         id: "banguela-isle-of-berk",
         name: "Banguela e passeio na Isle of Berk",
+        area: "Isle of Berk",
         icon: "camera",
         sections: [
           {
@@ -216,6 +224,7 @@ export default {
       {
         id: "spit-fyre-grill",
         name: "Almoço no Spit Fyre Grill",
+        area: "Isle of Berk",
         icon: "burger",
         sections: [
           {
@@ -237,6 +246,8 @@ export default {
       {
         id: "fyre-drill",
         name: "Fyre Drill (opcional)",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "target",
         sections: [
           {
@@ -257,6 +268,7 @@ export default {
         id: "hiccups-wing-gliders",
         attractionId: "hiccups-wing-gliders",
         name: "Hiccup's Wing Gliders",
+        area: "Isle of Berk",
         icon: "target",
         sections: [
           {
@@ -286,6 +298,8 @@ export default {
       {
         id: "dragon-racers-rally",
         name: "Dragon Racer's Rally (opcional)",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "target",
         sections: [
           {
@@ -307,6 +321,7 @@ export default {
       {
         id: "monsters-unchained",
         name: "Monsters Unchained: The Frankenstein Experiment",
+        area: "Dark Universe",
         icon: "target",
         sections: [
           {
@@ -334,6 +349,8 @@ export default {
       {
         id: "curse-of-the-werewolf",
         name: "Curse of the Werewolf e fotos com monstros (opcional)",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "camera",
         sections: [
           {
@@ -356,6 +373,7 @@ export default {
         id: "stardust-racers",
         attractionId: "stardust-racers",
         name: "Stardust Racers",
+        area: "Celestial Park",
         icon: "target",
         sections: [
           {
@@ -385,6 +403,7 @@ export default {
       {
         id: "pizza-moon-jantar",
         name: "Jantar no Pizza Moon",
+        area: "Celestial Park",
         icon: "burger",
         sections: [
           {
@@ -406,6 +425,7 @@ export default {
       {
         id: "lojas-celestial-park",
         name: "Lojas do Celestial Park",
+        area: "Celestial Park",
         icon: "bag",
         sections: [
           {
@@ -429,6 +449,8 @@ export default {
       {
         id: "stardust-noite-snw-noite",
         name: "Noite: Stardust iluminada e Super Nintendo World",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "camera",
         sections: [
           {
@@ -446,6 +468,7 @@ export default {
       {
         id: "celestial-goodnight",
         name: "Universal Celestial Goodnight",
+        area: "Celestial Park",
         icon: "camera",
         sections: [
           {

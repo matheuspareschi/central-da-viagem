@@ -197,6 +197,15 @@ function checkDuplicatedStoreStops(where: string, { content }: DayTrack): string
   return [];
 }
 
+/** Toda atração de checklist de parque mostra a área na lista; sem `area`, a linha fica sem subtítulo. */
+function checkAttractionAreas(where: string, { content }: DayTrack): string[] {
+  if (content.mode !== "checklist") return [];
+  content.attractions
+    .filter((item) => !item.area)
+    .forEach((item) => warnings.push(`${where}: atração "${item.id}" sem area`));
+  return [];
+}
+
 /** Ids de cartões e de itens de checklist não se repetem em nenhuma trilha do dia. */
 function checkDayIds(day: DayData): string[] {
   const ids = listDayTracks(day).flatMap(({ content }) =>
@@ -269,6 +278,7 @@ function checkDay(day: DayData): string[] {
       ...checkSchedule(where, track),
       ...checkStepTimes(where, track),
       ...checkDuplicatedStoreStops(where, track),
+      ...checkAttractionAreas(where, track),
       ...checkDerivedTiles(where, track),
       ...checkParkTimes(where, track),
       ...checkGuide(where, track),

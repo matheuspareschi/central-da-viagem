@@ -43,3 +43,11 @@ Todos têm `// REVISAR` nos arquivos. Detalhes em `melhorias-relatorio.md`.
 | 17 | guide "Chegada" | Ainda cita abertura às 09h00. |
 | 18 | variante "sem" | "Sair de casa ~12h00" derivado. |
 | 21 | Sair de Tampa, Chegar em casa | A definir. |
+
+
+## Dia 7, trilha Magic Kingdom (diretrizes do Thiago)
+
+- Nota de chegada: removido "ou balsa (~20–30 min a mais)". O Thiago diz monorail na ida; a balsa (ferryboat) fica só na saída (card `mk-exit`).
+- `summary` da trilha: removida a frase "Almoço e lanches dentro do parque." O Thiago disse que não precisa de lanches nem almoço dentro do parque.
+- Tiana: o texto original do Thiago dizia "Adventureland"; os dados mantêm Frontierland (Área 2), onde ela fica de fato, junto da Big Thunder.
+- Pendências com `// REVISAR`: "Sleepy Hollow" (o texto dizia "Sleep Hollow"); trecho do atalho em `mk-liberty-photos` (a definir); frase da fila em `mk-seven-dwarfs`; frase da parada em `mk-liberty-characters`.

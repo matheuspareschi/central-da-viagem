@@ -7,7 +7,10 @@ export interface ChecklistEntry {
   id: string;
   name: string;
   icon: IconName;
+  /** Área + tipo, exibido no cabeçalho dos detalhes. */
   subtitle?: string;
+  /** Só a área do parque, exibida na linha da lista. */
+  areaLabel?: string;
   sections: DetailSection[];
   isAdded: boolean;
 }
@@ -15,9 +18,12 @@ export interface ChecklistEntry {
 export const toAddedEntryId = (attractionId: string) => `${ADDED_ENTRY_PREFIX}${attractionId}`;
 export const isAddedEntryId = (entryId: string) => entryId.startsWith(ADDED_ENTRY_PREFIX);
 
+function findAreaLabel(attraction: ParkAttraction, areas: ParkArea[]): string {
+  return areas.find((area) => area.key === attraction.area)?.label ?? attraction.area;
+}
+
 export function describeAttraction(attraction: ParkAttraction, areas: ParkArea[]): string {
-  const areaLabel = areas.find((area) => area.key === attraction.area)?.label ?? attraction.area;
-  return `${areaLabel} · ${attraction.type}`;
+  return `${findAreaLabel(attraction, areas)} · ${attraction.type}`;
 }
 
 export function toDayEntry(item: ChecklistItem, linked: ParkAttraction | undefined, areas: ParkArea[]): ChecklistEntry {
@@ -26,18 +32,20 @@ export function toDayEntry(item: ChecklistItem, linked: ParkAttraction | undefin
     name: item.name,
     icon: item.icon,
     subtitle: linked ? describeAttraction(linked, areas) : undefined,
+    areaLabel: item.area,
     sections: item.sections,
     isAdded: false,
   };
 }
 
 export function toAddedEntry(attraction: ParkAttraction, areas: ParkArea[]): ChecklistEntry {
-  const areaLabel = areas.find((area) => area.key === attraction.area)?.label ?? attraction.area;
+  const areaLabel = findAreaLabel(attraction, areas);
   return {
     id: toAddedEntryId(attraction.id),
     name: attraction.name,
     icon: attraction.kind === "show" ? "sparkle" : "target",
     subtitle: `${describeAttraction(attraction, areas)} · adicionada`,
+    areaLabel,
     sections: [
       { color: "navy", icon: "parking", title: "Onde fica", paragraphs: [areaLabel] },
       { color: "citrus", icon: "target", title: "Sobre", paragraphs: [attraction.description] },

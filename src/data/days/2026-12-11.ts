@@ -40,6 +40,7 @@ export default {
             id: "mickey-minnie-runaway-railway",
             attractionId: "mickey-and-minnies-runaway-railway",
             name: "Hollywood Boulevard · Mickey and Minnie's Runaway Railway",
+            area: "Hollywood Boulevard",
             icon: "target",
             sections: [
               {
@@ -57,6 +58,7 @@ export default {
           {
             id: "tower-of-terror",
             name: "Sunset Boulevard · Torre do Terror",
+            area: "Sunset Boulevard",
             icon: "target",
             sections: [
               {
@@ -82,6 +84,7 @@ export default {
           {
             id: "rock-n-roller-coaster",
             name: "Sunset Boulevard · Rock 'n' Roller Coaster",
+            area: "Sunset Boulevard",
             icon: "target",
             sections: [
               {
@@ -106,6 +109,7 @@ export default {
           {
             id: "beauty-and-the-beast-show",
             name: "Sunset Boulevard · Show da Bela e a Fera",
+            area: "Sunset Boulevard",
             icon: "target",
             sections: [
               {
@@ -119,6 +123,8 @@ export default {
           {
             id: "pausa-lanchinhos",
             name: "Pausa para alimentação · Lanchinhos",
+            // REVISAR (área a definir)
+            area: "a definir",
             icon: "burger",
             sections: [
               {
@@ -134,6 +140,7 @@ export default {
           {
             id: "foto-mickey-minnie",
             name: "Sunset Boulevard · Foto com Mickey e Minnie",
+            area: "Sunset Boulevard",
             icon: "camera",
             sections: [
               {
@@ -147,6 +154,7 @@ export default {
           {
             id: "star-tours",
             name: "Echo Lake · Star Tours",
+            area: "Echo Lake",
             icon: "target",
             sections: [
               {
@@ -160,6 +168,7 @@ export default {
           {
             id: "pixar-plaza-personagens",
             name: "Pixar Plaza · Fotos com personagens",
+            area: "Pixar Plaza",
             icon: "camera",
             sections: [
               {
@@ -186,6 +195,7 @@ export default {
             id: "slinky-dog-dash",
             attractionId: "slinky-dog-dash",
             name: "Pixar Plaza · Slinky Dog Dash",
+            area: "Pixar Plaza",
             icon: "target",
             sections: [
               {
@@ -203,6 +213,7 @@ export default {
             id: "millennium-falcon",
             attractionId: "millennium-falcon-smugglers-run",
             name: "Star Wars: Galaxy's Edge · Millennium Falcon: Smugglers Run",
+            area: "Star Wars: Galaxy's Edge",
             icon: "target",
             sections: [
               {
@@ -220,6 +231,7 @@ export default {
             id: "rise-of-the-resistance",
             attractionId: "star-wars-rise-of-the-resistance",
             name: "Star Wars: Galaxy's Edge · Rise of the Resistance",
+            area: "Star Wars: Galaxy's Edge",
             icon: "target",
             sections: [
               {
@@ -235,6 +247,7 @@ export default {
           {
             id: "toy-story-land-noite",
             name: "Toy Story Land · Fotos à noite",
+            area: "Toy Story Land",
             icon: "camera",
             sections: [
               {
@@ -251,6 +264,7 @@ export default {
             id: "fantasmic",
             attractionId: "fantasmic",
             name: "Sunset Boulevard · Fantasmic!",
+            area: "Sunset Boulevard",
             icon: "camera",
             sections: [
               {
@@ -282,6 +296,7 @@ export default {
           {
             id: "world-of-animation",
             name: "Animation Courtyard · Show World of Animation",
+            area: "Animation Courtyard",
             icon: "camera",
             sections: [
               {

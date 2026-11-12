@@ -45,6 +45,7 @@ export default {
         id: "transformers",
         attractionId: "transformers-the-ride-3d",
         name: "Transformers: The Ride 3D",
+        area: "New York",
         icon: "target",
         sections: [
           {
@@ -76,6 +77,7 @@ export default {
       {
         id: "beco-diagonal",
         name: "Fotos no Beco Diagonal",
+        area: "Beco Diagonal",
         icon: "camera",
         sections: [
           {
@@ -111,6 +113,7 @@ export default {
       {
         id: "ollivanders",
         name: "Ollivanders e varinhas",
+        area: "Beco Diagonal",
         icon: "bag",
         sections: [
           {
@@ -148,6 +151,7 @@ export default {
       {
         id: "gringotts",
         name: "Harry Potter and the Escape from Gringotts",
+        area: "Beco Diagonal / Londres",
         icon: "target",
         sections: [
           {
@@ -194,6 +198,7 @@ export default {
         id: "mib",
         attractionId: "men-in-black-alien-attack",
         name: "Men in Black Alien Attack",
+        area: "World Expo",
         icon: "target",
         sections: [
           {
@@ -227,6 +232,8 @@ export default {
       {
         id: "simpsons",
         name: "The Simpsons Ride e donut Lard Lad",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "corn",
         sections: [
           {
@@ -256,6 +263,8 @@ export default {
       {
         id: "almoco",
         name: "Almoço fora do pico",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "burger",
         sections: [
           {
@@ -288,6 +297,7 @@ export default {
         id: "et-adventure",
         attractionId: "e-t-adventure",
         name: "E.T. Adventure",
+        area: "World Expo & DreamWorks Land",
         icon: "target",
         sections: [
           {
@@ -302,6 +312,7 @@ export default {
         id: "bourne",
         attractionId: "the-bourne-stuntacular",
         name: "The Bourne Stuntacular",
+        area: "Hollywood",
         icon: "camera",
         sections: [
           {
@@ -338,6 +349,7 @@ export default {
         id: "mummy",
         attractionId: "revenge-of-the-mummy",
         name: "Revenge of the Mummy",
+        area: "New York",
         icon: "target",
         sections: [
           {
@@ -377,6 +389,7 @@ export default {
         id: "race-through-new-york",
         attractionId: "race-through-new-york-jimmy-fallon",
         name: "Race Through New York (Jimmy Fallon)",
+        area: "New York",
         icon: "target",
         sections: [
           {
@@ -390,6 +403,8 @@ export default {
       {
         id: "minion-land",
         name: "Minion Mayhem e Villain-Con Minion Blast",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "target",
         sections: [
           {
@@ -419,6 +434,8 @@ export default {
       {
         id: "caldeirao-furado",
         name: "Jantar no Caldeirão Furado",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "burger",
         sections: [
           {
@@ -448,6 +465,7 @@ export default {
       {
         id: "gringotts-segunda-volta",
         name: "Gringotts (2ª vez)",
+        area: "Beco Diagonal / Londres",
         icon: "target",
         sections: [
           {
@@ -461,6 +479,8 @@ export default {
       {
         id: "parada-natal",
         name: "Parada de Natal e árvore",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "tree",
         sections: [
           {
@@ -490,6 +510,8 @@ export default {
       {
         id: "fogos",
         name: "Show de fogos",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "sparkle",
         sections: [
           {

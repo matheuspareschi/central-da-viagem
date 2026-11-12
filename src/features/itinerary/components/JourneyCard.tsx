@@ -1,11 +1,12 @@
 import { useId, useState } from "react";
-import { AlertTriangle, Car, Clock, Info, TrainFront, type LucideIcon } from "lucide-react";
+import { AlertTriangle, Car, Clock, Info, TrainFront, Undo2, type LucideIcon } from "lucide-react";
 import { categoryStyles } from "../../../data/presentation/categoryStyles";
 import type { DayCategory, Journey, JourneyGuide, JourneyNote } from "../../../types";
 
 const noteIcons: Record<JourneyNote["icon"], LucideIcon> = {
   car: Car,
   transit: TrainFront,
+  return: Undo2,
   info: Info,
 };
 

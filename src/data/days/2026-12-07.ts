@@ -27,7 +27,7 @@ export default {
         title: "Magic Kingdom",
         mode: "checklist",
         parkId: "magic-kingdom",
-        summary: "Dia inteiro com os clássicos de todas as lands, desfile e show de fogos à noite. Almoço e lanches dentro do parque.",
+        summary: "Dia inteiro com os clássicos de todas as lands, desfile e show de fogos à noite.",
         journey: {
           tiles: [
             { label: "Acordar", value: "6h15" },
@@ -36,18 +36,27 @@ export default {
             { label: "Parque aberto", value: "9h–23h" },
           ],
           notes: [
-            { icon: "car", text: "De carro: ~20–25 min até o estacionamento." },
-            { icon: "info", text: "Chegada para entrar no early entry (para não hóspedes)." },
-            { icon: "transit", text: "Até a entrada: tram, depois monorail ou balsa (~20–30 min a mais). Pegue o mapa em português (pt-br) ao chegar." },
-            { icon: "info", text: "Fotos da Disney: compradas antes da viagem, no Brasil." },
+            { icon: "transit", text: "Saindo do trenzinho (tram), ir de monorail para o parque. Ao chegar, não esqueça de pegar o mapa em português (pt-br)." },
+            { icon: "return", text: "Na volta, sair do parque de ferryboat." },
           ],
-          alerts: [],
+          alerts: ["Deixar os lanches do parque separados no dia anterior. Mochilas com filtro solar e remédios."],
         },
         attractions: [
+          {
+            id: "mk-carruagem-foto",
+            name: "Foto na subidinha da carruagem",
+            area: "Main Street, U.S.A.",
+            icon: "camera",
+            sections: [
+              { color: "navy", icon: "parking", title: "Onde", paragraphs: ["Main Street, U.S.A. Área 1 do roteiro."] },
+              { color: "palm", icon: "camera", title: "Foto", paragraphs: ["Logo pela manhã ou no final de tudo, quando estiver vazio."] },
+            ],
+          },
           {
             id: "mk-tiana",
             attractionId: "tiana",
             name: "Tiana's Bayou Adventure",
+            area: "Frontierland",
             icon: "leaf",
             sections: [
               { color: "navy", icon: "parking", title: "Endereço", paragraphs: ["Frontierland, Magic Kingdom. Área 2 do roteiro."] },
@@ -59,6 +68,7 @@ export default {
             id: "mk-big-thunder",
             attractionId: "bigthunder",
             name: "Big Thunder Mountain Railroad",
+            area: "Frontierland",
             icon: "target",
             sections: [
               { color: "navy", icon: "parking", title: "Endereço", paragraphs: ["Frontierland, Magic Kingdom."] },
@@ -70,6 +80,7 @@ export default {
             id: "mk-pirates",
             attractionId: "pirates",
             name: "Pirates of the Caribbean",
+            area: "Adventureland",
             icon: "target",
             sections: [
               { color: "navy", icon: "parking", title: "Endereço", paragraphs: ["Adventureland, Magic Kingdom. Área 3 do roteiro."] },
@@ -79,27 +90,33 @@ export default {
           },
           {
             id: "mk-liberty-photos",
-            name: "Liberty Tree e Hall of the Presidents (fotos)",
+            name: "Liberty Tree e Hall of the Presidents",
+            area: "Liberty Square",
             icon: "camera",
             sections: [
               { color: "navy", icon: "parking", title: "Endereço", paragraphs: ["Liberty Square, Magic Kingdom. Área 4 do roteiro."] },
               { color: "palm", icon: "camera", title: "Fotos", list: ["Foto 1: Liberty Tree.", "Foto 2: Hall of the Presidents."] },
+              // REVISAR (trecho do atalho a definir): o Thiago não disse de onde para onde.
+              { color: "gold", icon: "lightbulb", title: "Dica", paragraphs: ["Tem como cortar por um atalho."] },
             ],
           },
           {
             id: "mk-liberty-characters",
             name: "Personagens, waffle do Mickey e parada",
+            area: "Liberty Square",
             icon: "burger",
             sections: [
               { color: "navy", icon: "parking", title: "Endereço", paragraphs: ["Liberty Square, Magic Kingdom."] },
               { color: "citrus", icon: "target", title: "O que fazer", list: ["Tirar fotos com personagens na Liberty Square.", "Comer um waffle do Mickey e assistir à parada.", "Foto no poço de desejos da Cinderella, no caminho para a Tomorrowland."] },
-              { color: "gold", icon: "lightbulb", title: "Dica", paragraphs: ["Confirmar o horário real da parada no app no dia, pois ele define quando a Tomorrowland esvazia."] },
+              // REVISAR: "Sleepy Hollow" no lugar de "Sleep Hollow" (texto do Thiago); ele confirma. A frase da parada não estava no texto dele; ele decide se fica.
+              { color: "gold", icon: "lightbulb", title: "Dica", paragraphs: ["Ficar o mais perto possível do Sleepy Hollow.", "Confirmar o horário real da parada no app no dia, pois ele define quando a Tomorrowland esvazia."] },
             ],
           },
           {
             id: "mk-tron",
             attractionId: "tron",
             name: "TRON Lightcycle / Run",
+            area: "Tomorrowland",
             icon: "target",
             sections: [
               { color: "navy", icon: "parking", title: "Endereço", paragraphs: ["Tomorrowland, Magic Kingdom. Área 5 do roteiro."] },
@@ -111,6 +128,7 @@ export default {
             id: "mk-space-mountain",
             attractionId: "space",
             name: "Space Mountain",
+            area: "Tomorrowland",
             icon: "target",
             sections: [
               { color: "navy", icon: "parking", title: "Endereço", paragraphs: ["Tomorrowland, Magic Kingdom."] },
@@ -119,19 +137,33 @@ export default {
             ],
           },
           {
+            id: "mk-buzz",
+            attractionId: "buzz",
+            name: "Buzz Lightyear",
+            area: "Tomorrowland",
+            icon: "target",
+            sections: [
+              { color: "navy", icon: "parking", title: "Endereço", paragraphs: ["Tomorrowland, Magic Kingdom."] },
+              { color: "gold", icon: "lightbulb", title: "Dica", paragraphs: ["Atração atualizada."] },
+            ],
+          },
+          {
             id: "mk-seven-dwarfs",
             attractionId: "dwarfs",
             name: "Seven Dwarfs Mine Train",
+            area: "Fantasyland",
             icon: "target",
             sections: [
               { color: "navy", icon: "parking", title: "Endereço", paragraphs: ["Fantasyland, Magic Kingdom. Área 6 do roteiro."] },
               { color: "gold", icon: "lightbulb", title: "Tipo", paragraphs: ["Radical."] },
+              // REVISAR: frase não estava no texto do Thiago; ele decide se fica.
               { color: "citrus", icon: "target", title: "Como aproveitar melhor", paragraphs: ["Atração mais concorrida do parque; a fila costuma ser grande em qualquer horário."] },
             ],
           },
           {
             id: "mk-princesses",
             name: "Princesas e saída pelo castelo",
+            area: "Fantasyland",
             icon: "camera",
             sections: [
               { color: "navy", icon: "parking", title: "Endereço", paragraphs: ["Fantasyland / Cinderella Castle, Magic Kingdom."] },
@@ -141,6 +173,7 @@ export default {
           {
             id: "mk-fireworks",
             name: "Show de fogos (Main Street, U.S.A.)",
+            area: "Main Street, U.S.A.",
             icon: "tree",
             sections: [
               { color: "navy", icon: "parking", title: "Onde ficar", paragraphs: ["Perto da estátua do Walt Disney, na Main Street, U.S.A. Área 1 do roteiro."] },
@@ -151,10 +184,12 @@ export default {
           {
             id: "mk-exit",
             name: "Lojinhas de Natal e saída",
+            // REVISAR (o Thiago não disse a área das lojinhas)
+            area: "Main Street, U.S.A.",
             icon: "bag",
             sections: [
               { color: "citrus", icon: "bag", title: "Lojas", paragraphs: ["Ao sair do parque, passar nas lojinhas de Natal."] },
-              { color: "navy", icon: "parking", title: "Saída", paragraphs: ["Voltar de ferryboat."] },
+              { color: "gold", icon: "lightbulb", title: "Dica", paragraphs: ["Se não deu para tirar pela manhã, a foto na subidinha da carruagem vale agora, com a rua mais vazia."] },
             ],
           },
         ],
@@ -306,7 +341,7 @@ export default {
     {
       id: "magic-kingdom",
       label: "Magic Kingdom",
-      supportLine: "Dia inteiro no parque, com desfile e fogos", // REVISAR: dados não dizem quem vai ao parque
+      supportLine: "Vera, Sérgio, Renata, Thiago, Silvana, Gabriel e Isabela",
       trackKeys: ["magic-kingdom"],
       isDefault: true,
     },

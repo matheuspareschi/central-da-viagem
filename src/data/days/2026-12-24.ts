@@ -31,6 +31,8 @@ export default {
       {
         id: "ksc-bus-tour",
         name: "Kennedy Space Center Bus Tour",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "parking",
         sections: [
           {
@@ -71,6 +73,8 @@ export default {
       {
         id: "ksc-rocket-garden",
         name: "Rocket Garden",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "target",
         sections: [
           {
@@ -102,6 +106,8 @@ export default {
       {
         id: "ksc-astronaut-encounter",
         name: "Astronaut Encounter",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "target",
         sections: [
           {
@@ -133,6 +139,8 @@ export default {
       {
         id: "ksc-atlantis",
         name: "Space Shuttle Atlantis® e Shuttle Launch Experience®",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "target",
         sections: [
           {
@@ -164,6 +172,8 @@ export default {
       {
         id: "ksc-heroes-legends",
         name: "Heroes & Legends / U.S. Astronaut Hall of Fame",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "target",
         sections: [
           {
@@ -187,6 +197,8 @@ export default {
       {
         id: "ksc-gateway",
         name: "Gateway: The Deep Space Launch Complex®",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "target",
         sections: [
           {
@@ -210,6 +222,8 @@ export default {
       {
         id: "ksc-drone-show",
         name: "Holidays in Space — Drone Show",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "tree",
         sections: [
           {
@@ -249,6 +263,8 @@ export default {
       {
         id: "ksc-space-shop",
         name: "The Space Shop",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "bag",
         sections: [
           {

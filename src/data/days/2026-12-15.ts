@@ -39,6 +39,7 @@ export default {
         id: "velocicoaster",
         attractionId: "jurassic-world-velocicoaster",
         name: "Jurassic World VelociCoaster",
+        area: "Jurassic Park",
         icon: "target",
         sections: [
           { color: "gold", icon: "lightbulb", title: "Horário sugerido", paragraphs: ["Por volta das 10h05."] },
@@ -50,6 +51,7 @@ export default {
         id: "forbidden-journey",
         attractionId: "harry-potter-and-the-forbidden-journey",
         name: "Harry Potter and the Forbidden Journey",
+        area: "The Wizarding World of Harry Potter - Hogsmeade",
         icon: "target",
         sections: [
           { color: "gold", icon: "lightbulb", title: "Horário sugerido", paragraphs: ["Por volta das 11h00."] },
@@ -61,6 +63,7 @@ export default {
       {
         id: "hagrids",
         name: "Hagrid's Motorbike Adventure",
+        area: "The Wizarding World of Harry Potter - Hogsmeade",
         icon: "target",
         sections: [
           { color: "gold", icon: "lightbulb", title: "Horário sugerido", paragraphs: ["Por volta das 9h10."] },
@@ -72,6 +75,8 @@ export default {
       {
         id: "three-broomsticks",
         name: "Almoço no Três Vassouras",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "burger",
         sections: [
           { color: "gold", icon: "lightbulb", title: "Horário sugerido", paragraphs: ["Por volta das 11h50."] },
@@ -82,6 +87,7 @@ export default {
       {
         id: "hogsmeade-shops",
         name: "Lojas de Hogsmeade",
+        area: "Hogsmeade",
         icon: "bag",
         sections: [
           { color: "gold", icon: "lightbulb", title: "Horário sugerido", paragraphs: ["Por volta das 12h30."] },
@@ -93,6 +99,7 @@ export default {
         id: "kong",
         attractionId: "skull-island-reign-of-kong",
         name: "Skull Island: Reign of Kong",
+        area: "Skull Island",
         icon: "target",
         sections: [
           { color: "gold", icon: "lightbulb", title: "Horário sugerido", paragraphs: ["Por volta das 13h00."] },
@@ -103,6 +110,7 @@ export default {
       {
         id: "discovery-center",
         name: "Jurassic Park Discovery Center (descanso)",
+        area: "Jurassic Park",
         icon: "leaf",
         sections: [
           { color: "gold", icon: "lightbulb", title: "Horário sugerido", paragraphs: ["Por volta das 13h45."] },
@@ -111,6 +119,7 @@ export default {
       {
         id: "toon-lagoon",
         name: "Toon Lagoon: Ripsaw Falls e Bilge-Rat Barges",
+        area: "Toon Lagoon",
         icon: "target",
         sections: [
           { color: "gold", icon: "lightbulb", title: "Horário sugerido", paragraphs: ["Por volta das 14h00. Brinquedos que molham só na hora mais quente (14h–15h30)."] },
@@ -122,6 +131,7 @@ export default {
       {
         id: "marvel",
         name: "Marvel: Spider-Man e Hulk",
+        area: "Marvel Super Hero Island",
         icon: "target",
         sections: [
           { color: "gold", icon: "lightbulb", title: "Horário sugerido", paragraphs: ["Por volta das 15h15."] },
@@ -132,6 +142,8 @@ export default {
       {
         id: "jantar",
         name: "Jantar (parque ou CityWalk)",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "burger",
         sections: [
           { color: "gold", icon: "lightbulb", title: "Horário sugerido", paragraphs: ["Por volta das 17h15. Parque fecha ~20h; CityWalk depois, se quiserem."] },
@@ -143,6 +155,8 @@ export default {
       {
         id: "ollivanders",
         name: "Ollivanders e varinha",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "bag",
         sections: [
           { color: "gold", icon: "lightbulb", title: "Horário sugerido", paragraphs: ["Por volta das 18h00."] },
@@ -153,6 +167,8 @@ export default {
       {
         id: "hogs-head",
         name: "Hog's Head: cerveja amanteigada",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "burger",
         sections: [
           { color: "gold", icon: "lightbulb", title: "Horário sugerido", paragraphs: ["Por volta das 18h45."] },
@@ -161,6 +177,8 @@ export default {
       {
         id: "projecao-natal",
         name: "Projeção de Natal no castelo",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "camera",
         sections: [
           { color: "gold", icon: "lightbulb", title: "Horário", paragraphs: ["Por volta das 19h00. \"The Magic of Christmas at Hogwarts Castle\": horário só no app; chegar 20–30 min antes para ter lugar. Entrar na fila da repetição (Hagrid's ou VelociCoaster) até ~19h15, antes do fechamento."] },
@@ -170,6 +188,8 @@ export default {
       {
         id: "repeticao",
         name: "Repetição: Hagrid's ou VelociCoaster (Single Rider)",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "target",
         sections: [
           { color: "gold", icon: "lightbulb", title: "Horário sugerido", paragraphs: ["Entrar na fila até ~19h15, antes do fechamento."] },

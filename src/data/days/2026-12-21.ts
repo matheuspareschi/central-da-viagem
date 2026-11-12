@@ -43,6 +43,8 @@ export default {
       {
         id: "visao-geral",
         name: "Visão geral e logística",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "parking",
         sections: [
           {
@@ -89,6 +91,8 @@ export default {
         id: "cheetah-hunt",
         attractionId: "cheetah-hunt",
         name: "Cheetah Hunt",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "target",
         sections: [
           {
@@ -112,6 +116,8 @@ export default {
       {
         id: "cheetah-run",
         name: "Cheetah Run",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "leaf",
         sections: [
           {
@@ -135,6 +141,8 @@ export default {
       {
         id: "lion-hyena-ridge",
         name: "Lion & Hyena Ridge",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "leaf",
         sections: [
           {
@@ -157,6 +165,8 @@ export default {
         id: "cobra-curse",
         attractionId: "cobrass-curse",
         name: "Cobra's Curse",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "target",
         sections: [
           {
@@ -181,6 +191,8 @@ export default {
         id: "sheikra",
         attractionId: "sheikra",
         name: "SheiKra",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "target",
         sections: [
           {
@@ -205,6 +217,8 @@ export default {
         id: "tigris",
         attractionId: "tigris",
         name: "Tigris",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "target",
         sections: [
           {
@@ -226,6 +240,8 @@ export default {
       {
         id: "stanleyville-theater",
         name: "Stanleyville Theater",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "camera",
         sections: [
           {
@@ -249,6 +265,8 @@ export default {
       {
         id: "serengeti-safari",
         name: "Serengeti Safari",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "leaf",
         sections: [
           {
@@ -272,6 +290,8 @@ export default {
       {
         id: "animal-care-center",
         name: "Animal Care Center",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "leaf",
         sections: [
           {
@@ -293,6 +313,8 @@ export default {
       {
         id: "elephant-interaction-area",
         name: "Elephant Interaction Area",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "leaf",
         sections: [
           {
@@ -312,6 +334,8 @@ export default {
       {
         id: "penguin-point",
         name: "Penguin Point",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "leaf",
         sections: [
           {
@@ -331,6 +355,8 @@ export default {
       {
         id: "animal-connections",
         name: "Animal Connections",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "leaf",
         sections: [
           {
@@ -354,6 +380,7 @@ export default {
       {
         id: "almoco",
         name: "Almoço",
+        area: "Pantopia",
         icon: "burger",
         sections: [
           {
@@ -380,6 +407,8 @@ export default {
       {
         id: "falcon-fury",
         name: "Falcon's Fury",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "target",
         sections: [
           {
@@ -402,6 +431,8 @@ export default {
         id: "serengeti-flyer",
         attractionId: "serengeti-flyer",
         name: "Serengeti Flyer",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "target",
         sections: [
           {
@@ -423,6 +454,8 @@ export default {
       {
         id: "phoenix-rising",
         name: "Phoenix Rising",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "target",
         sections: [
           {
@@ -446,6 +479,8 @@ export default {
       {
         id: "pantopia-theater",
         name: "Pantopia Theater",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "camera",
         sections: [
           {
@@ -469,6 +504,8 @@ export default {
       {
         id: "congo-river-rapids",
         name: "Congo River Rapids",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "target",
         sections: [
           {
@@ -492,6 +529,8 @@ export default {
       {
         id: "ubanga-banga-bumper-cars",
         name: "Ubanga-Banga Bumper Cars",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "target",
         sections: [
           {
@@ -513,6 +552,8 @@ export default {
       {
         id: "habitat-hideaway",
         name: "Habitat Hideaway",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "leaf",
         sections: [
           {
@@ -536,6 +577,8 @@ export default {
       {
         id: "walkabout-way",
         name: "Walkabout Way",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "leaf",
         sections: [
           {
@@ -557,6 +600,8 @@ export default {
       {
         id: "lory-land",
         name: "Lory Land",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "leaf",
         sections: [
           {
@@ -579,6 +624,8 @@ export default {
         id: "iron-gwazi",
         attractionId: "iron-gwazi",
         name: "Iron Gwazi",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "target",
         sections: [
           {
@@ -602,6 +649,8 @@ export default {
       {
         id: "myombe-reserve",
         name: "Myombe Reserve",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "leaf",
         sections: [
           {
@@ -621,6 +670,8 @@ export default {
       {
         id: "moroccan-palace-theatre",
         name: "Moroccan Palace Theatre",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "camera",
         sections: [
           {
@@ -645,6 +696,8 @@ export default {
         id: "montu",
         attractionId: "montu",
         name: "Montu",
+        // REVISAR (área a definir)
+        area: "a definir",
         icon: "target",
         sections: [
           {
