@@ -40,7 +40,7 @@ export default {
         items: [
           {
             label: "Chegada",
-            text: "06h15 acordar\n07h15 sair de Storey Lake (~30 min de carro; rota I-4 oeste, saída Kirkman Rd/International Dr)\n~07h45 estacionar\n~08h15 no portão, com o ingresso já aberto no app\n09h00 abertura",
+            text: "06h15 acordar\n**07h15 sair de Storey Lake** (~30 min de carro; rota I-4 oeste, saída Kirkman Rd/International Dr)\n~07h45 estacionar\n~08h15 no portão, com o ingresso já aberto no app\n**09h00 abertura**",
           },
           {
             label: "Estacionamento",

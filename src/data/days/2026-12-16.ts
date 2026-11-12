@@ -123,7 +123,7 @@ itinerary: {
                 title: "Lojas",
                 list: [
                   "Mais de 180 lojas.",
-                  "Entre as lojas do diretório: adidas, PUMA, Converse, Foot Locker, Crocs, Fossil, Brooks Brothers, BOSS, Banana Republic e Armani.",
+                  "Entre as lojas do diretório: **adidas, PUMA, Converse**, Foot Locker, Crocs, Fossil, Brooks Brothers, BOSS, Banana Republic e Armani.",
                   "Seguir a aba International Premium Outlets da planilha Compras_na_Florida__2026.xlsx, com as **lojas ⭐ primeiro**.",
                 ],
               },

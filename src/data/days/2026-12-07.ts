@@ -131,7 +131,7 @@ export default {
             sections: [
               { color: "navy", icon: "parking", title: "Endereço", paragraphs: ["Tomorrowland, Magic Kingdom. Área 5 do roteiro."] },
               { color: "gold", icon: "lightbulb", title: "Tipo", paragraphs: ["Radical."] },
-              { color: "citrus", icon: "target", title: "Como aproveitar melhor", paragraphs: ["Com todo mundo vendo a parada, a Tomorrowland fica mais vazia. Aproveitar esse horário.", "Voltar a esta atração depois do **show de fogos**."] },
+              { color: "citrus", icon: "target", title: "Como aproveitar melhor", paragraphs: ["Com todo mundo vendo a parada, a **Tomorrowland fica mais vazia**. Aproveitar esse horário.", "Voltar a esta atração depois do **show de fogos**."] },
             ],
           },
           {
