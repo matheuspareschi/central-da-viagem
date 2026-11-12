@@ -27,11 +27,11 @@ export const tollStages: TollStage[] = [
     icon: Plane,
     iconClasses: "bg-gold-tint text-[#6b4a0b]",
     passos: [
-      { id: "pedagio-1", titulo: "Baixe o aplicativo", texto: "Instale o app Visitor Toll Pass e crie a sua conta." },
+      { id: "pedagio-1", titulo: "Baixe o aplicativo", texto: "Instale o app **Visitor Toll Pass** e crie a sua conta." },
       {
         id: "pedagio-2",
         titulo: "Cadastre o pagamento",
-        texto: "Adicione seu cartão global (com pelo menos US$ 10 de saldo) e faça a reserva da sua tag para os dias da viagem.",
+        texto: "Adicione seu cartão global (com **pelo menos US$ 10 de saldo**) e faça a **reserva da sua tag** para os dias da viagem.",
       },
     ],
   },
@@ -44,20 +44,20 @@ export const tollStages: TollStage[] = [
       {
         id: "pedagio-3",
         titulo: "Pegue o carro primeiro",
-        texto: "Retire a chave na locadora, vá até o veículo e anote a placa e o estado de registro.",
-        dica: "Recuse o pacote de pedágio no balcão e confira se o aparelho do carro, caso exista, está fechado.",
+        texto: "Retire a chave na locadora, vá até o veículo e **anote a placa** e o estado de registro.",
+        dica: "**Recuse o pacote de pedágio** no balcão e confira se o aparelho do carro, caso exista, está fechado.",
       },
       {
         id: "pedagio-4",
         titulo: "Retire a tag no totem",
         texto:
-          "Com o carro já estacionado na garagem, vá até a máquina de autoatendimento no Nível 1 do terminal, escaneie o QR Code do app e pegue o seu passe.",
+          "Com o carro já estacionado na garagem, vá até a máquina de autoatendimento no **Nível 1 do terminal**, **escaneie o QR Code** do app e pegue o seu passe.",
       },
       {
         id: "pedagio-5",
         titulo: "Ative e pendure no carro",
         texto:
-          "Escaneie o código da tag no aplicativo, digite a placa do veículo e pendure o cartão no espelho retrovisor interno antes de sair dirigindo.",
+          "Escaneie o código da tag no aplicativo, **digite a placa do veículo** e pendure o cartão no **espelho retrovisor interno** antes de sair dirigindo.",
       },
     ],
   },
@@ -71,7 +71,7 @@ export const tollStages: TollStage[] = [
         id: "pedagio-6",
         titulo: "Devolva a tag",
         texto:
-          "Antes de embarcar, retire o passe do retrovisor e deposite em uma das urnas de devolução do aeroporto para encerrar a conta e receber o estorno do saldo não utilizado.",
+          "Antes de embarcar, retire o passe do retrovisor e deposite em uma das **urnas de devolução do aeroporto** para encerrar a conta e receber o estorno do saldo não utilizado.",
       },
     ],
   },
