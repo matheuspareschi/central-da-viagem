@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { Heart } from "lucide-react";
 import { DetailSections, TapCheckbox } from "../../../components";
-import { isStoreClosed, storeGroupLabels, storeGroupOf, storeGroupOrder, type StoreGroup } from "../../../lib/stores";
+import { isStoreClosed, listStoreFilterKeys, storeFilterKeyOf, storeFilterLabel } from "../../../lib/stores";
 import type { DetailSection, ShopRegion, Store } from "../../../types";
 import type { StoreMarks } from "./useStoreMarks";
 
-type StoreFilter = "favoritas" | StoreGroup;
+/** "favoritas" ou a chave de um filtro de categoria (ver `listStoreFilterKeys`). */
+type StoreFilter = string;
 
 function describeStoreProfile(store: Store): DetailSection[] {
   const fields: [DetailSection["color"], string, string | undefined][] = [
@@ -19,7 +20,7 @@ function describeStoreProfile(store: Store): DetailSection[] {
 
 function pickStores(region: ShopRegion, marks: StoreMarks, filter: StoreFilter): Store[] {
   if (filter === "favoritas") return marks.summary.favoriteStores;
-  return region.stores.filter((store) => storeGroupOf(store) === filter);
+  return region.stores.filter((store) => storeFilterKeyOf(store) === filter);
 }
 
 interface StoreListProps {
@@ -71,10 +72,9 @@ interface StoreFiltersProps {
 }
 
 function StoreFilters({ region, favoritesCount, selected, onSelect }: StoreFiltersProps) {
-  const groupsInRegion = storeGroupOrder.filter((group) => region.stores.some((store) => storeGroupOf(store) === group));
   const filters: { key: StoreFilter; label: string }[] = [
     { key: "favoritas", label: `Favoritas ${favoritesCount}` },
-    ...groupsInRegion.map((group) => ({ key: group, label: storeGroupLabels[group] })),
+    ...listStoreFilterKeys(region).map((key) => ({ key, label: storeFilterLabel(key) })),
   ];
 
   return (

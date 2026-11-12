@@ -22,61 +22,20 @@ export default {
   itinerary: {
     kind: "checklist",
     parkId: "epcot",
-    summary: "Dia de parque único, sem trilha paralela de compras. Ritmo rápido em World Celebration, World Discovery e World Nature pela manhã, para deixar a tarde/noite inteira livre no World Showcase.",
+    summary: "Dia de parque único, sem trilha paralela de compras. Ritmo rápido em World Celebration, World Nature e World Discovery pela manhã, para deixar a tarde/noite inteira livre no World Showcase.",
     journey: {
-      tiles: [{ label: "Acordar", value: "6h30" }, { label: "Sair do resort", value: "7h30" }, { label: "Estacionamento abre", value: "8h00" }, { label: "Parque aberto", value: "9h–21h" }],
+      tiles: [{ label: "Acordar", value: "7h00" }, { label: "Sair do resort", value: "7h30" }, { label: "Estacionamento abre", value: "8h00" }, { label: "Parque aberto", value: "9h–21h" }],
       notes: [
         { icon: "car", text: "~25 min até os portões." },
-        { icon: "info", text: "Utilizar early entry (não hóspedes)." },
+        { icon: "info", text: "Utilizar early entry (não hóspedes)." }, // REVISAR: não está no texto do Thiago
         { icon: "info", text: "Café da manhã leve em casa antes de sair; levar lanches próprios (queijo, frutas, snacks) para o meio da manhã." },
-        { icon: "info", text: "No World Showcase, preferir quiosques baratos a restaurantes table-service." },
+        { icon: "info", text: "No World Showcase, preferir quiosques baratos a restaurantes table-service." }, // REVISAR: não está no texto do Thiago
+        { icon: "info", text: "Fazer as atrações das três primeiras áreas de forma rápida, para aproveitar o World Showcase com calma." },
         { icon: "info", text: "Fotos da Disney: compradas antes da viagem, no Brasil." },
       ],
-      alerts: [],
+      alerts: ["Deixar os lanches do parque separados no dia anterior. Mochilas com filtro solar, remédios etc."],
     },
     attractions: [
-      {
-        id: "guardians-cosmic-rewind",
-        name: "Guardiões da Galáxia: Cosmic Rewind",
-        area: "World Discovery",
-        icon: "target",
-        sections: [
-          {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: ["World Discovery, Epcot."],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Tipo",
-            paragraphs: ["Radical."],
-          },
-          {
-            color: "citrus",
-            icon: "target",
-            title: "Como aproveitar melhor",
-            paragraphs: [
-              "Deve ser a primeira parada do dia, antes até da Spaceship Earth — chegar na fila standby nos primeiros minutos de abertura, pois depois das 10h a espera cresce rápido (histórico de até 150+ min). Sentar no último carrinho dá mais sensação de giro.",
-            ],
-          },
-          {
-            color: "palm",
-            icon: "camera",
-            title: "Curiosidades",
-            paragraphs: [
-              "É a primeira montanha-russa do Epcot; a trilha sonora é sorteada entre 6 músicas diferentes a cada volta, então cada passeio é uma experiência diferente.",
-            ],
-          },
-          {
-            color: "gold",
-            icon: "tree",
-            title: "Destaques do pavilhão",
-            list: ["World Discovery reúne também Mission: Space e Test Track."],
-          },
-        ],
-      },
       {
         id: "spaceship-earth",
         attractionId: "spaceship-earth",
@@ -101,7 +60,7 @@ export default {
             icon: "target",
             title: "Como aproveitar melhor",
             paragraphs: [
-              "Ir logo depois de Guardiões, antes de encher; sentar do lado direito do veículo para ver melhor as cenas.",
+              "Primeira atração do dia. Sentar do lado direito do veículo para ver melhor as cenas.", // REVISAR: o lado direito não está no texto do Thiago
             ],
           },
           {
@@ -147,7 +106,7 @@ export default {
             icon: "target",
             title: "Como aproveitar melhor",
             paragraphs: [
-              "Fazer logo depois de sair da Spaceship Earth, antes do meio-dia — ponto tradicional de foto em grupo, com a esfera geodésica ao fundo.",
+              "Não esquecer de tirar fotos com a bola ao fundo. Fazer logo depois de sair da Spaceship Earth, antes do meio-dia — ponto tradicional de foto em grupo, com a esfera geodésica ao fundo.",
             ],
           },
         ],
@@ -185,6 +144,153 @@ export default {
             paragraphs: [
               "Ponto tradicional de fotos com a bola ao fundo — ótimo para a foto de capa do dia.",
             ],
+          },
+        ],
+      },
+      {
+        id: "soarin",
+        attractionId: "soarin-around-the-world", // REVISAR: conferir se o id do catálogo ainda vale com o nome "Soarin' Across America"
+        name: "Soarin' Across America",
+        area: "World Nature",
+        icon: "target",
+        sections: [
+          {
+            color: "navy",
+            icon: "parking",
+            title: "Endereço",
+            paragraphs: ["World Nature, Epcot."],
+          },
+          {
+            color: "gold",
+            icon: "lightbulb",
+            title: "Tipo",
+            paragraphs: ["Asa delta."],
+          },
+          {
+            color: "citrus",
+            icon: "target",
+            title: "Como aproveitar melhor",
+            paragraphs: [
+              "Escolher assentos das fileiras do meio para a melhor visão central da tela.",
+            ],
+          },
+          {
+            color: "palm",
+            icon: "camera",
+            title: "Curiosidades",
+            paragraphs: [
+              "Temática dos 250 anos dos EUA.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "epcot-pausa-comer",
+        name: "Pausa para comer",
+        area: "World Nature",
+        icon: "burger",
+        sections: [
+          { color: "navy", icon: "parking", title: "Endereço", paragraphs: ["World Nature, Epcot."] },
+          { color: "gold", icon: "lightbulb", title: "Dica", paragraphs: ["Momento para comer com calma."] },
+        ],
+      },
+      {
+        id: "coca-cola-store",
+        name: "Loja da Coca-Cola (Club Cool)", // REVISAR: o Thiago escreveu "cool club" e o JSON a coloca em World Nature, perto de The Land; confirmar onde fica
+        area: "World Nature",
+        icon: "bag",
+        sections: [
+          {
+            color: "navy",
+            icon: "parking",
+            title: "Endereço",
+            paragraphs: ["World Nature, Epcot — próxima ao pavilhão The Land."],
+          },
+          {
+            color: "gold",
+            icon: "lightbulb",
+            title: "Tipo",
+            paragraphs: ["Outro."],
+          },
+          {
+            color: "citrus",
+            icon: "target",
+            title: "Como aproveitar melhor",
+            paragraphs: [
+              "Parada rápida logo após o almoço/lanche, no mesmo trecho de Soarin'; combinar com fotos na área temática de Moana ao lado.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "moana-photo",
+        name: "Fotos na área temática de Moana",
+        area: "World Nature",
+        icon: "camera",
+        sections: [
+          {
+            color: "navy",
+            icon: "parking",
+            title: "Endereço",
+            paragraphs: [
+              "World Nature, Epcot — próxima ao pavilhão The Land / Journey of Water.",
+            ],
+          },
+          {
+            color: "gold",
+            icon: "lightbulb",
+            title: "Tipo",
+            paragraphs: ["Fotos."],
+          },
+          {
+            color: "citrus",
+            icon: "target",
+            title: "Como aproveitar melhor",
+            paragraphs: [
+              "Fazer logo após a parada na loja da Coca-Cola, antes de seguir para o World Discovery.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "guardians-cosmic-rewind",
+        name: "Guardiões da Galáxia: Cosmic Rewind",
+        area: "World Discovery",
+        icon: "target",
+        sections: [
+          {
+            color: "navy",
+            icon: "parking",
+            title: "Endereço",
+            paragraphs: ["World Discovery, Epcot."],
+          },
+          {
+            color: "gold",
+            icon: "lightbulb",
+            title: "Tipo",
+            paragraphs: ["Radical."],
+          },
+          {
+            color: "citrus",
+            icon: "target",
+            title: "Como aproveitar melhor",
+            paragraphs: [
+              "Sentar no último carrinho dá mais sensação de giro.", // REVISAR
+            ],
+          },
+          {
+            color: "palm",
+            icon: "camera",
+            title: "Curiosidades",
+            paragraphs: [
+              "É a primeira montanha-russa do Epcot; a trilha sonora é sorteada entre 6 músicas diferentes a cada volta, então cada passeio é uma experiência diferente.",
+            ],
+          },
+          {
+            color: "gold",
+            icon: "tree",
+            title: "Destaques do pavilhão",
+            list: ["World Discovery reúne também Mission: Space e Test Track."],
           },
         ],
       },
@@ -279,101 +385,6 @@ export default {
         ],
       },
       {
-        id: "soarin",
-        attractionId: "soarin-around-the-world",
-        name: "Soarin' Around the World",
-        area: "World Nature",
-        icon: "target",
-        sections: [
-          {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: ["World Nature, Epcot."],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Tipo",
-            paragraphs: ["Outro."],
-          },
-          {
-            color: "citrus",
-            icon: "target",
-            title: "Como aproveitar melhor",
-            paragraphs: [
-              "Escolher assentos das fileiras do meio para a melhor visão central da tela.",
-            ],
-          },
-          {
-            color: "palm",
-            icon: "camera",
-            title: "Curiosidades",
-            paragraphs: [
-              "A edição temática dos 250 anos dos EUA insere trechos com paisagens americanas históricas na sequência de voo, além do circuito clássico por marcos mundiais.",
-            ],
-          },
-        ],
-      },
-      {
-        id: "coca-cola-store",
-        name: "Loja da Coca-Cola (Coca-Cola Club)",
-        area: "World Nature",
-        icon: "bag",
-        sections: [
-          {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: ["World Nature, Epcot — próxima ao pavilhão The Land."],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Tipo",
-            paragraphs: ["Outro."],
-          },
-          {
-            color: "citrus",
-            icon: "target",
-            title: "Como aproveitar melhor",
-            paragraphs: [
-              "Parada rápida logo após o almoço/lanche, no mesmo trecho de Soarin'; combinar com fotos na área temática de Moana ao lado.",
-            ],
-          },
-        ],
-      },
-      {
-        id: "moana-photo",
-        name: "Fotos na área temática de Moana",
-        area: "World Nature",
-        icon: "camera",
-        sections: [
-          {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: [
-              "World Nature, Epcot — próxima ao pavilhão The Land / Journey of Water.",
-            ],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Tipo",
-            paragraphs: ["Fotos."],
-          },
-          {
-            color: "citrus",
-            icon: "target",
-            title: "Como aproveitar melhor",
-            paragraphs: [
-              "Fazer logo após a parada na loja da Coca-Cola, antes de seguir para o World Showcase.",
-            ],
-          },
-        ],
-      },
-      {
         id: "showcase-canada",
         name: "World Showcase — Canadá",
         area: "World Showcase",
@@ -460,7 +471,7 @@ export default {
             icon: "target",
             title: "Como aproveitar melhor",
             paragraphs: [
-              "Ida obrigatória — fila costuma ser menor no fim da tarde do que no meio do dia. Aproveitar para procurar Bela e a Fera na área.",
+              "Imperdível — fila costuma ser menor no fim da tarde do que no meio do dia. Aproveitar para procurar Bela e a Fera na área.",
             ],
           },
           {
@@ -563,6 +574,12 @@ export default {
             title: "Tipo",
             paragraphs: ["Show."],
           },
+          {
+            color: "citrus",
+            icon: "target",
+            title: "Como aproveitar melhor",
+            paragraphs: ["História do país."],
+          },
         ],
       },
       {
@@ -588,7 +605,7 @@ export default {
             icon: "target",
             title: "Como aproveitar melhor",
             paragraphs: [
-              "Boa parada para perfumes na Il Bel Cristallo; usar a área como ponto de encontro do grupo para os fogos, já que fica de frente para a lagoa.",
+              "Bom lugar para comprar perfumes (Il Bel Cristallo); wine bar; voltar aqui para assistir aos fogos, de frente para a lagoa.",
             ],
           },
           {
@@ -623,7 +640,7 @@ export default {
             color: "citrus",
             icon: "target",
             title: "Como aproveitar melhor",
-            paragraphs: ["Passar pelo pub alemão."],
+            paragraphs: ["Passar pelo pub alemão. Procurar a Branca de Neve."],
           },
         ],
       },
@@ -650,7 +667,7 @@ export default {
             icon: "target",
             title: "Como aproveitar melhor",
             paragraphs: [
-              "Só entrar se o tempo permitir — não é prioridade do dia.",
+              "Show de reflexos da China; ir só se houver tempo. Ficar de olho se a Mulan está por perto.",
             ],
           },
           {
@@ -686,7 +703,7 @@ export default {
             icon: "target",
             title: "Como aproveitar melhor",
             paragraphs: [
-              "Priorizar a atração em vez do meet-and-greet com Anna/Elsa (Royal Sommerhus fecha 18h30, mais cedo que o horário do roteiro).",
+              "Fazer se der tempo. O encontro com Elsa e Anna fecha às 18h30.",
             ],
           },
           {
@@ -722,7 +739,7 @@ export default {
             icon: "target",
             title: "Como aproveitar melhor",
             paragraphs: [
-              "Ir ao anoitecer — a fila costuma ser menor e a pirâmide iluminada por fora fica mais bonita para foto na saída.",
+              "Ir ao anoitecer — a fila costuma ser menor e a pirâmide iluminada por fora fica mais bonita para foto na saída.", // REVISAR: não está no texto do Thiago
             ],
           },
           {

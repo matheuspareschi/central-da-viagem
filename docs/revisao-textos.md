@@ -34,7 +34,19 @@ Todos têm `// REVISAR` nos arquivos. Detalhes em `melhorias-relatorio.md`.
 | Dia | Campo | Motivo |
 | --- | --- | --- |
 | 6 | horários dos passos | Chegada 15:40 e demais +20 min; a chegada antiga era 15:15. |
-| 8 | café, trajeto e parada do Olive Garden, noite | Horários derivados; Olive Garden com endereço e horário a definir. |
+| 8 | café e trajeto até o Olive Garden | Horários derivados (08:15 e 12:45), sem mudança. |
+| 8 | noite | Casa 17:45 (~30 min), saída 18:15, Disney Springs 18:40, volta 20:35 (chegada ~21:00); passo "Preparar lanches para o dia 09" removido, o aviso do Epcot está em `journey.alerts`. |
+| 8 | `journey.notes` | Nota de snacks copiada do dia 7. |
+| 8 | Olive Garden | Endereço e horário ("Terça: 11h às 22h") de site agregador; conferir no site oficial. |
+| 8 | Disney Springs | Cartão condensado em 4 seções. Removidos: a seção "Dica" (datas do Christmas Tree Stroll agora na seção Natal), a localização do Marketplace/Earl of Sandwich, a Árvore de Toy Story, os tijolos reciclados e o "Mais de" das curiosidades. |
+| 8 | Disney Springs | Horário de funcionamento informado pelo Thiago, não consta nos dados. |
+| 9 | `journey.tiles`, `alerts`, `notes`, `summary` | "Acordar" 7h00; alerta de lanches e mochilas; nota de ritmo rápido; ordem das áreas no resumo. "Utilizar early entry" e "quiosques baratos" ficaram com `REVISAR` (não estão no texto do Thiago). |
+| 9 | ordem das atrações | Spaceship Earth, foto da bola, Mickey, Soarin', pausa para comer (nova), Coca-Cola, Moana, Guardiões, Mission: Space, Test Track; World Showcase sem mudança. |
+| 9 | Spaceship Earth | "Sentar do lado direito do veículo" não está no texto do Thiago. |
+| 9 | Soarin' | Nome "Soarin' Across America"; conferir se o `attractionId` do catálogo ainda vale. |
+| 9 | Loja da Coca-Cola | Nome "(Club Cool)" e local: o Thiago escreveu "cool club" e o JSON a coloca em World Nature, perto de The Land. |
+| 9 | Guardiões da Galáxia | Texto reescrito (agora é da terceira área, não a primeira parada); conferir. |
+| 9 | México | "Ir ao anoitecer — a fila costuma ser menor..." não está no texto do Thiago. |
 | 10 | Islands, McDonald's, Hogwarts, CityWalk | Parque fecha 19h, mas os passos de Hogwarts e CityWalk seguem depois. |
 | 12 | horários após a doceria | 45 min antes; texto do Lake Eola cita 17h30. |
 | 13 | textos "Por volta das…" | Deslocados +1 h por causa da abertura às 10h. |

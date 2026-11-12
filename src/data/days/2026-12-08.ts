@@ -1,4 +1,13 @@
+import { mapSearchUrl } from "../../lib/maps";
 import type { DayData } from "../../types";
+
+const ADDRESSES = {
+  loopWest: "2001 W Osceola Pkwy, Kissimmee, FL",
+  oliveGarden: "1604 W Osceola Pkwy, Kissimmee, FL 34741.",
+  theLoop: "3208 N John Young Pkwy, Kissimmee, FL 34741",
+  theCrosslands: "1100 W Osceola Pkwy, Kissimmee, FL 34741",
+  disneySprings: "1486 E Buena Vista Dr, Lake Buena Vista, FL 32830",
+} as const;
 
 export default {
   dateISO: "2026-12-08",
@@ -21,21 +30,18 @@ export default {
       tiles: [
         { label: "Acordar", value: "8h00" },
         { label: "Sair de casa", value: "9h00" },
+        { label: "Disney Springs", value: "18h40" },
+        { label: "Voltar para casa", value: "21h00" },
       ],
-      notes: [],
-      alerts: [],
+      notes: [
+        { icon: "info", text: "Levar snacks leves (queijo, fruta, salgadinho) para acompanhar durante as compras." }, // REVISAR: mesmo texto da nota do dia 7
+      ],
+      alerts: ["Ao voltar para casa, preparar os lanches para o dia 09 (Epcot)."],
     },
     periods: [
       {
         title: "Manhã",
         steps: [
-          {
-            kind: "stop",
-            time: "08:15", // REVISAR: antes 07:30, antes do novo horário de acordar (8h00)
-            stopId: "",
-            name: "Café da manhã em casa",
-            icon: "house",
-          },
           {
             kind: "transit",
             time: "09:00",
@@ -44,7 +50,7 @@ export default {
           },
           {
             kind: "stop",
-            time: "09:30", // REVISAR: sem a parada duplicada do TJ Maxx, o Loop West começa na chegada
+            time: "09:30",
             stopId: "loop-west",
             name: "Loop West",
             icon: "bag",
@@ -56,7 +62,7 @@ export default {
         steps: [
           {
             kind: "transit",
-            time: "12:45", // REVISAR: trajeto até o Olive Garden, duração copiada dos trajetos vizinhos
+            time: "12:45",
             duration: "10–15 min",
             destinationName: "Olive Garden",
           },
@@ -106,36 +112,29 @@ export default {
           },
           {
             kind: "stop",
-            time: "18:00", // REVISAR: horário derivado do antigo "Jantar em casa"
+            time: "17:45",
             stopId: "",
             name: "Em casa: lanche rápido e descarregar as compras",
             icon: "house",
           },
           {
             kind: "transit",
-            time: "19:30",
+            time: "18:15",
             duration: "20–25 min",
             destinationName: "Disney Springs",
           },
           {
             kind: "stop",
-            time: "20:00",
+            time: "18:40",
             stopId: "disney-springs",
             name: "Disney Springs",
             icon: "target",
           },
           {
             kind: "transit",
-            time: "22:30",
+            time: "20:35",
             duration: "20–25 min",
             destinationName: "Storey Lake Resort",
-          },
-          {
-            kind: "stop",
-            time: "23:00", // REVISAR: derivado da volta de Disney Springs (22:30 + ~25 min)
-            stopId: "",
-            name: "Preparar lanches para o dia 09 (Epcot)",
-            icon: "house",
           },
         ],
       },
@@ -143,6 +142,7 @@ export default {
     cards: [
       {
         id: "olive-garden",
+        link: mapSearchUrl("Olive Garden", ADDRESSES.oliveGarden),
         name: "Olive Garden (almoço)",
         icon: "burger",
         time: "13:00",
@@ -151,23 +151,25 @@ export default {
             color: "navy",
             icon: "parking",
             title: "Endereço",
-            paragraphs: ["A definir."],
+            paragraphs: [ADDRESSES.oliveGarden],
           },
           {
             color: "gold",
             icon: "lightbulb",
             title: "Horário de funcionamento",
-            paragraphs: ["A definir."],
+            paragraphs: ["Terça: 11h às 22h."], 
           },
         ],
       },
       {
         id: "loop-west",
+        link: mapSearchUrl("Loop West", ADDRESSES.loopWest),
         name: "Loop West",
         icon: "bag",
         time: "09:30",
         shopRegionId: "loop-west",
         sections: [
+          { color: "navy", icon: "parking", title: "Endereço", paragraphs: [ADDRESSES.loopWest] },
           {
             color: "citrus",
             icon: "bag",
@@ -192,10 +194,12 @@ export default {
               "Todas as lojas ficam no mesmo trecho da W Osceola Pkwy — dá para fazer a pé sem mover o carro.",
             ],
           },
+          { color: "gold", icon: "lightbulb", title: "Curiosidades", paragraphs: ["Faz parte do complexo The Loop, dividido em Loop West e Loop East."] },
         ],
       },
       {
         id: "the-loop",
+        link: mapSearchUrl("The Loop", ADDRESSES.theLoop),
         name: "The Loop",
         icon: "bag",
         time: "14:15",
@@ -205,7 +209,7 @@ export default {
             color: "navy",
             icon: "parking",
             title: "Endereço",
-            paragraphs: ["3208 N John Young Pkwy, Kissimmee, FL 34741"],
+            paragraphs: [ADDRESSES.theLoop],
           },
           {
             color: "citrus",
@@ -226,10 +230,21 @@ export default {
               "Aeropostale",
             ],
           },
+          {
+            color: "gold",
+            icon: "lightbulb",
+            title: "Curiosidades",
+            list: [
+              "Inaugurado em 2007, tem cerca de 78.000 m² em um único piso, na esquina da John Young Pkwy com a Osceola Pkwy.",
+              "É dividido em duas áreas, Loop West e Loop East.",
+              "Tem cinema Regal.",
+            ],
+          },
         ],
       },
       {
         id: "the-crosslands",
+        link: mapSearchUrl("The Crosslands", ADDRESSES.theCrosslands),
         name: "The Crosslands",
         icon: "bag",
         time: "16:30",
@@ -239,7 +254,7 @@ export default {
             color: "navy",
             icon: "parking",
             title: "Endereço",
-            paragraphs: ["1100 W Osceola Pkwy, Kissimmee, FL 34741"],
+            paragraphs: [ADDRESSES.theCrosslands],
           },
           {
             color: "citrus",
@@ -265,42 +280,46 @@ export default {
       },
       {
         id: "disney-springs",
+        link: mapSearchUrl("Disney Springs", ADDRESSES.disneySprings),
         name: "Disney Springs",
         icon: "target",
-        time: "20:00",
+        time: "18:40",
         sections: [
           {
             color: "navy",
             icon: "parking",
             title: "Endereço e Estacionamento",
             paragraphs: [
-              "1486 E Buena Vista Dr, Lake Buena Vista, FL 32830",
-              "Entrada e estacionamento gratuitos.",
-            ],
-          },
-          {
-            color: "citrus",
-            icon: "tree",
-            title: "Natal",
-            list: [
-              "Christmas Tree Stroll (Marketplace, perto do Earl of Sandwich)",
-              "Neve artificial noturna no Town Center",
-              "World of Disney",
-            ],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Dica",
-            paragraphs: [
-              "Christmas Tree Stroll roda de 13/nov/2026 a 6/jan/2027.",
+              ADDRESSES.disneySprings,
+              "**Entrada e estacionamento gratuitos.**",
             ],
           },
           {
             color: "navy",
             icon: "lightbulb",
             title: "Horário de funcionamento",
-            paragraphs: ["Em geral até 23h (sexta e sábado até 23h30)."], // REVISAR: informado pelo Thiago, não consta nos dados
+            paragraphs: ["Em geral **até 23h** (sexta e sábado até 23h30)."], // REVISAR: informado pelo Thiago, não consta nos dados
+          },
+          {
+            color: "citrus",
+            icon: "tree",
+            title: "Natal",
+            list: [
+              "**Christmas Tree Stroll** (até 6/jan/2027): árvores com temas Disney, Pixar e Star Wars. Em geral, mapa e adesivos grátis, trocados por um pin.",
+              "**Neve** toda noite no Town Center.",
+              "**Papai Noel** até 24/dez; horário no app My Disney Experience.",
+              "**World of Disney**, a maior coleção de produtos Disney do mundo.",
+            ],
+          },
+          {
+            color: "gold",
+            icon: "lightbulb",
+            title: "Curiosidades",
+            list: [
+              "**150+ lojas e restaurantes** em 120 acres, em 4 bairros: Town Center, The Landing, Marketplace e West Side.",
+              "**Aerophile:** o maior balão cativo de hélio do mundo.",
+              "**Drawn to Life:** a única produção do Cirque du Soleil na Flórida.",
+            ],
           },
         ],
       },

@@ -29,6 +29,25 @@ export function storeGroupOf(store: Store): StoreGroup {
   return groupByCategory[store.category] ?? "outras";
 }
 
+/** Chave de um filtro da lista de lojas: o grupo, quando a categoria pertence a um; senão a própria categoria. */
+export function storeFilterKeyOf(store: Store): string {
+  return groupByCategory[store.category] ?? store.category;
+}
+
+export function storeFilterLabel(filterKey: string): string {
+  return storeGroupLabels[filterKey as StoreGroup] ?? filterKey;
+}
+
+const isGroupKey = (filterKey: string): filterKey is StoreGroup => filterKey in storeGroupLabels;
+
+/** Filtros da região: grupos conhecidos, depois as demais categorias (na ordem em que aparecem) e por fim as fechadas. */
+export function listStoreFilterKeys(region: ShopRegion): string[] {
+  const keys = new Set(region.stores.map(storeFilterKeyOf));
+  const knownGroups = storeGroupOrder.filter((group) => group !== "fechadas" && keys.has(group));
+  const otherCategories = [...keys].filter((key) => !isGroupKey(key));
+  return [...knownGroups, ...otherCategories, ...(keys.has("fechadas") ? ["fechadas"] : [])];
+}
+
 export const isStoreClosed = (store: Store) => storeGroupOf(store) === "fechadas";
 
 export interface StoreSummary {
