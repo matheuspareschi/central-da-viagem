@@ -9,4 +9,5 @@ export { BackButton, type BackTarget } from "./ui/PageChrome";
 export { BottomSheet } from "./ui/BottomSheet";
 export { TapCheckbox, CheckMark } from "./ui/TapCheckbox";
 export { DetailSections } from "./ui/DetailSections";
+export { RichText } from "./ui/RichText";
 export { IconBadge } from "./ui/IconBadge";

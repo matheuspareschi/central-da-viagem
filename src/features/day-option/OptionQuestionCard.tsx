@@ -1,3 +1,4 @@
+import { RichText } from "../../components";
 import type { DayOption } from "../../types";
 
 interface OptionQuestionCardProps {
@@ -22,7 +23,9 @@ export function OptionQuestionCard({ question, options, onChoose }: OptionQuesti
               className="flex min-h-14 w-full flex-col justify-center rounded-[14px] border border-line bg-paper-inset px-4 py-2 text-left focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-citrus"
             >
               <span className="text-base font-semibold leading-tight [overflow-wrap:anywhere]">{option.label}</span>
-              <span className="text-[13px] leading-snug text-ink-soft [overflow-wrap:anywhere]">{option.supportLine}</span>
+              <span className="text-[13px] leading-snug text-ink-soft [overflow-wrap:anywhere]">
+                <RichText text={option.supportLine} />
+              </span>
             </button>
           </li>
         ))}

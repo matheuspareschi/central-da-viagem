@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BottomSheet, TapCheckbox } from "../../components";
+import { BottomSheet, RichText, TapCheckbox } from "../../components";
 import type { DayOption } from "../../types";
 
 interface OptionSheetProps {
@@ -19,7 +19,9 @@ function OptionRadioCard({ option, checked, onSelect }: { option: DayOption; che
       <input type="radio" name="day-option" value={option.id} checked={checked} onChange={onSelect} className="h-5 w-5 shrink-0 accent-[#c1481f]" />
       <span className="flex min-w-0 flex-col">
         <span className="text-base font-semibold leading-tight [overflow-wrap:anywhere]">{option.label}</span>
-        <span className="text-[13px] leading-snug text-ink-soft [overflow-wrap:anywhere]">{option.supportLine}</span>
+        <span className="text-[13px] leading-snug text-ink-soft [overflow-wrap:anywhere]">
+          <RichText text={option.supportLine} />
+        </span>
       </span>
     </label>
   );

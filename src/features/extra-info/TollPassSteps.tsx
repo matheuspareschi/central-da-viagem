@@ -1,4 +1,4 @@
-import { TapCheckbox } from "../../components";
+import { RichText, TapCheckbox } from "../../components";
 import { allTollSteps, tollStages, tollTipIcon as TipIcon, type TollStage, type TollStep } from "../../data/pedagio";
 import { usePedagio } from "../../hooks/usePedagio";
 import { CheckProgress } from "./CheckProgress";
@@ -68,7 +68,9 @@ function StepRow({ step, isChecked, onToggle }: { step: TollStep; isChecked: boo
         <span className="pt-0.5 font-mono text-sm font-semibold text-ink-soft">{number}</span>
         <span className={`min-w-0 flex-1 [overflow-wrap:anywhere] ${isChecked ? "text-ink-soft line-through" : "text-ink"}`}>
           <span className="block text-[15px] font-semibold">{step.titulo}</span>
-          <span className="block text-sm">{step.texto}</span>
+          <span className="block text-sm">
+            <RichText text={step.texto} />
+          </span>
         </span>
       </span>
     </TapCheckbox>
@@ -81,7 +83,7 @@ function TipBlock({ text }: { text: string }) {
       <TipIcon className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />
       <span className="min-w-0 [overflow-wrap:anywhere]">
         <strong>Dica: </strong>
-        {text}
+        <RichText text={text} />
       </span>
     </p>
   );

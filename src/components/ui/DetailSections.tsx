@@ -1,4 +1,6 @@
+import { Fragment } from "react";
 import type { DetailSection, SectionColor } from "../../types";
+import { RichText } from "./RichText";
 
 const pillClasses: Record<SectionColor, string> = {
   navy: "bg-[#e3e2dc] text-ink",
@@ -17,14 +19,20 @@ export function DetailSections({ sections }: { sections: DetailSection[] }) {
           <span className={`inline-block rounded-full px-2.5 py-0.5 text-xs font-bold uppercase tracking-wider ${pillClasses[section.color]}`}>
             {section.title}
           </span>
-          <p className="mt-2 whitespace-pre-line text-sm leading-normal text-ink">{sectionText(section)}</p>
+          <p className="mt-2 whitespace-pre-line text-sm leading-normal text-ink">
+            {sectionLines(section).map((line, index) => (
+              <Fragment key={index}>
+                {index > 0 && "\n"}
+                <RichText text={line} />
+              </Fragment>
+            ))}
+          </p>
         </section>
       ))}
     </div>
   );
 }
 
-function sectionText({ paragraphs = [], list = [] }: DetailSection): string {
-  const bullets = list.map((entry) => `• ${entry}`);
-  return [...paragraphs, ...bullets].join("\n");
+function sectionLines({ paragraphs = [], list = [] }: DetailSection): string[] {
+  return [...paragraphs, ...list.map((entry) => `• ${entry}`)];
 }

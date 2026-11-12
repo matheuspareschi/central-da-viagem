@@ -5,6 +5,10 @@ import { parkCatalogs } from "../src/data/parks/index.ts";
 import { shopRegions } from "../src/data/shopping/index.ts";
 import { applyOption } from "../src/lib/dayOption.ts";
 import { listDayTracks, type DayTrack } from "../src/lib/dayTracks.ts";
+import { beforeTravelItems } from "../src/data/global/beforeTravel.ts";
+import { trashInstructions } from "../src/data/global/trashInstructions.ts";
+import { tollStages } from "../src/data/pedagio.ts";
+import { boldShare, hasUnclosedBoldMark } from "../src/lib/richText.ts";
 import { toMinutes } from "../src/lib/schedule.ts";
 import type { DayData, JourneyTile, ParkAttraction, StopStep, TransitStep } from "../src/types";
 
@@ -297,11 +301,37 @@ function checkDayAndOptions(day: DayData): string[] {
   return [...checkOptions(day), ...optionErrors];
 }
 
+const MAX_BOLD_SHARE = 0.4;
+
+/** Todo texto (string) dentro de um valor dos dados, com o caminho até ele. */
+function collectTexts(value: unknown, path: string): { path: string; text: string }[] {
+  if (typeof value === "string") return [{ path, text: value }];
+  if (Array.isArray(value)) return value.flatMap((item, index) => collectTexts(item, `${path}[${index}]`));
+  if (value && typeof value === "object") return Object.entries(value).flatMap(([key, item]) => collectTexts(item, `${path}.${key}`));
+  return [];
+}
+
+function collectContentTexts(days: DayData[]): { path: string; text: string }[] {
+  return [
+    ...days.flatMap((day) => collectTexts(day, `dia ${day.day}`)),
+    ...collectTexts({ tollStages, beforeTravelItems, trashInstructions }, "extras"),
+  ];
+}
+
+/** `**` sem fechamento é erro; negrito em mais de 40% do texto é só aviso (ver docs/guia-de-negrito.md). */
+function checkBoldMarks(texts: { path: string; text: string }[]): string[] {
+  texts
+    .filter(({ text }) => !hasUnclosedBoldMark(text) && boldShare(text) > MAX_BOLD_SHARE)
+    .forEach(({ path, text }) => warnings.push(`${path}: mais de 40% do texto em negrito ("${text.slice(0, 40)}...")`));
+  return texts.filter(({ text }) => hasUnclosedBoldMark(text)).map(({ path }) => `${path}: marcação ** sem fechamento`);
+}
+
 const days = await loadDays();
 const errors = [
   ...checkUniqueIds("dias", days.map((day) => day.dateISO)),
   ...checkCatalogs(),
   ...days.flatMap(checkDayAndOptions),
+  ...checkBoldMarks(collectContentTexts(days)),
 ];
 
 if (errors.length > 0) {

@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { allTollSteps, tollStages } from "../src/data/pedagio.ts";
 import day18 from "../src/data/days/2026-12-18.ts";
 import day16 from "../src/data/days/2026-12-16.ts";
+import { boldShare, hasUnclosedBoldMark, parseRichText } from "../src/lib/richText.ts";
 import { applyOption, findOption, optionQuestion } from "../src/lib/dayOption.ts";
 import { formatDecimal, formatFixedDecimal, parseDecimal } from "../src/utils/decimal.ts";
 import { calcularPreco, readPercent } from "../src/utils/price.ts";
@@ -63,6 +64,24 @@ const tests: Array<[string, () => void]> = [
     assert.deepEqual(keysOf("noite-do-jogo"), ["international-premium-outlets", "noite-jogo"]);
     assert.deepEqual(keysOf("noite-de-natal"), ["international-premium-outlets", "noite-natal"]);
   }],
+  ["negrito: 'a **b** c' vira três trechos", () => {
+    assert.deepEqual(parseRichText("a **b** c"), [
+      { text: "a ", isBold: false },
+      { text: "b", isBold: true },
+      { text: " c", isBold: false },
+    ]);
+  }],
+  ["negrito: marcação sem fechamento fica como texto normal", () => {
+    assert.deepEqual(parseRichText("a **b"), [{ text: "a **b", isBold: false }]);
+    assert.equal(hasUnclosedBoldMark("a **b"), true);
+    assert.equal(hasUnclosedBoldMark("a **b** c"), false);
+  }],
+  ["negrito: texto vazio ou sem marcação não quebra", () => {
+    assert.deepEqual(parseRichText(""), []);
+    assert.deepEqual(parseRichText("sem marcas"), [{ text: "sem marcas", isBold: false }]);
+    assert.equal(boldShare(""), 0);
+  }],
+  ["negrito: fração em negrito", () => assert.equal(boldShare("**ab** cde"), 2 / 6)],
   ["nenhum resultado vira NaN", () => {
     const result = calcularPreco({ preco: 0, d1: 100, d2: 100, imposto: 100 });
     for (const value of Object.values(result)) assert.ok(Number.isFinite(value));

@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { ChevronDown } from "lucide-react";
+import { RichText } from "../../components";
 import { trashInstructions } from "../../data/global/trashInstructions";
 
 /** Recolhido por padrão: o resumo mostra só o horário da coleta. */
@@ -17,7 +18,9 @@ export function TrashInstructions() {
 
       <div className="space-y-6 border-t border-ink/10 px-4 pb-5 pt-4 text-[16px] leading-relaxed text-ink">
         <InstructionBlock title="Horário">
-          <p>{trashInstructions.collectionHours}</p>
+          <p>
+            <RichText text={trashInstructions.collectionHours} />
+          </p>
         </InstructionBlock>
 
         <InstructionBlock title="Como descartar">
@@ -25,10 +28,14 @@ export function TrashInstructions() {
         </InstructionBlock>
 
         <InstructionBlock title="Itens volumosos">
-          <p className="mb-2">{trashInstructions.bulkyItemsIntro}</p>
+          <p className="mb-2">
+            <RichText text={trashInstructions.bulkyItemsIntro} />
+          </p>
           <ol className="list-decimal space-y-1.5 pl-6 marker:font-semibold marker:text-ink-soft">
             {trashInstructions.bulkyItemsBinLocations.map((location) => (
-              <li key={location}>{location}</li>
+              <li key={location}>
+                <RichText text={location} />
+              </li>
             ))}
           </ol>
         </InstructionBlock>
@@ -57,7 +64,9 @@ function BulletList({ items }: { items: string[] }) {
   return (
     <ul className="list-disc space-y-1.5 pl-5">
       {items.map((item) => (
-        <li key={item}>{item}</li>
+        <li key={item}>
+          <RichText text={item} />
+        </li>
       ))}
     </ul>
   );

@@ -1,6 +1,6 @@
 import { ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import { CheckMark, TapCheckbox } from "../../components";
+import { CheckMark, RichText, TapCheckbox } from "../../components";
 import { EXTRAS_PATH } from "../../components/navigationDestinations";
 import { useBeforeTravel } from "../../hooks/useBeforeTravel";
 
@@ -20,7 +20,9 @@ export function BeforeTravelList() {
             <TapCheckbox checked={isDone} onToggle={() => done.toggle(id)} label={isDone ? `Desmarcar: ${title}` : `Marcar: ${title}`}>
               <span className="min-w-0 flex-1 py-1.5">
                 <span className={`block text-[15px] font-semibold ${isDone ? "text-ink-soft line-through" : "text-ink"}`}>{title}</span>
-                <span className="block text-xs text-ink-soft">{subtitle}</span>
+                <span className="block text-xs text-ink-soft">
+                  <RichText text={subtitle} />
+                </span>
               </span>
             </TapCheckbox>
           </li>

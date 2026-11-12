@@ -1,5 +1,6 @@
 import { useId, useState } from "react";
 import { AlertTriangle, Car, Clock, Info, TrainFront, Undo2, type LucideIcon } from "lucide-react";
+import { RichText } from "../../../components";
 import { categoryStyles } from "../../../data/presentation/categoryStyles";
 import type { DayCategory, Journey, JourneyGuide, JourneyNote } from "../../../types";
 
@@ -15,11 +16,12 @@ const MAX_LEAD_LENGTH = 32;
 /** Destaca em negrito o trecho antes dos dois-pontos ("De carro:", "Confirmar no app:"), quando for curto. */
 function EmphasizedLead({ text }: { text: string }) {
   const colonIndex = text.indexOf(":");
-  if (colonIndex < 0 || colonIndex > MAX_LEAD_LENGTH) return <>{text}</>;
+  const lead = text.slice(0, colonIndex + 1);
+  if (colonIndex < 0 || colonIndex > MAX_LEAD_LENGTH || lead.includes("**")) return <RichText text={text} />;
   return (
     <>
-      <strong className="font-semibold">{text.slice(0, colonIndex + 1)}</strong>
-      {text.slice(colonIndex + 1)}
+      <strong className="font-semibold">{lead}</strong>
+      <RichText text={text.slice(colonIndex + 1)} />
     </>
   );
 }
@@ -105,7 +107,9 @@ function JourneyGuideList({ guide }: { guide: JourneyGuide }) {
       {guide.items.map(({ label, text }) => (
         <div key={label}>
           <dt className="font-mono text-xs uppercase text-ink-soft">{label}</dt>
-          <dd className="mt-0.5 whitespace-pre-line text-sm leading-[1.45] text-ink">{text}</dd>
+          <dd className="mt-0.5 whitespace-pre-line text-sm leading-[1.45] text-ink">
+            <RichText text={text} />
+          </dd>
         </div>
       ))}
     </dl>
