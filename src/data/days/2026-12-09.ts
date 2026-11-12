@@ -28,12 +28,12 @@ export default {
       notes: [
         { icon: "car", text: "~25 min até os portões." },
         { icon: "info", text: "Utilizar early entry (não hóspedes)." }, // REVISAR: não está no texto do Thiago
-        { icon: "info", text: "Café da manhã leve em casa antes de sair; levar lanches próprios (queijo, frutas, snacks) para o meio da manhã." },
-        { icon: "info", text: "No World Showcase, preferir quiosques baratos a restaurantes table-service." }, // REVISAR: não está no texto do Thiago
-        { icon: "info", text: "Fazer as atrações das três primeiras áreas de forma rápida, para aproveitar o World Showcase com calma." },
-        { icon: "info", text: "Fotos da Disney: compradas antes da viagem, no Brasil." },
+        { icon: "info", text: "Café da manhã leve em casa antes de sair; **levar lanches próprios** (queijo, frutas, snacks) para o meio da manhã." },
+        { icon: "info", text: "No World Showcase, preferir **quiosques baratos** a restaurantes table-service." }, // REVISAR: não está no texto do Thiago
+        { icon: "info", text: "Fazer as atrações das **três primeiras áreas** **de forma rápida**, para aproveitar o World Showcase com calma." },
+        { icon: "info", text: "Fotos da Disney: compradas antes da viagem, **no Brasil**." },
       ],
-      alerts: ["Deixar os lanches do parque separados no dia anterior. Mochilas com filtro solar, remédios etc."],
+      alerts: ["**Deixar os lanches do parque separados** no dia anterior. Mochilas com filtro solar, remédios etc."],
     },
     attractions: [
       {
@@ -60,7 +60,7 @@ export default {
             icon: "target",
             title: "Como aproveitar melhor",
             paragraphs: [
-              "Primeira atração do dia. Sentar do lado direito do veículo para ver melhor as cenas.", // REVISAR: o lado direito não está no texto do Thiago
+              "Primeira atração do dia. Sentar do **lado direito do veículo** para ver melhor as cenas.", // REVISAR: o lado direito não está no texto do Thiago
             ],
           },
           {
@@ -68,7 +68,7 @@ export default {
             icon: "camera",
             title: "Curiosidades",
             paragraphs: [
-              "A esfera geodésica tem 55 metros de diâmetro e pesa ~7.900 toneladas; é uma das maiores estruturas esféricas do mundo, mas não é uma esfera perfeita — tem um sistema de drenagem interno para evitar acúmulo de água da chuva.",
+              "A esfera geodésica tem 55 metros de diâmetro e pesa ~7.900 toneladas; é uma das maiores estruturas esféricas do mundo, mas não é uma esfera perfeita — tem um sistema de drenagem interno para **evitar acúmulo de água** da chuva.",
             ],
           },
           {
@@ -76,7 +76,7 @@ export default {
             icon: "tree",
             title: "Destaques do pavilhão",
             list: [
-              "World Celebration reúne também o encontro com Mickey and Friends e o Dreamers Point (fotos com a bola ao fundo).",
+              "World Celebration reúne também o encontro com **Mickey and Friends** e o **Dreamers Point** (fotos com a bola ao fundo).",
             ],
           },
         ],
@@ -106,7 +106,7 @@ export default {
             icon: "target",
             title: "Como aproveitar melhor",
             paragraphs: [
-              "Não esquecer de tirar fotos com a bola ao fundo. Fazer logo depois de sair da Spaceship Earth, antes do meio-dia — ponto tradicional de foto em grupo, com a esfera geodésica ao fundo.",
+              "Não esquecer de tirar **fotos com a bola ao fundo**. Fazer logo depois de sair da Spaceship Earth, **antes do meio-dia** — ponto tradicional de foto em grupo, com a esfera geodésica ao fundo.",
             ],
           },
         ],
@@ -134,7 +134,7 @@ export default {
             icon: "target",
             title: "Como aproveitar melhor",
             paragraphs: [
-              "Ir logo após a Spaceship Earth, antes do horário de pico do meio-dia.",
+              "Ir logo após a Spaceship Earth, **antes do horário de pico** do meio-dia.",
             ],
           },
           {
@@ -142,7 +142,7 @@ export default {
             icon: "camera",
             title: "Curiosidades",
             paragraphs: [
-              "Ponto tradicional de fotos com a bola ao fundo — ótimo para a foto de capa do dia.",
+              "Ponto tradicional de fotos com a bola ao fundo — ótimo para a **foto de capa do dia**.",
             ],
           },
         ],
@@ -171,7 +171,7 @@ export default {
             icon: "target",
             title: "Como aproveitar melhor",
             paragraphs: [
-              "Escolher assentos das fileiras do meio para a melhor visão central da tela.",
+              "Escolher assentos das **fileiras do meio** para a melhor visão central da tela.",
             ],
           },
           {
@@ -217,7 +217,7 @@ export default {
             icon: "target",
             title: "Como aproveitar melhor",
             paragraphs: [
-              "Parada rápida logo após o almoço/lanche, no mesmo trecho de Soarin'; combinar com fotos na área temática de Moana ao lado.",
+              "**Parada rápida** logo após o almoço/lanche, no mesmo trecho de Soarin'; combinar com **fotos na área temática de Moana** ao lado.",
             ],
           },
         ],
@@ -247,7 +247,7 @@ export default {
             icon: "target",
             title: "Como aproveitar melhor",
             paragraphs: [
-              "Fazer logo após a parada na loja da Coca-Cola, antes de seguir para o World Discovery.",
+              "Fazer logo após a parada na **loja da Coca-Cola**, antes de seguir para o World Discovery.",
             ],
           },
         ],
@@ -275,7 +275,7 @@ export default {
             icon: "target",
             title: "Como aproveitar melhor",
             paragraphs: [
-              "Sentar no último carrinho dá mais sensação de giro.", // REVISAR
+              "Sentar no **último carrinho** dá mais sensação de giro.", // REVISAR
             ],
           },
           {
@@ -283,7 +283,7 @@ export default {
             icon: "camera",
             title: "Curiosidades",
             paragraphs: [
-              "É a primeira montanha-russa do Epcot; a trilha sonora é sorteada entre 6 músicas diferentes a cada volta, então cada passeio é uma experiência diferente.",
+              "É a **primeira montanha-russa do Epcot**; a trilha sonora é sorteada entre 6 músicas diferentes a cada volta, então cada passeio é uma experiência diferente.",
             ],
           },
           {
@@ -318,7 +318,7 @@ export default {
             icon: "target",
             title: "Como aproveitar melhor",
             paragraphs: [
-              "Escolher o lado laranja para simulação mais intensa (giro real) ou o lado verde para versão mais suave, sem a centrifugação.",
+              "Escolher o **lado laranja** para simulação mais intensa (giro real) ou o **lado verde** para versão mais suave, sem a centrifugação.",
             ],
           },
           {
@@ -326,7 +326,7 @@ export default {
             icon: "camera",
             title: "Curiosidades",
             paragraphs: [
-              "Foi desenvolvida em parceria com a NASA; o lado laranja já foi criticado por causar enjoo em muitos visitantes devido à força G real gerada pela centrífuga.",
+              "Foi desenvolvida em **parceria com a NASA**; o lado laranja já foi criticado por causar enjoo em muitos visitantes devido à força G real gerada pela centrífuga.",
             ],
           },
           {
@@ -363,7 +363,7 @@ export default {
             icon: "target",
             title: "Como aproveitar melhor",
             paragraphs: [
-              "Ir na parte da manhã, antes do calor do meio-dia deixar a fila mais desconfortável.",
+              "Ir na **parte da manhã**, antes do calor do meio-dia deixar a fila mais desconfortável.",
             ],
           },
           {
@@ -371,7 +371,7 @@ export default {
             icon: "camera",
             title: "Curiosidades",
             paragraphs: [
-              'Ao final, os visitantes passam por uma área onde podem "projetar" seu próprio carro virtual e depois ver o design exibido em telas no showroom da Chevrolet.',
+              'Ao final, os visitantes passam por uma área onde podem **"projetar" seu próprio carro virtual** e depois ver o design exibido em telas no showroom da Chevrolet.',
             ],
           },
           {
@@ -407,7 +407,7 @@ export default {
             icon: "target",
             title: "Como aproveitar melhor",
             paragraphs: [
-              "Passagem rápida — sem atração prioritária neste pavilhão.",
+              "**Passagem rápida** — sem atração prioritária neste pavilhão.",
             ],
           },
         ],
@@ -435,7 +435,7 @@ export default {
             icon: "target",
             title: "Como aproveitar melhor",
             paragraphs: [
-              "Entrar no pub Rose & Crown mesmo sem consumir, só para ver a decoração; conferir a loja Queen's Table para itens de chá.",
+              "Entrar no pub Rose & Crown mesmo sem consumir, **só para ver a decoração**; conferir a loja Queen's Table para itens de chá.",
             ],
           },
           {
@@ -443,7 +443,7 @@ export default {
             icon: "camera",
             title: "Curiosidades",
             paragraphs: [
-              "Personagens de Alice no País das Maravilhas costumam circular por essa área com frequência maior que outras.",
+              "Personagens de **Alice no País das Maravilhas** costumam circular por essa área com frequência maior que outras.",
             ],
           },
         ],
@@ -471,7 +471,7 @@ export default {
             icon: "target",
             title: "Como aproveitar melhor",
             paragraphs: [
-              "Imperdível — fila costuma ser menor no fim da tarde do que no meio do dia. Aproveitar para procurar Bela e a Fera na área.",
+              "**Imperdível** — fila costuma ser menor no **fim da tarde** do que no meio do dia. Aproveitar para procurar Bela e a Fera na área.",
             ],
           },
           {
@@ -479,7 +479,7 @@ export default {
             icon: "camera",
             title: "Curiosidades",
             paragraphs: [
-              'Os visitantes "encolhem" ao tamanho de um rato durante o passeio, usando óculos 3D sem a armação visível, criando sensação real de escala reduzida pela cozinha do restaurante.',
+              'Os visitantes "encolhem" ao tamanho de um rato durante o passeio, usando **óculos 3D** sem a armação visível, criando sensação real de escala reduzida pela cozinha do restaurante.',
             ],
           },
         ],
@@ -507,7 +507,7 @@ export default {
             icon: "target",
             title: "Como aproveitar melhor",
             paragraphs: [
-              "Reservar tempo extra para fotos — é considerado um dos cenários mais detalhados do parque. Ficar de olho na Jasmine, que costuma fazer meet-and-greet nessa área.",
+              "**Reservar tempo extra** para fotos — é considerado um dos cenários mais detalhados do parque. Ficar de olho na Jasmine, que costuma fazer meet-and-greet nessa área.",
             ],
           },
           {
@@ -515,7 +515,7 @@ export default {
             icon: "camera",
             title: "Curiosidades",
             paragraphs: [
-              "É o único pavilhão do World Showcase construído com apoio direto do governo do país (não de uma empresa privada) — o Marrocos enviou artesãos para fazer os mosaicos no local.",
+              "É o **único pavilhão** do World Showcase construído com apoio direto do governo do país (não de uma empresa privada) — o Marrocos enviou artesãos para fazer os **mosaicos** no local.",
             ],
           },
         ],
@@ -543,7 +543,7 @@ export default {
             icon: "target",
             title: "Como aproveitar melhor",
             paragraphs: [
-              "Ir ao quiosque de Pick-a-Pearl (escolher uma ostra e ganhar uma pérola de verdade) e depois parar no torii em frente ao lago para foto e descanso.",
+              "Ir ao quiosque de **Pick-a-Pearl** (escolher uma ostra e ganhar uma pérola de verdade) e depois parar no **torii em frente ao lago** para foto e descanso.",
             ],
           },
           {
@@ -551,7 +551,7 @@ export default {
             icon: "camera",
             title: "Curiosidades",
             paragraphs: [
-              "O torii vermelho na beira da lagoa é uma réplica inspirada no santuário de Itsukushima; à noite, com a iluminação dos fogos ao fundo, é um dos pontos de foto mais procurados do parque.",
+              "O **torii vermelho** na beira da lagoa é uma réplica inspirada no santuário de Itsukushima; à noite, com a iluminação dos **fogos ao fundo**, é um dos pontos de foto mais procurados do parque.",
             ],
           },
         ],
@@ -605,7 +605,7 @@ export default {
             icon: "target",
             title: "Como aproveitar melhor",
             paragraphs: [
-              "Bom lugar para comprar perfumes (Il Bel Cristallo); wine bar; voltar aqui para assistir aos fogos, de frente para a lagoa.",
+              "Bom lugar para comprar perfumes (**Il Bel Cristallo**); **wine bar**; voltar aqui para **assistir aos fogos**, de frente para a lagoa.",
             ],
           },
           {
@@ -613,7 +613,7 @@ export default {
             icon: "camera",
             title: "Curiosidades",
             paragraphs: [
-              "A torre do Campanile e a praça central são réplicas inspiradas em Veneza e na Piazza San Marco.",
+              "A torre do **Campanile** e a praça central são réplicas inspiradas em Veneza e na Piazza San Marco.",
             ],
           },
         ],
@@ -640,7 +640,7 @@ export default {
             color: "citrus",
             icon: "target",
             title: "Como aproveitar melhor",
-            paragraphs: ["Passar pelo pub alemão. Procurar a Branca de Neve."],
+            paragraphs: ["Passar pelo pub alemão. Procurar a **Branca de Neve**."],
           },
         ],
       },
@@ -667,7 +667,7 @@ export default {
             icon: "target",
             title: "Como aproveitar melhor",
             paragraphs: [
-              "Show de reflexos da China; ir só se houver tempo. Ficar de olho se a Mulan está por perto.",
+              "Show de reflexos da China; ir **só se houver tempo**. Ficar de olho se a Mulan está por perto.",
             ],
           },
           {
@@ -675,7 +675,7 @@ export default {
             icon: "camera",
             title: "Curiosidades",
             paragraphs: [
-              "Mulan e Mushu costumam fazer aparições perto desse pavilhão, já que a história dela se passa na China.",
+              "**Mulan e Mushu** costumam fazer aparições perto desse pavilhão, já que a história dela se passa na China.",
             ],
           },
         ],
@@ -703,7 +703,7 @@ export default {
             icon: "target",
             title: "Como aproveitar melhor",
             paragraphs: [
-              "Fazer se der tempo. O encontro com Elsa e Anna fecha às 18h30.",
+              "Fazer se der tempo. O encontro com Elsa e Anna **fecha às 18h30**.",
             ],
           },
           {
@@ -711,7 +711,7 @@ export default {
             icon: "camera",
             title: "Curiosidades",
             paragraphs: [
-              "Reaproveita o mesmo sistema de trilhos da antiga atração Maelstrom, mas com efeitos e cenas totalmente novos de Arendelle.",
+              "Reaproveita o mesmo **sistema de trilhos** da antiga atração Maelstrom, mas com efeitos e cenas totalmente novos de Arendelle.",
             ],
           },
         ],
@@ -739,7 +739,7 @@ export default {
             icon: "target",
             title: "Como aproveitar melhor",
             paragraphs: [
-              "Ir ao anoitecer — a fila costuma ser menor e a pirâmide iluminada por fora fica mais bonita para foto na saída.", // REVISAR: não está no texto do Thiago
+              "**Ir ao anoitecer** — a fila costuma ser menor e a pirâmide iluminada por fora fica mais bonita para foto na saída.", // REVISAR: não está no texto do Thiago
             ],
           },
           {
@@ -747,7 +747,7 @@ export default {
             icon: "camera",
             title: "Curiosidades",
             paragraphs: [
-              "Zé Carioca é um dos três protagonistas do passeio junto com José (Pato Donald) e Panchito — uma rara aparição do personagem brasileiro em atração permanente da Disney.",
+              "**Zé Carioca** é um dos três protagonistas do passeio junto com José (Pato Donald) e Panchito — uma rara aparição do personagem brasileiro em atração permanente da Disney.",
             ],
           },
         ],
@@ -775,7 +775,7 @@ export default {
             icon: "target",
             title: "Como aproveitar melhor",
             paragraphs: [
-              "Voltar para a área da Itália com antecedência para garantir lugar de frente para a lagoa antes do início do show.",
+              "Voltar para a área da Itália **com antecedência** para garantir lugar **de frente para a lagoa** antes do início do show.",
             ],
           },
         ],

@@ -25,7 +25,7 @@ export default {
         { label: "Tempo de deslocamento", value: "1h15" },
       ],
       notes: [
-        { icon: "info", text: "Aproveitar o wi-fi do shopping para ativar o eSIM/chip digital durante a refeição." },
+        { icon: "info", text: "Aproveitar o wi-fi do shopping para **ativar o eSIM/chip digital** durante a refeição." },
       ],
       alerts: [],
     },
@@ -125,7 +125,7 @@ export default {
             icon: "sparkle",
             title: "Curiosidades e fotos",
             paragraphs: [
-              "A sigla MCO vem da antiga base militar McCoy Air Force Base. Para fotos, aproveite os átrios internos com jardins tropicais e fontes naturais, ou a arquitetura futurista e envidraçada do novo Terminal C.",
+              "A sigla MCO vem da antiga base militar McCoy Air Force Base. Para fotos, aproveite os **átrios internos** com jardins tropicais e fontes naturais, ou a arquitetura futurista e envidraçada do **novo Terminal C**.",
             ],
           },
           {
@@ -133,7 +133,7 @@ export default {
             icon: "lightbulb",
             title: "Dica para aproveitar",
             paragraphs: [
-              "Use o serviço gratuito MCO Reserve para agendar horário e furar a fila da segurança na volta, além de conferir as lojas temáticas da Disney, Universal e NASA ainda dentro do terminal.",
+              "Use o serviço **gratuito** MCO Reserve para agendar horário e furar a fila da segurança na volta, além de conferir as lojas temáticas da Disney, Universal e NASA ainda dentro do terminal.",
             ],
           },
         ],
@@ -173,7 +173,7 @@ export default {
             icon: "sparkle",
             title: "Curiosidades e fotos",
             paragraphs: [
-              "Maior shopping tradicional de Orlando, rende ótimas fotos na colorida parede de chocolates da M&M's World, na vitrine interativa da Crayola Experience e ao lado dos carros elétricos expostos na loja da Tesla.",
+              "Maior shopping tradicional de Orlando, rende ótimas fotos na colorida **parede de chocolates da M&M's World**, na **vitrine interativa da Crayola Experience** e ao lado dos carros elétricos expostos na loja da Tesla.",
             ],
           },
           {
@@ -181,7 +181,7 @@ export default {
             icon: "lightbulb",
             title: "Dica para aproveitar",
             paragraphs: [
-              "Vá direto à Primark (dois andares) para comprar itens oficiais da Disney e malas baratas, passe nas máquinas de pelúcia da Gatcha e retire o livro de cupons de desconto gratuitos no balcão de atendimento ao cliente (Guest Services).",
+              "Vá direto à Primark (dois andares) para comprar itens oficiais da Disney e malas baratas, passe nas máquinas de pelúcia da Gatcha e retire o livro de cupons de desconto **gratuitos** no balcão de atendimento ao cliente (Guest Services).",
             ],
           },
         ],
@@ -198,7 +198,7 @@ export default {
             icon: "parking",
             title: "Estacionamento",
             paragraphs: [
-              "Estacionamento do Florida Mall, gratuito.",
+              "Estacionamento do Florida Mall, **gratuito**.",
             ],
           },
           {
@@ -214,7 +214,7 @@ export default {
             icon: "sparkle",
             title: "Curiosidades e fotos",
             paragraphs: [
-              "É uma das unidades mais procuradas por turistas graças ao imposto menor de Orlando (6,5%, contra 7% de Miami). Em dias de lançamento de iPhone, a equipe faz um corredor de aplausos na entrada para receber os compradores.",
+              "É uma das unidades mais procuradas por turistas graças ao imposto menor de Orlando (**6,5%**, contra **7%** de Miami). Em dias de lançamento de iPhone, a equipe faz um corredor de aplausos na entrada para receber os compradores.",
             ],
           },
           {
@@ -222,7 +222,7 @@ export default {
             icon: "lightbulb",
             title: "Dica para aproveitar",
             paragraphs: [
-              "Compre pelo site ou aplicativo antes da viagem e escolha a opção de retirada rápida (Pick Up) para pegar seu aparelho sem enfrentar filas e sem risco de estoque esgotado.",
+              "Compre pelo site ou aplicativo antes da viagem e escolha a opção de **retirada rápida (Pick Up)** para pegar seu aparelho **sem enfrentar filas** e sem risco de estoque esgotado.",
             ],
           },
         ],
@@ -239,7 +239,7 @@ export default {
             icon: "target",
             title: "Sobre",
             paragraphs: [
-              "Guardar as malas e se instalar. Nem todo o grupo precisa ir ao Walmart — só um carro/grupo menor segue para o mercado.",
+              "Guardar as malas e se instalar. Nem todo o grupo precisa ir ao Walmart — **só um carro/grupo menor** segue para o mercado.",
             ],
           },
           {
@@ -247,7 +247,7 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "Definir com antecedência quem vai ao Walmart, para não haver indecisão na hora.",
+              "**Definir com antecedência** quem vai ao Walmart, para não haver indecisão na hora.",
             ],
           },
         ],

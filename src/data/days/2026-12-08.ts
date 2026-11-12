@@ -34,9 +34,9 @@ export default {
         { label: "Voltar para casa", value: "21h00" },
       ],
       notes: [
-        { icon: "info", text: "Levar snacks leves (queijo, fruta, salgadinho) para acompanhar durante as compras." }, // REVISAR: mesmo texto da nota do dia 7
+        { icon: "info", text: "**Levar snacks leves** (queijo, fruta, salgadinho) para acompanhar durante as compras." }, // REVISAR: mesmo texto da nota do dia 7
       ],
-      alerts: ["Ao voltar para casa, preparar os lanches para o dia 09 (Epcot)."],
+      alerts: ["Ao voltar para casa, **preparar os lanches** para o dia 09 (Epcot)."],
     },
     periods: [
       {
@@ -191,10 +191,10 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "Todas as lojas ficam no mesmo trecho da W Osceola Pkwy — dá para fazer a pé sem mover o carro.",
+              "Todas as lojas ficam no mesmo trecho da W Osceola Pkwy — dá para fazer a pé **sem mover o carro**.",
             ],
           },
-          { color: "gold", icon: "lightbulb", title: "Curiosidades", paragraphs: ["Faz parte do complexo The Loop, dividido em Loop West e Loop East."] },
+          { color: "gold", icon: "lightbulb", title: "Curiosidades", paragraphs: ["Faz parte do complexo The Loop, dividido em **Loop West e Loop East**."] },
         ],
       },
       {
@@ -235,7 +235,7 @@ export default {
             icon: "lightbulb",
             title: "Curiosidades",
             list: [
-              "Inaugurado em 2007, tem cerca de 78.000 m² em um único piso, na esquina da John Young Pkwy com a Osceola Pkwy.",
+              "**Inaugurado em 2007**, tem cerca de **78.000 m²** em um único piso, na esquina da John Young Pkwy com a Osceola Pkwy.",
               "É dividido em duas áreas, Loop West e Loop East.",
               "Tem cinema Regal.",
             ],
