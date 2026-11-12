@@ -117,7 +117,7 @@ export default {
             icon: "parking",
             title: "Estacionamento",
             paragraphs: [
-              "Público e gratuito, perto de 104 S Lakeview Ave.",
+              "Público e **gratuito**, perto de 104 S Lakeview Ave.",
             ],
           },
           {
@@ -125,7 +125,7 @@ export default {
             icon: "corn",
             title: "Sobre a feira",
             paragraphs: [
-              "104 S Lakeview Ave, sábados 8h–13h, no centro histórico de Plant Street (não é caminhável até o Village).",
+              "104 S Lakeview Ave, **sábados 8h–13h**, no centro histórico de Plant Street (não é caminhável até o Village).",
             ],
           },
           {
@@ -133,7 +133,7 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "Cheguem perto das 8h para os produtos mais frescos — feiras costumam esvaziar o estoque bom até o meio da manhã.",
+              "Cheguem perto **das 8h** para os produtos mais frescos — feiras costumam esvaziar o estoque bom até o meio da manhã.",
             ],
           },
         ],
@@ -150,7 +150,7 @@ export default {
             icon: "parking",
             title: "Estacionamento",
             paragraphs: [
-              "Estacionamento próprio do lifestyle center, gratuito e amplo.",
+              "Estacionamento próprio do lifestyle center, **gratuito** e amplo.",
             ],
           },
           {
@@ -158,7 +158,7 @@ export default {
             icon: "bag",
             title: "Lojas âncora",
             paragraphs: [
-              "Target, Lowe's, Bealls, Best Buy, HomeGoods, Marshalls, Ross, Burlington, Old Navy, Ulta, Bath & Body Works, PetSmart, Party City, Jo-Ann, World Market, Victoria's Secret. Mais de 80 lojas num só estacionamento.",
+              "Target, Lowe's, Bealls, Best Buy, HomeGoods, Marshalls, Ross, Burlington, Old Navy, Ulta, Bath & Body Works, PetSmart, Party City, Jo-Ann, World Market, Victoria's Secret. **Mais de 80 lojas** num só estacionamento.",
             ],
           },
           {
@@ -166,7 +166,7 @@ export default {
             icon: "lightbulb",
             title: "Sugestão",
             paragraphs: [
-              "Priorizem as âncoras relevantes para vocês antes que o movimento de sábado aumente.",
+              "**Priorizem as âncoras relevantes** para vocês antes que o movimento de sábado aumente.",
             ],
           },
         ],
@@ -182,7 +182,7 @@ export default {
             icon: "parking",
             title: "Estacionamento",
             paragraphs: [
-              "Estacionamento próprio, gratuito.",
+              "Estacionamento próprio, **gratuito**.",
             ],
           },
           {
@@ -206,7 +206,7 @@ export default {
             icon: "parking",
             title: "Estacionamento",
             paragraphs: [
-              "Rua costuma ser gratuita; à noite (Now Snowing) o movimento aumenta — cheguem com folga.",
+              "Rua costuma ser **gratuita**; à noite (Now Snowing) o movimento aumenta — cheguem com folga.",
             ],
           },
           {
@@ -214,7 +214,7 @@ export default {
             icon: "tree",
             title: "Now Snowing",
             paragraphs: [
-              "Sessões grátis às 18h, 19h, 20h e 21h — cheguem ~17h para passear antes da primeira sessão.",
+              "Sessões **grátis** **às 18h**, 19h, 20h e 21h — cheguem ~17h para passear antes da primeira sessão.",
             ],
           },
           {
@@ -222,7 +222,7 @@ export default {
             icon: "tree",
             title: "Celebration Lakeside Park",
             paragraphs: [
-              "Caminhada de 15–20 min pelo boardwalk iluminado (631 Sycamore St).",
+              "**Caminhada de 15–20 min** pelo boardwalk iluminado (631 Sycamore St).",
             ],
           },
           {
@@ -230,7 +230,7 @@ export default {
             icon: "burger",
             title: "Jantar",
             paragraphs: [
-              "Columbia Restaurant tem unidade em Celebration — reserva recomendada em dezembro.",
+              "Columbia Restaurant tem unidade em Celebration — **reserva recomendada** em dezembro.",
             ],
           },
         ],

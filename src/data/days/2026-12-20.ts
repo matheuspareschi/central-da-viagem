@@ -19,7 +19,7 @@ export default {
     journey: {
       tiles: [],
       notes: [
-        { icon: "info", text: "Chegada do Rafael Narcizo neste dia — sem compromisso de missa." },
+        { icon: "info", text: "Chegada do Rafael Narcizo neste dia — **sem compromisso de missa**." },
         { icon: "info", text: "Horários sugeridos, ajustáveis." },
       ],
       alerts: [],
@@ -91,7 +91,7 @@ export default {
             icon: "bag",
             title: "Sobre",
             paragraphs: [
-              "Mais de 160 lojas e uma praça de alimentação grande, perto da Disney e do SeaWorld. Entre as lojas estão Polo Ralph Lauren, Coach e Burberry.",
+              "**Mais de 160 lojas** e uma praça de alimentação grande, perto da Disney e do SeaWorld. Entre as lojas estão Polo Ralph Lauren, Coach e Burberry.",
             ],
           },
           {
@@ -99,7 +99,7 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "Vindo da região da Disney, o caminho mais usado é pela Hwy 535, por baixo da I-4, e depois a Vineland Ave. Almoço livre na praça de alimentação do próprio outlet.",
+              "Vindo da região da Disney, o caminho mais usado é pela **Hwy 535**, por baixo da I-4, e depois a Vineland Ave. Almoço livre na praça de alimentação do próprio outlet.",
             ],
           },
           {
@@ -107,7 +107,7 @@ export default {
             icon: "alert",
             title: "Atenção",
             paragraphs: [
-              "Horário de funcionamento em dezembro ainda a confirmar no site oficial do outlet.",
+              "Horário de funcionamento em dezembro ainda a **confirmar no site oficial** do outlet.",
             ],
           },
         ],
@@ -129,7 +129,7 @@ export default {
             icon: "lightbulb",
             title: "Horário",
             paragraphs: [
-              "Segunda a domingo, das 6h às 23h59 (segundo o site do Walmart). A seção de bebidas alcoólicas fecha à meia-noite.",
+              "Segunda a domingo, **das 6h às 23h59** (segundo o site do Walmart). A seção de bebidas alcoólicas fecha à meia-noite.",
             ],
           },
           {
@@ -137,7 +137,7 @@ export default {
             icon: "bag",
             title: "Sobre",
             paragraphs: [
-              "É a parada mais próxima do Vineland. Boa para compras de mercado em volume: o Walmart costuma sair entre 22% e 28% mais barato que o Publix nesse tipo de compra.",
+              "É a parada mais próxima do Vineland. Boa para compras de mercado em volume: o Walmart costuma sair entre **22%** e **28%** mais barato que o Publix nesse tipo de compra.",
             ],
           },
           {
@@ -145,7 +145,7 @@ export default {
             icon: "alert",
             title: "Atenção",
             paragraphs: [
-              "As compras vão ficar no carro até a noite no CityWalk. Prefira deixar refrigerados e congelados para a última parada ou use bolsa térmica.",
+              "As compras vão ficar no carro até a noite no CityWalk. Prefira deixar refrigerados e congelados para a **última parada** ou use **bolsa térmica**.",
             ],
           },
         ],
@@ -161,7 +161,7 @@ export default {
             icon: "parking",
             title: "Endereço",
             paragraphs: [
-              "4750 Millenia Plaza Way, Orlando, FL 32839. O endereço do centro comercial (Millenia Plaza) aparece como 4649 em alguns sites; use o 4750 para a loja.",
+              "4750 Millenia Plaza Way, Orlando, FL 32839. O endereço do centro comercial (Millenia Plaza) aparece como 4649 em alguns sites; **use o 4750** para a loja.",
             ],
           },
           {
@@ -169,7 +169,7 @@ export default {
             icon: "lightbulb",
             title: "Horário",
             paragraphs: [
-              "Segundo um site de terceiros, funciona todos os dias das 8h às 22h. Vale confirmar no app do Target perto da data.",
+              "Segundo um site de terceiros, funciona todos os dias **das 8h às 22h**. Vale **confirmar no app** do Target perto da data.",
             ],
           },
           {
@@ -183,7 +183,7 @@ export default {
             icon: "leaf",
             title: "Observação",
             paragraphs: [
-              "É a parada mais longe do Vineland, mas fica já na região do Universal, o que facilita a ida ao CityWalk. O Total Wine fica no mesmo complexo, então dá para fechar a lista de vinhos aqui.",
+              "É a parada **mais longe do Vineland**, mas fica já na região do Universal, o que facilita a ida ao CityWalk. O Total Wine fica no mesmo complexo, então dá para fechar a lista de vinhos aqui.",
             ],
           },
         ],
@@ -211,7 +211,7 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "Chegar depois das 18h costuma dar estacionamento grátis nos garagens do Universal, como previsto no plano do Dia 10. Vale confirmar a regra perto da data.",
+              "Chegar **depois das 18h** costuma dar estacionamento **grátis** nos garagens do Universal, como previsto no plano do Dia 10. Vale **confirmar a regra perto** da data.",
             ],
           },
           {

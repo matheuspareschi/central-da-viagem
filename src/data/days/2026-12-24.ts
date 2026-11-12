@@ -23,7 +23,7 @@ export default {
     journey: {
       tiles: [],
       notes: [
-        { icon: "car", text: "Deslocamento: ~1h15–1h30 cada trecho, ~2h30–3h de carro no total." },
+        { icon: "car", text: "Deslocamento: ~**1h15–1h30** cada trecho, ~**2h30–3h** de carro no total." },
       ],
       alerts: [],
     },
@@ -49,7 +49,7 @@ export default {
             icon: "target",
             title: "Como aproveitar melhor",
             paragraphs: [
-              "Ir direto na abertura — é o gargalo do dia, a fila cresce rápido na parte da manhã. Ônibus saem por ordem de chegada.",
+              "**Ir direto na abertura** — é o gargalo do dia, a fila cresce rápido na parte da manhã. Ônibus saem por ordem de chegada.",
             ],
           },
           {
@@ -57,7 +57,7 @@ export default {
             icon: "alert",
             title: "Atenção",
             paragraphs: [
-              "Em temporadas de festa o parque tem usado fila virtual por QR code no local — confirmar se estará ativa em dez/2026.",
+              "Em temporadas de festa o parque tem usado fila virtual por QR code no local — **confirmar se estará ativa** em dez/2026.",
             ],
           },
           {
@@ -65,7 +65,7 @@ export default {
             icon: "camera",
             title: "Curiosidades",
             paragraphs: [
-              "Passa pelas plataformas LC-39A e LC-39B e para no Apollo/Saturn V Center, com o foguete Saturn V completo e a Sala de Controle da missão Apollo 8.",
+              "Passa pelas plataformas LC-39A e LC-39B e para no Apollo/Saturn V Center, com o foguete **Saturn V completo** e a Sala de Controle da missão Apollo 8.",
             ],
           },
         ],
@@ -90,7 +90,7 @@ export default {
             icon: "target",
             title: "Como aproveitar melhor",
             paragraphs: [
-              "Encaixar entre o Bus Tour e o almoço; tours guiados gratuitos rolam ao longo do dia.",
+              "Encaixar entre o Bus Tour e o almoço; tours guiados **gratuitos** rolam ao longo do dia.",
             ],
           },
           {
@@ -98,7 +98,7 @@ export default {
             icon: "camera",
             title: "Curiosidades",
             paragraphs: [
-              "Coleção ao ar livre de foguetes históricos (Mercury, Gemini, Atlas, Titan). Em dez/2026 é também o palco do possível Holidays in Space Drone Show à noite.",
+              "Coleção ao ar livre de foguetes históricos (Mercury, Gemini, Atlas, Titan). Em dez/2026 é também o palco do possível **Holidays in Space Drone Show** à noite.",
             ],
           },
         ],
@@ -123,7 +123,7 @@ export default {
             icon: "target",
             title: "Como aproveitar melhor",
             paragraphs: [
-              "Confira o horário exato da sessão do dia assim que entrar (varia, ~20–30 min).",
+              "Confira o **horário exato** da sessão do dia assim que entrar (varia, ~20–30 min).",
             ],
           },
           {
@@ -131,7 +131,7 @@ export default {
             icon: "camera",
             title: "Curiosidades",
             paragraphs: [
-              "Sessão com um astronauta real da NASA contando histórias de missão e respondendo perguntas do público.",
+              "Sessão com um **astronauta real da NASA** contando histórias de missão e respondendo perguntas do público.",
             ],
           },
         ],
@@ -156,7 +156,7 @@ export default {
             icon: "target",
             title: "Como aproveitar melhor",
             paragraphs: [
-              "Reserve ~1h30; o filme imersivo antes da exibição do ônibus espacial é parte da experiência, não pule.",
+              "**Reserve ~1h30**; o filme imersivo antes da exibição do ônibus espacial é parte da experiência, **não pule**.",
             ],
           },
           {
@@ -164,7 +164,7 @@ export default {
             icon: "camera",
             title: "Curiosidades",
             paragraphs: [
-              "O Atlantis é exibido em ângulo de voo, como se estivesse em órbita. A Shuttle Launch Experience é um simulador anexo de sensação de lançamento.",
+              "O **Atlantis** é exibido em ângulo de voo, como se estivesse em órbita. A Shuttle Launch Experience é um simulador anexo de sensação de lançamento.",
             ],
           },
         ],
@@ -181,7 +181,7 @@ export default {
             icon: "target",
             title: "Como aproveitar melhor",
             paragraphs: [
-              "~45 min é suficiente; encaixa bem no fim da tarde, ritmo mais tranquilo.",
+              "**~45 min** é suficiente; encaixa bem no fim da tarde, ritmo mais tranquilo.",
             ],
           },
           {
@@ -189,7 +189,7 @@ export default {
             icon: "camera",
             title: "Curiosidades",
             paragraphs: [
-              "Homenagem aos primeiros astronautas americanos (Mercury Seven), com hologramas e o Hall da Fama anexo.",
+              "Homenagem aos primeiros astronautas americanos (**Mercury Seven**), com hologramas e o Hall da Fama anexo.",
             ],
           },
         ],
@@ -214,7 +214,7 @@ export default {
             icon: "camera",
             title: "Curiosidades",
             paragraphs: [
-              "Exibição mais recente do parque, focada no programa Artemis e futuras missões a Marte, com réplicas do SLS e do Starship.",
+              "Exibição mais recente do parque, focada no **programa Artemis** e futuras missões a Marte, com réplicas do SLS e do Starship.",
             ],
           },
         ],
@@ -231,7 +231,7 @@ export default {
             icon: "alert",
             title: "Pendente de confirmação",
             paragraphs: [
-              "Edição 2026 ainda não confirmada oficialmente pelo parque — reconfirmar mais perto da data. Se acontecer, muda a hora de saída do parque (empurraria o retorno para depois das 19h).",
+              "Edição 2026 ainda não confirmada oficialmente pelo parque — reconfirmar mais perto da data. Se acontecer, muda a hora de saída do parque (empurraria o retorno para **depois das 19h**).",
             ],
           },
           {
@@ -247,7 +247,7 @@ export default {
             icon: "target",
             title: "Como aproveitar melhor",
             paragraphs: [
-              "Em 2025 rodou nightly às 18h50, de 21 a 30/dez (fechado só dia 25), incluso no ingresso, no Rocket Garden.",
+              "Em 2025 rodou nightly **às 18h50**, de 21 a 30/dez (**fechado** só dia 25), incluso no ingresso, no Rocket Garden.",
             ],
           },
           {
@@ -255,7 +255,7 @@ export default {
             icon: "camera",
             title: "Curiosidades",
             paragraphs: [
-              "Show de ~600 drones contando a história de \"Starflake\", passando pelos programas Apollo, Shuttle e Artemis.",
+              "Show de **~600 drones** contando a história de \"Starflake\", passando pelos programas Apollo, Shuttle e Artemis.",
             ],
           },
         ],
@@ -272,7 +272,7 @@ export default {
             icon: "target",
             title: "Como aproveitar melhor",
             paragraphs: [
-              "Deixar para os últimos 30 min, antes de sair.",
+              "Deixar para os **últimos 30 min**, antes de sair.",
             ],
           },
           {
@@ -280,7 +280,7 @@ export default {
             icon: "camera",
             title: "Curiosidades",
             paragraphs: [
-              "Loja oficial de lembranças — comida liofilizada de astronauta, réplicas, roupas com logo da NASA.",
+              "Loja oficial de lembranças — **comida liofilizada de astronauta**, réplicas, roupas com logo da NASA.",
             ],
           },
         ],

@@ -31,9 +31,9 @@ export default {
         { label: "Chegar ao parque", value: "10h00" },
       ],
       notes: [
-        { icon: "info", text: "O Epic Universe abre às 10h (entrada antecipada às 9h). Fecha às 21h." },
+        { icon: "info", text: "O Epic Universe **abre às 10h** (entrada antecipada às 9h). **Fecha às 21h**." },
       ],
-      alerts: ["Confirmar no app: horário do parque assumido das 10h às 21h. Deslocar tudo pela diferença."],
+      alerts: ["**Confirmar no app**: horário do parque assumido **das 10h às 21h**. Deslocar tudo pela diferença."],
     },
     attractions: [
       {
@@ -48,7 +48,7 @@ export default {
             icon: "parking",
             title: "Endereço e estacionamento",
             paragraphs: [
-              "1001 Epic Blvd, Orlando, FL 32819. Estacionamento US$ 32 a 35 por dia. Foto da placa e da fileira.",
+              "1001 Epic Blvd, Orlando, FL 32819. Estacionamento **US$ 32 a 35 por dia**. Foto da placa e da fileira.",
             ],
           },
           {
@@ -59,7 +59,7 @@ export default {
               "08h00 acordar",
               "09h00 sair de Storey Lake",
               "09h30 entrar",
-              "10h00 chegar ao parque; abertura 10h (entrada antecipada 9h)", // REVISAR: horários substituídos conforme o novo pedido
+              "10h00 chegar ao parque; **abertura 10h** (entrada antecipada 9h)", // REVISAR: horários substituídos conforme o novo pedido
               "~21h00 fechamento",
             ],
           },
@@ -68,9 +68,9 @@ export default {
             icon: "alert",
             title: "Atenção",
             list: [
-              "Perto do Natal o parque tende a estar mais cheio que no dia 17: usar o alerta de fila no app.",
-              "Antes de sair no dia 17, o grupo escolhe as 2 favoritas para repetir (padrão: Stardust Racers e Battle at the Ministry).",
-              "Dia 23 é Daytona, com saída cedo: dormir assim que chegar.",
+              "Perto do Natal o parque tende a estar mais cheio que no dia 17: usar o **alerta de fila no app**.",
+              "Antes de sair no dia 17, o grupo escolhe as **2 favoritas para repetir** (padrão: Stardust Racers e Battle at the Ministry).",
+              "Dia 23 é Daytona, com saída cedo: **dormir assim que chegar**.",
             ],
           },
         ],
@@ -92,7 +92,7 @@ export default {
             color: "gold",
             icon: "lightbulb",
             title: "Dica",
-            paragraphs: ["Pedir a primeira fileira, aproveitando a fila curta da abertura. É a única atração obrigatória da manhã."],
+            paragraphs: ["Pedir a primeira fileira, aproveitando a fila curta da abertura. É a única atração **obrigatória** da manhã."],
           },
         ],
       },
@@ -108,14 +108,14 @@ export default {
             icon: "bag",
             title: "Lojas",
             paragraphs: [
-              "Toothless' Treasures: adoção de dragão de pelúcia (US$ 21). Escolhe a cor do ovo, faz o juramento viking, dá o nome e há uma cerimônia de nascimento. Hiccup's Work Shop e How to Treat Your Dragon têm decoração de Natal.",
+              "Toothless' Treasures: adoção de dragão de pelúcia (**US$ 21**). Escolhe a cor do ovo, faz o juramento viking, dá o nome e há uma cerimônia de nascimento. Hiccup's Work Shop e How to Treat Your Dragon têm decoração de Natal.",
             ],
           },
           {
             color: "gold",
             icon: "camera",
             title: "Dica",
-            paragraphs: ["Passeio com calma por volta das 09h30 a 10h45, com fotos e personagens."],
+            paragraphs: ["Passeio com calma **por volta das 09h30 a 10h45**, com fotos e personagens."],
           },
         ],
       },
@@ -129,14 +129,14 @@ export default {
             color: "navy",
             icon: "camera",
             title: "Onde",
-            paragraphs: ["Ministry of Magic. A entrada fica junto da fila Single Rider: avisar o funcionário. ~10h45."],
+            paragraphs: ["Ministry of Magic. A entrada fica junto da fila Single Rider: **avisar o funcionário**. **~10h45**."],
           },
           {
             color: "citrus",
             icon: "camera",
             title: "Sobre",
             paragraphs: [
-              "Visita à parte da fila com o Ministério da Magia, passando pelo pó de Flu, sem andar no brinquedo. Faz sentido para quem já fez a Battle no dia 17 e quer ver os detalhes.",
+              "Visita à parte da fila com o Ministério da Magia, passando pelo pó de Flu, **sem andar no brinquedo**. Faz sentido para quem já fez a Battle no dia 17 e quer ver os detalhes.",
             ],
           },
         ],
@@ -153,14 +153,14 @@ export default {
             icon: "camera",
             title: "Sobre",
             paragraphs: [
-              "Le Cirque Arcanus (~11h15): show de circo e Animais Fantásticos, hora de sentar (os guias divergem: opcional). Perto do Le Gobelet Noir, os quadros de Cassandra Trelawney, Sir Cadogan e Simon Beauchamp ensinam um feitiço a quem tem varinha.",
+              "Le Cirque Arcanus (**~11h15**): show de circo e Animais Fantásticos, hora de sentar (os guias divergem: opcional). Perto do Le Gobelet Noir, os quadros de Cassandra Trelawney, Sir Cadogan e Simon Beauchamp ensinam um feitiço a quem tem varinha.",
             ],
           },
           {
             color: "gold",
             icon: "burger",
             title: "Dica",
-            paragraphs: ["~12h00 crepe de cerveja amanteigada no Café L'Air de la Sirène, para dividir."],
+            paragraphs: ["**~12h00** crepe de cerveja amanteigada no Café L'Air de la Sirène, para dividir."],
           },
         ],
       },
@@ -174,14 +174,14 @@ export default {
             color: "navy",
             icon: "burger",
             title: "Onde",
-            paragraphs: ["Super Nintendo World, ~13h00. Reservar ou pedir pelo app."],
+            paragraphs: ["Super Nintendo World, **~13h00**. Reservar ou pedir pelo app."],
           },
           {
             color: "gold",
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "A comida é só ok, mas o ambiente é o mais temático do parque (Mario Burger, Super Mushroom Soup). Vale a experiência.",
+              "A comida é só ok, mas o ambiente é **o mais temático do parque** (Mario Burger, Super Mushroom Soup). Vale a experiência.",
             ],
           },
         ],
@@ -198,7 +198,7 @@ export default {
             icon: "target",
             title: "Sobre",
             paragraphs: [
-              "Pulseira interativa (cerca de US$ 45 + taxas) com 5 minijogos: Goomba Crazy Crank, Piranha Plant Nap Mishap, Koopa Troopa POWer Punch, Bob-omb Kaboom Room e Thwomp Panel Panic. Com 3 chaves, todo o grupo joga o Bowser Jr. Shadow Showdown. A pontuação aparece no app.",
+              "Pulseira interativa (cerca de **US$ 45** + taxas) com 5 minijogos: Goomba Crazy Crank, Piranha Plant Nap Mishap, Koopa Troopa POWer Punch, Bob-omb Kaboom Room e Thwomp Panel Panic. Com 3 chaves, todo o grupo joga o Bowser Jr. Shadow Showdown. A pontuação aparece no app.",
             ],
           },
           {
@@ -206,7 +206,7 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "Comprar uma só e revezar (~14h00). O Bob-omb Kaboom Room é exclusivo da Super Nintendo World de Orlando. Se ninguém quiser, usar o tempo na Mine-Cart Madness (se a fila for baixa) e nas lojas 1-Up Factory e Mario Motors.",
+              "**Comprar uma só e revezar** (**~14h00**). O Bob-omb Kaboom Room é exclusivo da Super Nintendo World de Orlando. Se ninguém quiser, usar o tempo na Mine-Cart Madness (se a fila for baixa) e nas lojas 1-Up Factory e Mario Motors.",
             ],
           },
         ],
@@ -221,14 +221,14 @@ export default {
             color: "navy",
             icon: "target",
             title: "Onde",
-            paragraphs: ["Dark Universe, ~15h30. Altura mínima do Monsters Unchained: 1,22 m."],
+            paragraphs: ["Dark Universe, **~15h30**. Altura mínima do Monsters Unchained: 1,22 m."],
           },
           {
             color: "gold",
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "Repetir o Monsters Unchained só se a fila for ≤30 min. Sobremesa no Das Stakehaus (chocolate em forma de túmulo). ~16h00: ver a hélice do The Burning Blade Tavern pegar fogo e fotos com os monstros.",
+              "Repetir o Monsters Unchained **só se a fila for** ≤30 min. Sobremesa no Das Stakehaus (chocolate em forma de túmulo). ~16h00: ver a hélice do The Burning Blade Tavern pegar fogo e fotos com os monstros.",
             ],
           },
           {
@@ -236,7 +236,7 @@ export default {
             icon: "alert",
             title: "Atenção",
             paragraphs: [
-              "Darkmoor Monster Makeup é opcional, com reserva no site da Universal (US$ 45 só a maquiagem; US$ 169+ o pacote). Adultos maquiados não podem beber álcool.",
+              "Darkmoor Monster Makeup é opcional, com **reserva no site** da Universal (**US$ 45** só a maquiagem; **US$ 169**+ o pacote). Adultos maquiados não podem beber álcool.",
             ],
           },
         ],
@@ -251,14 +251,14 @@ export default {
             color: "navy",
             icon: "burger",
             title: "Onde",
-            paragraphs: ["Isle of Berk, ~17h15. Reservar pelo app: perto do Natal enche."],
+            paragraphs: ["Isle of Berk, ~17h15. **Reservar pelo app**: perto do Natal enche."],
           },
           {
             color: "gold",
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "Salão de banquete viking. Thawfest Platter: frango glaceado com barbecue de frutas silvestres, salmão grelhado e salsicha. A Berk ao entardecer fica com a decoração de Natal.",
+              "Salão de banquete viking. **Thawfest Platter**: frango glaceado com barbecue de frutas silvestres, salmão grelhado e salsicha. A Berk ao entardecer fica com a decoração de Natal.",
             ],
           },
         ],
@@ -275,9 +275,9 @@ export default {
             title: "Lojas",
             list: [
               "Other Worlds Mercantile",
-              "North Star – Wintry Wonders (produtos de Natal)",
+              "North Star – Wintry Wonders (**produtos de Natal**)",
               "K. Rammelle (doces)",
-              "Pretorius' Scientific Oddities (Dark Universe)",
+              "Pretorius' Scientific Oddities (**Dark Universe**)",
             ],
           },
           {
@@ -285,7 +285,7 @@ export default {
             icon: "tree",
             title: "Dica",
             paragraphs: [
-              "~18h30. O Celestial Park vira um 'cosmic winter wonderland' no Natal, com árvores iluminadas. Foto de capa: lago e Helios Grand Hotel ao fundo.",
+              "**~18h30**. O Celestial Park vira um 'cosmic winter wonderland' no Natal, com árvores iluminadas. Foto de capa: lago e Helios Grand Hotel ao fundo.",
             ],
           },
         ],
@@ -302,7 +302,7 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "~19h00, por Single Rider. Padrão: Stardust Racers iluminada e Battle at the Ministry. Entrar na fila até ~20h, porque ela fecha no encerramento.",
+              "~19h00, por Single Rider. Padrão: Stardust Racers iluminada e Battle at the Ministry. Entrar na fila **até ~20h**, porque ela fecha no encerramento.",
             ],
           },
         ],
@@ -317,14 +317,14 @@ export default {
             color: "navy",
             icon: "camera",
             title: "Onde",
-            paragraphs: ["Celestial Park. Fechamento previsto às 21h00."],
+            paragraphs: ["Celestial Park. Fechamento previsto **às 21h00**."],
           },
           {
             color: "gold",
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "Chegar 20 a 30 min antes (horário só no app). Para descansar, o bar do 10º andar do Helios Grand Hotel é aberto a não hóspedes e tem vista para o show (nome e horário a confirmar).",
+              "**Chegar 20 a 30 min antes** (**horário só no app**). Para descansar, o bar do 10º andar do Helios Grand Hotel é aberto a não hóspedes e tem vista para o show (nome e horário a confirmar).",
             ],
           },
           {
@@ -332,7 +332,7 @@ export default {
             icon: "alert",
             title: "Atenção",
             paragraphs: [
-              "Se sobrar tempo ou energia, o que faltou no dia 17 entra aqui: Mario Kart, segunda pista da Stardust, Toothless Meet & Greet, Fyre Drill (se estiver quente) e Untrainable Dragon (se perdeu o horário).",
+              "Se sobrar tempo ou energia, **o que faltou no dia 17** entra aqui: Mario Kart, segunda pista da Stardust, Toothless Meet & Greet, Fyre Drill (se estiver quente) e Untrainable Dragon (se perdeu o horário).",
             ],
           },
         ],

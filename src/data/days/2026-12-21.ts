@@ -32,12 +32,12 @@ export default {
         { label: "Chegar em casa", value: "A definir" },
       ],
       notes: [
-        { icon: "car", text: "De carro: Storey Lake → Busch Gardens, cerca de 1h30 a 1h45 (~100 km)." },
+        { icon: "car", text: "De carro: Storey Lake → Busch Gardens, cerca de **1h30 a 1h45** (~100 km)." },
         { icon: "info", text: "Parque aberto das 9h às 21h." },
-        { icon: "info", text: "Quem não quiser fazer a Montu espera na saída ou usa o Rider Switch." },
-        { icon: "info", text: "O roteiro completo termina por volta das 19h, então o Tampa Outlet só cabe saindo do parque até ~17h e cortando os extras (Lory Land, Habitat Hideaway, Ubanga-Banga, teatros, Walkabout Way, Congo River Rapids)." },
+        { icon: "info", text: "Quem não quiser fazer a Montu espera na saída ou usa o **Rider Switch**." },
+        { icon: "info", text: "O roteiro completo termina **por volta das 19h**, então o Tampa Outlet só cabe saindo do parque **até ~17h** e cortando os extras (Lory Land, Habitat Hideaway, Ubanga-Banga, teatros, Walkabout Way, Congo River Rapids)." },
       ],
-      alerts: ["Confirmar: horários sugeridos assumem abertura às 9h."],
+      alerts: ["Confirmar: horários sugeridos assumem abertura **às 9h**."],
     },
     attractions: [
       {
@@ -52,8 +52,8 @@ export default {
             icon: "parking",
             title: "Endereço / Estacionamento",
             paragraphs: [
-              "10165 McKinley Dr, Tampa, FL. Cerca de 1h30 a 1h45 de carro de Orlando pela I-4 Oeste (~100 km, sujeito a trânsito). Estacionamento pago à parte.",
-              "Sugestão: acordar 6h00, sair do Storey Lake às 7h00 e chegar entre ~8h30 e ~8h45, de 15 a 30 minutos antes de abrir.",
+              "10165 McKinley Dr, Tampa, FL. Cerca de 1h30 a 1h45 de carro de Orlando pela I-4 Oeste (~100 km, sujeito a trânsito). **Estacionamento pago à parte**.",
+              "Sugestão: acordar 6h00, sair do Storey Lake **às 7h00** e chegar entre ~8h30 e ~8h45, de 15 a 30 minutos antes de abrir.",
             ],
           },
           {
@@ -61,7 +61,7 @@ export default {
             icon: "lightbulb",
             title: "Horário",
             paragraphs: [
-              "Confirmar no site oficial o horário de abertura e fechamento de 21/12 e se há evento de Natal com programação diferente.",
+              "**Confirmar no site oficial** o horário de abertura e fechamento de 21/12 e se há evento de Natal com programação diferente.",
             ],
           },
           {
@@ -69,10 +69,10 @@ export default {
             icon: "lightbulb",
             title: "Fura-fila e transporte interno",
             list: [
-              "Quick Queue: comprar no dia, depois de ver as filas. Em dezembro vale considerar para Iron Gwazi, SheiKra e Tigris.",
-              "Serengeti Railway (trenzinho): gratuito, dá a volta na savana e poupa as pernas.",
-              "Skyride: US$ 5 por viagem entre Edge of Africa e Stanleyville.",
-              "Rider Switch: permite revezar numa atração sem pegar a fila de novo.",
+              "**Quick Queue**: comprar no dia, depois de ver as filas. Em dezembro vale considerar para Iron Gwazi, SheiKra e Tigris.",
+              "Serengeti Railway (trenzinho): **gratuito**, dá a volta na savana e poupa as pernas.",
+              "Skyride: **US$ 5 por viagem** entre Edge of Africa e Stanleyville.",
+              "**Rider Switch**: permite revezar numa atração sem pegar a fila de novo.",
             ],
           },
           {
@@ -80,9 +80,9 @@ export default {
             icon: "alert",
             title: "Atenção",
             list: [
-              "Conferir no app/mapa se há atrações fechadas e onde fica a entrada em relação a Morocco e Egypt.",
+              "Conferir no app/mapa se há atrações **fechadas** e onde fica a entrada em relação a Morocco e Egypt.",
               "A Kumba fechou em 2026 e não entra no plano.",
-              "Confirmar se pode entrar com comida e se aceitam dinheiro (leitora relata que não aceitam dinheiro, não permitem comida de fora e só há armários pagos).",
+              "**Confirmar se pode entrar** com comida e se aceitam dinheiro (leitora relata que não aceitam dinheiro, não permitem comida de fora e só há armários pagos).",
             ],
           },
         ],
@@ -100,7 +100,7 @@ export default {
             icon: "target",
             title: "Sobre",
             paragraphs: [
-              "Edge of Africa. Montanha-russa de 3 lançamentos, sem looping, até 100 km/h, 1.220 m de percurso. Foi a primeira de 3 lançamentos da Flórida.",
+              "Edge of Africa. Montanha-russa de 3 lançamentos, sem looping, **até 100 km/h**, 1.220 m de percurso. Foi a primeira de 3 lançamentos da Flórida.",
             ],
           },
           {
@@ -108,7 +108,7 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "Primeira do dia (~10h): a fila costuma ser grande porque aceita crianças maiores.",
+              "**Primeira do dia (~10h)**: a fila costuma ser grande porque aceita crianças maiores.",
             ],
           },
         ],
@@ -125,7 +125,7 @@ export default {
             icon: "leaf",
             title: "Sobre",
             paragraphs: [
-              "Edge of Africa. Safari a pé com guepardos, hipopótamos, hienas, leões e suricatos. Cerca de 20 minutos.",
+              "Edge of Africa. Safari a pé com guepardos, hipopótamos, hienas, leões e suricatos. **Cerca de 20 minutos**.",
             ],
           },
           {
@@ -133,7 +133,7 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "Logo depois da Cheetah Hunt (~10h40): de manhã os animais costumam estar mais ativos.",
+              "**Logo depois da Cheetah Hunt** (~10h40): de manhã os animais costumam estar mais ativos.",
             ],
           },
         ],
@@ -150,14 +150,14 @@ export default {
             icon: "leaf",
             title: "Sobre",
             paragraphs: [
-              "Edge of Africa. Habitat novo cercado por vidros, com visão de até 270° do terreno. Os leões chegam bem perto do vidro.",
+              "Edge of Africa. Habitat novo cercado por vidros, com **visão de até 270°** do terreno. Os leões chegam bem perto do vidro.",
             ],
           },
           {
             color: "gold",
             icon: "camera",
             title: "Dica",
-            paragraphs: ["Bom para fotos. Fica no mesmo bloco da Cheetah Run."],
+            paragraphs: ["**Bom para fotos**. Fica no mesmo bloco da Cheetah Run."],
           },
         ],
       },
@@ -174,7 +174,7 @@ export default {
             icon: "target",
             title: "Sobre",
             paragraphs: [
-              "Egypt. Montanha-russa que gira no próprio eixo, até 64 km/h, ~3m30, com trechos de ré. Um elevador vertical sobe 21 m antes de começar.",
+              "Egypt. Montanha-russa que gira no próprio eixo, **até 64 km/h**, ~3m30, com trechos de ré. Um elevador vertical sobe 21 m antes de começar.",
             ],
           },
           {
@@ -182,7 +182,7 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "~11h30. Na fila dá para ver cobras venenosas de perto, atrás de vidro.",
+              "**~11h30**. Na fila dá para ver cobras venenosas de perto, atrás de vidro.",
             ],
           },
         ],
@@ -200,7 +200,7 @@ export default {
             icon: "target",
             title: "Sobre",
             paragraphs: [
-              "Stanleyville. Montanha-russa de queda livre de 90°, com pernas soltas, mais de 110 km/h. O carrinho trava ~3 segundos no topo antes de cair.",
+              "Stanleyville. Montanha-russa de queda livre de 90°, com pernas soltas, **mais de 110 km/h**. O carrinho trava ~3 segundos no topo antes de cair.",
             ],
           },
           {
@@ -208,7 +208,7 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "~16h15. Usar o Quick Queue se a fila estiver grande.",
+              "**~16h15**. Usar o **Quick Queue** se a fila estiver grande.",
             ],
           },
         ],
@@ -226,14 +226,14 @@ export default {
             icon: "target",
             title: "Sobre",
             paragraphs: [
-              "Stanleyville. Montanha-russa de 3 lançamentos, 45 m de altura, 100 km/h, com marcha à ré. Inaugurada em 2019.",
+              "Stanleyville. Montanha-russa de 3 lançamentos, 45 m de altura, **100 km/h**, com marcha à ré. Inaugurada em 2019.",
             ],
           },
           {
             color: "gold",
             icon: "lightbulb",
             title: "Dica",
-            paragraphs: ["Fica ao lado da SheiKra: faça as duas em sequência."],
+            paragraphs: ["Fica ao lado da SheiKra: faça **as duas em sequência**."],
           },
         ],
       },
@@ -249,7 +249,7 @@ export default {
             icon: "camera",
             title: "Sobre",
             paragraphs: [
-              "Stanleyville. Apresentações sazonais, como shows de música e acrobacias.",
+              "Stanleyville. Apresentações **sazonais**, como shows de música e acrobacias.",
             ],
           },
           {
@@ -257,7 +257,7 @@ export default {
             icon: "alert",
             title: "Atenção",
             paragraphs: [
-              "Ver a programação do dia. O VPD sugere gastar o tempo com outras atrações.",
+              "**Ver a programação do dia**. O VPD sugere gastar o tempo com outras atrações.",
             ],
           },
         ],
@@ -274,7 +274,7 @@ export default {
             icon: "leaf",
             title: "Sobre",
             paragraphs: [
-              "Nairobi (Serengeti Outpost). Passeio de caminhão de ~30 min pela savana, com girafas, zebras, elefantes e rinocerontes. Dá para alimentar as girafas com alface.",
+              "Nairobi (Serengeti Outpost). Passeio de caminhão de **~30 min** pela savana, com girafas, zebras, elefantes e rinocerontes. Dá para alimentar as girafas com alface.",
             ],
           },
           {
@@ -282,7 +282,7 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "~12h. Reservar horário com antecedência. É pago à parte, a partir de US$ 39,99 em dia útil (confirmar valor de dezembro). Crianças menores de 5 anos não participam.",
+              "~12h. **Reservar horário** com antecedência. É pago à parte, **a partir de US$ 39,99** em dia útil (confirmar valor de dezembro). Crianças menores de 5 anos não participam.",
             ],
           },
         ],
@@ -299,7 +299,7 @@ export default {
             icon: "leaf",
             title: "Sobre",
             paragraphs: [
-              "Nairobi. Centro de tratamento e reabilitação com salas de nutrição, raio X e cirurgia. Dá para observar procedimentos feitos nos animais do próprio parque.",
+              "Nairobi. Centro de tratamento e reabilitação com salas de nutrição, raio X e cirurgia. Dá para **observar procedimentos** feitos nos animais do próprio parque.",
             ],
           },
           {
@@ -327,7 +327,7 @@ export default {
             color: "gold",
             icon: "camera",
             title: "Dica",
-            paragraphs: ["Parada rápida de fotos, no mesmo trecho da Safari."],
+            paragraphs: ["**Parada rápida** de fotos, no mesmo trecho da Safari."],
           },
         ],
       },
@@ -364,7 +364,7 @@ export default {
             icon: "leaf",
             title: "Sobre",
             paragraphs: [
-              "Nairobi. Interação com animais como flamingos e lêmures. Em alguns horários é possível alimentá-los.",
+              "Nairobi. Interação com animais como flamingos e lêmures. Em alguns horários é possível **alimentá-los**.",
             ],
           },
           {
@@ -372,7 +372,7 @@ export default {
             icon: "alert",
             title: "Atenção",
             paragraphs: [
-              "Os horários variam. Conferir nos guias fornecidos na entrada do parque.",
+              "Os horários variam. Conferir nos **guias fornecidos na entrada** do parque.",
             ],
           },
         ],
@@ -388,9 +388,9 @@ export default {
             icon: "burger",
             title: "Onde comer (~13h30)",
             list: [
-              "Dragon Fire Grill & Pub (Pantopia): grande, coberto e com ar-condicionado, com comida americana, tex-mex, asiática e sanduíches. Opção principal.",
-              "Serengeti Overlook (Edge of Africa): considerado o melhor do parque, um pouco mais caro, com vista para a savana.",
-              "Zambia Smokehouse (Stanleyville): costela e frango grelhados, ambiente com ar-condicionado.",
+              "Dragon Fire Grill & Pub (Pantopia): grande, coberto e com ar-condicionado, com comida americana, tex-mex, asiática e sanduíches. **Opção principal**.",
+              "Serengeti Overlook (Edge of Africa): considerado o **melhor do parque**, um pouco mais caro, com vista para a savana.",
+              "Zambia Smokehouse (Stanleyville): **costela e frango grelhados**, ambiente com ar-condicionado.",
               "Chick-fil-A: também dentro do parque.",
             ],
           },
@@ -399,7 +399,7 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "Almoçar leve: ainda vêm torre de queda, balanço e várias montanhas-russas. Avaliar o All Day Dining Deal (refeições de 90 em 90 min) se o grupo come bastante no parque.",
+              "**Almoçar leve**: ainda vêm torre de queda, balanço e várias montanhas-russas. Avaliar o **All Day Dining Deal** (refeições de 90 em 90 min) se o grupo come bastante no parque.",
             ],
           },
         ],
@@ -416,7 +416,7 @@ export default {
             icon: "target",
             title: "Sobre",
             paragraphs: [
-              "Pantopia. Torre de queda de 102 m, a maior da América. No topo os bancos giram e você fica de frente para o chão, antes de cair a 96 km/h com 3,5 G (quase 6 segundos).",
+              "Pantopia. Torre de queda de 102 m, **a maior da América**. No topo os bancos giram e você fica de frente para o chão, antes de cair a 96 km/h com 3,5 G (quase 6 segundos).",
             ],
           },
           {
@@ -440,14 +440,14 @@ export default {
             icon: "target",
             title: "Sobre",
             paragraphs: [
-              "Pantopia. Balanço gigante com dois pêndulos, 41 m de altura e até 109 km/h. É o screamin' swing mais alto e rápido do mundo.",
+              "Pantopia. Balanço gigante com dois pêndulos, 41 m de altura e **até 109 km/h**. É o screamin' swing mais alto e rápido do mundo.",
             ],
           },
           {
             color: "gold",
             icon: "lightbulb",
             title: "Dica",
-            paragraphs: ["Faça logo depois da Falcon's Fury, no mesmo bloco."],
+            paragraphs: ["Faça logo depois da **Falcon's Fury**, no mesmo bloco."],
           },
         ],
       },
@@ -463,7 +463,7 @@ export default {
             icon: "target",
             title: "Sobre",
             paragraphs: [
-              "Pantopia. Montanha-russa invertida de 2024, 558 m e até 70 km/h. É a única do parque com áudio integrado.",
+              "Pantopia. Montanha-russa invertida de 2024, 558 m e até 70 km/h. É a **única do parque com áudio integrado**.",
             ],
           },
           {
@@ -471,7 +471,7 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "Curta e tranquila, boa para fechar o bloco de Pantopia.",
+              "**Curta e tranquila**, boa para fechar o bloco de Pantopia.",
             ],
           },
         ],
@@ -488,7 +488,7 @@ export default {
             icon: "camera",
             title: "Sobre",
             paragraphs: [
-              "Pantopia. Show interativo com animais (Animal Tales) sobre preservação ambiental.",
+              "Pantopia. Show interativo com animais (**Animal Tales**) sobre preservação ambiental.",
             ],
           },
           {
@@ -496,7 +496,7 @@ export default {
             icon: "alert",
             title: "Atenção",
             paragraphs: [
-              "O VPD não recomenda e diz que não vale o tempo. Só se o horário bater e sobrar tempo.",
+              "**O VPD não recomenda** e diz que não vale o tempo. Só se o horário bater e sobrar tempo.",
             ],
           },
         ],
@@ -513,7 +513,7 @@ export default {
             icon: "target",
             title: "Sobre",
             paragraphs: [
-              "Congo. Bote redondo para 12 pessoas em rio artificial com corredeiras. Molha muito. Pessoas do lado de fora podem acertar vocês com pistolas de água.",
+              "Congo. Bote redondo para 12 pessoas em rio artificial com corredeiras. **Molha muito**. Pessoas do lado de fora podem acertar vocês com pistolas de água.",
             ],
           },
           {
@@ -521,7 +521,7 @@ export default {
             icon: "alert",
             title: "Atenção",
             paragraphs: [
-              "Só vale se estiver calor. Levar roupa extra. Altura mínima de 1,07 m.",
+              "**Só vale se estiver calor**. Levar roupa extra. Altura mínima de 1,07 m.",
             ],
           },
         ],
@@ -537,7 +537,7 @@ export default {
             color: "citrus",
             icon: "target",
             title: "Sobre",
-            paragraphs: ["Congo. Réplica simples dos carrinhos de bate-bate."],
+            paragraphs: ["Congo. **Réplica simples** dos carrinhos de bate-bate."],
           },
           {
             color: "attn",
@@ -561,7 +561,7 @@ export default {
             icon: "leaf",
             title: "Sobre",
             paragraphs: [
-              "Wild Oasis. Espaço com capivaras, tamanduás-bandeira, macacos e aves tropicais.",
+              "Wild Oasis. Espaço com **capivaras**, tamanduás-bandeira, macacos e aves tropicais.",
             ],
           },
           {
@@ -569,7 +569,7 @@ export default {
             icon: "alert",
             title: "Atenção",
             paragraphs: [
-              "Está dentro de uma área infantil. Só vale se estiver no caminho.",
+              "Está dentro de uma área infantil. **Só vale se estiver** no caminho.",
             ],
           },
         ],
@@ -586,7 +586,7 @@ export default {
             icon: "leaf",
             title: "Sobre",
             paragraphs: [
-              "Bird Gardens. Cangurus e outros animais típicos da Austrália.",
+              "Bird Gardens. **Cangurus** e outros animais típicos da Austrália.",
             ],
           },
           {
@@ -609,7 +609,7 @@ export default {
             icon: "leaf",
             title: "Sobre",
             paragraphs: [
-              "Bird Gardens. Grande viveiro de pássaros, com tratadores disponíveis e, às vezes, interação.",
+              "Bird Gardens. Grande viveiro de pássaros, com **tratadores disponíveis** e, às vezes, interação.",
             ],
           },
           {
@@ -633,7 +633,7 @@ export default {
             icon: "target",
             title: "Sobre",
             paragraphs: [
-              "Morocco. Híbrida de madeira e aço, 63 m de altura, até 122 km/h, queda de 91° e 3 inversões. Substituiu a antiga Gwazi.",
+              "Morocco. Híbrida de madeira e aço, 63 m de altura, **até 122 km/h**, queda de 91° e **3 inversões**. Substituiu a antiga Gwazi.",
             ],
           },
           {
@@ -641,7 +641,7 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "~17h40. É a que mais enche: usar o Quick Queue. Se for a prioridade número 1 do grupo, considerar ir direto a ela na abertura (conferir o mapa).",
+              "**~17h40**. É a que mais enche: **usar o Quick Queue**. Se for a prioridade número 1 do grupo, considerar ir direto a ela na abertura (conferir o mapa).",
             ],
           },
         ],
@@ -657,7 +657,7 @@ export default {
             color: "citrus",
             icon: "leaf",
             title: "Sobre",
-            paragraphs: ["Morocco. Mini-trilha com gorilas e chimpanzés."],
+            paragraphs: ["Morocco. **Mini-trilha** com gorilas e chimpanzés."],
           },
           {
             color: "gold",
@@ -679,7 +679,7 @@ export default {
             icon: "camera",
             title: "Sobre",
             paragraphs: [
-              "Morocco. Show de patinação no gelo criado por diretores de musicais da Broadway. Segundo o VPD, é o melhor show do parque.",
+              "Morocco. Show de patinação no gelo criado por diretores de musicais da Broadway. Segundo o VPD, é o **melhor show do parque**.",
             ],
           },
           {
@@ -687,7 +687,7 @@ export default {
             icon: "alert",
             title: "Atenção",
             paragraphs: [
-              "Em dezembro a programação pode mudar. Encaixar só se o horário coincidir.",
+              "Em dezembro a programação pode mudar. Encaixar **só se o horário coincidir**.",
             ],
           },
         ],
@@ -705,7 +705,7 @@ export default {
             icon: "target",
             title: "Sobre",
             paragraphs: [
-              "Egypt. Montanha-russa de pernas soltas, 7 inversões e mais de 96 km/h. Foi a com mais inversões do mundo quando inaugurou.",
+              "Egypt. Montanha-russa de pernas soltas, **7 inversões** e mais de 96 km/h. Foi a com mais inversões do mundo quando inaugurou.",
             ],
           },
           {
@@ -713,7 +713,7 @@ export default {
             icon: "alert",
             title: "Atenção",
             paragraphs: [
-              "É a última do dia (~18h40). Quem não for fazer espera na saída ou usa o Rider Switch. Altura mínima de 1,38 m.",
+              "É a última do dia (~18h40). Quem não for fazer espera na saída ou usa o Rider Switch. **Altura mínima de 1,38 m**.",
             ],
           },
         ],

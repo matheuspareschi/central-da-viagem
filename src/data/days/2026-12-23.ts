@@ -20,7 +20,7 @@ export default {
     journey: {
       tiles: [],
       notes: [
-        { icon: "info", text: "Grupo Casa fica preparando a ceia e arrumando a casa; se faltar algo, evitar compras no dia." },
+        { icon: "info", text: "Grupo Casa fica preparando a ceia e arrumando a casa; se faltar algo, **evitar compras no dia**." },
       ],
       alerts: [],
     },
@@ -142,7 +142,7 @@ export default {
             icon: "parking",
             title: "Endereço",
             paragraphs: [
-              "1801 W International Speedway Blvd, Daytona Beach, FL 32114. Fica ao lado do aeroporto de Daytona Beach.",
+              "1801 W International Speedway Blvd, Daytona Beach, FL 32114. Fica **ao lado do aeroporto** de Daytona Beach.",
             ],
           },
           {
@@ -150,8 +150,8 @@ export default {
             icon: "camera",
             title: "Sobre",
             paragraphs: [
-              "Visita só para foto em frente ao autódromo, sem tour. Segundo relatos de visitantes, as estátuas de Bill France e Dale Earnhardt ficam do lado de fora do prédio Ticket & Tours, boas para foto.",
-              "O Motorsports Hall of Fame of America fica nesse mesmo prédio. O ingresso só do museu se compra pelo telefone 1-800-748-7467; o horário informado é de 10h às 17h, com fechamento em feriados e dias de evento na pista.",
+              "Visita **só para foto em frente** ao autódromo, sem tour. Segundo relatos de visitantes, as estátuas de Bill France e Dale Earnhardt ficam do lado de fora do prédio Ticket & Tours, boas para foto.",
+              "O Motorsports Hall of Fame of America fica nesse mesmo prédio. O ingresso só do museu se compra pelo telefone 1-800-748-7467; o horário informado é de **10h às 17h**, com fechamento em feriados e dias de evento na pista.",
             ],
           },
           {
@@ -159,7 +159,7 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "Ligar antes para perguntar se dá para entrar na loja ou no saguão sem ingresso e confirmar se o museu abre no dia 23. Para referência, o tour de 2024 custava US$ 26 para adultos, caso o grupo mude de ideia.",
+              "Ligar antes para perguntar se dá para entrar na loja ou no saguão sem ingresso e **confirmar se o museu** abre no dia 23. Para referência, o tour de 2024 custava **US$ 26** para adultos, caso o grupo mude de ideia.",
             ],
           },
           {
@@ -167,7 +167,7 @@ export default {
             icon: "alert",
             title: "Atenção",
             paragraphs: [
-              "⚠️ Não foi possível confirmar nenhum acesso geral gratuito sem tour. Se não houver, a ideia é apenas tirar a foto em frente ao prédio e seguir viagem.",
+              "⚠️ Não foi possível **confirmar nenhum acesso geral** **gratuito** sem tour. Se não houver, a ideia é apenas tirar a foto em frente ao prédio e seguir viagem.",
             ],
           },
         ],
@@ -183,7 +183,7 @@ export default {
             icon: "parking",
             title: "Endereço",
             paragraphs: [
-              "Beach Street, centro de Daytona Beach (referência: 249 N Beach Street ⚠️). Há vagas ao longo da Beach Street. Pelo mapa, a International Speedway Blvd, que liga o Speedway à praia, cruza a Beach Street, então o jardim fica no caminho (conferir no GPS).",
+              "Beach Street, centro de Daytona Beach (referência: 249 N Beach Street ⚠️). Há **vagas ao longo da Beach Street**. Pelo mapa, a International Speedway Blvd, que liga o Speedway à praia, cruza a Beach Street, então o jardim fica no caminho (conferir no GPS).",
             ],
           },
           {
@@ -191,8 +191,8 @@ export default {
             icon: "leaf",
             title: "Sobre",
             paragraphs: [
-              "Parque linear de 22,5 acres à beira do rio Halifax, da Main Street até a Orange Avenue. A parte sul, entre a International Speedway Blvd e a Orange Avenue, tem jardins botânicos com rosal, lagos com fontes que mudam de cor e área para brincar com água. A entrada é gratuita.",
-              "A Beach Street, ao lado, tem lojas e restaurantes; aqui o plano é só passar e caminhar.",
+              "Parque linear de 22,5 acres à beira do rio Halifax, da Main Street até a Orange Avenue. A parte sul, entre a International Speedway Blvd e a Orange Avenue, tem jardins botânicos com rosal, lagos com fontes que mudam de cor e área para brincar com água. A entrada é **gratuita**.",
+              "A Beach Street, ao lado, tem lojas e restaurantes; aqui o plano é **só passar e caminhar**.",
             ],
           },
           {
@@ -200,7 +200,7 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "Ótimo lugar para beliscar o lanche trazido de casa. A trilha tem piso azul acolchoado ao longo do rio.",
+              "Ótimo lugar para beliscar o **lanche trazido de casa**. A trilha tem piso azul acolchoado ao longo do rio.",
             ],
           },
         ],
@@ -217,7 +217,7 @@ export default {
             title: "Endereço / Estacionamento",
             paragraphs: [
               "70 Boardwalk, Daytona Beach, FL 32118.",
-              "Estacionar na garagem do Ocean Center (701 Earl Street), em frente ao Main Street Pier; uma passarela no segundo andar atravessa a A1A e leva ao Bandshell pelo Ocean Walk Shoppes. Valor da garagem ⚠️ a confirmar (varia por dia).",
+              "Estacionar na **garagem do Ocean Center** (701 Earl Street), em frente ao Main Street Pier; uma passarela no segundo andar atravessa a A1A e leva ao Bandshell pelo Ocean Walk Shoppes. Valor da garagem ⚠️ a confirmar (varia por dia).",
             ],
           },
           {
@@ -225,7 +225,7 @@ export default {
             icon: "camera",
             title: "Sobre",
             paragraphs: [
-              "Prédio que lembra um castelo, construído em 1937. Para esta visita, serve para ver e fotografar.",
+              "Prédio que lembra um castelo, **construído em 1937**. Para esta visita, serve para ver e fotografar.",
             ],
           },
         ],
@@ -249,7 +249,7 @@ export default {
             icon: "tree",
             title: "Sobre",
             paragraphs: [
-              "Orla com restaurantes, fliperama e lojas de souvenir. A areia é lisa e compacta, ótima para caminhar à beira d'água. As corridas de carro na praia começaram em 1936.",
+              "Orla com restaurantes, fliperama e lojas de souvenir. A **areia é lisa e compacta**, ótima para caminhar à beira d'água. As corridas de carro na praia começaram em 1936.",
             ],
           },
           {
@@ -257,7 +257,7 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "Estacionar na garagem e não na areia, para evitar a taxa de dirigir na praia (cerca de US$ 20 por veículo, segundo relatos). Levar toalha e uma troca de roupa.",
+              "Estacionar na garagem e não na areia, para **evitar a taxa** de dirigir na praia (cerca de **US$ 20 por veículo**, segundo relatos). Levar toalha e uma troca de roupa.",
             ],
           },
           {
@@ -265,7 +265,7 @@ export default {
             icon: "alert",
             title: "Atenção",
             paragraphs: [
-              "Mar frio em dezembro: a ideia é molhar os pés e caminhar; banho de mar fica por conta de quem aguentar.",
+              "**Mar frio em dezembro**: a ideia é molhar os pés e caminhar; banho de mar fica por conta de quem aguentar.",
             ],
           },
         ],
@@ -281,7 +281,7 @@ export default {
             icon: "parking",
             title: "Endereço",
             paragraphs: [
-              "Final da Main Street, na orla ⚠️ endereço exato a confirmar. Garagem do Ocean Center (701 Earl Street) bem em frente.",
+              "Final da Main Street, na orla ⚠️ **endereço exato a confirmar**. Garagem do Ocean Center (701 Earl Street) bem em frente.",
             ],
           },
           {
@@ -289,7 +289,7 @@ export default {
             icon: "camera",
             title: "Sobre",
             paragraphs: [
-              "Cartão-postal de Daytona Beach: píer de madeira com cerca de 300 m (1.000 pés), existente desde 1925, que passou por uma reforma de US$ 1,56 milhão em 2023. Foto do píer visto da praia e caminhada até o fim.",
+              "Cartão-postal de Daytona Beach: píer de madeira com cerca de 300 m (1.000 pés), existente desde 1925, que passou por uma reforma de **US$ 1,56** milhão em 2023. Foto do píer visto da praia e caminhada até o fim.",
             ],
           },
           {
@@ -297,7 +297,7 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "Ponto final do passeio: sair da orla até 14h para chegar em casa por volta das 16h.",
+              "Ponto final do passeio: sair da orla **até 14h** para chegar em casa **por volta das 16h**.",
             ],
           },
         ],
