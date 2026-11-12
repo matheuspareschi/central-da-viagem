@@ -26,7 +26,7 @@ export default {
         { label: "Chegar em casa", value: "~20h55" }, // REVISAR: 19h10 + ~1h45
       ],
       notes: [
-        { icon: "car", text: "Deslocamento: ~1h45 cada trecho, ~3h30 de carro no total." },
+        { icon: "car", text: "Deslocamento: ~1h45 cada trecho, **~3h30 de carro** no total." },
       ],
       alerts: [],
     },
@@ -191,7 +191,7 @@ export default {
             icon: "target",
             title: "Sobre",
             paragraphs: [
-              "Carvalho monumental com mais de 600 anos — já estava ali antes de Ponce de León chegar à Flórida em 1513. Fica no pátio do hotel Villa 1565.",
+              "Carvalho monumental com **mais de 600 anos** — já estava ali antes de Ponce de León chegar à Flórida em 1513. Fica no pátio do hotel Villa 1565.",
             ],
           },
           {
@@ -199,7 +199,7 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "Não precisa ser hóspede do hotel para ver e fotografar. No caminho, dá pra admirar de fora a fachada do antigo Castle Warden Hotel (hoje Ripley's Believe It or Not!), no 19 San Marco Ave.",
+              "**Não precisa ser hóspede** do hotel para ver e fotografar. No caminho, dá pra admirar de fora a fachada do antigo Castle Warden Hotel (hoje Ripley's Believe It or Not!), no 19 San Marco Ave.",
             ],
           },
         ],
@@ -223,7 +223,7 @@ export default {
             icon: "target",
             title: "Sobre",
             paragraphs: [
-              "Terreno onde a expedição de Pedro Menéndez de Avilés celebrou a primeira missa católica dos EUA, em 1565. A Great Cross de 63m marca o local do desembarque. A Shrine, dentro do mesmo terreno, é considerada o primeiro santuário mariano dos EUA.",
+              "Terreno onde a expedição de Pedro Menéndez de Avilés celebrou a **primeira missa católica dos EUA**, em 1565. A Great Cross de 63m marca o local do desembarque. A Shrine, dentro do mesmo terreno, é considerada o primeiro santuário mariano dos EUA.",
             ],
           },
           {
@@ -231,7 +231,7 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "Grátis. Jardins tranquilos à beira d'água — ótimo para fotos matinais, ainda sem muito movimento.",
+              "**Grátis**. Jardins tranquilos à beira d'água — ótimo para fotos matinais, ainda sem muito movimento.",
             ],
           },
         ],
@@ -255,7 +255,7 @@ export default {
             icon: "target",
             title: "Sobre",
             paragraphs: [
-              "Forte de alvenaria mais antigo dos EUA continentais, construído entre 1672–1695 em pedra coquina (absorve bolas de canhão em vez de rachar). Monumento Nacional do National Park Service.",
+              "Forte de alvenaria **mais antigo dos EUA continentais**, construído entre 1672–1695 em pedra coquina (absorve bolas de canhão em vez de rachar). Monumento Nacional do National Park Service.",
             ],
           },
           {
@@ -264,7 +264,7 @@ export default {
             title: "Dica",
             paragraphs: [
               "**US$ 15/adulto (16+), grátis até 15 anos** — Isabela (14) entra de graça. Horário: diário 8h45–17h15 (última entrada 17h). Ingresso vale por 7 dias.",
-              "Sem disparo de canhão programado em dezembro. Peça a um ranger para indicar a \"Câmara Secreta\" (descoberta selada em 1930). Programa Junior Ranger disponível.",
+              "**Sem disparo de canhão programado** em dezembro. Peça a um ranger para indicar a \"Câmara Secreta\" (descoberta selada em 1930). Programa Junior Ranger disponível.",
             ],
           },
         ],
@@ -288,7 +288,7 @@ export default {
             icon: "target",
             title: "Sobre",
             paragraphs: [
-              "Portão de pedra coquina de 1808, entrada histórica para St. George Street.",
+              "Portão de pedra coquina **de 1808**, entrada histórica para St. George Street.",
             ],
           },
           {
@@ -296,7 +296,7 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "Grátis, 10 min — fica no caminho de volta do Castillo. Ótimo ponto de foto.",
+              "**Grátis**, 10 min — fica no caminho de volta do Castillo. Ótimo ponto de foto.",
             ],
           },
         ],
@@ -321,7 +321,7 @@ export default {
             icon: "burger",
             title: "Sobre",
             paragraphs: [
-              "Frutos do mar estilo Nova Orleans, num pátio de frente para o bayfront — po'boys, jambalaya, red beans and rice, peixe grelhado ou frito. ~US$ 14–24/prato, servido até 16h.",
+              "Frutos do mar estilo Nova Orleans, num pátio de frente para o bayfront — po'boys, jambalaya, red beans and rice, peixe grelhado ou frito. **~US$ 14–24/prato**, servido **até 16h**.",
             ],
           },
           {
@@ -329,7 +329,7 @@ export default {
             icon: "alert",
             title: "Atenção",
             paragraphs: [
-              "Não aceita reserva — pode haver espera, principalmente para mesa no pátio com música ao vivo. É um desvio de ~10–12 min a pé a partir do Old City Gate (fica na orla, perto da Bridge of Lions) — depois volta-se normalmente para St. George Street/St. Photios à tarde.",
+              "**Não aceita reserva** — pode haver espera, principalmente para mesa no pátio com música ao vivo. É um desvio de ~10–12 min a pé a partir do Old City Gate (fica na orla, perto da Bridge of Lions) — depois volta-se normalmente para St. George Street/St. Photios à tarde.",
             ],
           },
         ],
@@ -353,7 +353,7 @@ export default {
             icon: "target",
             title: "Sobre",
             paragraphs: [
-              "Capela dentro da histórica Avero House (coquina, ~1749), dedicada aos primeiros imigrantes gregos dos EUA (1768). Ícones bizantinos e afrescos pintados à mão.",
+              "Capela dentro da histórica **Avero House** (coquina, ~1749), dedicada aos primeiros imigrantes gregos dos EUA (1768). Ícones bizantinos e afrescos pintados à mão.",
             ],
           },
           {
@@ -361,7 +361,7 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "Grátis (doações bem-vindas). 15 min é suficiente.",
+              "**Grátis** (doações bem-vindas). 15 min é suficiente.",
             ],
           },
         ],
@@ -385,7 +385,7 @@ export default {
             icon: "target",
             title: "Sobre",
             paragraphs: [
-              "A rua mais antiga dos EUA ainda em uso — fragmentos de cerâmica do início dos anos 1600 já foram encontrados ali.",
+              "A rua **mais antiga dos EUA** ainda em uso — fragmentos de cerâmica do início dos anos 1600 já foram encontrados ali.",
             ],
           },
           {
@@ -393,7 +393,7 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "Grátis. Vale desviar do fluxo principal de St. George Street.",
+              "**Grátis**. Vale desviar do fluxo principal de St. George Street.",
             ],
           },
         ],
@@ -417,7 +417,7 @@ export default {
             icon: "target",
             title: "Sobre",
             paragraphs: [
-              "Paróquia católica mais antiga dos EUA (missa fundadora em 1565, prédio atual de 1797). O Governor's House é museu gratuito sobre a história colonial, num prédio de 1598.",
+              "Paróquia católica mais antiga dos EUA (missa fundadora em 1565, prédio atual de 1797). O Governor's House é museu **gratuito** sobre a história colonial, num prédio de 1598.",
             ],
           },
           {
@@ -425,7 +425,7 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "Grátis os dois. Confira se não há missa/evento na Cathedral no horário. Governor's House tem banheiros públicos — bom ponto de parada para o grupo todo.",
+              "**Grátis** os dois. Confira se não há missa/evento na Cathedral no horário. Governor's House tem banheiros públicos — bom ponto de parada para o grupo todo.",
             ],
           },
         ],
@@ -449,7 +449,7 @@ export default {
             icon: "target",
             title: "Sobre",
             paragraphs: [
-              "A rua mais estreita dos EUA (~2,1m). A Love Tree é uma palmeira que cresceu dentro de um carvalho, formando um \"abraço\" — lenda diz que casais que se beijam ali selam o amor para sempre.",
+              "A rua **mais estreita dos EUA** (~2,1m). A Love Tree é uma palmeira que cresceu dentro de um carvalho, formando um \"abraço\" — lenda diz que casais que se beijam ali selam o amor para sempre.",
             ],
           },
           {
@@ -457,7 +457,7 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "Grátis, ~10 min — parada rápida e fofa para foto do grupo.",
+              "**Grátis**, ~10 min — parada rápida e fofa para foto do grupo.",
             ],
           },
         ],
@@ -481,7 +481,7 @@ export default {
             icon: "target",
             title: "Sobre",
             paragraphs: [
-              "Três prédios do Gilded Age lado a lado. Flagler College é o antigo Hotel Ponce de León (1888), com Rotunda e +79 vitrais Tiffany. Villa Zorayda é mansão de 1883 inspirada na Alhambra. Lightner é o antigo Hotel Alcazar (1888), hoje museu de antiguidades.",
+              "Três prédios do Gilded Age lado a lado. **Flagler College** é o antigo Hotel Ponce de León (1888), com Rotunda e +79 vitrais Tiffany. **Villa Zorayda** é mansão de 1883 inspirada na Alhambra. **Lightner** é o antigo Hotel Alcazar (1888), hoje museu de antiguidades.",
             ],
           },
           {
@@ -489,7 +489,7 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "Vista externa grátis nos três. Entrada paga opcional: Flagler tour guiado ~US$ 21–22 (só nos horários fixos 10h/14h, não bate com este roteiro), Villa Zorayda ~US$ 10 (autoguiado, sem hora marcada), Lightner ~US$ 20 (autoguiado, aberto 9h–17h). Confirmado: os três abrem normalmente às terças-feiras.",
+              "Vista externa **grátis** nos três. Entrada paga opcional: Flagler tour guiado **~US$ 21–22** (só nos horários fixos 10h/14h, não bate com este roteiro), Villa Zorayda **~US$ 10** (autoguiado, sem hora marcada), Lightner ~US$ 20 (autoguiado, aberto 9h–17h). Confirmado: os três abrem normalmente às terças-feiras.",
             ],
           },
         ],
@@ -513,7 +513,7 @@ export default {
             icon: "target",
             title: "Sobre",
             paragraphs: [
-              "Igreja construída por Henry Flagler (1886–87), estilo Gótico Veneziano com fachada em terracota.",
+              "Igreja construída por Henry Flagler (1886–87), estilo **Gótico Veneziano** com fachada em terracota.",
             ],
           },
           {
@@ -521,7 +521,7 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "Grátis (vista externa). Interior normalmente só acessível em horário de culto.",
+              "**Grátis** (vista externa). Interior normalmente só acessível em horário de culto.",
             ],
           },
         ],
@@ -545,7 +545,7 @@ export default {
             icon: "target",
             title: "Sobre",
             paragraphs: [
-              "Ponte histórica de 1927 com esculturas de leões de mármore de Carrara; caminhada pela orla com vista para a Matanzas Bay e o Castillo ao fundo.",
+              "**Ponte histórica de 1927** com esculturas de leões de mármore de Carrara; caminhada pela orla com vista para a Matanzas Bay e o Castillo ao fundo.",
             ],
           },
           {
@@ -553,7 +553,7 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "Grátis. Ótimo horário para fotos com luz de fim de tarde.",
+              "**Grátis**. Ótimo horário para fotos com luz de fim de tarde.",
             ],
           },
         ],
@@ -577,7 +577,7 @@ export default {
             icon: "tree",
             title: "Sobre",
             paragraphs: [
-              "Mais de 3 milhões de luzinhas brancas cobrindo o centro histórico, de 21/nov/2026 a 18/jan/2027.",
+              "Mais de 3 milhões de luzinhas brancas cobrindo o centro histórico, de **21/nov/2026 a 18/jan/2027**.",
             ],
           },
           {
@@ -585,7 +585,7 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "Grátis, sem ingresso. Use o app oficial \"Nights of Lights\" para mapa e banheiros. Vistam casaco leve — esfria perto da água. É a última parada dentro do centro histórico, antes de pegar a estrada.",
+              "**Grátis**, sem ingresso. Use o app oficial \"Nights of Lights\" para mapa e banheiros. Vistam casaco leve — esfria perto da água. É a última parada dentro do centro histórico, antes de pegar a estrada.",
             ],
           },
         ],
@@ -610,7 +610,7 @@ export default {
             icon: "burger",
             title: "Sobre",
             paragraphs: [
-              "Fast food — sanduíches de frango, nuggets (opção grelhada sem glúten), waffle fries, saladas. Fica no lado sul da cidade, praticamente no caminho de saída para a I-95 S.",
+              "Fast food — sanduíches de frango, nuggets (**opção grelhada sem glúten**), waffle fries, saladas. Fica no lado sul da cidade, praticamente no caminho de saída para a I-95 S.",
             ],
           },
           {
@@ -618,7 +618,7 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "Drive-thru ou mesa por dentro. Horário: seg–sáb 6h30–22h, fechado aos domingos (não é o caso do dia 15, terça-feira). ~30 min de parada é suficiente.",
+              "Drive-thru ou mesa por dentro. Horário: seg–sáb **6h30–22h**, **fechado** aos domingos (não é o caso do dia 15, terça-feira). ~30 min de parada é suficiente.",
             ],
           },
         ],

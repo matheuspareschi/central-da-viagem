@@ -28,17 +28,17 @@ export default {
       tiles: [{ label: "Acordar", value: "7h30" }, { label: "Sair de casa", value: "8h15" }, { label: "Estacionamento e portão", value: "9h15" }, { label: "Beco Diagonal", value: "10h" }],
       notes: [
         { icon: "car", text: "~15 min até os portões." },
-        { icon: "info", text: "Às 10h00, seguir a pé para o Beco Diagonal via New York e San Francisco (~12 min)." },
-        { icon: "info", text: "6000 Universal Blvd, Orlando, FL 32819. Estacionamento a partir de US$35 por dia (2026). São duas garagens enormes: anote o setor e o andar." },
-        { icon: "info", text: "Da garagem ao portão pelo CityWalk são cerca de 15–20 min a pé." },
-        { icon: "info", text: "Horários sugeridos assumem abertura às 10h; se o app mostrar outro horário, desloque tudo pela mesma diferença." },
-        { icon: "info", text: "Prioridade de corte se apertar: Horror Make-Up, E.T., Villain-Con, Race Through New York. Nunca cortar: Gringotts (2x), Mummy, Transformers, Ollivanders e Bourne." },
-        { icon: "info", text: "Ingresso já cadastrado no app Universal Orlando Resort antes de sair." },
-        { icon: "info", text: "Levar só bolsa pequena (armários), carregador portátil e protetor solar." },
-        { icon: "info", text: "Universal não permite cooler: levar muffin ou barrinha de whey assado." },
-        { icon: "info", text: "Água filtrada grátis nas máquinas Coca-Cola Freestyle." },
+        { icon: "info", text: "**Às 10h00**, seguir a pé para o Beco Diagonal via New York e San Francisco (**~12 min**)." },
+        { icon: "info", text: "6000 Universal Blvd, Orlando, FL 32819. Estacionamento **a partir de US$35 por dia** (2026). São duas garagens enormes: **anote o setor e o andar**." },
+        { icon: "info", text: "Da garagem ao portão pelo CityWalk são cerca de **15–20 min a pé**." },
+        { icon: "info", text: "Horários sugeridos assumem abertura **às 10h**; se o app mostrar outro horário, desloque tudo pela mesma diferença." },
+        { icon: "info", text: "Prioridade de corte se apertar: Horror Make-Up, E.T., Villain-Con, Race Through New York. **Nunca cortar**: Gringotts (2x), Mummy, Transformers, Ollivanders e Bourne." },
+        { icon: "info", text: "**Ingresso já cadastrado** no app Universal Orlando Resort antes de sair." },
+        { icon: "info", text: "**Levar só bolsa pequena** (armários), carregador portátil e protetor solar." },
+        { icon: "info", text: "Universal **não permite cooler**: levar muffin ou barrinha de whey assado." },
+        { icon: "info", text: "Água filtrada **grátis** nas máquinas Coca-Cola Freestyle." },
       ],
-      alerts: ["Fora de operação: Hollywood Rip Ride Rockit, Fast & Furious Supercharged e Animal Actors."],
+      alerts: ["**Fora de operação**: Hollywood Rip Ride Rockit, Fast & Furious Supercharged e Animal Actors."],
     },
     attractions: [
       {
@@ -53,7 +53,7 @@ export default {
             icon: "lightbulb",
             title: "Horário sugerido",
             paragraphs: [
-              "Por volta das 13h00. Meio do dia: brinquedos de fila menor, shows com ar-condicionado e almoço fora do pico.",
+              "Por volta **das 13h00**. Meio do dia: brinquedos de fila menor, shows com ar-condicionado e almoço fora do pico.",
             ],
           },
           {
@@ -61,7 +61,7 @@ export default {
             icon: "target",
             title: "Sobre",
             paragraphs: [
-              "Simulador 3D com movimento, com Optimus Prime gigante na porta. Dá para sentir o calor das explosões. Fila média de ~33 min.",
+              "Simulador 3D com movimento, com Optimus Prime gigante na porta. Dá para sentir o calor das explosões. **Fila média de ~33 min**.",
             ],
           },
           {
@@ -69,7 +69,7 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "Fazer antes das 14h. Tem single rider. Depois, Race Through New York (Jimmy Fallon, ~18 min, com ar-condicionado) para aliviar o calor.",
+              "Fazer **antes das 14h**. Tem single rider. Depois, Race Through New York (Jimmy Fallon, ~18 min, com ar-condicionado) para aliviar o calor.",
             ],
           },
         ],
@@ -84,7 +84,7 @@ export default {
             color: "gold",
             icon: "lightbulb",
             title: "Horário sugerido",
-            paragraphs: ["Por volta das 11h00. Depois, ~10 min a pé até New York."],
+            paragraphs: ["Por volta **das 11h00**. Depois, ~10 min a pé até New York."],
           },
           {
             color: "citrus",
@@ -93,11 +93,11 @@ export default {
             list: [
               "Dragão do Gringotts cuspindo fogo.",
               "Beco Bativolta (Knockturn Alley).",
-              "Largo Grimmauld nº 12: esperar o Kreacher na janela.",
-              "Cabine telefônica vermelha: discar 62442 para o Ministério da Magia.",
-              "Parede da Plataforma 9¾ no King's Cross: um filma o outro \"atravessando\".",
+              "Largo Grimmauld nº 12: esperar o **Kreacher na janela**.",
+              "Cabine telefônica vermelha: discar **62442** para o Ministério da Magia.",
+              "**Parede da Plataforma 9¾** no King's Cross: um filma o outro \"atravessando\".",
               "Knight Bus: foto pelos fundos, sem fila.",
-              "Câmbio dos duendes (dólar por notas de Gringotts).",
+              "**Câmbio dos duendes** (dólar por notas de Gringotts).",
             ],
           },
           {
@@ -105,7 +105,7 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "Não compre varinha agora: a loja lota. A escolha da varinha é melhor à noite (Ollivanders, 19:00). Decoração de Natal do Universal Holidays no Beco Diagonal.",
+              "**Não compre varinha agora**: a loja lota. A escolha da varinha é melhor à noite (**Ollivanders, 19:00**). Decoração de Natal do Universal Holidays no Beco Diagonal.",
             ],
           },
         ],
@@ -121,7 +121,7 @@ export default {
             icon: "lightbulb",
             title: "Horário sugerido",
             paragraphs: [
-              "Por volta das 19h00. Noite de Harry Potter: Ollivanders mais vazio, jantar temático e segunda volta no Gringotts.",
+              "Por volta **das 19h00**. Noite de Harry Potter: Ollivanders mais vazio, jantar temático e segunda volta no Gringotts.",
             ],
           },
           {
@@ -135,7 +135,7 @@ export default {
             icon: "bag",
             title: "Sobre",
             paragraphs: [
-              "Teatrinho interativo de ~10 min em que a varinha escolhe o bruxo, com saída pela loja. Varinhas custavam de US$65 a US$85 em 2025. As varinhas interativas funcionam em todo o Beco Diagonal e em Hogsmeade.",
+              "Teatrinho interativo de ~10 min em que a varinha escolhe o bruxo, com saída pela loja. Varinhas custavam de **US$65** a **US$85** em 2025. As varinhas interativas funcionam em todo o Beco Diagonal e em Hogsmeade.",
             ],
           },
           {
@@ -143,7 +143,7 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "À noite a fila é menor e as chances de ser escolhido aumentam; grupo só de adultos tem mais chance. Decida antes se alguém vai comprar varinha.",
+              "**À noite a fila é menor** e as chances de ser escolhido aumentam; **grupo só de adultos** tem mais chance. Decida antes se alguém vai comprar varinha.",
             ],
           },
         ],
@@ -158,7 +158,7 @@ export default {
             color: "gold",
             icon: "lightbulb",
             title: "Horário sugerido",
-            paragraphs: ["Por volta das 10h15. Beco Diagonal vazio e Gringotts com fila baixa antes das 12h."],
+            paragraphs: ["Por volta **das 10h15**. Beco Diagonal vazio e Gringotts com fila baixa **antes das 12h**."],
           },
           {
             color: "navy",
@@ -171,7 +171,7 @@ export default {
             icon: "target",
             title: "Sobre",
             paragraphs: [
-              "Montanha-russa indoor com simulador 3D dentro do banco de Gringotts (adrenalina 3/5). A fila passa pelo saguão de mármore com duendes trabalhando. O dragão de 18 m cospe fogo real a cada 10–15 min.",
+              "Montanha-russa indoor com simulador 3D dentro do banco de Gringotts (adrenalina 3/5). A fila passa pelo saguão de mármore com duendes trabalhando. O **dragão de 18 m** cospe fogo real a cada 10–15 min.",
             ],
           },
           {
@@ -179,9 +179,9 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             list: [
-              "A fila varia muito: ~29 min às 10h, ~83 min às 15h–16h e ~35 min depois das 19h.",
-              "Guardar a bolsa no armário (os pequenos são grátis durante a fila e o brinquedo).",
-              "Tem single rider: pergunte ao funcionário se compensa.",
+              "A fila varia muito: ~29 min às 10h, **~83 min às 15h–16h** e ~35 min depois das 19h.",
+              "Guardar a bolsa no armário (os pequenos são **grátis** durante a fila e o brinquedo).",
+              "Tem **single rider**: pergunte ao funcionário se compensa.",
             ],
           },
           {
@@ -189,7 +189,7 @@ export default {
             icon: "alert",
             title: "Atenção",
             paragraphs: [
-              "Se estiver parado ou com mais de 60 min na abertura, vá primeiro à Mummy e volte ao Gringotts às 12h ou depois das 19h30.",
+              "Se estiver parado ou com mais de 60 min na abertura, vá primeiro à Mummy e volte ao Gringotts **às 12h** ou **depois das 19h30**.",
             ],
           },
         ],
@@ -205,7 +205,7 @@ export default {
             color: "gold",
             icon: "lightbulb",
             title: "Horário sugerido",
-            paragraphs: ["Por volta das 18h15. Depois, ~10 min a pé de volta ao Beco Diagonal."],
+            paragraphs: ["Por volta **das 18h15**. Depois, ~10 min a pé de volta ao Beco Diagonal."],
           },
           {
             color: "navy",
@@ -218,14 +218,14 @@ export default {
             icon: "target",
             title: "Sobre",
             paragraphs: [
-              "Dark ride de tiro com placar, com mais de 120 tipos de alienígenas. Fila de ~22 min à tarde; tem single rider.",
+              "Dark ride de tiro com placar, com mais de 120 tipos de alienígenas. Fila de ~22 min à tarde; tem **single rider**.",
             ],
           },
           {
             color: "attn",
             icon: "alert",
             title: "Atenção",
-            paragraphs: ["Os carrinhos giram bastante: quem enjoa com facilidade deve ter cuidado."],
+            paragraphs: ["Os carrinhos giram bastante: **quem enjoa com facilidade** deve ter cuidado."],
           },
         ],
       },
@@ -247,7 +247,7 @@ export default {
             icon: "target",
             title: "Sobre",
             paragraphs: [
-              "Simulador em tela de 25 m de diâmetro (~22 min de fila). Na área, Duff Beer, Moe's Tavern (foto e Love Tester) e o donut rosa gigante do Lard Lad.",
+              "Simulador em tela de 25 m de diâmetro (**~22 min de fila**). Na área, Duff Beer, Moe's Tavern (foto e Love Tester) e o donut rosa gigante do Lard Lad.",
             ],
           },
           {
@@ -255,7 +255,7 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "Sentar na primeira fileira e não olhar para os lados. O donut dá para dividir com o grupo.",
+              "Sentar na **primeira fileira** e não olhar para os lados. O donut dá para dividir com o grupo.",
             ],
           },
         ],
@@ -288,7 +288,7 @@ export default {
             icon: "lightbulb",
             title: "Observação",
             paragraphs: [
-              "Pedir pelo app com a carteira configurada evita fila. Preço de parque: espere pagar caro.",
+              "**Pedir pelo app** com a carteira configurada evita fila. Preço de parque: espere pagar caro.",
             ],
           },
         ],
@@ -304,7 +304,7 @@ export default {
             color: "gold",
             icon: "lightbulb",
             title: "Horário sugerido",
-            paragraphs: ["Por volta das 16h50. Opcional, fila de ~28 min."],
+            paragraphs: ["Por volta **das 16h50**. Opcional, fila de ~28 min."],
           },
         ],
       },
@@ -332,7 +332,7 @@ export default {
             icon: "target",
             title: "Sobre",
             paragraphs: [
-              "Espetáculo de dublês com telão LED côncavo e palco giratório (~30 min), sentado e com ar-condicionado. Considerado o que mais surpreende no parque.",
+              "Espetáculo de dublês com telão LED côncavo e palco giratório (**~30 min**), sentado e com **ar-condicionado**. Considerado o que mais surpreende no parque.",
             ],
           },
           {
@@ -340,7 +340,7 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "Escolher a sessão no app e chegar 15 min antes. Depois, E.T. Adventure (opcional, fila de ~28 min).",
+              "Escolher a sessão no app e **chegar 15 min antes**. Depois, E.T. Adventure (opcional, fila de ~28 min).",
             ],
           },
         ],
@@ -369,7 +369,7 @@ export default {
             icon: "target",
             title: "Sobre",
             paragraphs: [
-              "Montanha-russa indoor no escuro (~70 km/h), ambientada em 1926, que vai e volta nos trilhos. Adrenalina 3/5.",
+              "Montanha-russa indoor no escuro (**~70 km/h**), ambientada em 1926, que vai e volta nos trilhos. Adrenalina 3/5.",
             ],
           },
           {
@@ -377,10 +377,10 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             list: [
-              "Fila fica em torno de 44 min o dia todo: não adianta esperar.",
-              "Armário obrigatório; tem single rider.",
-              "Se bater fome antes das 13h, lanche rápido no Louie's Italian e deixe o almoço para as 15h30.",
-              "Se passar show de rua (Blues Brothers, Beat Builders, Vamos! Báilalo), pare 10 min: não tem fila.",
+              "Fila fica em torno de **44 min o dia todo**: não adianta esperar.",
+              "Armário **obrigatório**; tem single rider.",
+              "Se bater fome **antes das 13h**, lanche rápido no Louie's Italian e deixe o almoço para as 15h30.",
+              "Se passar show de rua (Blues Brothers, Beat Builders, Vamos! Báilalo), **pare 10 min**: não tem fila.",
             ],
           },
         ],
@@ -396,7 +396,7 @@ export default {
             color: "gold",
             icon: "lightbulb",
             title: "Horário sugerido",
-            paragraphs: ["Por volta das 13h40. Depois, ~10 min a pé até a Minion Land."],
+            paragraphs: ["Por volta **das 13h40**. Depois, ~10 min a pé até a Minion Land."],
           },
         ],
       },
@@ -418,7 +418,7 @@ export default {
             icon: "target",
             title: "Sobre",
             paragraphs: [
-              "Minion Mayhem é um simulador leve (você vira Minion ainda na fila, ~35 min). Villain-Con Minion Blast é um jogo de tiro com blaster que pode ser pareado com o app.",
+              "Minion Mayhem é um simulador leve (**você vira Minion** ainda na fila, ~35 min). Villain-Con Minion Blast é um jogo de tiro com blaster que pode ser pareado com o app.",
             ],
           },
           {
@@ -426,7 +426,7 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "Pop-A-Nana (pipoca doce de banana) para dividir. Villain-Con é um dos primeiros itens a cortar se o dia apertar.",
+              "**Pop-A-Nana** (pipoca doce de banana) para dividir. Villain-Con é um dos primeiros itens a cortar se o dia apertar.",
             ],
           },
         ],
@@ -449,7 +449,7 @@ export default {
             icon: "burger",
             title: "Sobre",
             paragraphs: [
-              "Pub britânico temático, sem serviço de mesa: peixe com fritas, torta de carne moída com purê, sanduíches e cerveja amanteigada (sem álcool).",
+              "Pub britânico temático, **sem serviço de mesa**: peixe com fritas, torta de carne moída com purê, sanduíches e cerveja amanteigada (sem álcool).",
             ],
           },
           {
@@ -457,7 +457,7 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "Pedir pelo app. A cerveja amanteigada gelada é bem doce e enche: dividir. Sorvete do Florean Fortescue de sobremesa.",
+              "**Pedir pelo app**. A cerveja amanteigada gelada é bem doce e enche: **dividir**. Sorvete do Florean Fortescue de sobremesa.",
             ],
           },
         ],
@@ -472,7 +472,7 @@ export default {
             color: "gold",
             icon: "lightbulb",
             title: "Horário sugerido",
-            paragraphs: ["Por volta das 20h30. Depois das 19h a fila costuma cair para ~35 min."],
+            paragraphs: ["Por volta **das 20h30**. Depois **das 19h** a fila costuma cair para ~35 min."],
           },
         ],
       },
@@ -494,7 +494,7 @@ export default {
             icon: "tree",
             title: "Sobre",
             paragraphs: [
-              "Durante o Universal Holidays (14/11/2026 a 03/01/2027) há parada noturna no Studios que termina com o acendimento da árvore de Natal de 80 pés.",
+              "Durante o Universal Holidays (**14/11/2026 a 03/01/2027**) há parada noturna no Studios que termina com o acendimento da árvore de Natal de 80 pés.",
             ],
           },
           {
@@ -502,7 +502,7 @@ export default {
             icon: "alert",
             title: "Atenção",
             paragraphs: [
-              "O horário exato só aparece no app. Chegar 30–40 min antes para ter lugar. Sair do parque por volta das 22h30 para evitar a multidão final.",
+              "O horário exato só aparece no app. Chegar 30–40 min antes para ter lugar. Sair do parque **por volta das 22h30** para **evitar a multidão final**.",
             ],
           },
         ],

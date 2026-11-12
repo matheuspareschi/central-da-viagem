@@ -30,7 +30,7 @@ itinerary: {
             { label: "IHOP", value: "~8h00" },
           ],
           notes: [
-            { icon: "car", text: "De carro: tempo da casa até o IHOP (6005 International Dr) a definir." },
+            { icon: "car", text: "De carro: tempo da casa até o IHOP (6005 International Dr) **a definir**." },
           ],
           alerts: [],
         },
@@ -72,7 +72,7 @@ itinerary: {
                 icon: "burger",
                 title: "Sobre",
                 paragraphs: [
-                  "Rede de panquecas e café da manhã americano. Avaliações de viajantes falam em comida servida rápido e cerca de US$ 20 por pessoa no brunch. A unidade abre 24 horas.",
+                  "Rede de panquecas e café da manhã americano. Avaliações de viajantes falam em comida servida rápido e cerca de **US$ 20 por pessoa** no brunch. A unidade abre 24 horas.",
                 ],
               },
               {
@@ -80,23 +80,23 @@ itinerary: {
                 icon: "lightbulb",
                 title: "Dica",
                 paragraphs: [
-                  "Chegue cedo: com cerca de 10 pessoas, a espera por mesa pode ser longa.",
-                  "Panquecas e French toast são o forte da casa.",
+                  "**Chegue cedo**: com cerca de 10 pessoas, a espera por mesa pode ser longa.",
+                  "Panquecas e **French toast** são o forte da casa.",
                 ],
               },
               {
                 color: "palm",
                 icon: "leaf",
                 title: "Desconto",
-                paragraphs: ["O IHOP tem cardápio sênior para maiores de 55 anos, com preços menores. Vale perguntar na mesa."],
+                paragraphs: ["O IHOP tem cardápio sênior para **maiores de 55 anos**, com preços menores. Vale perguntar na mesa."],
               },
               {
                 color: "attn",
                 icon: "alert",
                 title: "Atenção",
                 paragraphs: [
-                  "Horário desta unidade não conferido na página oficial: confirmar no Google Maps.",
-                  "Tempo de deslocamento do resort até o IHOP não confirmado.",
+                  "Horário desta unidade não conferido na página oficial: **confirmar no Google Maps**.",
+                  "Tempo de deslocamento do resort até o IHOP **não confirmado**.",
                 ],
               },
             ],
@@ -114,7 +114,7 @@ itinerary: {
                 title: "Endereço e estacionamento",
                 paragraphs: [
                   "4951 International Dr, Orlando, FL 32819, no extremo norte da International Drive, perto da I-4.",
-                  "Cerca de 3.000 vagas: chegar na abertura ajuda a achar vaga.",
+                  "Cerca de 3.000 vagas: **chegar na abertura** ajuda a achar vaga.",
                 ],
               },
               {
@@ -124,7 +124,7 @@ itinerary: {
                 list: [
                   "Mais de 180 lojas.",
                   "Entre as lojas do diretório: adidas, PUMA, Converse, Foot Locker, Crocs, Fossil, Brooks Brothers, BOSS, Banana Republic e Armani.",
-                  "Seguir a aba International Premium Outlets da planilha Compras_na_Florida__2026.xlsx, com as lojas ⭐ primeiro.",
+                  "Seguir a aba International Premium Outlets da planilha Compras_na_Florida__2026.xlsx, com as **lojas ⭐ primeiro**.",
                 ],
               },
               {
@@ -132,8 +132,8 @@ itinerary: {
                 icon: "lightbulb",
                 title: "Horário",
                 paragraphs: [
-                  "Horário normal: segunda a sábado, das 10h às 21h. Em dezembro pode variar.",
-                  "Almoço na praça de alimentação por volta das 13h, para não sair do estacionamento no meio do dia.",
+                  "Horário normal: segunda a sábado, **das 10h às 21h**. Em dezembro pode variar.",
+                  "Almoço na praça de alimentação **por volta das 13h**, para não sair do estacionamento no meio do dia.",
                 ],
               },
               {
@@ -141,8 +141,8 @@ itinerary: {
                 icon: "alert",
                 title: "Atenção",
                 paragraphs: [
-                  "Sacolas não entram no Kia Center: antes do jogo, deixe tudo no porta-malas, fora de vista.",
-                  "Confirmar o horário do dia 16 no site do outlet.",
+                  "Sacolas não entram no Kia Center: antes do jogo, **deixe tudo no porta-malas**, fora de vista.",
+                  "Confirmar o **horário do dia 16** no site do outlet.",
                 ],
               },
             ],
@@ -163,7 +163,7 @@ itinerary: {
             { label: "Volta", value: "22h00" },
           ],
           notes: [
-            { icon: "info", text: "Os dois locais da noite (Kia Center e Dr. Phillips Center) ficam a poucos quarteirões um do outro." },
+            { icon: "info", text: "Os dois locais da noite (Kia Center e Dr. Phillips Center) ficam a **poucos quarteirões** um do outro." },
           ],
           alerts: [],
         },
@@ -192,7 +192,7 @@ itinerary: {
                 title: "Endereço e estacionamento",
                 paragraphs: [
                   "400 W Church St, Orlando, FL 32801.",
-                  "Estacionamento pré-pago na GEICO Garage (400 West South Street), reservável no site da cidade de Orlando ou na bilheteria. Alternativa: HD Supply Garage, a cerca de 5 minutos a pé.",
+                  "Estacionamento **pré-pago** na **GEICO Garage** (400 West South Street), reservável no site da cidade de Orlando ou na bilheteria. Alternativa: HD Supply Garage, a cerca de 5 minutos a pé.",
                 ],
               },
               {
@@ -200,8 +200,8 @@ itinerary: {
                 icon: "target",
                 title: "Sobre",
                 paragraphs: [
-                  "Jogo do Orlando Magic contra o Cleveland Cavaliers na quarta-feira, 16/12, às 19h (horário de Orlando).",
-                  "A arena abriu em 2010 e se chamava Amway Center até dezembro de 2023. Tem 9 restaurantes e bares.",
+                  "Jogo do Orlando Magic contra o Cleveland Cavaliers na quarta-feira, 16/12, **às 19h** (horário de Orlando).",
+                  "A arena **abriu em 2010** e se chamava Amway Center até dezembro de 2023. Tem 9 restaurantes e bares.",
                 ],
               },
               {
@@ -209,7 +209,7 @@ itinerary: {
                 icon: "lightbulb",
                 title: "Dica",
                 paragraphs: [
-                  "Jante antes: comida e bebida de fora não entram na arena.",
+                  "Jante antes: comida e bebida de fora **não entram na arena**.",
                   "Chegue com folga para achar os lugares.",
                 ],
               },
@@ -218,8 +218,8 @@ itinerary: {
                 icon: "alert",
                 title: "Atenção",
                 paragraphs: [
-                  "Bolsas e recipientes não entram, exceto pequenas bolsas médicas e de bebê. Leve só uma clutch pequena e deixe as sacolas do outlet no carro.",
-                  "Horário de abertura das portas não confirmado.",
+                  "**Bolsas e recipientes não entram**, exceto pequenas bolsas médicas e de bebê. Leve só uma **clutch pequena** e deixe as sacolas do outlet no carro.",
+                  "Horário de abertura das portas **não confirmado**.",
                   "Fim do jogo estimado entre 21h30 e 22h.",
                 ],
               },
@@ -240,7 +240,7 @@ itinerary: {
             { label: "Volta", value: "22h00" },
           ],
           notes: [
-            { icon: "info", text: "Os dois locais da noite (Kia Center e Dr. Phillips Center) ficam a poucos quarteirões um do outro." },
+            { icon: "info", text: "Os dois locais da noite (Kia Center e Dr. Phillips Center) ficam a **poucos quarteirões** um do outro." },
           ],
           alerts: [],
         },
@@ -271,7 +271,7 @@ itinerary: {
                 icon: "tree",
                 title: "Sobre",
                 paragraphs: [
-                  "Festival gratuito de 27/11 a 31/12/2026, com música ao vivo, filmes de Natal, comidinhas sazonais, luzes e neve artificial todas as noites.",
+                  "Festival **gratuito** de 27/11 a 31/12/2026, com música ao vivo, filmes de Natal, comidinhas sazonais, luzes e neve artificial todas as noites.",
                 ],
               },
               {
@@ -279,8 +279,8 @@ itinerary: {
                 icon: "lightbulb",
                 title: "Dica",
                 paragraphs: [
-                  "Vá depois do pôr do sol (por volta das 17h30) para ver as luzes acesas.",
-                  "Combine com o grupo do jogo o ponto e o horário de encontro.",
+                  "Vá depois do pôr do sol (**por volta das 17h30**) para ver as luzes acesas.",
+                  "Combine com o grupo do jogo o **ponto e o horário** de encontro.",
                 ],
               },
               {
@@ -288,8 +288,8 @@ itinerary: {
                 icon: "alert",
                 title: "Atenção",
                 paragraphs: [
-                  "A programação exata do dia 16 ainda não foi divulgada: conferir perto da data.",
-                  "Distância a pé até o Kia Center não confirmada.",
+                  "A programação exata do dia 16 **ainda não foi divulgada**: conferir perto da data.",
+                  "Distância a pé até o Kia Center **não confirmada**.",
                 ],
               },
             ],
@@ -302,14 +302,14 @@ itinerary: {
     {
       id: "noite-do-jogo",
       label: "Noite do jogo",
-      supportLine: "Grupo todo de dia · os meninos no jogo à noite",
+      supportLine: "Grupo todo de dia · **os meninos** no jogo à noite",
       trackKeys: ["international-premium-outlets", "noite-jogo"],
       isDefault: true,
     },
     {
       id: "noite-de-natal",
       label: "Noite de Natal",
-      supportLine: "Grupo todo de dia · outro grupo na decoração à noite",
+      supportLine: "Grupo todo de dia · **outro grupo** na decoração à noite",
       trackKeys: ["international-premium-outlets", "noite-natal"],
     },
   ],

@@ -30,8 +30,8 @@ export default {
           tiles: [{ label: "Acordar", value: "7h00" }, { label: "Sair de casa", value: "7h45" }, { label: "Estacionamento abre", value: "8h" }, { label: "Parque aberto", value: "9h–21h" }],
           notes: [
             { icon: "car", text: "Ida até os portões ~20 min." },
-            { icon: "info", text: "Deixar os lanches do parque separados no dia anterior. Mochilas com filtro solar, remédios etc." },
-            { icon: "info", text: "Fotos da Disney: compradas antes da viagem, no Brasil." },
+            { icon: "info", text: "**Deixar os lanches** do parque separados no dia anterior. Mochilas com filtro solar, remédios etc." },
+            { icon: "info", text: "Fotos da Disney: compradas antes da viagem, **no Brasil**." },
           ],
           alerts: [],
         },
@@ -48,9 +48,9 @@ export default {
                 icon: "camera",
                 title: "Foto",
                 list: [
-                  "Onde: fachada do teatro (antes de entrar na fila).",
-                  "Melhor horário: 11h (luz boa, não muito cheio).",
-                  "Dica: fotografar de frente, com a fachada colorida ao fundo — fica melhor com luz natural do meio-dia.",
+                  "Onde: fachada do teatro (**antes de entrar** na fila).",
+                  "Melhor horário: **11h** (luz boa, não muito cheio).",
+                  "Dica: fotografar de frente, com a **fachada colorida ao fundo** — fica melhor com luz natural do meio-dia.",
                 ],
               },
             ],
@@ -66,9 +66,9 @@ export default {
                 icon: "camera",
                 title: "Foto",
                 list: [
-                  "Onde: frente do prédio da torre (à distância, no pátio).",
-                  "De dia: 10h–11h (sol ainda alto, bom contraste).",
-                  "De noite: 19h30+ (iluminação dramática, mais atmosférico).",
+                  "Onde: frente do prédio da torre (à distância, **no pátio**).",
+                  "De dia: **10h–11h** (sol ainda alto, bom contraste).",
+                  "De noite: **19h30+** (iluminação dramática, mais atmosférico).",
                 ],
               },
               {
@@ -76,7 +76,7 @@ export default {
                 icon: "lightbulb",
                 title: "Dica",
                 paragraphs: [
-                  "A torre fica impressionante com a iluminação roxa/dourada à noite — melhor que de dia para uma foto mágica.",
+                  "A torre fica impressionante com a **iluminação roxa/dourada** à noite — melhor que de dia para uma foto mágica.",
                 ],
               },
             ],
@@ -92,8 +92,8 @@ export default {
                 icon: "camera",
                 title: "Foto",
                 list: [
-                  "Onde: fachada frontal com o logo do carro de rodas (do lado de fora da fila).",
-                  "Melhor horário: 10h–11h ou 19h+ (à noite a iluminação de neon fica linda).",
+                  "Onde: fachada frontal com o logo do carro de rodas (**do lado de fora da fila**).",
+                  "Melhor horário: **10h–11h** ou 19h+ (à noite a iluminação de neon fica linda).",
                 ],
               },
               {
@@ -101,7 +101,7 @@ export default {
                 icon: "lightbulb",
                 title: "Dica",
                 paragraphs: [
-                  "De dia, peguem a posição com o sol ao fundo; de noite, as luzes rosa/azul da fachada ficam incríveis.",
+                  "De dia, peguem a posição com o **sol ao fundo**; de noite, as luzes rosa/azul da fachada ficam incríveis.",
                 ],
               },
             ],
@@ -132,7 +132,7 @@ export default {
                 icon: "lightbulb",
                 title: "Dica",
                 paragraphs: [
-                  "Usar os lanches do parque separados no dia anterior.",
+                  "Usar os **lanches do parque** separados no dia anterior.",
                 ],
               },
             ],
@@ -176,7 +176,7 @@ export default {
                 icon: "camera",
                 title: "Personagens",
                 paragraphs: [
-                  "Fotos com personagens: Os Incríveis, Divertida Mente, Monstros S.A. e outros.",
+                  "**Fotos com personagens**: Os Incríveis, Divertida Mente, Monstros S.A. e outros.",
                 ],
               },
               {
@@ -184,9 +184,9 @@ export default {
                 icon: "camera",
                 title: "Melhor horário",
                 list: [
-                  "Evitem: 10h–13h (aglomerado, filas de 30+ min por personagem).",
-                  "Ideal: 15h–16h (meio da tarde, filas menores que 10 min).",
-                  "Backup: 19h–20h (antes do Fantasmic).",
+                  "Evitem: **10h–13h** (aglomerado, filas de 30+ min por personagem).",
+                  "Ideal: **15h–16h** (meio da tarde, filas menores que 10 min).",
+                  "Backup: **19h–20h** (antes do Fantasmic).",
                 ],
               },
             ],
@@ -203,8 +203,8 @@ export default {
                 icon: "camera",
                 title: "Foto",
                 list: [
-                  "De dia: 10h–11h (luz clara).",
-                  "De noite: 19h+ (imperdível — luzes coloridas, ambiente mágico).",
+                  "De dia: **10h–11h** (luz clara).",
+                  "De noite: **19h+** (imperdível — luzes coloridas, ambiente mágico).",
                 ],
               },
             ],
@@ -221,8 +221,8 @@ export default {
                 icon: "camera",
                 title: "Foto",
                 list: [
-                  "De dia: 9h–10h (mais iluminado, menos gente para foto limpa).",
-                  "De noite: 18h+ (atmosfera escura e imersiva, muito mais mágica — luzes de neon dos estabelecimentos).",
+                  "De dia: **9h–10h** (mais iluminado, menos gente para foto limpa).",
+                  "De noite: **18h+** (atmosfera escura e imersiva, muito mais mágica — luzes de neon dos estabelecimentos).",
                 ],
               },
             ],
@@ -239,7 +239,7 @@ export default {
                 icon: "alert",
                 title: "Atenção",
                 paragraphs: [
-                  "Atração mais disputada do parque — conferir a fila e o horário de funcionamento no dia.",
+                  "Atração mais disputada do parque — **conferir a fila e o horário** de funcionamento no dia.",
                 ],
               },
             ],
@@ -255,7 +255,7 @@ export default {
                 icon: "camera",
                 title: "Foto",
                 paragraphs: [
-                  "Voltar para Toy Story Land e tirar fotos à noite (a partir das 19h).",
+                  "Voltar para Toy Story Land e tirar fotos à noite (**a partir das 19h**).",
                 ],
               },
             ],
@@ -272,7 +272,7 @@ export default {
                 icon: "target",
                 title: "Onde ficar",
                 paragraphs: [
-                  "Sunset Boulevard (melhor vista), ou perto da água entre as atrações.",
+                  "**Sunset Boulevard** (melhor vista), ou perto da água entre as atrações.",
                 ],
               },
               {
@@ -280,7 +280,7 @@ export default {
                 icon: "camera",
                 title: "Melhor horário",
                 paragraphs: [
-                  "Chegar 45 min a 1h antes (geralmente 19h45, se o show sair às 20h30).",
+                  "Chegar 45 min a 1h antes (geralmente 19h45, se o show sair **às 20h30**).",
                 ],
               },
               {
@@ -288,7 +288,7 @@ export default {
                 icon: "lightbulb",
                 title: "Dica para fotos",
                 paragraphs: [
-                  "Posicionem-se perto da água, sem árvores/pessoas bloqueando. As explosões de fogo e fumaça são os melhores momentos para fotografar — estejam prontos quando as chamas começarem.",
+                  "Posicionem-se **perto da água**, sem árvores/pessoas bloqueando. As explosões de fogo e fumaça são os melhores momentos para fotografar — estejam prontos quando as chamas começarem.",
                 ],
               },
             ],
@@ -304,7 +304,7 @@ export default {
                 icon: "target",
                 title: "Onde",
                 paragraphs: [
-                  "Animation Courtyard (projeções em tela gigante).",
+                  "**Animation Courtyard** (projeções em tela gigante).",
                 ],
               },
               {
@@ -312,7 +312,7 @@ export default {
                 icon: "camera",
                 title: "Melhor horário",
                 paragraphs: [
-                  "17h–18h30 (se houver sessão) ou 20h (se houver sessão pós-Fantasmic).",
+                  "**17h–18h30** (se houver sessão) ou 20h (se houver sessão pós-Fantasmic).",
                 ],
               },
             ],
@@ -328,10 +328,10 @@ export default {
         journey: {
           tiles: [],
           notes: [
-            { icon: "info", text: "Se as lojas demorarem, cortem a Blackbird ou encurtem Windermere." },
-            { icon: "info", text: "Opcionais fora da rota: Guitar Center (12402 S Orange Blossom Trail, abre 11h–21h) e Sound 4 Less (5563 International Dr — confirmar por telefone se ainda funciona: (407) 456-8844)." },
+            { icon: "info", text: "Se as lojas demorarem, **cortem a Blackbird** ou encurtem Windermere." },
+            { icon: "info", text: "Opcionais fora da rota: Guitar Center (12402 S Orange Blossom Trail, abre **11h–21h**) e Sound 4 Less (5563 International Dr — **confirmar por telefone** se ainda funciona: (407) 456-8844)." },
           ],
-          alerts: ["Confirmar horários das lojas independentes na véspera."],
+          alerts: ["**Confirmar horários** das lojas independentes na véspera."],
         },
         periods: [
           {
@@ -457,7 +457,7 @@ export default {
                 icon: "bag",
                 title: "Sobre",
                 paragraphs: [
-                  "Loja independente local, com instrumentos e acessórios em geral, novos e usados, e preço acessível.",
+                  "Loja independente local, com instrumentos e acessórios em geral, novos e usados, e **preço acessível**.",
                 ],
               },
               {
@@ -465,7 +465,7 @@ export default {
                 icon: "lightbulb",
                 title: "Horário",
                 paragraphs: [
-                  "Ter–Sex 10h–18h · Sáb 10h–17h · Seg e Dom fechado.",
+                  "Ter–Sex 10h–18h · Sáb 10h–17h · **Seg e Dom fechado**.",
                 ],
               },
             ],
@@ -487,7 +487,7 @@ export default {
                 icon: "bag",
                 title: "Sobre",
                 paragraphs: [
-                  "Rede nacional do grupo Guitar Center. Instrumentos de banda e orquestra, guitarras, teclados, acessórios e partituras, predominantemente novos.",
+                  "Rede nacional do grupo **Guitar Center**. Instrumentos de banda e orquestra, guitarras, teclados, acessórios e partituras, predominantemente novos.",
                 ],
               },
               {
@@ -495,7 +495,7 @@ export default {
                 icon: "lightbulb",
                 title: "Horário",
                 paragraphs: [
-                  "Seg–Sex 11h–20h · Sáb 10h–17h · Dom 12h–17h.",
+                  "Seg–Sex **11h–20h** · Sáb 10h–17h · Dom 12h–17h.",
                 ],
               },
             ],
@@ -517,7 +517,7 @@ export default {
                 icon: "bag",
                 title: "Sobre",
                 paragraphs: [
-                  "Loja boutique de alto padrão: violões e guitarras artesanais (Santa Cruz, Bourgeois, Lowden, Huss & Dalton), teclados Nord e baixos Warwick.",
+                  "Loja boutique de alto padrão: **violões e guitarras artesanais** (Santa Cruz, Bourgeois, Lowden, Huss & Dalton), teclados Nord e baixos Warwick.",
                 ],
               },
               {
@@ -525,7 +525,7 @@ export default {
                 icon: "alert",
                 title: "Atenção",
                 paragraphs: [
-                  "Às sextas fecha às 16h — chegar até 15h para ter tempo.",
+                  "Às sextas **fecha às 16h** — chegar **até 15h** para ter tempo.",
                 ],
               },
             ],
@@ -547,7 +547,7 @@ export default {
                 icon: "bag",
                 title: "Sobre",
                 paragraphs: [
-                  "Guitarras e baixos vintage, amplificadores valvulados e pedais. Só usados e vintage, com preços de ~US$ 300 a US$ 25.000.",
+                  "Guitarras e baixos vintage, amplificadores valvulados e pedais. Só usados e vintage, com preços de **~US$ 300** a **US$ 25.000**.",
                 ],
               },
               {
@@ -555,7 +555,7 @@ export default {
                 icon: "lightbulb",
                 title: "Horário",
                 paragraphs: [
-                  "Ter–Sáb 12h–19h · Seg e Dom fechado.",
+                  "Ter–Sáb **12h–19h** · Seg e Dom fechado.",
                 ],
               },
             ],
@@ -571,7 +571,7 @@ export default {
                 icon: "parking",
                 title: "Onde começar",
                 paragraphs: [
-                  "Centro (Town Square) na Main Street; Prefeitura no 614 Main St. Estacionar ali e fazer um trecho a pé.",
+                  "Centro (Town Square) na Main Street; Prefeitura no 614 Main St. **Estacionar ali** e fazer um trecho a pé.",
                 ],
               },
               {
@@ -579,13 +579,13 @@ export default {
                 icon: "tree",
                 title: "Rota sugerida (~1h)",
                 list: [
-                  "Centro: Town Square, lojas locais da Main Street e biblioteca (prédio estilo \"Florida Cracker\", com varanda ao redor).",
-                  "Lake Street Park: caminho à beira do lago, bom ponto para fotos.",
-                  "Palmer Park (Pine St, entre a 2nd e a 3rd Ave): bancos de frente para o Lake Butler.",
-                  "Oakdale Street, de carro: rua arborizada, boa para ver as casas.",
-                  "Lake Down: rampa pública gratuita na Conroy-Windermere Road.",
-                  "Isleworth: condomínio fechado, só dá para ver o entorno pela Conroy-Windermere Road.",
-                  "Opcional: R.D. Keene Park (10900 Chase Road), 52 acres na Lake Isleworth.",
+                  "Centro: **Town Square**, lojas locais da Main Street e biblioteca (prédio estilo \"Florida Cracker\", com varanda ao redor).",
+                  "**Lake Street Park**: caminho à beira do lago, bom ponto para fotos.",
+                  "**Palmer Park** (Pine St, entre a 2nd e a 3rd Ave): bancos de frente para o Lake Butler.",
+                  "**Oakdale Street**, de carro: rua arborizada, boa para ver as casas.",
+                  "Lake Down: rampa pública **gratuita** na Conroy-Windermere Road.",
+                  "Isleworth: condomínio **fechado**, só dá para ver o entorno pela Conroy-Windermere Road.",
+                  "Opcional: **R.D. Keene Park** (10900 Chase Road), 52 acres na Lake Isleworth.",
                 ],
               },
               {
@@ -593,7 +593,7 @@ export default {
                 icon: "alert",
                 title: "Atenção",
                 paragraphs: [
-                  "Confirmar endereço e horário da biblioteca no Google Maps. A maioria das ruas residenciais não é asfaltada: ir devagar. Escurece por volta das 17h30, então o passeio de carro rende mais com a última luz do dia.",
+                  "**Confirmar endereço e horário** da biblioteca no Google Maps. A maioria das ruas residenciais não é asfaltada: ir devagar. Escurece **por volta das 17h30**, então o passeio de carro rende mais com a última luz do dia.",
                 ],
               },
               {
@@ -601,7 +601,7 @@ export default {
                 icon: "lightbulb",
                 title: "Observação",
                 paragraphs: [
-                  "A feira de Windermere acontece nas sextas de manhã na Main Street (horário não confirmado) — só entra se o dia for reorganizado para a manhã.",
+                  "A feira de Windermere acontece nas sextas de manhã na Main Street (horário não confirmado) — **só entra se o dia** for reorganizado para a manhã.",
                 ],
               },
             ],
@@ -617,7 +617,7 @@ export default {
                 icon: "parking",
                 title: "Endereço",
                 paragraphs: [
-                  "5770 W Irlo Bronson Memorial Hwy, Kissimmee, FL 34746. Entrada e estacionamento no local: grátis.",
+                  "5770 W Irlo Bronson Memorial Hwy, Kissimmee, FL 34746. Entrada e estacionamento no local: **grátis**.",
                 ],
               },
               {
@@ -625,7 +625,7 @@ export default {
                 icon: "bag",
                 title: "Sobre",
                 paragraphs: [
-                  "Complexo a céu aberto com mais de 70 lojas e restaurantes independentes e roda-gigante. Aberto diariamente, das 11h às 23h. Brinquedos e atrações são pagos à parte.",
+                  "Complexo a céu aberto com mais de 70 lojas e restaurantes independentes e roda-gigante. Aberto diariamente, **das 11h às 23h**. Brinquedos e atrações são pagos à parte.",
                 ],
               },
               {
@@ -633,7 +633,7 @@ export default {
                 icon: "lightbulb",
                 title: "Friday Muscle Car Cruise",
                 paragraphs: [
-                  "Às sextas há exibição de muscle cars (pós-1964) e trucks a partir das 15h, com desfile às 20h30. Chegar por volta das 19h ajuda a pegar bom lugar na calçada.",
+                  "Às sextas há exibição de muscle cars (pós-1964) e trucks **a partir das 15h**, com desfile **às 20h30**. Chegar **por volta das 19h** ajuda a pegar bom lugar na calçada.",
                 ],
               },
             ],
