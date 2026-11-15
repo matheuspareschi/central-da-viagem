@@ -22,16 +22,11 @@ export default {
   itinerary: {
     kind: "checklist",
     parkId: "epcot",
-    summary: "Dia de parque único, sem trilha paralela de compras. Ritmo rápido em World Celebration, World Nature e World Discovery pela manhã, para deixar a tarde/noite inteira livre no World Showcase.",
+    summary: "Dia de parque único, sem trilha paralela de compras. Ritmo rápido em World Celebration, World of Nature e World Discovery pela manhã, para deixar o World Showcase com calma.",
     journey: {
       tiles: [{ label: "Acordar", value: "7h00" }, { label: "Sair do resort", value: "7h30" }, { label: "Estacionamento abre", value: "8h00" }, { label: "Parque aberto", value: "9h–21h" }],
       notes: [
-        { icon: "car", text: "~25 min até os portões." },
-        { icon: "info", text: "Utilizar early entry (não hóspedes)." }, // REVISAR: não está no texto do Thiago
-        { icon: "info", text: "Café da manhã leve em casa antes de sair; **levar lanches próprios** (queijo, frutas, snacks) para o meio da manhã." },
-        { icon: "info", text: "No World Showcase, preferir **quiosques baratos** a restaurantes table-service." }, // REVISAR: não está no texto do Thiago
-        { icon: "info", text: "Fazer as atrações das **três primeiras áreas** **de forma rápida**, para aproveitar o World Showcase com calma." },
-        { icon: "info", text: "Fotos da Disney: compradas antes da viagem, **no Brasil**." },
+        { icon: "car", text: "Ida até os portões: em torno de 25 minutos." },
       ],
       alerts: ["**Deixar os lanches do parque separados** no dia anterior. Mochilas com filtro solar, remédios etc."],
     },
@@ -39,744 +34,267 @@ export default {
       {
         id: "spaceship-earth",
         attractionId: "spaceship-earth",
-        name: "Spaceship Earth",
+        name: "SpaceShip Earth - A Bola",
         area: "World Celebration",
         icon: "target",
         sections: [
           {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: ["World Celebration, Epcot (entrada principal)."],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Tipo",
-            paragraphs: ["Fotos."],
-          },
-          {
             color: "citrus",
             icon: "target",
-            title: "Como aproveitar melhor",
-            paragraphs: [
-              "Primeira atração do dia. Sentar do **lado direito do veículo** para ver melhor as cenas.", // REVISAR: o lado direito não está no texto do Thiago
-            ],
-          },
-          {
-            color: "palm",
-            icon: "camera",
-            title: "Curiosidades",
-            paragraphs: [
-              "A esfera geodésica tem 55 metros de diâmetro e pesa ~7.900 toneladas; é uma das maiores estruturas esféricas do mundo, mas não é uma esfera perfeita — tem um sistema de drenagem interno para **evitar acúmulo de água** da chuva.",
-            ],
-          },
-          {
-            color: "gold",
-            icon: "tree",
-            title: "Destaques do pavilhão",
-            list: [
-              "World Celebration reúne também o encontro com **Mickey and Friends** e o **Dreamers Point** (fotos com a bola ao fundo).",
-            ],
-          },
-        ],
-      },
-      {
-        id: "spaceship-earth-photo",
-        name: "Foto com a Bola (Dreamers Point)",
-        area: "World Celebration",
-        icon: "camera",
-        sections: [
-          {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: [
-              "World Celebration, Epcot — em frente à Spaceship Earth.",
-            ],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Tipo",
-            paragraphs: ["Fotos."],
-          },
-          {
-            color: "citrus",
-            icon: "target",
-            title: "Como aproveitar melhor",
-            paragraphs: [
-              "Não esquecer de tirar **fotos com a bola ao fundo**. Fazer logo depois de sair da Spaceship Earth, **antes do meio-dia** — ponto tradicional de foto em grupo, com a esfera geodésica ao fundo.",
-            ],
+            title: "Roteiro",
+            paragraphs: ["SpaceShip Earth - A Bola."],
           },
         ],
       },
       {
         id: "mickey-friends",
-        name: "Mickey and Friends (meet & greet)",
+        name: "Mickey and Friends",
         area: "World Celebration",
         icon: "camera",
         sections: [
           {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: ["World Celebration, Epcot."],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Tipo",
-            paragraphs: ["Fotos."],
-          },
-          {
-            color: "citrus",
-            icon: "target",
-            title: "Como aproveitar melhor",
-            paragraphs: [
-              "Ir logo após a Spaceship Earth, **antes do horário de pico** do meio-dia.",
-            ],
-          },
-          {
             color: "palm",
             icon: "camera",
-            title: "Curiosidades",
-            paragraphs: [
-              "Ponto tradicional de fotos com a bola ao fundo — ótimo para a **foto de capa do dia**.",
-            ],
+            title: "Foto",
+            paragraphs: ["Fotos com personagens. Não esquecer de tirar fotos com a bola de fundo."],
           },
         ],
       },
       {
         id: "soarin",
-        attractionId: "soarin-around-the-world", // REVISAR: conferir se o id do catálogo ainda vale com o nome "Soarin' Across America"
         name: "Soarin' Across America",
-        area: "World Nature",
+        area: "World of Nature",
         icon: "target",
         sections: [
           {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: ["World Nature, Epcot."],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Tipo",
-            paragraphs: ["Asa delta."],
-          },
-          {
             color: "citrus",
             icon: "target",
-            title: "Como aproveitar melhor",
-            paragraphs: [
-              "Escolher assentos das **fileiras do meio** para a melhor visão central da tela.",
-            ],
-          },
-          {
-            color: "palm",
-            icon: "camera",
-            title: "Curiosidades",
-            paragraphs: [
-              "Temática dos 250 anos dos EUA.",
-            ],
+            title: "Roteiro",
+            paragraphs: ["Asa delta, temática EUA 250 anos. Momento para comer com calma."],
           },
         ],
       },
       {
-        id: "epcot-pausa-comer",
-        name: "Pausa para comer",
-        area: "World Nature",
-        icon: "burger",
-        sections: [
-          { color: "navy", icon: "parking", title: "Endereço", paragraphs: ["World Nature, Epcot."] },
-          { color: "gold", icon: "lightbulb", title: "Dica", paragraphs: ["Momento para comer com calma."] },
-        ],
-      },
-      {
-        id: "coca-cola-store",
-        name: "Loja da Coca-Cola (Club Cool)", // REVISAR: o Thiago escreveu "cool club" e o JSON a coloca em World Nature, perto de The Land; confirmar onde fica
-        area: "World Nature",
+        id: "coca-cool-club",
+        name: "Lojinha da Coca-Cola (Cool Club)",
+        area: "World of Nature",
         icon: "bag",
         sections: [
           {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: ["World Nature, Epcot — próxima ao pavilhão The Land."],
-          },
-          {
             color: "gold",
-            icon: "lightbulb",
-            title: "Tipo",
-            paragraphs: ["Outro."],
-          },
-          {
-            color: "citrus",
-            icon: "target",
-            title: "Como aproveitar melhor",
-            paragraphs: [
-              "**Parada rápida** logo após o almoço/lanche, no mesmo trecho de Soarin'; combinar com **fotos na área temática de Moana** ao lado.",
-            ],
+            icon: "bag",
+            title: "Roteiro",
+            paragraphs: ["Ir na lojinha da Coca-Cola, Cool Club."],
           },
         ],
       },
       {
-        id: "moana-photo",
-        name: "Fotos na área temática de Moana",
-        area: "World Nature",
+        id: "moana-foto",
+        name: "Área da Moana",
+        area: "World of Nature",
         icon: "camera",
         sections: [
           {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: [
-              "World Nature, Epcot — próxima ao pavilhão The Land / Journey of Water.",
-            ],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Tipo",
-            paragraphs: ["Fotos."],
-          },
-          {
-            color: "citrus",
-            icon: "target",
-            title: "Como aproveitar melhor",
-            paragraphs: [
-              "Fazer logo após a parada na **loja da Coca-Cola**, antes de seguir para o World Discovery.",
-            ],
+            color: "palm",
+            icon: "camera",
+            title: "Foto",
+            paragraphs: ["Aproveitar o tempo e tirar fotos na área da Moana."],
           },
         ],
       },
       {
-        id: "guardians-cosmic-rewind",
-        name: "Guardiões da Galáxia: Cosmic Rewind",
+        id: "guardioes",
+        name: "Guardiões da Galáxia",
         area: "World Discovery",
         icon: "target",
         sections: [
           {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: ["World Discovery, Epcot."],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Tipo",
-            paragraphs: ["Radical."],
-          },
-          {
             color: "citrus",
             icon: "target",
-            title: "Como aproveitar melhor",
-            paragraphs: [
-              "Sentar no **último carrinho** dá mais sensação de giro.", // REVISAR
-            ],
-          },
-          {
-            color: "palm",
-            icon: "camera",
-            title: "Curiosidades",
-            paragraphs: [
-              "É a **primeira montanha-russa do Epcot**; a trilha sonora é sorteada entre 6 músicas diferentes a cada volta, então cada passeio é uma experiência diferente.",
-            ],
-          },
-          {
-            color: "gold",
-            icon: "tree",
-            title: "Destaques do pavilhão",
-            list: ["World Discovery reúne também Mission: Space e Test Track."],
+            title: "Roteiro",
+            paragraphs: ["Ir no último carrinho."],
           },
         ],
       },
       {
         id: "mission-space",
-        attractionId: "mission-space",
         name: "Mission: Space",
         area: "World Discovery",
         icon: "target",
         sections: [
           {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: ["World Discovery, Epcot."],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Tipo",
-            paragraphs: ["Radical."],
-          },
-          {
             color: "citrus",
             icon: "target",
-            title: "Como aproveitar melhor",
-            paragraphs: [
-              "Escolher o **lado laranja** para simulação mais intensa (giro real) ou o **lado verde** para versão mais suave, sem a centrifugação.",
-            ],
-          },
-          {
-            color: "palm",
-            icon: "camera",
-            title: "Curiosidades",
-            paragraphs: [
-              "Foi desenvolvida em **parceria com a NASA**; o lado laranja já foi criticado por causar enjoo em muitos visitantes devido à força G real gerada pela centrífuga.",
-            ],
-          },
-          {
-            color: "gold",
-            icon: "tree",
-            title: "Destaques do pavilhão",
-            list: [
-              "World Discovery reúne também Guardiões da Galáxia: Cosmic Rewind e Test Track.",
-            ],
+            title: "Roteiro",
+            paragraphs: ["Mais forte (laranja), simulador de espaço."],
           },
         ],
       },
       {
         id: "test-track",
-        attractionId: "test-track",
         name: "Test Track",
         area: "World Discovery",
         icon: "target",
         sections: [
           {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: ["World Discovery, Epcot."],
+            color: "citrus",
+            icon: "target",
+            title: "Roteiro",
+            paragraphs: ["Carros da GM."],
           },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Tipo",
-            paragraphs: ["Radical."],
-          },
+        ],
+      },
+      {
+        id: "canada",
+        name: "Canadá",
+        area: "World Showcase",
+        icon: "target",
+        sections: [
           {
             color: "citrus",
             icon: "target",
-            title: "Como aproveitar melhor",
-            paragraphs: [
-              "Ir na **parte da manhã**, antes do calor do meio-dia deixar a fila mais desconfortável.",
-            ],
+            title: "Roteiro",
+            paragraphs: ["Sem atração interessante."],
           },
+        ],
+      },
+      {
+        id: "uk-pub",
+        name: "Reino Unido: pub e Queen's Table",
+        area: "World Showcase",
+        icon: "bag",
+        sections: [
+          {
+            color: "gold",
+            icon: "bag",
+            title: "Roteiro",
+            paragraphs: ["Conhecer o pub; ver a lojinha Queen's Table; podemos encontrar a Alice de País das Maravilhas."],
+          },
+        ],
+      },
+      {
+        id: "franca-ratatouille",
+        name: "França: Ratatouille",
+        area: "World Showcase",
+        icon: "target",
+        sections: [
+          {
+            color: "citrus",
+            icon: "target",
+            title: "Roteiro",
+            paragraphs: ["Ratatouille, imperdível. Procurar Bela e a Fera."],
+          },
+        ],
+      },
+      {
+        id: "marrocos",
+        name: "Marrocos",
+        area: "World Showcase",
+        icon: "camera",
+        sections: [
           {
             color: "palm",
             icon: "camera",
-            title: "Curiosidades",
-            paragraphs: [
-              'Ao final, os visitantes passam por uma área onde podem **"projetar" seu próprio carro virtual** e depois ver o design exibido em telas no showroom da Chevrolet.',
-            ],
-          },
-          {
-            color: "gold",
-            icon: "tree",
-            title: "Destaques do pavilhão",
-            list: [
-              "World Discovery reúne também Guardiões da Galáxia: Cosmic Rewind e Mission: Space.",
-            ],
+            title: "Foto",
+            paragraphs: ["Cenografia perfeita; aproveitar para tirar fotos. Ver se não encontramos a Jasmine."],
           },
         ],
       },
       {
-        id: "showcase-canada",
-        name: "World Showcase — Canadá",
+        id: "japao",
+        name: "Japão: Pick a Pearl e portal",
         area: "World Showcase",
-        icon: "target",
+        icon: "camera",
         sections: [
-          {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: ["World Showcase, Epcot."],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Tipo",
-            paragraphs: ["Fotos."],
-          },
-          {
-            color: "citrus",
-            icon: "target",
-            title: "Como aproveitar melhor",
-            paragraphs: [
-              "**Passagem rápida** — sem atração prioritária neste pavilhão.",
-            ],
-          },
-        ],
-      },
-      {
-        id: "showcase-uk",
-        name: "World Showcase — Reino Unido",
-        area: "World Showcase",
-        icon: "target",
-        sections: [
-          {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: ["World Showcase, Epcot."],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Tipo",
-            paragraphs: ["Fotos."],
-          },
-          {
-            color: "citrus",
-            icon: "target",
-            title: "Como aproveitar melhor",
-            paragraphs: [
-              "Entrar no pub Rose & Crown mesmo sem consumir, **só para ver a decoração**; conferir a loja Queen's Table para itens de chá.",
-            ],
-          },
           {
             color: "palm",
             icon: "camera",
-            title: "Curiosidades",
-            paragraphs: [
-              "Personagens de **Alice no País das Maravilhas** costumam circular por essa área com frequência maior que outras.",
-            ],
+            title: "Foto",
+            paragraphs: ["Acompanhar o Pick a Pearl. Portal para tirar foto de frente para o lago. Tempo de descanso em frente ao portal."],
           },
         ],
       },
       {
-        id: "showcase-france",
-        name: "World Showcase — França (Remy's Ratatouille Adventure)",
+        id: "eua",
+        name: "EUA",
         area: "World Showcase",
         icon: "target",
         sections: [
           {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: ["World Showcase, Epcot."],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Tipo",
-            paragraphs: ["Outro."],
-          },
-          {
             color: "citrus",
             icon: "target",
-            title: "Como aproveitar melhor",
-            paragraphs: [
-              "**Imperdível** — fila costuma ser menor no **fim da tarde** do que no meio do dia. Aproveitar para procurar Bela e a Fera na área.",
-            ],
-          },
-          {
-            color: "palm",
-            icon: "camera",
-            title: "Curiosidades",
-            paragraphs: [
-              'Os visitantes "encolhem" ao tamanho de um rato durante o passeio, usando **óculos 3D** sem a armação visível, criando sensação real de escala reduzida pela cozinha do restaurante.',
-            ],
-          },
-        ],
-      },
-      {
-        id: "showcase-morocco",
-        name: "World Showcase — Marrocos",
-        area: "World Showcase",
-        icon: "target",
-        sections: [
-          {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: ["World Showcase, Epcot."],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Tipo",
-            paragraphs: ["Fotos."],
-          },
-          {
-            color: "citrus",
-            icon: "target",
-            title: "Como aproveitar melhor",
-            paragraphs: [
-              "**Reservar tempo extra** para fotos — é considerado um dos cenários mais detalhados do parque. Ficar de olho na Jasmine, que costuma fazer meet-and-greet nessa área.",
-            ],
-          },
-          {
-            color: "palm",
-            icon: "camera",
-            title: "Curiosidades",
-            paragraphs: [
-              "É o **único pavilhão** do World Showcase construído com apoio direto do governo do país (não de uma empresa privada) — o Marrocos enviou artesãos para fazer os **mosaicos** no local.",
-            ],
-          },
-        ],
-      },
-      {
-        id: "showcase-japan",
-        name: "World Showcase — Japão",
-        area: "World Showcase",
-        icon: "target",
-        sections: [
-          {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: ["World Showcase, Epcot."],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Tipo",
-            paragraphs: ["Fotos."],
-          },
-          {
-            color: "citrus",
-            icon: "target",
-            title: "Como aproveitar melhor",
-            paragraphs: [
-              "Ir ao quiosque de **Pick-a-Pearl** (escolher uma ostra e ganhar uma pérola de verdade) e depois parar no **torii em frente ao lago** para foto e descanso.",
-            ],
-          },
-          {
-            color: "palm",
-            icon: "camera",
-            title: "Curiosidades",
-            paragraphs: [
-              "O **torii vermelho** na beira da lagoa é uma réplica inspirada no santuário de Itsukushima; à noite, com a iluminação dos **fogos ao fundo**, é um dos pontos de foto mais procurados do parque.",
-            ],
-          },
-        ],
-      },
-      {
-        id: "showcase-usa",
-        name: "World Showcase — EUA (The American Adventure)",
-        area: "World Showcase",
-        icon: "target",
-        sections: [
-          {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: ["World Showcase, Epcot."],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Tipo",
-            paragraphs: ["Show."],
-          },
-          {
-            color: "citrus",
-            icon: "target",
-            title: "Como aproveitar melhor",
+            title: "Roteiro",
             paragraphs: ["História do país."],
           },
         ],
       },
       {
-        id: "showcase-italy",
-        name: "World Showcase — Itália",
+        id: "italia",
+        name: "Itália",
         area: "World Showcase",
         icon: "bag",
         sections: [
           {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: ["World Showcase, Epcot."],
-          },
-          {
             color: "gold",
-            icon: "lightbulb",
-            title: "Tipo",
-            paragraphs: ["Fotos."],
-          },
-          {
-            color: "citrus",
-            icon: "target",
-            title: "Como aproveitar melhor",
-            paragraphs: [
-              "Bom lugar para comprar perfumes (**Il Bel Cristallo**); **wine bar**; voltar aqui para **assistir aos fogos**, de frente para a lagoa.",
-            ],
-          },
-          {
-            color: "palm",
-            icon: "camera",
-            title: "Curiosidades",
-            paragraphs: [
-              "A torre do **Campanile** e a praça central são réplicas inspiradas em Veneza e na Piazza San Marco.",
-            ],
+            icon: "bag",
+            title: "Roteiro",
+            paragraphs: ["Bom lugar para comprar perfumes; wine bar. Voltar aqui para assistir os fogos."],
           },
         ],
       },
       {
-        id: "showcase-germany",
-        name: "World Showcase — Alemanha",
+        id: "alemanha",
+        name: "Alemanha: pub alemão",
         area: "World Showcase",
         icon: "target",
         sections: [
           {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: ["World Showcase, Epcot."],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Tipo",
-            paragraphs: ["Fotos."],
-          },
-          {
             color: "citrus",
             icon: "target",
-            title: "Como aproveitar melhor",
-            paragraphs: ["Passar pelo pub alemão. Procurar a **Branca de Neve**."],
+            title: "Roteiro",
+            paragraphs: ["Pub alemão. Ficar de olho: Branca de Neve."],
           },
         ],
       },
       {
-        id: "showcase-china",
-        name: "World Showcase — China",
+        id: "china",
+        name: "China: show de reflexos",
         area: "World Showcase",
         icon: "target",
         sections: [
           {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: ["World Showcase, Epcot."],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Tipo",
-            paragraphs: ["Show."],
-          },
-          {
             color: "citrus",
             icon: "target",
-            title: "Como aproveitar melhor",
-            paragraphs: [
-              "Show de reflexos da China; ir **só se houver tempo**. Ficar de olho se a Mulan está por perto.",
-            ],
-          },
-          {
-            color: "palm",
-            icon: "camera",
-            title: "Curiosidades",
-            paragraphs: [
-              "**Mulan e Mushu** costumam fazer aparições perto desse pavilhão, já que a história dela se passa na China.",
-            ],
+            title: "Roteiro",
+            paragraphs: ["Ir apenas se estivermos com tempo. Ficar de olho se a Mulan não está lá."],
           },
         ],
       },
       {
-        id: "showcase-norway",
-        name: "World Showcase — Noruega (Frozen Ever After)",
+        id: "noruega-frozen",
+        name: "Noruega: Frozen",
         area: "World Showcase",
         icon: "target",
         sections: [
           {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: ["World Showcase, Epcot."],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Tipo",
-            paragraphs: ["Outro."],
-          },
-          {
             color: "citrus",
             icon: "target",
-            title: "Como aproveitar melhor",
-            paragraphs: [
-              "Fazer se der tempo. O encontro com Elsa e Anna **fecha às 18h30**.",
-            ],
-          },
-          {
-            color: "palm",
-            icon: "camera",
-            title: "Curiosidades",
-            paragraphs: [
-              "Reaproveita o mesmo **sistema de trilhos** da antiga atração Maelstrom, mas com efeitos e cenas totalmente novos de Arendelle.",
-            ],
+            title: "Roteiro",
+            paragraphs: ["Frozen! Fazer se der tempo. Encontro com Elsa e Anna. Fecha às 18h30."],
           },
         ],
       },
       {
-        id: "showcase-mexico",
-        name: "World Showcase — México (Gran Fiesta Tour)",
+        id: "mexico",
+        name: "México: Zé Carioca",
         area: "World Showcase",
         icon: "target",
         sections: [
           {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: ["World Showcase, Epcot."],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Tipo",
-            paragraphs: ["Outro."],
-          },
-          {
             color: "citrus",
             icon: "target",
-            title: "Como aproveitar melhor",
-            paragraphs: [
-              "**Ir ao anoitecer** — a fila costuma ser menor e a pirâmide iluminada por fora fica mais bonita para foto na saída.", // REVISAR: não está no texto do Thiago
-            ],
-          },
-          {
-            color: "palm",
-            icon: "camera",
-            title: "Curiosidades",
-            paragraphs: [
-              "**Zé Carioca** é um dos três protagonistas do passeio junto com José (Pato Donald) e Panchito — uma rara aparição do personagem brasileiro em atração permanente da Disney.",
-            ],
-          },
-        ],
-      },
-      {
-        id: "epcot-fireworks",
-        name: "Fogos (show noturno)",
-        area: "World Showcase",
-        icon: "tree",
-        sections: [
-          {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: ["Vista da lagoa, próximo à Itália, World Showcase."],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Tipo",
-            paragraphs: ["Show."],
-          },
-          {
-            color: "citrus",
-            icon: "target",
-            title: "Como aproveitar melhor",
-            paragraphs: [
-              "Voltar para a área da Itália **com antecedência** para garantir lugar **de frente para a lagoa** antes do início do show.",
-            ],
+            title: "Roteiro",
+            paragraphs: ["Atração com Zé Carioca."],
           },
         ],
       },
