@@ -3,12 +3,12 @@ import type { DayData } from "../../types";
 
 export default {
   dateISO: "2026-12-10",
-  calendarTitle: "Islands of Adventure",
+  calendarTitle: "Outlet Marketplace e Islands of Adventure",
   day: 10,
   weekday: "Qui",
   liturgicalWeekday: "3ª sem. do Advento",
   category: "compras",
-  title: "Islands of Adventure",
+  title: "Outlet Marketplace e Islands of Adventure",
   reading: {
     label: "3ª sem. do Advento",
     oldTestamentReading: "Habacuque 2:1–5",
@@ -62,7 +62,7 @@ export default {
             kind: "stop",
             time: "16:30",
             stopId: "epic-mcdonalds",
-            name: "Epic McDonald's — jantar",
+            name: "Epic McDonald's",
             icon: "burger",
           },
           {
@@ -75,7 +75,7 @@ export default {
             kind: "stop",
             time: "18:00",
             stopId: "islands-of-adventure",
-            name: "Islands of Adventure — Hagrid's primeiro (chegar às 18h: estacionamento grátis a partir desse horário. Fecha às 19h)",
+            name: "Islands of Adventure",
             icon: "target",
           },
           {
@@ -180,6 +180,7 @@ export default {
       },
       {
         id: "islands-of-adventure",
+        link: mapSearchUrl("Universal's Islands of Adventure", "6000 Universal Blvd, Orlando, FL 32819"),
         name: "Universal's Islands of Adventure",
         icon: "target",
         time: "18:00",
