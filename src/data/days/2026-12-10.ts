@@ -3,12 +3,12 @@ import type { DayData } from "../../types";
 
 export default {
   dateISO: "2026-12-10",
-  calendarTitle: "Outlet Marketplace e Islands of Adventure",
+  calendarTitle: "Islands of Adventure",
   day: 10,
   weekday: "Qui",
   liturgicalWeekday: "3ª sem. do Advento",
   category: "compras",
-  title: "Outlet Marketplace e Universal",
+  title: "Islands of Adventure",
   reading: {
     label: "3ª sem. do Advento",
     oldTestamentReading: "Habacuque 2:1–5",
@@ -16,25 +16,23 @@ export default {
   },
   itinerary: {
     kind: "schedule",
-    summary: "Compras no Orlando Outlet Marketplace, Islands of Adventure à noite (Hagrid's primeiro; o parque fecha às 19h), jantar no Epic McDonald's e CityWalk.",
+    summary: "Compras no Orlando Outlet Marketplace, jantar no Epic McDonald's, Islands of Adventure à noite (Hagrid's primeiro; o parque fecha às 19h) e CityWalk.",
     group: "Grupo completo · 10 pessoas · 2 carros",
     journey: {
       tiles: [
         { label: "Acordar", value: "8h00" },
         { label: "Sair de casa", value: "9h20" },
-        { label: "Compras no outlet", value: "10h–17h" },
+        { label: "Compras no outlet", value: "10h–16h" },
         { label: "Islands fecha", value: "19h" },
       ],
       notes: [
         { icon: "car", text: "De carro: **~25 min** da casa até o Orlando Outlet Marketplace." },
-        { icon: "info", text: "Horários são **sugestões e podem mudar** conforme o andamento das compras." },
       ],
-      alerts: [],
+      alerts: ["**Almoço livre**: cada um come quando quiser, com os snacks do carro ou algo rápido no local."],
     },
     periods: [
       {
         title: "Manhã",
-        note: "Almoço livre: cada um come quando quiser, com os snacks do carro ou algo rápido no local.",
         steps: [
           {
             kind: "transit",
@@ -56,8 +54,21 @@ export default {
         steps: [
           {
             kind: "transit",
-            time: "17:40", // REVISAR: para chegar às 18h; compras seguem até 17h
-            duration: "~15–20 min",
+            time: "16:00",
+            duration: "~10 min",
+            destinationName: "Epic McDonald's",
+          },
+          {
+            kind: "stop",
+            time: "16:30",
+            stopId: "epic-mcdonalds",
+            name: "Epic McDonald's — jantar",
+            icon: "burger",
+          },
+          {
+            kind: "transit",
+            time: "17:40", // para chegar às 18h
+            duration: "~10 min",
             destinationName: "Universal's Islands of Adventure",
           },
           {
@@ -68,30 +79,10 @@ export default {
             icon: "target",
           },
           {
-            kind: "transit",
-            time: "19:00", // REVISAR: depende do fim da visita (~1h)
-            duration: "~10 min",
-            destinationName: "Epic McDonald's",
-          },
-          {
             kind: "stop",
-            time: "19:15", // REVISAR: derivado do fim da visita ao parque
-            stopId: "epic-mcdonalds",
-            name: "Epic McDonald's — jantar",
-            icon: "burger",
-          },
-          {
-            kind: "stop",
-            time: "20:00", // REVISAR: antes 19:30; o parque fecha às 19h, conferir se ainda faz sentido
-            stopId: "hogwarts-lights",
-            name: "Castelo de Hogwarts iluminado",
-            icon: "camera",
-          },
-          {
-            kind: "stop",
-            time: "20:30", // REVISAR: antes 20:15
+            time: "19:00",
             stopId: "citywalk",
-            name: "CityWalk — passeio a pé",
+            name: "CityWalk",
             icon: "tree",
           },
           {
@@ -109,6 +100,7 @@ export default {
         name: "Orlando Outlet Marketplace",
         icon: "bag",
         time: "09:50",
+        link: mapSearchUrl("Orlando Outlet Marketplace", "5269 International Dr, Orlando, FL 32819"),
         shopRegionId: "outlet-marketplace",
         sections: [
           {
@@ -140,7 +132,7 @@ export default {
             icon: "lightbulb",
             title: "Horário",
             paragraphs: [
-              "**Abre às 10h** (horário padrão do centro; confirmar no site oficial da Premium Outlets para 10/12). Chegue **às 9h50** para estar na porta na abertura. Plano: compras **das 10h às 17h**.",
+              "**Abre às 10h** (horário padrão do centro; confirmar no site oficial da Premium Outlets para 10/12). Chegue **às 9h50** para estar na porta na abertura. Plano: compras **das 10h às 16h**.",
             ],
           },
           {
@@ -148,7 +140,7 @@ export default {
             icon: "alert",
             title: "Atenção",
             paragraphs: [
-              "Combinem um ponto de encontro e um horário de reunião **às 16h45**, antes da saída **às 17h**. Algumas lojas listadas em sites de terceiros (ex.: ASICS, VF Outlet) podem já ter **fechado**.",
+              "Combinem um ponto de encontro e um horário de reunião **às 15h45**, antes da saída **às 16h**. Algumas lojas listadas em sites de terceiros (ex.: ASICS, VF Outlet) podem já ter **fechado**.",
             ],
           },
         ],
@@ -158,7 +150,7 @@ export default {
         link: mapSearchUrl("Epic McDonald's", "6875 Sand Lake Rd, Orlando, FL 32819"),
         name: "Epic McDonald's",
         icon: "burger",
-        time: "19:15",
+        time: "16:30",
         sections: [
           {
             color: "navy",
@@ -181,7 +173,7 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "Jantar barato e rápido, depois do Islands of Adventure. Peça pelos quiosques para **evitar fila no balcão**.",
+              "Jantar barato e rápido, antes do Islands of Adventure. Peça pelos quiosques para **evitar fila no balcão**.",
             ],
           },
         ],
@@ -232,42 +224,10 @@ export default {
         ],
       },
       {
-        id: "hogwarts-lights",
-        name: "Castelo de Hogwarts iluminado",
-        icon: "camera",
-        time: "20:00",
-        sections: [
-          {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: [
-              "Hogsmeade, dentro do Islands of Adventure (The Wizarding World of Harry Potter).",
-            ],
-          },
-          {
-            color: "citrus",
-            icon: "camera",
-            title: "Sobre",
-            paragraphs: [
-              "Em dezembro, o castelo recebe o show de projeção \"The Magic of Christmas at Hogwarts Castle\" (cerca de 8 minutos), **do anoitecer até o fechamento**. Hogsmeade também ganha decoração de Natal.",
-            ],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Dica",
-            paragraphs: [
-              "O horário exato dos shows de 10/12 **ainda não está publicado** (ver o app do Universal no dia). Enquanto esperam na fila do Hagrid's, dá para ver o castelo iluminado. **Levem casaco leve**.",
-            ],
-          },
-        ],
-      },
-      {
         id: "citywalk",
         name: "CityWalk",
         icon: "tree",
-        time: "20:30",
+        time: "19:00",
         sections: [
           {
             color: "navy",
@@ -282,7 +242,7 @@ export default {
             icon: "tree",
             title: "Sobre",
             paragraphs: [
-              "Passeio a pé pelas lojas, luzes e decoração de Natal depois do fechamento do parque. **Sem compromisso de horário**.",
+              "Lojas, luzes e decoração de Natal a partir do fechamento do parque, às 19h. **Sem compromisso de horário**.",
             ],
           },
           {
