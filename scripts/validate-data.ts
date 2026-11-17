@@ -150,7 +150,7 @@ function isStrictlyAscending(minutes: (number | undefined)[]): boolean {
   return known.every((value, index) => index === 0 || known[index - 1] < value);
 }
 
-/** Acordar < Sair de casa < Estacionamento abre ≤ abertura do parque < fechamento. */
+/** Acordar < Sair de casa; Estacionamento abre ≤ abertura do parque < fechamento. Sair depois de o estacionamento abrir é normal. */
 function checkParkTimes(where: string, { category, extras }: DayTrack): string[] {
   if (category !== "parque") return [];
   const times = pickParkTimeTiles(extras.journey.tiles);
@@ -162,7 +162,7 @@ function checkParkTimes(where: string, { category, extras }: DayTrack): string[]
     (label) => (label === undefined ? undefined : parseClockLabel(label)),
   );
   const errors: string[] = [];
-  if (!isStrictlyAscending([wakeUp, leave, parkingOpens])) errors.push(`${where}: "Acordar", "Sair" e "Estacionamento abre" fora de ordem`);
+  if (!isStrictlyAscending([wakeUp, leave])) errors.push(`${where}: "Acordar" e "Sair" fora de ordem`);
   if (parkingOpens !== undefined && opens !== undefined && parkingOpens > opens) errors.push(`${where}: o estacionamento abre depois do parque`);
   if (opens !== undefined && closes !== undefined && closes <= opens) errors.push(`${where}: o parque fecha antes de abrir`);
   return errors;

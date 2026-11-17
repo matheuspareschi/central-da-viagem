@@ -6,7 +6,7 @@ export default {
   day: 15,
   park: {
     name: "Islands of Adventure",
-    departure: "7h15",
+    departure: "8h10",
     opening: "9h",
     closing: "19h",
   },
@@ -25,11 +25,8 @@ export default {
     // REVISAR (notes): Item "Chegada e preparação" redistribuído; conferir.
     summary: "Primeira visita ao Islands of Adventure, na ordem do roteiro.",
     journey: {
-      tiles: [{ label: "Acordar", value: "6h15" }, { label: "Sair de casa", value: "7h15" }, { label: "Estacionamento abre", value: "8h00" }, { label: "Parque aberto", value: "9h–19h" }],
-      notes: [
-        { icon: "info", text: "Tem early entry (para não hóspedes)." },
-        { icon: "info", text: "Se chegar antes das 8h00, ir na Hulk (se conseguir entrar antes)." },
-      ],
+      tiles: [{ label: "Acordar", value: "7h10" }, { label: "Sair de casa", value: "8h10" }, { label: "Estacionamento abre", value: "8h00" }, { label: "Parque aberto", value: "9h–19h" }],
+      notes: [],
       alerts: [],
     },
     attractions: [

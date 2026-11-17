@@ -6,7 +6,7 @@ export default {
   day: 17,
   park: {
     name: "Epic Universe",
-    departure: "7h15",
+    departure: "8h30",
     opening: "10h",
     closing: "21h",
   },
@@ -24,7 +24,7 @@ export default {
     parkId: "epic-universe",
     summary: "Primeira visita ao Epic Universe, na ordem do roteiro.",
     journey: {
-      tiles: [{ label: "Acordar", value: "6h15" }, { label: "Sair de casa", value: "7h15" }, { label: "Entrada antecipada", value: "9h" }, { label: "Parque aberto", value: "10h–21h" }],
+      tiles: [{ label: "Acordar", value: "7h30" }, { label: "Sair de casa", value: "8h30" }, { label: "Chegada no parque", value: "9h20" }, { label: "Parque aberto", value: "10h–21h" }],
       notes: [
         { icon: "info", text: "Ida até os portões: mesmos horários do Universal Studios." },
       ],
