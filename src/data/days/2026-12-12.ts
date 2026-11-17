@@ -15,7 +15,7 @@ export default {
   weekday: "Sáb",
   liturgicalWeekday: "3ª sem. do Advento",
   category: "turismo",
-  title: "Lake Buena Vista, WonderWorks, ICON Park, Lake Eola e Disney Springs",
+  title: "Lake Buena Vista e passeios em Orlando",
   reading: {
     label: "3ª sem. do Advento",
     oldTestamentReading: "Habacuque 3:13–19",
