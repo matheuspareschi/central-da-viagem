@@ -74,13 +74,13 @@ const tests: Array<[string, () => void]> = [
     assert.equal(day.category, "compras");
     assert.equal(day.split, undefined);
   }],
-  ["dia 16: cada opção é um roteiro único, com a mesma manhã e noite diferente", () => {
+  ["dia 16: cada opção é um roteiro único, com a mesma manhã e tarde e noite diferente", () => {
     const keysOf = (id: string) => day16.options.find((option) => option.id === id)?.trackKeys;
     assert.deepEqual(keysOf("noite-do-jogo"), ["noite-jogo"]);
     assert.deepEqual(keysOf("noite-de-natal"), ["noite-natal"]);
     const tracks = day16.itinerary.tracks;
-    const morningOf = (key: string) => tracks.find((track) => track.key === key)?.periods[0];
-    assert.deepEqual(morningOf("noite-jogo"), morningOf("noite-natal"));
+    const dayOf = (key: string) => tracks.find((track) => track.key === key)?.periods.slice(0, 2);
+    assert.deepEqual(dayOf("noite-jogo"), dayOf("noite-natal"));
   }],
   ["dia 10: com o Daily Dealz ele vem antes do outlet, que começa às 11h30", () => {
     const track = day10.itinerary.tracks.find((candidate) => candidate.key === "daily-dealz-outlet-e-islands");

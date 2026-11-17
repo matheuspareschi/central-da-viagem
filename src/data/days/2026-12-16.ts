@@ -4,33 +4,35 @@ import type { DayData, DayPeriod, JourneyNote, StopCard } from "../../types";
 const FREE_LUNCH_ALERT = "**Almoço livre**: cada um come quando quiser, com os snacks do carro ou algo rápido no local.";
 
 const WAKE_UP_TILE = { label: "Acordar", value: "7h00" };
-const IHOP_TILE = { label: "IHOP", value: "~8h00" };
+const IHOP_TILE = { label: "IHOP", value: "~8h30" };
 const RETURN_TILE = { label: "Volta", value: "22h00" };
 
 const DAY_NOTES: JourneyNote[] = [
-  { icon: "car", text: "De carro: tempo da casa até o IHOP (6005 International Dr) **a definir**." },
+  { icon: "car", text: "De carro: **~25 min** da casa até o IHOP (6005 International Dr), saindo **às 8h**." },
 ];
 const NIGHT_NOTE: JourneyNote = {
   icon: "info",
   text: "Os dois locais da noite (Kia Center e Dr. Phillips Center) ficam a **poucos quarteirões** um do outro.",
 };
 
-/** Manhã e tarde são iguais nas duas variações do dia; só a noite muda. */
-const dayPeriods: DayPeriod[] = [
-  {
-    title: "Manhã",
-    steps: [
-      { kind: "transit", time: "07:30", destinationName: "IHOP (International Dr)" }, // REVISAR: tempo de deslocamento não informado; mantidos os 30 min até a chegada
-      { kind: "stop", time: "08:00", stopId: "ihop-6005-international-dr", name: "Café da manhã no IHOP", icon: "burger" },
-      { kind: "transit", time: "09:45", destinationName: "Orlando International Premium Outlets" },
-      { kind: "stop", time: "10:00", stopId: "outlet-international-premium", name: "Orlando International Premium Outlets", icon: "bag" },
-    ],
-  },
-  {
-    title: "Tarde",
-    steps: [{ kind: "transit", time: "16:00", destinationName: "Centro de Orlando" }],
-  },
-];
+/** A manhã e a tarde (jantar no Outlet) são iguais nas duas variações do dia; só a noite muda. */
+const morningPeriod: DayPeriod = {
+  title: "Manhã",
+  steps: [
+    { kind: "transit", time: "08:00", duration: "~25 min", destinationName: "IHOP (International Dr)" },
+    { kind: "stop", time: "08:30", stopId: "ihop-6005-international-dr", name: "Café da manhã no IHOP", icon: "burger" },
+    { kind: "transit", time: "10:00", destinationName: "Orlando International Premium Outlets" }, // REVISAR: tempo de deslocamento do IHOP ao outlet não informado
+    { kind: "stop", time: "10:15", stopId: "outlet-international-premium", name: "Orlando International Premium Outlets", icon: "bag" },
+  ],
+};
+
+const afternoonPeriod: DayPeriod = {
+  title: "Tarde",
+  steps: [
+    { kind: "stop", time: "16:00", stopId: "", name: "Jantar no Outlet", icon: "burger" }, // REVISAR: horário estimado
+    { kind: "transit", time: "17:00", destinationName: "Centro de Orlando" }, // REVISAR: horário estimado
+  ],
+};
 
 const dayCards: StopCard[] = [
     {
@@ -38,7 +40,7 @@ const dayCards: StopCard[] = [
       link: mapSearchUrl("IHOP", "6005 International Dr, Orlando, FL 32819"),
       name: "IHOP",
       icon: "burger",
-      time: "08:00",
+      time: "08:30",
       sections: [
         {
           color: "navy",
@@ -75,7 +77,6 @@ const dayCards: StopCard[] = [
           title: "Atenção",
           paragraphs: [
             "Horário desta unidade não conferido na página oficial: **confirmar no Google Maps**.",
-            "Tempo de deslocamento do resort até o IHOP **não confirmado**.",
           ],
         },
       ],
@@ -85,7 +86,7 @@ const dayCards: StopCard[] = [
       link: mapSearchUrl("Orlando International Premium Outlets", "4951 International Dr, Orlando, FL 32819"),
       name: "Orlando International Premium Outlets",
       icon: "bag",
-      time: "10:00",
+      time: "10:15",
       shopRegionId: "international-premium-outlets",
       sections: [
         {
@@ -245,11 +246,11 @@ export default {
           alerts: [FREE_LUNCH_ALERT],
         },
         periods: [
-          ...dayPeriods,
+          morningPeriod,
+          afternoonPeriod,
           {
             title: "Noite",
             steps: [
-              { kind: "stop", time: "17:30", stopId: "", name: "Jantar antes do jogo", icon: "burger" },
               { kind: "stop", time: "18:30", stopId: "kia-center", name: "Entrada na arena", icon: "target" },
               { kind: "stop", time: "19:00", stopId: "kia-center", name: "Início do jogo: Magic x Cavaliers", icon: "target" },
               { kind: "transit", time: "22:00", destinationName: "Storey Lake Resort (volta)" },
@@ -271,7 +272,8 @@ export default {
           alerts: [FREE_LUNCH_ALERT],
         },
         periods: [
-          ...dayPeriods,
+          morningPeriod,
+          afternoonPeriod,
           {
             title: "Noite",
             steps: [
