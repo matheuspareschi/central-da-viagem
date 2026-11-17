@@ -159,7 +159,7 @@ export default {
             color: "attn",
             icon: "alert",
             title: "Atenção",
-            paragraphs: ["Estacionamento na garagem do ICON Park, **do 4º ao 7º andar**. É **pago**: **confirme o valor** no dia."],
+            paragraphs: ["Estacionamento **grátis** na garagem do ICON Park, **do 4º ao 7º andar**."],
           },
         ],
       },
