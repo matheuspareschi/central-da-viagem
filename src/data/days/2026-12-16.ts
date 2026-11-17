@@ -15,7 +15,7 @@ const NIGHT_NOTE: JourneyNote = {
   text: "Os dois locais da noite (Kia Center e Dr. Phillips Center) ficam a **poucos quarteirões** um do outro.",
 };
 
-/** A manhã e a tarde (jantar no Outlet) são iguais nas duas variações do dia; só a noite muda. */
+/** A manhã é igual nas duas variações do dia; a tarde (jantar no Outlet) e a noite mudam só no destino e no estacionamento. */
 const morningPeriod: DayPeriod = {
   title: "Manhã",
   steps: [
@@ -26,13 +26,13 @@ const morningPeriod: DayPeriod = {
   ],
 };
 
-const afternoonPeriod: DayPeriod = {
+const afternoonPeriod = (destinationName: string): DayPeriod => ({
   title: "Tarde",
   steps: [
     { kind: "stop", time: "16:00", stopId: "", name: "Jantar no Outlet", icon: "burger" }, // REVISAR: horário estimado
-    { kind: "transit", time: "17:00", destinationName: "Administration Garage (centro de Orlando)" }, // REVISAR: horário estimado
+    { kind: "transit", time: "17:00", destinationName }, // REVISAR: horário estimado
   ],
-};
+});
 
 const dayCards: StopCard[] = [
     {
@@ -127,35 +127,73 @@ const dayCards: StopCard[] = [
         },
       ],
     },
+];
+
+const gameCards: StopCard[] = [
     {
-      id: "administration-garage",
-      address: "300 Liberty Ave, Orlando, FL 32801",
-      name: "Administration Garage",
+      id: "parking-game",
+      name: "Estacionamento para o jogo",
       icon: "parking",
       time: "17:30",
+      parkingOptions: [
+        {
+          id: "garland-lot",
+          name: "Garland Lot",
+          address: "109 W Pine St, Orlando, FL 32801",
+          walk: "5 a 7 min a pé",
+          price: "**US$ 10 a 15** em eventos noturnos (após as 17h) e fins de semana",
+          details: "Estacionamento aberto bem próximo à arena. A saída após o evento é bem mais rápida do que nos prédios-garagem, mas há poucas vagas: chegar cerca de **2 horas antes**.",
+        },
+        {
+          id: "55-west-garage",
+          name: "55 West Garage",
+          address: "60 W Pine St, Orlando, FL 32801",
+          walk: "~7 min a pé (2 quarteirões)",
+          price: "Tarifa única de evento: **US$ 10** na hora ou **US$ 11** reservando antes",
+          details: "Garagem coberta da prefeitura. Ponto negativo: o trânsito para sair dos andares superiores é lento logo depois de grandes shows ou jogos.",
+        },
+        {
+          id: "central-blvd-garage",
+          name: "Central Blvd. Garage",
+          address: "53 W Central Blvd, Orlando, FL 32801",
+          walk: "~7 min a pé",
+          price: "Cerca de **US$ 10 a 11** em eventos noturnos",
+          details: "Garagem pública bem localizada, com fácil acesso pela W Central Blvd.",
+        },
+        {
+          id: "grove-park-lot",
+          name: "Grove Park Lot",
+          address: "521 W Central Blvd, Orlando, FL 32801",
+          walk: "5 a 9 min a pé",
+          price: "Em média **US$ 16** em jogos do Orlando Magic",
+          details: "Fica do outro lado da linha férrea (perto também do Inter&Co Stadium). A vantagem é a saída rápida para a via expressa, sem pegar o miolo congestionado de Downtown.",
+        },
+        {
+          id: "administration-garage-game",
+          name: "Administration Garage",
+          address: "300 Liberty Ave, Orlando, FL 32801",
+          walk: "8 a 10 min a pé",
+          price: "Tarifa fixa de cerca de **US$ 10** em noites de eventos",
+          details: "Um pouco mais ao sul, perto da prefeitura. Garagem segura.",
+        },
+      ],
       sections: [
         {
-          color: "navy",
-          icon: "parking",
-          title: "Endereço e estacionamento",
+          color: "gold",
+          icon: "lightbulb",
+          title: "Dica",
           paragraphs: [
-            "Administration Garage (Administration Center Garage), 300 Liberty Ave, Orlando, FL 32801.",
-            "Fica a cerca de **0,6 milha** do Kia Center (fonte de terceiros), uns 12 minutos a pé, e serve também para o Dr. Phillips Center.",
+            "Reserve pelo celular, com o **ParkMobile** ou o portal de estacionamento da City of Orlando. Em noites de jogo cheio, quem não reservou pode pagar mais na entrada da garagem.",
           ],
         },
         {
           color: "attn",
           icon: "alert",
           title: "Atenção",
-          paragraphs: [
-            "Valor no dia do evento **não confirmado**: a cidade de Orlando vende o estacionamento de eventos pelo site orlando.gov. Conferir antes.",
-          ],
+          paragraphs: ["Valores e distâncias vêm de fontes de terceiros e podem mudar: **confirmar antes de ir**."],
         },
       ],
     },
-];
-
-const gameCards: StopCard[] = [
     {
       id: "kia-center",
       name: "Kia Center: Magic x Cavaliers",
@@ -183,7 +221,7 @@ const gameCards: StopCard[] = [
           title: "Dica",
           paragraphs: [
             "Jante antes: comida e bebida de fora **não entram na arena**.",
-            "As portas abrem cerca de **1h antes** do horário do ingresso (~18h). Estacionar na Administration Garage **por volta das 17h30** dá tempo de caminhar uns 12 minutos e passar pela segurança.",
+            "As portas abrem cerca de **1h antes** do horário do ingresso (~18h). Chegar ao estacionamento **por volta das 17h30** dá tempo de caminhar e passar pela segurança.",
           ],
         },
         {
@@ -201,6 +239,32 @@ const gameCards: StopCard[] = [
 ];
 
 const christmasCards: StopCard[] = [
+    {
+      id: "administration-garage",
+      address: "300 Liberty Ave, Orlando, FL 32801",
+      name: "Administration Garage",
+      icon: "parking",
+      time: "17:30",
+      sections: [
+        {
+          color: "navy",
+          icon: "parking",
+          title: "Endereço e estacionamento",
+          paragraphs: [
+            "Administration Garage (Administration Center Garage), 300 Liberty Ave, Orlando, FL 32801.",
+            "Fica perto da prefeitura, no centro de Orlando.",
+          ],
+        },
+        {
+          color: "attn",
+          icon: "alert",
+          title: "Atenção",
+          paragraphs: [
+            "Valor no dia do evento **não confirmado**: a cidade de Orlando vende o estacionamento de eventos pelo site orlando.gov. Conferir antes.",
+          ],
+        },
+      ],
+    },
     {
       id: "dr-phillips-center",
       name: "Dr. Phillips Center: Frontyard Holiday Festival",
@@ -273,11 +337,11 @@ export default {
         },
         periods: [
           morningPeriod,
-          afternoonPeriod,
+          afternoonPeriod("Centro de Orlando (estacionamento)"),
           {
             title: "Noite",
             steps: [
-              { kind: "stop", time: "17:30", stopId: "administration-garage", name: "Estacionamento: Administration Garage", icon: "parking" },
+              { kind: "stop", time: "17:30", stopId: "parking-game", name: "Estacionamento", icon: "parking" },
               { kind: "stop", time: "18:00", stopId: "kia-center", name: "Entrada na arena", icon: "target" },
               { kind: "stop", time: "19:00", stopId: "kia-center", name: "Início do jogo: Magic x Cavaliers", icon: "target" },
               { kind: "transit", time: "22:00", destinationName: "Storey Lake Resort (volta)" },
@@ -300,7 +364,7 @@ export default {
         },
         periods: [
           morningPeriod,
-          afternoonPeriod,
+          afternoonPeriod("Administration Garage (centro de Orlando)"),
           {
             title: "Noite",
             steps: [

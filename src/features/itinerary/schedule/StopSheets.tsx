@@ -4,9 +4,12 @@ import { Link, useLocation } from "react-router-dom";
 import { BottomSheet, DetailSections, IconBadge } from "../../../components";
 import { shopRegions } from "../../../data/shopping";
 import { rememberScrollForReturn } from "../../../lib/scrollReturn";
+import { describeParkingChoice, findChosenParking } from "../../../lib/parkingOptions";
 import { describeShopStop } from "../../../lib/stores";
-import type { ExtraLink, ShopRegion, StopCard } from "../../../types";
+import type { ExtraLink, ParkingOption, ShopRegion, StopCard } from "../../../types";
+import { ParkingOptionList } from "./ParkingOptionList";
 import { StoreList } from "./StoreList";
+import { useParkingChoice } from "./useParkingChoice";
 import { useStoreMarks } from "./useStoreMarks";
 
 const SHOP_SHEET_MAX_HEIGHT_PERCENT = 78;
@@ -90,10 +93,23 @@ function StopHeader({ card, subtitle }: { card: StopCard; subtitle?: string }) {
 /** Abre a folha de uma parada: com lojas (aba Lojas) ou só com as informações da parada. */
 export function StopSheet({ card, onClose, onOpenGroceryList }: StopSheetProps) {
   const region = card.shopRegionId ? shopRegions[card.shopRegionId] : undefined;
-  return region ? (
-    <ShopStopSheet card={card} region={region} onClose={onClose} onOpenGroceryList={onOpenGroceryList} />
-  ) : (
-    <PlainStopSheet card={card} onClose={onClose} onOpenGroceryList={onOpenGroceryList} />
+  if (region) return <ShopStopSheet card={card} region={region} onClose={onClose} onOpenGroceryList={onOpenGroceryList} />;
+  if (card.parkingOptions) return <ParkingStopSheet card={card} options={card.parkingOptions} onClose={onClose} />;
+  return <PlainStopSheet card={card} onClose={onClose} onOpenGroceryList={onOpenGroceryList} />;
+}
+
+/** Parada com estacionamentos para escolher: a lista vem primeiro e as dicas do cartão, depois. */
+function ParkingStopSheet({ card, options, onClose }: { card: StopCard; options: ParkingOption[]; onClose: () => void }) {
+  const choice = useParkingChoice(card.id);
+  return (
+    <BottomSheet
+      title={card.name}
+      onClose={onClose}
+      header={<StopHeader card={card} subtitle={describeParkingChoice(findChosenParking(options, choice.chosenId))} />}
+    >
+      <ParkingOptionList options={options} choice={choice} />
+      <DetailSections sections={card.sections} />
+    </BottomSheet>
   );
 }
 

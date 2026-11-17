@@ -5,10 +5,12 @@ import { shopRegions } from "../../../data/shopping";
 import { useCurrentAgenda } from "../../../hooks/useCurrentAgenda";
 import { mapSearchUrl } from "../../../lib/maps";
 import { formatPeriodRange, isHomeDestination, splitStopName } from "../../../lib/schedule";
+import { describeParkingChoice, findChosenParking } from "../../../lib/parkingOptions";
 import { describeShopStop } from "../../../lib/stores";
-import type { DayPeriod, ScheduleDay, ShopRegion, StopCard, StopStep, TransitStep } from "../../../types";
+import type { DayPeriod, ParkingOption, ScheduleDay, ShopRegion, StopCard, StopStep, TransitStep } from "../../../types";
 import { GroceryListSheet } from "./GroceryListSheet";
 import { StopSheet } from "./StopSheets";
+import { useParkingChoice } from "./useParkingChoice";
 import { useStoreMarks } from "./useStoreMarks";
 
 interface ScheduleViewProps {
@@ -115,11 +117,16 @@ interface StopRowProps {
 function StopRow({ step, card, isCurrent, onOpen }: StopRowProps) {
   const region = card?.shopRegionId ? shopRegions[card.shopRegionId] : undefined;
   const destination = { mapLink: card?.link, address: card?.address };
-  return region ? (
-    <ShopStopRow step={step} region={region} {...destination} isCurrent={isCurrent} onOpen={onOpen} />
-  ) : (
-    <StopRowLayout step={step} {...destination} isCurrent={isCurrent} onOpen={card ? onOpen : undefined} />
-  );
+  if (region) return <ShopStopRow step={step} region={region} {...destination} isCurrent={isCurrent} onOpen={onOpen} />;
+  if (card?.parkingOptions) return <ParkingStopRow step={step} card={card} options={card.parkingOptions} isCurrent={isCurrent} onOpen={onOpen} />;
+  return <StopRowLayout step={step} {...destination} isCurrent={isCurrent} onOpen={card ? onOpen : undefined} />;
+}
+
+/** Parada de estacionamento: o subtítulo e o pino seguem a opção escolhida. */
+function ParkingStopRow({ step, card, options, isCurrent, onOpen }: Omit<StopRowProps, "card"> & { card: StopCard; options: ParkingOption[] }) {
+  const chosen = findChosenParking(options, useParkingChoice(card.id).chosenId);
+  const mapLink = chosen ? mapSearchUrl(chosen.name, chosen.address) : undefined;
+  return <StopRowLayout step={step} subtitle={describeParkingChoice(chosen)} mapLink={mapLink} isCurrent={isCurrent} onOpen={onOpen} />;
 }
 
 function ShopStopRow({ step, region, isCurrent, onOpen, ...destination }: Omit<StopRowProps, "card"> & RowDestination & { region: ShopRegion }) {

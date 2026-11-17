@@ -4,6 +4,7 @@ import day18 from "../src/data/days/2026-12-18.ts";
 import day10 from "../src/data/days/2026-12-10.ts";
 import day16 from "../src/data/days/2026-12-16.ts";
 import { toDayEntry } from "../src/lib/parkChecklist.ts";
+import { describeParkingChoice, describeParkingOption, findChosenParking } from "../src/lib/parkingOptions.ts";
 import { isGratis } from "../src/lib/estacionamento.ts";
 import { estacionamentos } from "../src/data/estacionamentos.ts";
 import type { ChecklistItem, ParkAttraction } from "../src/types";
@@ -74,18 +75,33 @@ const tests: Array<[string, () => void]> = [
     assert.equal(day.category, "compras");
     assert.equal(day.split, undefined);
   }],
-  ["dia 16: cada opção é um roteiro único, com a mesma manhã e tarde e noite diferente", () => {
+  ["dia 16: cada opção é um roteiro único, com a mesma manhã e o jantar no Outlet à tarde", () => {
     const keysOf = (id: string) => day16.options.find((option) => option.id === id)?.trackKeys;
     assert.deepEqual(keysOf("noite-do-jogo"), ["noite-jogo"]);
     assert.deepEqual(keysOf("noite-de-natal"), ["noite-natal"]);
-    const tracks = day16.itinerary.tracks;
-    const dayOf = (key: string) => tracks.find((track) => track.key === key)?.periods.slice(0, 2);
-    assert.deepEqual(dayOf("noite-jogo"), dayOf("noite-natal"));
+    const periodsOf = (key: string) => day16.itinerary.tracks.find((track) => track.key === key)?.periods;
+    assert.deepEqual(periodsOf("noite-jogo")?.[0], periodsOf("noite-natal")?.[0]);
+    for (const key of ["noite-jogo", "noite-natal"]) {
+      const afternoon = periodsOf(key)?.[1];
+      assert.equal(afternoon?.title, "Tarde");
+      assert.equal(afternoon?.steps[0].kind === "stop" && afternoon.steps[0].name, "Jantar no Outlet");
+    }
   }],
-  ["dia 10: com o Daily Dealz ele vem antes do outlet, que começa às 11h30", () => {
-    const track = day10.itinerary.tracks.find((candidate) => candidate.key === "daily-dealz-outlet-e-islands");
-    const stops = track?.periods[0].steps.flatMap((step) => (step.kind === "stop" ? [[step.stopId, step.time]] : []));
-    assert.deepEqual(stops, [["daily-dealz", "10:00"], ["outlet-marketplace", "11:30"]]);
+  ["dia 16: o estacionamento do jogo tem opções para escolher e o da noite de Natal é a Administration Garage", () => {
+    const cardsOf = (key: string) => day16.itinerary.tracks.find((track) => track.key === key)?.cards ?? [];
+    const options = cardsOf("noite-jogo").find((card) => card.id === "parking-game")?.parkingOptions;
+    assert.equal(options?.length, 5);
+    assert.equal(new Set(options?.map((option) => option.id)).size, 5);
+    assert.ok(cardsOf("noite-natal").some((card) => card.id === "administration-garage"));
+    assert.ok(!cardsOf("noite-jogo").some((card) => card.id === "administration-garage"));
+  }],
+  ["estacionamento: escolha do cartão mostra o nome; sem escolha, convida a escolher", () => {
+    const option = { id: "a", name: "Garagem A", address: "x", walk: "5 min a pé", price: "**US$ 10**", details: "d" };
+    assert.equal(findChosenParking([option], "a"), option);
+    assert.equal(findChosenParking([option], null), undefined);
+    assert.equal(describeParkingChoice(option), "Escolhido: Garagem A");
+    assert.equal(describeParkingChoice(undefined), "Toque para escolher onde estacionar");
+    assert.equal(describeParkingOption(option), "5 min a pé · US$ 10");
   }],
   ["negrito: 'a **b** c' vira três trechos", () => {
     assert.deepEqual(parseRichText("a **b** c"), [

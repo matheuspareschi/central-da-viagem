@@ -60,6 +60,18 @@ export interface ExtraLink {
   icon: "car" | "cart";
 }
 
+/** Uma opção de estacionamento de um cartão de parada: a pessoa abre os detalhes e escolhe onde vai parar. */
+export interface ParkingOption {
+  id: string;
+  name: string;
+  address: string;
+  /** Distância a pé até o destino, ex.: "5 a 7 min a pé". */
+  walk: string;
+  /** Valor esperado, com a condição quando houver. `**` marca negrito. */
+  price: string;
+  details: string;
+}
+
 export interface StopCard {
   id: string;
   name: string;
@@ -76,6 +88,8 @@ export interface StopCard {
   extraLink?: ExtraLink;
   /** Botão extra na folha de detalhe. */
   action?: "groceryList";
+  /** Estacionamentos entre os quais escolher; a escolha fica só no aparelho. */
+  parkingOptions?: ParkingOption[];
   sections: DetailSection[];
 }
 
