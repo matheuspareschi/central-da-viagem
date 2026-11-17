@@ -194,7 +194,7 @@ export default {
         category: "compras",
         title: "Feira e Winter Garden",
         mode: "schedule",
-        summary: "Café da manhã e feira de Winter Garden, Winter Garden Village, almoço em casa, Nike Factory Store e Celebration à noite.",
+        summary: "Feira de Winter Garden de manhã, Winter Garden Village, almoço em casa, Nike Factory Store e Celebration à noite.",
         journey: {
           tiles: [{ label: "Acordar", value: "7h00" }, { label: "Sair de casa", value: "7h30" }],
           notes: [],
@@ -222,7 +222,7 @@ export default {
         mode: "schedule",
         summary: "Direto ao Winter Garden Village, almoço em casa, Nike Factory Store e Celebration à noite.",
         journey: {
-          tiles: [{ label: "Acordar", value: "8h30" }, { label: "Sair de casa", value: "9h25" }], // REVISAR: saída derivada de chegar às 10h com ~30–35 min de carro
+          tiles: [{ label: "Acordar", value: "8h30" }, { label: "Sair de casa", value: "9h25" }],
           notes: [],
           alerts: [],
         },
@@ -245,7 +245,7 @@ export default {
     {
       id: "com-feira",
       label: "Com a feira",
-      supportLine: "Café da manhã e feira · acordar às 7h00", // REVISAR: dados não dizem quem vai
+      supportLine: "Feira de manhã · acordar às 7h00", // REVISAR: dados não dizem quem vai
       trackKeys: ["com-feira"],
       isDefault: true,
     },
