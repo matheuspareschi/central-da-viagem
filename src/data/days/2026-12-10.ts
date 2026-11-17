@@ -74,7 +74,7 @@ const dailyDealzCard: StopCard = {
   address: DAILY_DEALZ_ADDRESS,
   sections: [
     ...dailyDealzAboutSections,
-    { color: "gold", icon: "lightbulb", title: "Horário", paragraphs: ["**Abre às 10h.**"] },
+    { color: "gold", icon: "lightbulb", title: "Horário", paragraphs: ["Abre às **10h**."] },
     {
       color: "attn",
       icon: "alert",

@@ -21,7 +21,7 @@ const morningPeriod: DayPeriod = {
   steps: [
     { kind: "transit", time: "08:00", duration: "~25 min", destinationName: "IHOP (International Dr)" },
     { kind: "stop", time: "08:30", stopId: "ihop-6005-international-dr", name: "Café da manhã no IHOP", icon: "burger" },
-    { kind: "transit", time: "10:00", destinationName: "Orlando International Premium Outlets" }, // REVISAR: tempo de deslocamento do IHOP ao outlet não informado
+    { kind: "transit", time: "10:00", duration: "11 min", destinationName: "Orlando International Premium Outlets" },
     { kind: "stop", time: "10:15", stopId: "outlet-international-premium", name: "Orlando International Premium Outlets", icon: "bag" },
   ],
 };
@@ -30,7 +30,7 @@ const afternoonPeriod: DayPeriod = {
   title: "Tarde",
   steps: [
     { kind: "stop", time: "16:00", stopId: "", name: "Jantar no Outlet", icon: "burger" }, // REVISAR: horário estimado
-    { kind: "transit", time: "17:00", destinationName: "Centro de Orlando" }, // REVISAR: horário estimado
+    { kind: "transit", time: "17:00", destinationName: "Administration Garage (centro de Orlando)" }, // REVISAR: horário estimado
   ],
 };
 
@@ -127,6 +127,32 @@ const dayCards: StopCard[] = [
         },
       ],
     },
+    {
+      id: "administration-garage",
+      address: "300 Liberty Ave, Orlando, FL 32801",
+      name: "Administration Garage",
+      icon: "parking",
+      time: "17:30",
+      sections: [
+        {
+          color: "navy",
+          icon: "parking",
+          title: "Endereço e estacionamento",
+          paragraphs: [
+            "Administration Garage (Administration Center Garage), 300 Liberty Ave, Orlando, FL 32801.",
+            "Fica a cerca de **0,6 milha** do Kia Center (fonte de terceiros), uns 12 minutos a pé, e serve também para o Dr. Phillips Center.",
+          ],
+        },
+        {
+          color: "attn",
+          icon: "alert",
+          title: "Atenção",
+          paragraphs: [
+            "Valor no dia do evento **não confirmado**: a cidade de Orlando vende o estacionamento de eventos pelo site orlando.gov. Conferir antes.",
+          ],
+        },
+      ],
+    },
 ];
 
 const gameCards: StopCard[] = [
@@ -134,7 +160,7 @@ const gameCards: StopCard[] = [
       id: "kia-center",
       name: "Kia Center: Magic x Cavaliers",
       icon: "target",
-      time: "18:30",
+      time: "18:00",
       sections: [
         {
           color: "navy",
@@ -157,7 +183,7 @@ const gameCards: StopCard[] = [
           title: "Dica",
           paragraphs: [
             "Jante antes: comida e bebida de fora **não entram na arena**.",
-            "Chegue com folga para achar os lugares.",
+            "As portas abrem cerca de **1h antes** do horário do ingresso (~18h). Estacionar na Administration Garage **por volta das 17h30** dá tempo de caminhar uns 12 minutos e passar pela segurança.",
           ],
         },
         {
@@ -166,7 +192,7 @@ const gameCards: StopCard[] = [
           title: "Atenção",
           paragraphs: [
             "**Bolsas e recipientes não entram**, exceto pequenas bolsas médicas e de bebê. Leve só uma **clutch pequena** e deixe as sacolas do outlet no carro.",
-            "Horário de abertura das portas **não confirmado**.",
+            "Horário do jogo (19h) e das portas **não confirmados** em fonte oficial: conferir no ingresso.",
             "Fim do jogo estimado entre 21h30 e 22h.",
           ],
         },
@@ -251,7 +277,8 @@ export default {
           {
             title: "Noite",
             steps: [
-              { kind: "stop", time: "18:30", stopId: "kia-center", name: "Entrada na arena", icon: "target" },
+              { kind: "stop", time: "17:30", stopId: "administration-garage", name: "Estacionamento: Administration Garage", icon: "parking" },
+              { kind: "stop", time: "18:00", stopId: "kia-center", name: "Entrada na arena", icon: "target" },
               { kind: "stop", time: "19:00", stopId: "kia-center", name: "Início do jogo: Magic x Cavaliers", icon: "target" },
               { kind: "transit", time: "22:00", destinationName: "Storey Lake Resort (volta)" },
             ],
@@ -277,7 +304,8 @@ export default {
           {
             title: "Noite",
             steps: [
-              { kind: "stop", time: "17:30", stopId: "dr-phillips-center", name: "Frontyard Holiday Festival", icon: "tree" },
+              { kind: "stop", time: "17:30", stopId: "administration-garage", name: "Estacionamento: Administration Garage", icon: "parking" },
+              { kind: "stop", time: "17:45", stopId: "dr-phillips-center", name: "Frontyard Holiday Festival", icon: "tree" },
               { kind: "transit", time: "22:00", destinationName: "Storey Lake Resort (volta)" },
             ],
           },
