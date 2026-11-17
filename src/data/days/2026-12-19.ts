@@ -180,7 +180,7 @@ export default {
   weekday: "Sáb",
   liturgicalWeekday: "4ª sem. do Advento",
   category: "compras",
-  title: "Winter Garden",
+  title: "Feira, Winter Garden, Celebration",
   reading: {
     label: "4ª sem. do Advento",
     oldTestamentReading: "Juízes 13:2–24",
@@ -192,7 +192,7 @@ export default {
       {
         key: "com-feira",
         category: "compras",
-        title: "Feira e Winter Garden",
+        title: "Feira, Winter Garden, Celebration",
         mode: "schedule",
         summary: "Feira de Winter Garden de manhã, Winter Garden Village, almoço em casa, Nike Factory Store e Celebration à noite.",
         journey: {
@@ -218,7 +218,7 @@ export default {
       {
         key: "sem-feira",
         category: "compras",
-        title: "Winter Garden",
+        title: "Winter Garden, Celebration",
         mode: "schedule",
         summary: "Direto ao Winter Garden Village, almoço em casa, Nike Factory Store e Celebration à noite.",
         journey: {
