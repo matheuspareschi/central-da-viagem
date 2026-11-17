@@ -1,5 +1,13 @@
 import type { DayData } from "../../types";
 
+const ADDRESSES = {
+  lakeBuenaVista: "15657 S Apopka Vineland Rd, Orlando, FL 32821",
+  wonderWorks: "9067 International Dr, Orlando, FL 32819",
+  lakeEola: "195 N Rosalind Ave, Orlando, FL 32801",
+  oldTown: "5770 W Irlo Bronson Memorial Hwy, Kissimmee, FL 34746",
+  disneySprings: "1486 E Buena Vista Dr, Lake Buena Vista, FL 32830",
+};
+
 export default {
   dateISO: "2026-12-12",
   calendarTitle: "Compras em Lake Buena Vista e passeios pela cidade",
@@ -7,7 +15,7 @@ export default {
   weekday: "Sáb",
   liturgicalWeekday: "3ª sem. do Advento",
   category: "turismo",
-  title: "Lake Buena Vista, CityWalk, WonderWorks/ICON Park e Lake Eola",
+  title: "Lake Buena Vista, WonderWorks, Lake Eola, Old Town e Disney Springs",
   reading: {
     label: "3ª sem. do Advento",
     oldTestamentReading: "Habacuque 3:13–19",
@@ -15,25 +23,23 @@ export default {
   },
   itinerary: {
     kind: "schedule",
-    // REVISAR (notes): O texto original diz "Dia 13 é Saint Augustine", mas Saint Augustine é o dia 14 (o dia 13 é Universal Studios).
     summary: "Grupo em carros, saindo e voltando do Storey Lake Resort.",
     journey: {
       tiles: [
         { label: "Acordar", value: "8h40" },
         { label: "Sair de casa", value: "9h45" },
+        { label: "Paradas", value: "5" },
+        { label: "Deslocamento", value: "~2h25 no total" },
       ],
       notes: [
-        { icon: "car", text: "De carro: ~10 min até a primeira parada." },
-        { icon: "info", text: "A parada no Disney Springs à noite é **opcional** (nem todos estão comprometidos)." }, // REVISAR: trocado de CityWalk
-        { icon: "info", text: "Dia 13 é Saint Augustine com saída cedo." },
-        { icon: "info", text: "Doceria Melt'n Dip Crepe & Gelato: informação de que está **fechada**; não incluída no roteiro." },
+        { icon: "info", text: "Sugestão: levar **petiscos** na bolsa para beliscar nos parques (Lake Eola e Old Town)." },
+        { icon: "return", text: "Sugestão: dá para **almoçar em casa**, já que o outlet fica a ~10 min, antes de seguir para os passeios." },
       ],
       alerts: [],
     },
     periods: [
       {
         title: "Manhã",
-        note: "Bloco longo de compras no outlet.",
         steps: [
           { kind: "transit", time: "09:45", duration: "10 min", destinationName: "Lake Buena Vista Factory Stores" },
           { kind: "stop", time: "10:00", stopId: "lake-buena-vista-factory-stores", name: "Lake Buena Vista Factory Stores", icon: "bag" },
@@ -42,18 +48,20 @@ export default {
       {
         title: "Tarde",
         steps: [
-          { kind: "transit", time: "14:30", duration: "20 min", destinationName: "WonderWorks e ICON Park" },
-          { kind: "stop", time: "15:00", stopId: "wonderworks-icon-park", name: "WonderWorks (casa torta) e ICON Park", icon: "camera" },
-          { kind: "transit", time: "16:00", duration: "25–30 min", destinationName: "Lake Eola Park" }, // REVISAR: sem a doceria (45 min), horários seguintes 45 min antes
+          { kind: "transit", time: "14:30", duration: "20 min", destinationName: "WonderWorks (casa torta)" },
+          { kind: "stop", time: "15:00", stopId: "wonderworks", name: "WonderWorks (casa torta)", icon: "camera" },
+          { kind: "transit", time: "16:00", duration: "25–30 min", destinationName: "Lake Eola Park" },
           { kind: "stop", time: "16:45", stopId: "lake-eola", name: "Lake Eola: decoração, mercado e show da árvore", icon: "tree" },
         ],
       },
       {
         title: "Noite",
         steps: [
-          { kind: "transit", time: "18:45", duration: "20–25 min", destinationName: "Disney Springs" }, // REVISAR: 45 min antes
-          { kind: "stop", time: "19:15", stopId: "disney-springs", name: "Disney Springs (conhecer o lugar, ver lojas diferentes)", icon: "target" }, // REVISAR
-          { kind: "transit", time: "20:45", duration: "25–30 min", destinationName: "Storey Lake Resort" }, // REVISAR
+          { kind: "transit", time: "19:00", duration: "~35 min", destinationName: "Old Town Kissimmee" },
+          { kind: "stop", time: "19:45", stopId: "old-town-kissimmee", name: "Old Town Kissimmee", icon: "camera" },
+          { kind: "transit", time: "20:30", duration: "~25 min", destinationName: "Disney Springs" },
+          { kind: "stop", time: "21:00", stopId: "disney-springs", name: "Disney Springs (conhecer o lugar, ver lojas diferentes)", icon: "target" },
+          { kind: "transit", time: "22:00", duration: "25–30 min", destinationName: "Storey Lake Resort" },
         ],
       },
     ],
@@ -61,6 +69,7 @@ export default {
       {
         id: "lake-buena-vista-factory-stores",
         name: "Lake Buena Vista Factory Stores",
+        address: ADDRESSES.lakeBuenaVista,
         icon: "bag",
         time: "10:00",
         shopRegionId: "lake-buena-vista-factory-stores",
@@ -105,18 +114,17 @@ export default {
         ],
       },
       {
-        id: "wonderworks-icon-park",
-        name: "WonderWorks (casa torta) e ICON Park",
+        id: "wonderworks",
+        name: "WonderWorks (casa torta)",
+        address: ADDRESSES.wonderWorks,
         icon: "camera",
         time: "15:00",
         sections: [
           {
             color: "navy",
             icon: "parking",
-            title: "Endereços",
-            paragraphs: [
-              "WonderWorks: 9067 International Dr, Orlando, FL 32819 (Pointe Orlando). ICON Park: 8375 International Dr, Orlando, FL 32819. Fica a uma **curta caminhada** entre os dois.",
-            ],
+            title: "Endereço",
+            paragraphs: ["9067 International Dr, Orlando, FL 32819 (Pointe Orlando)."],
           },
           {
             color: "gold",
@@ -129,22 +137,21 @@ export default {
             icon: "camera",
             title: "Sobre",
             paragraphs: [
-              "A foto da casa de cabeça para baixo é na fachada do WonderWorks e dá para fazer sem entrar. No ICON Park circular é **grátis**, e a The Wheel já aparece iluminada ao entardecer. Subir na roda é opcional e pago.",
+              "A foto da casa de cabeça para baixo é na fachada do WonderWorks e dá para fazer sem entrar.",
             ],
           },
           {
             color: "attn",
             icon: "alert",
             title: "Atenção",
-            paragraphs: [
-              "Estacionamento no Pointe Orlando e no ICON Park **é pago**. **Confirme o valor** no dia.",
-            ],
+            paragraphs: ["Estacionamento no Pointe Orlando **é pago**. **Confirme o valor** no dia."],
           },
         ],
       },
       {
         id: "lake-eola",
         name: "Lake Eola Park",
+        address: ADDRESSES.lakeEola,
         icon: "tree",
         time: "16:45",
         sections: [
@@ -183,10 +190,36 @@ export default {
         ],
       },
       {
+        id: "old-town-kissimmee",
+        name: "Old Town Kissimmee",
+        address: ADDRESSES.oldTown,
+        icon: "camera",
+        time: "19:45",
+        sections: [
+          {
+            color: "navy",
+            icon: "parking",
+            title: "Endereço e Estacionamento",
+            paragraphs: [
+              "5770 W Irlo Bronson Memorial Hwy, Kissimmee, FL 34746. Entrada e estacionamento no local: **grátis**.",
+            ],
+          },
+          {
+            color: "citrus",
+            icon: "bag",
+            title: "Sobre",
+            paragraphs: [
+              "Complexo a céu aberto com mais de 70 lojas e restaurantes independentes e roda-gigante. Aberto diariamente, **das 11h às 23h**. Brinquedos e atrações são pagos à parte.",
+            ],
+          },
+        ],
+      },
+      {
         id: "disney-springs",
         name: "Disney Springs",
+        address: ADDRESSES.disneySprings,
         icon: "target",
-        time: "19:15",
+        time: "21:00",
         sections: [
           {
             color: "navy",
