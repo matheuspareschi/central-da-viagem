@@ -61,12 +61,6 @@ export default {
                 paragraphs: ["Tiana na Adventureland."],
               },
               {
-                color: "navy",
-                icon: "parking",
-                title: "Endereço",
-                paragraphs: ["Frontierland, Magic Kingdom. Área 2 do roteiro."],
-              },
-              {
                 color: "gold",
                 icon: "lightbulb",
                 title: "Tipo",
@@ -94,12 +88,6 @@ export default {
                 paragraphs: ["Local ideal deste pavilhão: em frente à Big Thunder, quando o carrinho estiver passando.", "Ao sair, analisar se queremos um sorvete da Dole."],
               },
               {
-                color: "navy",
-                icon: "parking",
-                title: "Endereço",
-                paragraphs: ["Frontierland, Magic Kingdom."],
-              },
-              {
                 color: "gold",
                 icon: "lightbulb",
                 title: "Tipo",
@@ -119,12 +107,6 @@ export default {
                 icon: "target",
                 title: "Roteiro",
                 paragraphs: ["Atração."],
-              },
-              {
-                color: "navy",
-                icon: "parking",
-                title: "Endereço",
-                paragraphs: ["Adventureland, Magic Kingdom. Área 3 do roteiro."],
               },
               {
                 color: "gold",
@@ -152,12 +134,6 @@ export default {
                 title: "Foto",
                 paragraphs: ["Tirar foto na Liberty Tree."],
               },
-              {
-                color: "navy",
-                icon: "parking",
-                title: "Endereço",
-                paragraphs: ["Liberty Square, Magic Kingdom. Área 4 do roteiro."],
-              },
             ],
           },
           {
@@ -172,12 +148,6 @@ export default {
                 icon: "camera",
                 title: "Foto",
                 paragraphs: ["Tirar foto no Hall of Presidents."],
-              },
-              {
-                color: "navy",
-                icon: "parking",
-                title: "Endereço",
-                paragraphs: ["Liberty Square, Magic Kingdom. Área 4 do roteiro."],
               },
             ],
           },
@@ -206,12 +176,6 @@ export default {
                 icon: "camera",
                 title: "Foto",
                 paragraphs: ["Na Liberty Square, tirar fotos com personagens."],
-              },
-              {
-                color: "navy",
-                icon: "parking",
-                title: "Endereço",
-                paragraphs: ["Liberty Square, Magic Kingdom."],
               },
             ],
           },
@@ -263,12 +227,6 @@ export default {
                 paragraphs: ["Atração."],
               },
               {
-                color: "navy",
-                icon: "parking",
-                title: "Endereço",
-                paragraphs: ["Tomorrowland, Magic Kingdom. Área 5 do roteiro."],
-              },
-              {
                 color: "gold",
                 icon: "lightbulb",
                 title: "Tipo",
@@ -294,12 +252,6 @@ export default {
                 icon: "target",
                 title: "Roteiro",
                 paragraphs: ["Ao sair da Tron. As pessoas estarão vendo a parada, por isso fica vazia."],
-              },
-              {
-                color: "navy",
-                icon: "parking",
-                title: "Endereço",
-                paragraphs: ["Tomorrowland, Magic Kingdom."],
               },
               {
                 color: "gold",
@@ -328,12 +280,6 @@ export default {
                 title: "Roteiro",
                 paragraphs: ["Atração atualizada."],
               },
-              {
-                color: "navy",
-                icon: "parking",
-                title: "Endereço",
-                paragraphs: ["Tomorrowland, Magic Kingdom."],
-              },
             ],
           },
           {
@@ -348,12 +294,6 @@ export default {
                 icon: "target",
                 title: "Roteiro",
                 paragraphs: ["Atração."],
-              },
-              {
-                color: "navy",
-                icon: "parking",
-                title: "Endereço",
-                paragraphs: ["Fantasyland, Magic Kingdom. Área 6 do roteiro."],
               },
               {
                 color: "gold",
@@ -380,12 +320,6 @@ export default {
                 icon: "camera",
                 title: "Foto",
                 paragraphs: ["Aproveitar para tirar fotos com as princesas da Disney."],
-              },
-              {
-                color: "navy",
-                icon: "parking",
-                title: "Endereço",
-                paragraphs: ["Fantasyland / Cinderella Castle, Magic Kingdom."],
               },
             ],
           },
@@ -533,7 +467,6 @@ export default {
             time: "09:50",
             shopRegionId: "outlet-marketplace",
             sections: [
-              { color: "navy", icon: "parking", title: "Endereço", paragraphs: [ADDRESSES.outletMarketplace] },
               { color: "citrus", icon: "bag", title: "Lojas", paragraphs: ["Outlet/clearance de moda esportiva e casual — foco do grupo: **Adidas, Puma e New Balance**."] },
               { color: "gold", icon: "lightbulb", title: "Horário", paragraphs: ["**Abre 10h** (Seg–Sáb). Chegando 9h50 é preciso **aguardar ~10 min** a abertura — vale a pena para garantir vaga perto da entrada. **Ir direto às três marcas-alvo** antes de circular pelo resto do outlet."] },
               { color: "palm", icon: "target", title: "Dica de desconto", paragraphs: ["Centro de 40 lojas com descontos de **25%** a **65%**. Fica a dois quarteirões do Orlando International Premium Outlets, dá pra esticar até lá se sobrar tempo."] },
@@ -569,7 +502,6 @@ export default {
             icon: "burger",
             time: "12:20",
             sections: [
-              { color: "navy", icon: "parking", title: "Endereço", paragraphs: ["Mills 50 District (Mills Ave & Colonial Dr / SR 50), Orlando, FL."] },
               { color: "citrus", icon: "burger", title: "Sobre", paragraphs: ["**Cozinha cubana, prato feito**. Mills 50 tem a maior concentração de restaurantes do Guia Michelin e murais de Orlando."] },
               { color: "gold", icon: "lightbulb", title: "Dica", paragraphs: ["Prato feito em torno de **US$ 10–13/pessoa**. Dá para uma espiada rápida na arte de rua saindo do almoço, sem custo extra."] },
             ],
@@ -614,7 +546,6 @@ export default {
             icon: "leaf",
             time: "15:40",
             sections: [
-              { color: "navy", icon: "parking", title: "Endereço", paragraphs: [ADDRESSES.kraftAzalea] },
               { color: "citrus", icon: "target", title: "Sobre", paragraphs: ["Jardim \"secreto\" de 5,22 acres à beira do Lake Maitland, com ciprestes cobertos de barba-de-velho e o **monumento Exedra**."] },
               { color: "gold", icon: "lightbulb", title: "Dica", paragraphs: ["**Grátis**. Horário **8h ao anoitecer**. Parada rápida (30 min) — ambiente tranquilo, pouco turístico."] },
               { color: "attn", icon: "alert", title: "Atenção", paragraphs: ["Uma fonte lista fechamento às 19h — **confirmar no local**."] },
@@ -646,8 +577,6 @@ export default {
             icon: "target",
             time: "16:15",
             sections: [
-              // REVISAR: o Thiago não deu o endereço; conferir.
-              { color: "navy", icon: "parking", title: "Endereço", paragraphs: [ADDRESSES.rollinsCollege] },
               { color: "citrus", icon: "target", title: "Sobre", paragraphs: ["Um dos **campi mais bonitos dos EUA**, com arquitetura de inspiração mediterrânea espanhola à beira do Lago Virginia."] },
               {
                 color: "palm",
@@ -679,7 +608,6 @@ export default {
             icon: "target",
             time: "17:55",
             sections: [
-              { color: "navy", icon: "parking", title: "Endereço", paragraphs: [ADDRESSES.parkAvenue] },
               // REVISAR: tirei "e o campus da Rollins College por fora", que agora é uma parada própria.
               { color: "citrus", icon: "target", title: "Sobre", paragraphs: ["A rua mais charmosa de Winter Park — vitrines e cafés."] },
               { color: "gold", icon: "lightbulb", title: "Dica", paragraphs: ["**Grátis**, caminhada livre. Ótimo para esticar as pernas entre os dois jardins."] },
@@ -713,7 +641,6 @@ export default {
             icon: "bag",
             time: "18:55",
             sections: [
-              { color: "navy", icon: "parking", title: "Endereço", paragraphs: [ADDRESSES.traderJoes] },
               { color: "citrus", icon: "bag", title: "Lojas", paragraphs: ["Trader Joe's (Dr. Phillips)."] },
               // REVISAR (dica a definir): o Thiago não informou dica nem curiosidade.
               { color: "citrus", icon: "bag", title: "Sobre", paragraphs: ["Conhecida por oferecer alimentos exclusivos a preços acessíveis em um ambiente descontraído. Fundada em 1967 na Califórnia, a empresa se destaca por vender principalmente **produtos de marca própria** e por ter uma equipe de atendimento bastante amigável."] },
@@ -726,7 +653,6 @@ export default {
             icon: "bag",
             time: "19:45",
             sections: [
-              { color: "navy", icon: "parking", title: "Endereço", paragraphs: [ADDRESSES.tjMaxx] },
               { color: "citrus", icon: "bag", title: "Lojas", paragraphs: ["TJ Maxx (moda e casa, preço de desconto)."] },
               // REVISAR: tirei a distância até o Walmart de Turkey Lake, que saiu desta trilha.
               { color: "gold", icon: "lightbulb", title: "Dica", paragraphs: ["Fica no **mesmo trecho de International Drive** do Outlet Marketplace da manhã, já no sentido de volta para Kissimmee."] },

@@ -45,12 +45,6 @@ export default {
             paragraphs: ["SpaceShip Earth - A Bola."],
           },
           {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: ["World Celebration, Epcot (entrada principal)."],
-          },
-          {
             color: "gold",
             icon: "lightbulb",
             title: "Tipo",
@@ -60,7 +54,7 @@ export default {
             color: "citrus",
             icon: "target",
             title: "Como aproveitar melhor",
-            paragraphs: ["Primeira atração do dia. Sentar do **lado direito do veículo** para ver melhor as cenas."],
+            paragraphs: ["Primeira atração do dia. Sentar do **lado direito do veículo** para ver melhor as cenas.", "Não esquecer de tirar **fotos com a bola ao fundo**. Fazer logo depois de sair da Spaceship Earth, **antes do meio-dia** — ponto tradicional de foto em grupo, com a esfera geodésica ao fundo."],
           },
           {
             color: "palm",
@@ -73,12 +67,6 @@ export default {
             icon: "tree",
             title: "Destaques do pavilhão",
             list: ["World Celebration reúne também o encontro com **Mickey and Friends** e o **Dreamers Point** (fotos com a bola ao fundo)."],
-          },
-          {
-            color: "citrus",
-            icon: "target",
-            title: "Como aproveitar melhor",
-            paragraphs: ["Não esquecer de tirar **fotos com a bola ao fundo**. Fazer logo depois de sair da Spaceship Earth, **antes do meio-dia** — ponto tradicional de foto em grupo, com a esfera geodésica ao fundo."],
           },
         ],
       },
@@ -93,12 +81,6 @@ export default {
             icon: "camera",
             title: "Foto",
             paragraphs: ["Fotos com personagens. Não esquecer de tirar fotos com a bola de fundo."],
-          },
-          {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: ["World Celebration, Epcot."],
           },
           {
             color: "citrus",
@@ -128,12 +110,6 @@ export default {
             paragraphs: ["Asa delta, temática EUA 250 anos. Momento para comer com calma."],
           },
           {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: ["World Nature, Epcot."],
-          },
-          {
             color: "citrus",
             icon: "target",
             title: "Como aproveitar melhor",
@@ -158,12 +134,6 @@ export default {
             icon: "bag",
             title: "Roteiro",
             paragraphs: ["Ir na lojinha da Coca-Cola, Cool Club."],
-          },
-          {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: ["World Nature, Epcot — próxima ao pavilhão The Land."],
           },
           {
             color: "gold",
@@ -193,12 +163,6 @@ export default {
             paragraphs: ["Aproveitar o tempo e tirar fotos na área da Moana."],
           },
           {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: ["World Nature, Epcot — próxima ao pavilhão The Land / Journey of Water."],
-          },
-          {
             color: "citrus",
             icon: "target",
             title: "Como aproveitar melhor",
@@ -218,12 +182,6 @@ export default {
             icon: "target",
             title: "Roteiro",
             paragraphs: ["Ir no último carrinho."],
-          },
-          {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: ["World Discovery, Epcot."],
           },
           {
             color: "gold",
@@ -265,12 +223,6 @@ export default {
             paragraphs: ["Mais forte (laranja), simulador de espaço."],
           },
           {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: ["World Discovery, Epcot."],
-          },
-          {
             color: "gold",
             icon: "lightbulb",
             title: "Tipo",
@@ -308,12 +260,6 @@ export default {
             icon: "target",
             title: "Roteiro",
             paragraphs: ["Carros da GM."],
-          },
-          {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: ["World Discovery, Epcot."],
           },
           {
             color: "gold",
@@ -355,12 +301,6 @@ export default {
             paragraphs: ["Sem atração interessante."],
           },
           {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: ["World Showcase, Epcot."],
-          },
-          {
             color: "gold",
             icon: "lightbulb",
             title: "Tipo",
@@ -385,12 +325,6 @@ export default {
             icon: "bag",
             title: "Roteiro",
             paragraphs: ["Conhecer o pub; ver a lojinha Queen's Table; podemos encontrar a Alice de País das Maravilhas."],
-          },
-          {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: ["World Showcase, Epcot."],
           },
           {
             color: "gold",
@@ -426,12 +360,6 @@ export default {
             paragraphs: ["Ratatouille, imperdível. Procurar Bela e a Fera."],
           },
           {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: ["World Showcase, Epcot."],
-          },
-          {
             color: "gold",
             icon: "lightbulb",
             title: "Tipo",
@@ -464,12 +392,6 @@ export default {
             paragraphs: ["Cenografia perfeita; aproveitar para tirar fotos. Ver se não encontramos a Jasmine."],
           },
           {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: ["World Showcase, Epcot."],
-          },
-          {
             color: "citrus",
             icon: "target",
             title: "Como aproveitar melhor",
@@ -494,12 +416,6 @@ export default {
             icon: "camera",
             title: "Foto",
             paragraphs: ["Acompanhar o Pick a Pearl. Portal para tirar foto de frente para o lago. Tempo de descanso em frente ao portal."],
-          },
-          {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: ["World Showcase, Epcot."],
           },
           {
             color: "gold",
@@ -534,12 +450,6 @@ export default {
             paragraphs: ["História do país."],
           },
           {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: ["World Showcase, Epcot."],
-          },
-          {
             color: "gold",
             icon: "lightbulb",
             title: "Tipo",
@@ -558,12 +468,6 @@ export default {
             icon: "bag",
             title: "Roteiro",
             paragraphs: ["Bom lugar para comprar perfumes; wine bar. Voltar aqui para assistir os fogos."],
-          },
-          {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: ["World Showcase, Epcot."],
           },
           {
             color: "gold",
@@ -598,12 +502,6 @@ export default {
             paragraphs: ["Pub alemão. Ficar de olho: Branca de Neve."],
           },
           {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: ["World Showcase, Epcot."],
-          },
-          {
             color: "gold",
             icon: "lightbulb",
             title: "Tipo",
@@ -629,12 +527,6 @@ export default {
             icon: "target",
             title: "Roteiro",
             paragraphs: ["Ir apenas se estivermos com tempo. Ficar de olho se a Mulan não está lá."],
-          },
-          {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: ["World Showcase, Epcot."],
           },
           {
             color: "gold",
@@ -670,12 +562,6 @@ export default {
             paragraphs: ["Frozen! Fazer se der tempo. Encontro com Elsa e Anna. Fecha às 18h30."],
           },
           {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: ["World Showcase, Epcot."],
-          },
-          {
             color: "gold",
             icon: "lightbulb",
             title: "Tipo",
@@ -701,12 +587,6 @@ export default {
             icon: "target",
             title: "Roteiro",
             paragraphs: ["Atração com Zé Carioca."],
-          },
-          {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: ["World Showcase, Epcot."],
           },
           {
             color: "gold",

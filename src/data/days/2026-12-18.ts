@@ -70,7 +70,6 @@ const islandsAttractions: ChecklistItem[] = [
             icon: "target",
             sections: [
               { color: "gold", icon: "lightbulb", title: "Horário sugerido", paragraphs: ["Por volta das 17h45."] },
-              { color: "navy", icon: "house", title: "Endereço", paragraphs: ["Estação de Hogsmeade (Islands of Adventure) ↔ King's Cross, Beco Diagonal (Universal Studios)."] },
               { color: "citrus", icon: "leaf", title: "Sobre", paragraphs: ["Trem com cabines **fechadas** e projeção da janela, menos de 10 min por trecho. A história muda conforme o sentido, então ida e volta valem a pena. Exige ingresso park-to-park."] },
               { color: "attn", icon: "alert", title: "Atenção", paragraphs: ["Fila costuma ser de 15–30 min ou mais. Se passar de ~40 min **às 17h45**, adiar ou fazer só a ida. Já fechou para manutenção: se estiver fora, dá para ir a pé pelo CityWalk (~15–20 min)."] },
             ],

@@ -107,12 +107,6 @@ export default {
             paragraphs: ["Atração 3. Fazer se tiver menos de 1h de fila."],
           },
           {
-            color: "navy",
-            icon: "house",
-            title: "Endereço",
-            paragraphs: ["The Wizarding World of Harry Potter – Hogsmeade, Islands of Adventure."],
-          },
-          {
             color: "citrus",
             icon: "leaf",
             title: "Sobre",

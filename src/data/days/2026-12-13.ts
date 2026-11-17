@@ -101,10 +101,8 @@ export default {
         icon: "bag",
         sections: [
           { color: "citrus", icon: "bag", title: "Roteiro", paragraphs: ["Ver o show do Ollivanders."] },
-          { color: "navy", icon: "house", title: "Endereço", paragraphs: ["Beco Diagonal, Universal Studios Florida."] },
           { color: "citrus", icon: "bag", title: "Sobre", paragraphs: ["Teatrinho interativo de ~10 min em que a varinha escolhe o bruxo, com saída pela loja. Varinhas custavam de **US$65** a **US$85** em 2025. As varinhas interativas funcionam em todo o Beco Diagonal e em Hogsmeade."] },
-          { color: "gold", icon: "lightbulb", title: "Dica", paragraphs: ["**À noite a fila é menor** e as chances de ser escolhido aumentam; **grupo só de adultos** tem mais chance. Decida antes se alguém vai comprar varinha."] },
-          { color: "gold", icon: "lightbulb", title: "Dica", paragraphs: ["**Não compre varinha agora**: a loja lota. A escolha da varinha é melhor à noite (**Ollivanders, 19:00**). Decoração de Natal do Universal Holidays no Beco Diagonal."] },
+          { color: "gold", icon: "lightbulb", title: "Dica", paragraphs: ["**À noite a fila é menor** e as chances de ser escolhido aumentam; **grupo só de adultos** tem mais chance. Decida antes se alguém vai comprar varinha.", "**Não compre varinha agora**: a loja lota. A escolha da varinha é melhor à noite (**Ollivanders, 19:00**). Decoração de Natal do Universal Holidays no Beco Diagonal."] },
         ],
       },
       {
@@ -124,7 +122,6 @@ export default {
         icon: "target",
         sections: [
           { color: "citrus", icon: "target", title: "Roteiro", paragraphs: ["Gringotts."] },
-          { color: "navy", icon: "house", title: "Endereço", paragraphs: ["Beco Diagonal / Londres, Universal Studios Florida."] },
           { color: "citrus", icon: "target", title: "Sobre", paragraphs: ["Montanha-russa indoor com simulador 3D dentro do banco de Gringotts (adrenalina 3/5). A fila passa pelo saguão de mármore com duendes trabalhando. O **dragão de 18 m** cospe fogo real a cada 10–15 min."] },
           { color: "gold", icon: "lightbulb", title: "Dica", list: ["A fila varia muito: ~29 min às 10h, **~83 min às 15h–16h** e ~35 min depois das 19h.", "Guardar a bolsa no armário (os pequenos são **grátis** durante a fila e o brinquedo).", "Tem **single rider**: pergunte ao funcionário se compensa."] },
           { color: "attn", icon: "alert", title: "Atenção", paragraphs: ["Se estiver parado ou com mais de 60 min na abertura, vá primeiro à Mummy e volte ao Gringotts **às 12h** ou **depois das 19h30**."] },
@@ -138,7 +135,6 @@ export default {
         icon: "target",
         sections: [
           { color: "citrus", icon: "target", title: "Roteiro", paragraphs: ["Men in Black."] },
-          { color: "navy", icon: "house", title: "Endereço", paragraphs: ["Área World Expo, Universal Studios Florida."] },
           { color: "citrus", icon: "target", title: "Sobre", paragraphs: ["Dark ride de tiro com placar, com mais de 120 tipos de alienígenas. Fila de ~22 min à tarde; tem **single rider**."] },
           { color: "attn", icon: "alert", title: "Atenção", paragraphs: ["Os carrinhos giram bastante: **quem enjoa com facilidade** deve ter cuidado."] },
         ],
@@ -173,7 +169,6 @@ export default {
         icon: "target",
         sections: [
           { color: "gold", icon: "lightbulb", title: "Atenção", paragraphs: ["Tem horários para acontecer. Confirmar no app."] },
-          { color: "navy", icon: "house", title: "Endereço", paragraphs: ["Área Hollywood, Universal Studios Florida."] },
           { color: "citrus", icon: "target", title: "Sobre", paragraphs: ["Espetáculo de dublês com telão LED côncavo e palco giratório (**~30 min**), sentado e com **ar-condicionado**. Considerado o que mais surpreende no parque."] },
           { color: "gold", icon: "lightbulb", title: "Dica", paragraphs: ["Escolher a sessão no app e **chegar 15 min antes**. Depois, E.T. Adventure (opcional, fila de ~28 min)."] },
         ],
@@ -186,7 +181,6 @@ export default {
         icon: "target",
         sections: [
           { color: "citrus", icon: "target", title: "Roteiro", paragraphs: ["Revenge of the Mummy."] },
-          { color: "navy", icon: "house", title: "Endereço", paragraphs: ["Área New York, Universal Studios Florida."] },
           { color: "citrus", icon: "target", title: "Sobre", paragraphs: ["Montanha-russa indoor no escuro (**~70 km/h**), ambientada em 1926, que vai e volta nos trilhos. Adrenalina 3/5."] },
           { color: "gold", icon: "lightbulb", title: "Dica", list: ["Fila fica em torno de **44 min o dia todo**: não adianta esperar.", "Armário **obrigatório**; tem single rider.", "Se bater fome **antes das 13h**, lanche rápido no Louie's Italian e deixe o almoço para as 15h30.", "Se passar show de rua (Blues Brothers, Beat Builders, Vamos! Báilalo), **pare 10 min**: não tem fila."] },
         ],
