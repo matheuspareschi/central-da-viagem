@@ -52,16 +52,6 @@ export default {
         ],
       },
       {
-        id: "san-francisco-fast-furious",
-        attractionId: "fast-and-furious-supercharged",
-        name: "Velozes e Furiosos",
-        area: "San Francisco",
-        icon: "target",
-        sections: [
-          { color: "citrus", icon: "target", title: "Sobre", paragraphs: ["Não é tão legal assim, mas sempre vale a pena."] },
-        ],
-      },
-      {
         id: "diagon-knight-bus",
         name: "Knight Bus",
         area: "Diagon Alley",
@@ -150,6 +140,16 @@ export default {
         ],
       },
       {
+        id: "dreamworks-shrek-po",
+        attractionId: "shreks-swamp-and-pos-kung-fu-camp",
+        name: "Casa do Shrek e Dojo do Po",
+        area: "DreamWorks",
+        icon: "camera",
+        sections: [
+          { color: "palm", icon: "camera", title: "Foto", paragraphs: ["Tirar fotos na casa do Shrek e no Dojo do Po, na área da DreamWorks."] },
+        ],
+      },
+      {
         id: "dreamworks-et",
         attractionId: "e-t-adventure",
         name: "E.T.",
@@ -191,16 +191,6 @@ export default {
         icon: "target",
         sections: [
           { color: "citrus", icon: "target", title: "Roteiro", paragraphs: ["Race Through New York Starring Jimmy Fallon."] },
-        ],
-      },
-      {
-        id: "dreamworks-fast-furious",
-        attractionId: "fast-and-furious-supercharged",
-        name: "Velozes e Furiosos",
-        area: "DreamWorks",
-        icon: "target",
-        sections: [
-          { color: "citrus", icon: "target", title: "Roteiro", paragraphs: ["Velozes e Furiosos."] },
         ],
       },
       {
