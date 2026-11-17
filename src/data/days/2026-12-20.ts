@@ -15,6 +15,7 @@ export default {
   },
   itinerary: {
     kind: "schedule",
+    parkId: "universal-studios-florida",
     summary: "Dia de compras em ordem de proximidade: Vineland (manhã), Walmart (mais perto do Vineland), Super Target Millenia (mais longe) e Universal Studios Florida à noite.",
     journey: {
       tiles: [],

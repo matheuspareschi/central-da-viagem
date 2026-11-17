@@ -3,6 +3,8 @@ import { allTollSteps, tollStages } from "../src/data/pedagio.ts";
 import day18 from "../src/data/days/2026-12-18.ts";
 import day16 from "../src/data/days/2026-12-16.ts";
 import { toDayEntry } from "../src/lib/parkChecklist.ts";
+import { formatCheckedDate, isGratis } from "../src/lib/estacionamento.ts";
+import { estacionamentos } from "../src/data/estacionamentos.ts";
 import type { ChecklistItem, ParkAttraction } from "../src/types";
 import { boldShare, hasUnclosedBoldMark, parseRichText } from "../src/lib/richText.ts";
 import { applyOption, findOption, optionQuestion } from "../src/lib/dayOption.ts";
@@ -109,6 +111,19 @@ const tests: Array<[string, () => void]> = [
     const entry = toDayEntry(item(), [], areas);
     assert.equal(entry.subtitle, undefined);
     assert.deepEqual(entry.sections, []);
+  }],
+  ["estacionamento: grátis em verde, mas não quando negado", () => {
+    assert.equal(isGratis("padrão grátis"), true);
+    assert.equal(isGratis("**grátis** (autoestacionamento)"), true);
+    assert.equal(isGratis("**não é grátis** no Epic"), false);
+    assert.equal(isGratis("**US$ 35**/dia"), false);
+  }],
+  ["estacionamento: data de conferência em dd/mm/aaaa", () => assert.equal(formatCheckedDate("2026-11-17"), "17/11/2026")],
+  ["estacionamento: todos os parques têm id igual à chave e a data é ISO", () => {
+    for (const [key, parking] of Object.entries(estacionamentos)) {
+      assert.equal(parking.id, key);
+      assert.match(parking.conferidoEm, /^\d{4}-\d{2}-\d{2}$/);
+    }
   }],
   ["nenhum resultado vira NaN", () => {
     const result = calcularPreco({ preco: 0, d1: 100, d2: 100, imposto: 100 });

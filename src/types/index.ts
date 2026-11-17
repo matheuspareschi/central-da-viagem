@@ -125,6 +125,28 @@ export interface JourneyGuide {
   items: JourneyGuideItem[];
 }
 
+/** Uma linha de preço do estacionamento; `**` marca negrito, como nos outros textos dos dados. */
+export interface ValorEstacionamento {
+  rotulo: string;
+  valor: string;
+}
+
+/** Dados do bloco "Chegada e estacionamento" de um parque; a chave do registro é o `parkId` da trilha. */
+export interface Estacionamento {
+  id: string;
+  nome: string;
+  endereco: string;
+  valores: ValorEstacionamento[];
+  /** `null` = ainda a definir: o bloco mostra "A definir" em vez de inventar. */
+  comoChegar: string | null;
+  /** Escolhe o ícone da linha "Como chegar": tram ou a pé. */
+  meio: "tram" | "a-pe";
+  dicas: string[];
+  /** Data ISO (AAAA-MM-DD) em que os valores foram conferidos. */
+  conferidoEm: string;
+  fonte: string;
+}
+
 /** Conteúdo do cartão "Horários e trajeto". */
 export interface Journey {
   tiles: JourneyTile[];
@@ -141,7 +163,7 @@ export interface TrackExtras {
   summary: string;
   group?: string;
   journey: Journey;
-  /** Só em trilhas de parque: aponta para o catálogo em `data/parks`. */
+  /** Só em trilhas de parque: aponta para o catálogo em `data/parks` e para o estacionamento em `data/estacionamentos`. */
   parkId?: string;
 }
 

@@ -2,6 +2,7 @@ import { readdirSync } from "node:fs";
 import { pathToFileURL } from "node:url";
 import { resolve } from "node:path";
 import { parkCatalogs } from "../src/data/parks/index.ts";
+import { estacionamentos } from "../src/data/estacionamentos.ts";
 import { shopRegions } from "../src/data/shopping/index.ts";
 import { applyOption } from "../src/lib/dayOption.ts";
 import { listDayTracks, type DayTrack } from "../src/lib/dayTracks.ts";
@@ -205,6 +206,11 @@ function checkDuplicatedStoreStops(where: string, { content }: DayTrack): string
 }
 
 /** Toda atração de checklist de parque mostra a área na lista; sem `area`, a linha fica sem subtítulo. */
+function checkParking(where: string, { extras }: DayTrack): string[] {
+  if (extras.parkId && !estacionamentos[extras.parkId]) warnings.push(`${where}: parque "${extras.parkId}" sem dados em data/estacionamentos`);
+  return [];
+}
+
 function checkAttractionAreas(where: string, { content }: DayTrack): string[] {
   if (content.mode !== "checklist") return [];
   content.attractions
@@ -286,6 +292,7 @@ function checkDay(day: DayData): string[] {
       ...checkStepTimes(where, track),
       ...checkDuplicatedStoreStops(where, track),
       ...checkAttractionAreas(where, track),
+      ...checkParking(where, track),
       ...checkDerivedTiles(where, track),
       ...checkParkTimes(where, track),
       ...checkGuide(where, track),

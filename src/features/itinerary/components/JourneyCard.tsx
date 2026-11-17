@@ -2,7 +2,9 @@ import { useId, useState } from "react";
 import { AlertTriangle, Car, Clock, Info, TrainFront, Undo2, type LucideIcon } from "lucide-react";
 import { RichText } from "../../../components";
 import { categoryStyles } from "../../../data/presentation/categoryStyles";
+import { estacionamentos } from "../../../data/estacionamentos";
 import type { DayCategory, Journey, JourneyGuide, JourneyNote } from "../../../types";
+import { ParkingBlock } from "./ParkingBlock";
 
 const noteIcons: Record<JourneyNote["icon"], LucideIcon> = {
   car: Car,
@@ -117,11 +119,13 @@ function JourneyGuideList({ guide }: { guide: JourneyGuide }) {
 }
 
 /**
- * Cartão "Horários e trajeto": blocos de horário, notas de deslocamento e alertas (seções vazias são omitidas).
+ * Cartão "Horários e trajeto": blocos de horário, notas de deslocamento e alertas (seções vazias são omitidas);
+ * em dias de parque, termina com "Chegada e estacionamento".
  * Quando o dia tem `guide`, um controle segmentado separa "Horários" das regras do dia.
  */
-export function JourneyCard({ journey, category }: { journey: Journey; category?: DayCategory }) {
+export function JourneyCard({ journey, category, parkId }: { journey: Journey; category?: DayCategory; parkId?: string }) {
   const { tiles, notes, alerts, guide } = journey;
+  const parking = parkId ? estacionamentos[parkId] : undefined;
   const [view, setView] = useState<JourneyView>("horarios");
   const titleId = useId();
   const clockColor = category ? categoryStyles[category].iconColor : "text-ink-soft";
@@ -141,6 +145,7 @@ export function JourneyCard({ journey, category }: { journey: Journey; category?
           {tiles.length > 0 && <JourneyTiles tiles={tiles} />}
           {notes.length > 0 && <JourneyNotes notes={notes} />}
           {alerts.length > 0 && <JourneyAlerts alerts={alerts} />}
+          {parking && <ParkingBlock parking={parking} />}
         </>
       )}
     </section>

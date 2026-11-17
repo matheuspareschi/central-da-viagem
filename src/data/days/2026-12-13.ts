@@ -31,7 +31,6 @@ export default {
         { icon: "info", text: "**Às 10h00**, seguir a pé para o Beco Diagonal via New York e San Francisco (**~12 min**)." },
         { icon: "info", text: "6000 Universal Blvd, Orlando, FL 32819. Estacionamento **a partir de US$35 por dia** (2026). São duas garagens enormes: **anote o setor e o andar**." },
         { icon: "info", text: "Da garagem ao portão pelo CityWalk são cerca de **15–20 min a pé**." },
-        { icon: "info", text: "Horários sugeridos assumem abertura **às 10h**; se o app mostrar outro horário, desloque tudo pela mesma diferença." },
         { icon: "info", text: "Prioridade de corte se apertar: Horror Make-Up, E.T., Villain-Con, Race Through New York. **Nunca cortar**: Gringotts (2x), Mummy, Transformers, Ollivanders e Bourne." },
         { icon: "info", text: "**Ingresso já cadastrado** no app Universal Orlando Resort antes de sair." },
         { icon: "info", text: "**Levar só bolsa pequena** (armários), carregador portátil e protetor solar." },

@@ -16,6 +16,7 @@ export default {
   },
   itinerary: {
     kind: "schedule",
+    parkId: "islands-of-adventure",
     summary: "Compras no Orlando Outlet Marketplace, jantar no Epic McDonald's, Islands of Adventure à noite (Hagrid's primeiro; o parque fecha às 19h) e CityWalk.",
     group: "Grupo completo · 10 pessoas · 2 carros",
     journey: {
