@@ -3,7 +3,7 @@ import { allTollSteps, tollStages } from "../src/data/pedagio.ts";
 import day18 from "../src/data/days/2026-12-18.ts";
 import day16 from "../src/data/days/2026-12-16.ts";
 import { toDayEntry } from "../src/lib/parkChecklist.ts";
-import { formatCheckedDate, isGratis } from "../src/lib/estacionamento.ts";
+import { isGratis } from "../src/lib/estacionamento.ts";
 import { estacionamentos } from "../src/data/estacionamentos.ts";
 import type { ChecklistItem, ParkAttraction } from "../src/types";
 import { boldShare, hasUnclosedBoldMark, parseRichText } from "../src/lib/richText.ts";
@@ -118,7 +118,6 @@ const tests: Array<[string, () => void]> = [
     assert.equal(isGratis("**não é grátis** no Epic"), false);
     assert.equal(isGratis("**US$ 35**/dia"), false);
   }],
-  ["estacionamento: data de conferência em dd/mm/aaaa", () => assert.equal(formatCheckedDate("2026-11-17"), "17/11/2026")],
   ["estacionamento: todos os parques têm id igual à chave e a data é ISO", () => {
     for (const [key, parking] of Object.entries(estacionamentos)) {
       assert.equal(parking.id, key);

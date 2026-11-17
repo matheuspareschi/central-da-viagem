@@ -131,7 +131,7 @@ export interface ValorEstacionamento {
   valor: string;
 }
 
-/** Dados do bloco "Chegada e estacionamento" de um parque; a chave do registro é o `parkId` da trilha. */
+/** Dados do bloco "Chegada e estacionamento" de um parque; a chave do registro é o `parkId` da trilha. `conferidoEm` e `fonte` documentam a origem dos valores e não aparecem na tela. */
 export interface Estacionamento {
   id: string;
   nome: string;
@@ -141,7 +141,6 @@ export interface Estacionamento {
   comoChegar: string | null;
   /** Escolhe o ícone da linha "Como chegar": tram ou a pé. */
   meio: "tram" | "a-pe";
-  dicas: string[];
   /** Data ISO (AAAA-MM-DD) em que os valores foram conferidos. */
   conferidoEm: string;
   fonte: string;
