@@ -20,7 +20,7 @@ export default {
     group: "Grupo completo, exceto Rafael Narcizo (chega dia 20)",
     journey: {
       tiles: [
-        { label: "Acordar", value: "A definir" },
+        { label: "Acordar", value: "6h40" },
         { label: "Sair de casa", value: "7h30" }, // REVISAR: horário do primeiro trajeto
         { label: "Sair de Saint Augustine", value: "19h10" }, // REVISAR: horário do trajeto de volta
         { label: "Chegar em casa", value: "~20h55" }, // REVISAR: 19h10 + ~1h45
@@ -39,6 +39,13 @@ export default {
             time: "07:30",
             duration: "~1h45",
             destinationName: "Historic Downtown Parking Facility, St. Augustine",
+          },
+          {
+            kind: "stop",
+            time: "09:15",
+            stopId: "parking",
+            name: "Historic Downtown Parking Facility (estacionamento)",
+            icon: "parking",
           },
           {
             kind: "stop",
@@ -172,18 +179,36 @@ export default {
     ],
     cards: [
       {
-        id: "old-senator",
-        name: "The Old Senator (Live Oak)",
-        icon: "leaf",
-        time: "09:40",
+        id: "parking",
+        name: "Historic Downtown Parking Facility",
+        address: "1 Cordova St, St. Augustine, FL",
+        icon: "parking",
+        time: "09:15",
         sections: [
           {
             color: "navy",
             icon: "parking",
             title: "Endereço e Estacionamento",
             paragraphs: [
+              "1 Cordova St, St. Augustine, FL.",
+              "US$ 20/veículo, tarifa fixa 7h–17h. Pago no início do dia, vale para todas as paradas seguintes.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "old-senator",
+        name: "The Old Senator (Live Oak)",
+        address: "137 San Marco Ave, St. Augustine, FL",
+        icon: "leaf",
+        time: "09:40",
+        sections: [
+          {
+            color: "navy",
+            icon: "parking",
+            title: "Endereço",
+            paragraphs: [
               "137 San Marco Ave, St. Augustine, FL.",
-              "**Historic Downtown Parking Facility**, 1 Cordova St — US$ 20/veículo, tarifa fixa 7h–17h. Feito no início do dia, vale para todas as paradas seguintes.",
             ],
           },
           {
@@ -207,6 +232,7 @@ export default {
       {
         id: "mission",
         name: "Mission Nombre de Dios e Shrine",
+        address: "27 Ocean Ave, St. Augustine, FL",
         icon: "target",
         time: "09:50",
         sections: [
@@ -239,6 +265,7 @@ export default {
       {
         id: "castillo",
         name: "Castillo de San Marcos",
+        address: "1 S Castillo Dr, St. Augustine, FL",
         icon: "target",
         time: "10:40",
         sections: [
@@ -272,6 +299,7 @@ export default {
       {
         id: "old-city-gate",
         name: "Old City Gate",
+        address: "St. George St & Orange St, St. Augustine, FL",
         icon: "target",
         time: "12:10",
         sections: [
@@ -337,6 +365,7 @@ export default {
       {
         id: "st-photios",
         name: "St. Photios Greek Orthodox National Shrine",
+        address: "41 St. George St, St. Augustine, FL",
         icon: "house",
         time: "13:30",
         sections: [
@@ -369,6 +398,7 @@ export default {
       {
         id: "aviles",
         name: "Aviles Street",
+        address: "Plaza de la Constitución, St. Augustine, FL",
         icon: "target",
         time: "13:45",
         sections: [
@@ -401,6 +431,7 @@ export default {
       {
         id: "cathedral",
         name: "Cathedral Basilica e Governor's House",
+        address: "38 Cathedral Pl, St. Augustine, FL",
         icon: "house",
         time: "14:05",
         sections: [
@@ -433,6 +464,7 @@ export default {
       {
         id: "treasury",
         name: "Treasury Street e Love Tree",
+        address: "Charlotte St & Treasury St, St. Augustine, FL",
         icon: "target",
         time: "14:50",
         sections: [
@@ -465,6 +497,7 @@ export default {
       {
         id: "flagler",
         name: "Flagler College e Villa Zorayda e Lightner",
+        address: "74 King St, St. Augustine, FL",
         icon: "house",
         time: "15:05",
         sections: [
@@ -497,6 +530,7 @@ export default {
       {
         id: "grace-church",
         name: "Grace United Methodist Church",
+        address: "8 Carrera St, St. Augustine, FL",
         icon: "house",
         time: "15:50",
         sections: [
@@ -529,6 +563,7 @@ export default {
       {
         id: "bridge-of-lions",
         name: "Bridge of Lions & Bayfront",
+        address: "Avenida Menéndez, St. Augustine, FL",
         icon: "target",
         time: "16:10",
         sections: [
@@ -561,6 +596,7 @@ export default {
       {
         id: "nights-of-lights",
         name: "Nights of Lights (passeio a pé)",
+        address: "Plaza de la Constitución, St. Augustine, FL",
         icon: "tree",
         time: "17:15",
         sections: [
