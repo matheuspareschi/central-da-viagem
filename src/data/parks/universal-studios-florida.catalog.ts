@@ -1,5 +1,5 @@
 // Catálogo de atrações do parque Universal Studios Florida.
-// Fonte: docs/fontes/Guia_Completo_de_Atracoes_dos_Parques_de_Orlando.pdf (transcrito sem alterações). Os textos ainda passarão por revisão.
+// Fonte: docs/fontes/Guia_Completo_de_Atracoes_dos_Parques_de_Orlando.pdf (transcrito sem alterações, exceto Fast & Furious - Supercharged, removida por estar fechada). Os textos ainda passarão por revisão.
 import type { ParkAttraction, ParkArea } from "../../types";
 
 export const universalStudiosFloridaAreas: ParkArea[] = [
@@ -18,7 +18,6 @@ export const universalStudiosFlorida: ParkAttraction[] = [
   { id: "race-through-new-york-jimmy-fallon", parkId: "universal-studios-florida", area: "new-york", name: "Race Through New York Jimmy Fallon", type: "Simulador de Movimento 3D", kind: "attraction", description: "Corrida divertida pelos pontos turísticos de NY com o apresentador Jimmy Fallon." },
   { id: "revenge-of-the-mummy", parkId: "universal-studios-florida", area: "new-york", name: "Revenge of the Mummy", type: "Montanha-Russa no Escuro", kind: "attraction", description: "Coaster interna rápida com fogo real, múmias animatrônicas e acelerações repentinas." },
   { id: "shows-de-rua-blues-brothers-beat-builders", parkId: "universal-studios-florida", area: "new-york", name: "Shows de Rua (Blues Brothers / Beat Builders)", type: "Shows de Música ao Vivo", kind: "show", description: "Apresentações musicais de rua com clássicos de blues e percussão de obra." },
-  { id: "fast-and-furious-supercharged", parkId: "universal-studios-florida", area: "san-francisco-and-hollywood", name: "Fast & Furious - Supercharged", type: "Simulador de Ônibus", kind: "attraction", description: "Perseguição em alta velocidade ao lado da família de Velozes e Furiosos." },
   { id: "horror-make-up-show", parkId: "universal-studios-florida", area: "san-francisco-and-hollywood", name: "Horror Make-Up Show", type: "Show de Comédia / Bastidores", kind: "show", description: "Demonstração bem-humorada da criação de maquiagens e monstros de cinema." },
   { id: "the-bourne-stuntacular", parkId: "universal-studios-florida", area: "san-francisco-and-hollywood", name: "The Bourne Stuntacular", type: "Show de Acrobacias ao Vivo", kind: "show", description: "Dublês em tempo real integrados com uma tela LED gigante de alta definição." },
   { id: "men-in-black-alien-attack", parkId: "universal-studios-florida", area: "world-expo-and-dreamworks-land", name: "MEN IN BLACK Alien Attack", type: "Dark Ride de Tiro Interativa", kind: "attraction", description: "Carrinhos de 6 lugares equipados com lasers para caçar alienígenas nas ruas." },
