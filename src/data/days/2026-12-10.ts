@@ -74,14 +74,12 @@ const dailyDealzCard: StopCard = {
   address: DAILY_DEALZ_ADDRESS,
   sections: [
     ...dailyDealzAboutSections,
+    { color: "gold", icon: "lightbulb", title: "Horário", paragraphs: ["**Abre às 10h.**"] },
     {
       color: "attn",
       icon: "alert",
       title: "Atenção",
-      paragraphs: [
-        "Horário de funcionamento **a confirmar**.",
-        "Sair **às 11h15 no máximo** para estar no Orlando Outlet Marketplace às 11h30.",
-      ],
+      paragraphs: ["Sair **às 11h15 no máximo** para estar no Orlando Outlet Marketplace às 11h30."],
     },
   ],
 };
@@ -255,7 +253,7 @@ export default {
         journey: {
           tiles: [WAKE_UP_TILE, LEAVE_HOME_TILE, { label: "Compras no outlet", value: "11h30–16h" }, ISLANDS_CLOSING_TILE],
           notes: [{ icon: "car", text: "De carro: **~25 min** da casa até o Daily Dealz e **~15 min** de lá até o Orlando Outlet Marketplace." }], // REVISAR: tempo entre o Daily Dealz e o outlet estimado
-          alerts: ["Confirmar: horário de abertura do Daily Dealz.", FREE_LUNCH_ALERT],
+          alerts: [FREE_LUNCH_ALERT],
         },
         periods: [
           {
