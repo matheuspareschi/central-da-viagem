@@ -37,16 +37,19 @@ function describeLinked(linked: ParkAttraction[], areas: ParkArea[]): string | u
   return `${findAreaLabel(linked[0], areas)} · ${linked.map((attraction) => attraction.type).join(" + ")}`;
 }
 
-function curiositiesSection(linked: ParkAttraction[]): DetailSection {
-  const paragraphs =
-    linked.length === 1 ? [linked[0].description] : linked.map((attraction) => `**${attraction.name}:** ${attraction.description}`);
-  return { color: "palm", icon: "camera", title: CURIOSITIES_TITLE, paragraphs };
+function curiosityParagraphs(linked: ParkAttraction[]): string[] {
+  return linked.length === 1 ? [linked[0].description] : linked.map((attraction) => `**${attraction.name}:** ${attraction.description}`);
 }
 
-/** A descrição do catálogo vira "Curiosidades", salvo quando o item do dia já tem a sua. */
+/** A descrição do catálogo vira "Curiosidades"; se o item do dia já tem as suas, ela entra junto, depois delas. */
 function withCuriosities(sections: DetailSection[], linked: ParkAttraction[]): DetailSection[] {
-  const alreadyHasCuriosities = sections.some((section) => section.title === CURIOSITIES_TITLE);
-  return linked.length === 0 || alreadyHasCuriosities ? sections : [...sections, curiositiesSection(linked)];
+  if (linked.length === 0) return sections;
+  const catalogParagraphs = curiosityParagraphs(linked);
+  const hasCuriosities = sections.some((section) => section.title === CURIOSITIES_TITLE);
+  if (!hasCuriosities) return [...sections, { color: "palm", icon: "camera", title: CURIOSITIES_TITLE, paragraphs: catalogParagraphs }];
+  return sections.map((section) =>
+    section.title === CURIOSITIES_TITLE ? { ...section, paragraphs: [...(section.paragraphs ?? []), ...catalogParagraphs] } : section,
+  );
 }
 
 export function toDayEntry(item: ChecklistItem, linked: ParkAttraction[], areas: ParkArea[]): ChecklistEntry {

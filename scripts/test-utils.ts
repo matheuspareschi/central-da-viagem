@@ -99,9 +99,11 @@ const tests: Array<[string, () => void]> = [
     assert.equal(entry.subtitle, "Área · Tipo 1 + Tipo 2");
     assert.deepEqual(entry.sections[0].paragraphs, ["**A:** d1", "**B:** d2"]);
   }],
-  ["checklist: não duplica Curiosidades já escritas no dia", () => {
+  ["checklist: junta a descrição do catálogo às Curiosidades do dia", () => {
     const own = { color: "palm" as const, icon: "camera" as const, title: "Curiosidades", paragraphs: ["própria"] };
-    assert.deepEqual(toDayEntry(item([own]), [attraction("A", "T", "d")], areas).sections, [own]);
+    const sections = toDayEntry(item([own]), [attraction("A", "T", "d")], areas).sections;
+    assert.equal(sections.length, 1);
+    assert.deepEqual(sections[0].paragraphs, ["própria", "d"]);
   }],
   ["checklist: sem ligação não ganha subtítulo nem seção", () => {
     const entry = toDayEntry(item(), [], areas);
