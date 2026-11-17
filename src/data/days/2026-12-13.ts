@@ -6,7 +6,7 @@ export default {
   day: 13,
   park: {
     name: "Universal Studios Florida",
-    departure: "8h15",
+    departure: "8h30",
     opening: "10h", // REVISAR: abre às 10h (antes 9h); confirmar no app
   },
   weekday: "Dom",
@@ -23,9 +23,9 @@ export default {
     parkId: "universal-studios-florida",
     // REVISAR (alerts): "Fora de operação" não tinha marcação de alerta; foi tratado como alerta por ser informação crítica.
     // REVISAR (notes): Item "Chegada e preparação" dividido entre tiles e notes; conferir agrupamento.
-    summary: "Visita única ao Universal Studios (não haverá segunda visita). Domingo costuma ser mais cheio.",
+    summary: "Visita única ao Universal Studios (não haverá segunda visita).",
     journey: {
-      tiles: [{ label: "Acordar", value: "7h30" }, { label: "Sair de casa", value: "8h15" }, { label: "Estacionamento e portão", value: "9h15" }, { label: "Beco Diagonal", value: "10h" }],
+      tiles: [{ label: "Acordar", value: "7h45" }, { label: "Sair de casa", value: "8h30" }, { label: "Estacionamento", value: "8h00" }, { label: "Chegada", value: "10h00" }],
       notes: [
         { icon: "car", text: "~15 min até os portões." },
         { icon: "info", text: "**Às 10h00**, seguir a pé para o Beco Diagonal via New York e San Francisco (**~12 min**)." },
@@ -42,495 +42,178 @@ export default {
     },
     attractions: [
       {
-        id: "transformers",
+        id: "hollywood-transformers",
         attractionId: "transformers-the-ride-3d",
-        name: "Transformers: The Ride 3D",
-        area: "New York",
+        name: "Transformers",
+        area: "Hollywood",
         icon: "target",
         sections: [
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Horário sugerido",
-            paragraphs: [
-              "Por volta **das 13h00**. Meio do dia: brinquedos de fila menor, shows com ar-condicionado e almoço fora do pico.",
-            ],
-          },
-          {
-            color: "citrus",
-            icon: "target",
-            title: "Sobre",
-            paragraphs: [
-              "Simulador 3D com movimento, com Optimus Prime gigante na porta. Dá para sentir o calor das explosões. **Fila média de ~33 min**.",
-            ],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Dica",
-            paragraphs: [
-              "Fazer **antes das 14h**. Tem single rider. Depois, Race Through New York (Jimmy Fallon, ~18 min, com ar-condicionado) para aliviar o calor.",
-            ],
-          },
+          { color: "citrus", icon: "camera", title: "Foto", paragraphs: ["Melhor local para tirar fotos com os personagens. Do lado da atração tem personagens da saga para ver e tirar fotos."] },
         ],
       },
       {
-        id: "beco-diagonal",
-        name: "Fotos no Beco Diagonal",
-        area: "Beco Diagonal",
+        id: "san-francisco-fast-furious",
+        attractionId: "fast-and-furious-supercharged",
+        name: "Velozes e Furiosos",
+        area: "San Francisco",
+        icon: "target",
+        sections: [
+          { color: "citrus", icon: "target", title: "Sobre", paragraphs: ["Não é tão legal assim, mas sempre vale a pena."] },
+        ],
+      },
+      {
+        id: "diagon-knight-bus",
+        name: "Knight Bus",
+        area: "Diagon Alley",
         icon: "camera",
         sections: [
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Horário sugerido",
-            paragraphs: ["Por volta **das 11h00**. Depois, ~10 min a pé até New York."],
-          },
-          {
-            color: "citrus",
-            icon: "camera",
-            title: "Sobre",
-            list: [
-              "Dragão do Gringotts cuspindo fogo.",
-              "Beco Bativolta (Knockturn Alley).",
-              "Largo Grimmauld nº 12: esperar o **Kreacher na janela**.",
-              "Cabine telefônica vermelha: discar **62442** para o Ministério da Magia.",
-              "**Parede da Plataforma 9¾** no King's Cross: um filma o outro \"atravessando\".",
-              "Knight Bus: foto pelos fundos, sem fila.",
-              "**Câmbio dos duendes** (dólar por notas de Gringotts).",
-            ],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Dica",
-            paragraphs: [
-              "**Não compre varinha agora**: a loja lota. A escolha da varinha é melhor à noite (**Ollivanders, 19:00**). Decoração de Natal do Universal Holidays no Beco Diagonal.",
-            ],
-          },
+          { color: "palm", icon: "camera", title: "Foto", paragraphs: ["Vale esperar a vez e fotografar de frente."] },
         ],
       },
       {
-        id: "ollivanders",
-        attractionId: "ollivanders-wand-shop",
-        name: "Ollivanders e varinhas",
-        area: "Beco Diagonal",
+        id: "diagon-largo-grimmauld",
+        name: "Largo Grimmauld",
+        area: "Diagon Alley",
+        icon: "camera",
+        sections: [
+          { color: "palm", icon: "camera", title: "Foto", paragraphs: ["A fachada de tijolos e a placa do largo são bons enquadramentos, com menos gente no início da manhã."] },
+        ],
+      },
+      {
+        id: "diagon-cambio-galeoes",
+        name: "Trocar dólares por galeões",
+        area: "Diagon Alley",
         icon: "bag",
         sections: [
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Horário sugerido",
-            paragraphs: [
-              "Por volta **das 19h00**. Noite de Harry Potter: Ollivanders mais vazio, jantar temático e segunda volta no Gringotts.",
-            ],
-          },
-          {
-            color: "navy",
-            icon: "house",
-            title: "Endereço",
-            paragraphs: ["Beco Diagonal, Universal Studios Florida."],
-          },
-          {
-            color: "citrus",
-            icon: "bag",
-            title: "Sobre",
-            paragraphs: [
-              "Teatrinho interativo de ~10 min em que a varinha escolhe o bruxo, com saída pela loja. Varinhas custavam de **US$65** a **US$85** em 2025. As varinhas interativas funcionam em todo o Beco Diagonal e em Hogsmeade.",
-            ],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Dica",
-            paragraphs: [
-              "**À noite a fila é menor** e as chances de ser escolhido aumentam; **grupo só de adultos** tem mais chance. Decida antes se alguém vai comprar varinha.",
-            ],
-          },
+          { color: "gold", icon: "lightbulb", title: "Roteiro", paragraphs: ["Passar para trocar dólares por galeões."] },
+        ],
+      },
+      {
+        id: "diagon-ollivanders",
+        attractionId: "ollivanders-wand-shop",
+        name: "Show do Ollivanders",
+        area: "Diagon Alley",
+        icon: "bag",
+        sections: [
+          { color: "citrus", icon: "bag", title: "Roteiro", paragraphs: ["Ver o show do Ollivanders."] },
+        ],
+      },
+      {
+        id: "diagon-dedos-de-mel",
+        name: "Dedos de mel",
+        area: "Diagon Alley",
+        icon: "bag",
+        sections: [
+          { color: "gold", icon: "lightbulb", title: "Roteiro", paragraphs: ["Não esquecer dos dedos de mel."] },
         ],
       },
       {
         id: "gringotts",
         attractionId: "harry-potter-and-escape-from-gringotts",
-        name: "Harry Potter and the Escape from Gringotts",
-        area: "Beco Diagonal / Londres",
+        name: "Gringotts",
+        area: "Diagon Alley",
         icon: "target",
         sections: [
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Horário sugerido",
-            paragraphs: ["Por volta **das 10h15**. Beco Diagonal vazio e Gringotts com fila baixa **antes das 12h**."],
-          },
-          {
-            color: "navy",
-            icon: "house",
-            title: "Endereço",
-            paragraphs: ["Beco Diagonal / Londres, Universal Studios Florida."],
-          },
-          {
-            color: "citrus",
-            icon: "target",
-            title: "Sobre",
-            paragraphs: [
-              "Montanha-russa indoor com simulador 3D dentro do banco de Gringotts (adrenalina 3/5). A fila passa pelo saguão de mármore com duendes trabalhando. O **dragão de 18 m** cospe fogo real a cada 10–15 min.",
-            ],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Dica",
-            list: [
-              "A fila varia muito: ~29 min às 10h, **~83 min às 15h–16h** e ~35 min depois das 19h.",
-              "Guardar a bolsa no armário (os pequenos são **grátis** durante a fila e o brinquedo).",
-              "Tem **single rider**: pergunte ao funcionário se compensa.",
-            ],
-          },
-          {
-            color: "attn",
-            icon: "alert",
-            title: "Atenção",
-            paragraphs: [
-              "Se estiver parado ou com mais de 60 min na abertura, vá primeiro à Mummy e volte ao Gringotts **às 12h** ou **depois das 19h30**.",
-            ],
-          },
+          { color: "citrus", icon: "target", title: "Roteiro", paragraphs: ["Gringotts."] },
         ],
       },
       {
-        id: "mib",
+        id: "world-expo-men-in-black",
         attractionId: "men-in-black-alien-attack",
-        name: "Men in Black Alien Attack",
+        name: "Men in Black",
         area: "World Expo",
         icon: "target",
         sections: [
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Horário sugerido",
-            paragraphs: ["Por volta **das 18h15**. Depois, ~10 min a pé de volta ao Beco Diagonal."],
-          },
-          {
-            color: "navy",
-            icon: "house",
-            title: "Endereço",
-            paragraphs: ["Área World Expo, Universal Studios Florida."],
-          },
-          {
-            color: "citrus",
-            icon: "target",
-            title: "Sobre",
-            paragraphs: [
-              "Dark ride de tiro com placar, com mais de 120 tipos de alienígenas. Fila de ~22 min à tarde; tem **single rider**.",
-            ],
-          },
-          {
-            color: "attn",
-            icon: "alert",
-            title: "Atenção",
-            paragraphs: ["Os carrinhos giram bastante: **quem enjoa com facilidade** deve ter cuidado."],
-          },
+          { color: "citrus", icon: "target", title: "Roteiro", paragraphs: ["Men in Black."] },
         ],
       },
       {
-        id: "simpsons",
+        id: "world-expo-simpsons",
         attractionId: "the-simpsons-ride",
-        name: "The Simpsons Ride e donut Lard Lad",
-        // REVISAR (área a definir)
-        area: "a definir",
-        icon: "corn",
-        sections: [
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Horário sugerido",
-            paragraphs: ["Por volta das 17h40."],
-          },
-          {
-            color: "citrus",
-            icon: "target",
-            title: "Sobre",
-            paragraphs: [
-              "Simulador em tela de 25 m de diâmetro (**~22 min de fila**). Na área, Duff Beer, Moe's Tavern (foto e Love Tester) e o donut rosa gigante do Lard Lad.",
-            ],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Dica",
-            paragraphs: [
-              "Sentar na **primeira fileira** e não olhar para os lados. O donut dá para dividir com o grupo.",
-            ],
-          },
-        ],
-      },
-      {
-        id: "almoco",
-        name: "Almoço fora do pico",
-        // REVISAR (área a definir)
-        area: "a definir",
-        icon: "burger",
-        sections: [
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Horário sugerido",
-            paragraphs: ["Por volta das 15h30."],
-          },
-          {
-            color: "gold",
-            icon: "burger",
-            title: "Onde comer",
-            list: [
-              "Illumination's Minion Café (hambúrguer de rosbife, salmão).",
-              "Mel's Drive-In (Hollywood): hambúrguer, chicken fingers, milkshake.",
-              "Louie's Italian (New York) e Krusty Burger (Springfield) como alternativas.",
-            ],
-          },
-          {
-            color: "palm",
-            icon: "lightbulb",
-            title: "Observação",
-            paragraphs: [
-              "**Pedir pelo app** com a carteira configurada evita fila. Preço de parque: espere pagar caro.",
-            ],
-          },
-        ],
-      },
-      {
-        id: "et-adventure",
-        attractionId: "e-t-adventure",
-        name: "E.T. Adventure",
-        area: "World Expo & DreamWorks Land",
+        name: "Simpsons Ride",
+        area: "World Expo",
         icon: "target",
         sections: [
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Horário sugerido",
-            paragraphs: ["Por volta **das 16h50**. Opcional, fila de ~28 min."],
-          },
+          { color: "citrus", icon: "target", title: "Roteiro", paragraphs: ["Simpsons Ride."] },
         ],
       },
       {
-        id: "bourne",
+        id: "dreamworks-et",
+        attractionId: "e-t-adventure",
+        name: "E.T.",
+        area: "DreamWorks",
+        icon: "target",
+        sections: [
+          { color: "citrus", icon: "target", title: "Roteiro", paragraphs: ["E.T."] },
+        ],
+      },
+      {
+        id: "dreamworks-bourne",
         attractionId: "the-bourne-stuntacular",
         name: "The Bourne Stuntacular",
-        area: "Hollywood",
-        icon: "camera",
+        area: "DreamWorks",
+        icon: "target",
         sections: [
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Horário sugerido",
-            paragraphs: ["Por volta das 16h15."],
-          },
-          {
-            color: "navy",
-            icon: "house",
-            title: "Endereço",
-            paragraphs: ["Área Hollywood, Universal Studios Florida."],
-          },
-          {
-            color: "citrus",
-            icon: "target",
-            title: "Sobre",
-            paragraphs: [
-              "Espetáculo de dublês com telão LED côncavo e palco giratório (**~30 min**), sentado e com **ar-condicionado**. Considerado o que mais surpreende no parque.",
-            ],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Dica",
-            paragraphs: [
-              "Escolher a sessão no app e **chegar 15 min antes**. Depois, E.T. Adventure (opcional, fila de ~28 min).",
-            ],
-          },
+          { color: "gold", icon: "lightbulb", title: "Atenção", paragraphs: ["Tem horários para acontecer. Confirmar no app."] },
         ],
       },
       {
-        id: "mummy",
+        id: "dreamworks-mummy",
         attractionId: "revenge-of-the-mummy",
         name: "Revenge of the Mummy",
-        area: "New York",
+        area: "DreamWorks",
         icon: "target",
         sections: [
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Horário sugerido",
-            paragraphs: ["Por volta das 11h45."],
-          },
-          {
-            color: "navy",
-            icon: "house",
-            title: "Endereço",
-            paragraphs: ["Área New York, Universal Studios Florida."],
-          },
-          {
-            color: "citrus",
-            icon: "target",
-            title: "Sobre",
-            paragraphs: [
-              "Montanha-russa indoor no escuro (**~70 km/h**), ambientada em 1926, que vai e volta nos trilhos. Adrenalina 3/5.",
-            ],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Dica",
-            list: [
-              "Fila fica em torno de **44 min o dia todo**: não adianta esperar.",
-              "Armário **obrigatório**; tem single rider.",
-              "Se bater fome **antes das 13h**, lanche rápido no Louie's Italian e deixe o almoço para as 15h30.",
-              "Se passar show de rua (Blues Brothers, Beat Builders, Vamos! Báilalo), **pare 10 min**: não tem fila.",
-            ],
-          },
+          { color: "citrus", icon: "target", title: "Roteiro", paragraphs: ["Revenge of the Mummy."] },
         ],
       },
       {
-        id: "race-through-new-york",
+        id: "dreamworks-race-new-york",
         attractionId: "race-through-new-york-jimmy-fallon",
-        name: "Race Through New York (Jimmy Fallon)",
-        area: "New York",
+        name: "Race Through New York Starring Jimmy Fallon",
+        area: "DreamWorks",
         icon: "target",
         sections: [
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Horário sugerido",
-            paragraphs: ["Por volta **das 13h40**. Depois, ~10 min a pé até a Minion Land."],
-          },
+          { color: "citrus", icon: "target", title: "Roteiro", paragraphs: ["Race Through New York Starring Jimmy Fallon."] },
         ],
       },
       {
-        id: "minion-land",
-        attractionIds: ["despicable-me-minion-mayhem", "villain-con-minion-blast"],
-        name: "Minion Mayhem e Villain-Con Minion Blast",
-        // REVISAR (área a definir)
-        area: "a definir",
+        id: "dreamworks-fast-furious",
+        attractionId: "fast-and-furious-supercharged",
+        name: "Velozes e Furiosos",
+        area: "DreamWorks",
         icon: "target",
         sections: [
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Horário sugerido",
-            paragraphs: ["Por volta das 14h15."],
-          },
-          {
-            color: "citrus",
-            icon: "target",
-            title: "Sobre",
-            paragraphs: [
-              "Minion Mayhem é um simulador leve (**você vira Minion** ainda na fila, ~35 min). Villain-Con Minion Blast é um jogo de tiro com blaster que pode ser pareado com o app.",
-            ],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Dica",
-            paragraphs: [
-              "**Pop-A-Nana** (pipoca doce de banana) para dividir. Villain-Con é um dos primeiros itens a cortar se o dia apertar.",
-            ],
-          },
+          { color: "citrus", icon: "target", title: "Roteiro", paragraphs: ["Velozes e Furiosos."] },
         ],
       },
       {
-        id: "caldeirao-furado",
-        name: "Jantar no Caldeirão Furado",
-        // REVISAR (área a definir)
-        area: "a definir",
-        icon: "burger",
-        sections: [
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Horário sugerido",
-            paragraphs: ["Por volta das 19h50."],
-          },
-          {
-            color: "citrus",
-            icon: "burger",
-            title: "Sobre",
-            paragraphs: [
-              "Pub britânico temático, **sem serviço de mesa**: peixe com fritas, torta de carne moída com purê, sanduíches e cerveja amanteigada (sem álcool).",
-            ],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Dica",
-            paragraphs: [
-              "**Pedir pelo app**. A cerveja amanteigada gelada é bem doce e enche: **dividir**. Sorvete do Florean Fortescue de sobremesa.",
-            ],
-          },
-        ],
-      },
-      {
-        id: "gringotts-segunda-volta",
-        attractionId: "harry-potter-and-escape-from-gringotts",
-        name: "Gringotts (2ª vez)",
-        area: "Beco Diagonal / Londres",
+        id: "dreamworks-minion-mayhem",
+        attractionId: "despicable-me-minion-mayhem",
+        name: "Minion Mayhem",
+        area: "DreamWorks",
         icon: "target",
         sections: [
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Horário sugerido",
-            paragraphs: ["Por volta **das 20h30**. Depois **das 19h** a fila costuma cair para ~35 min."],
-          },
+          { color: "citrus", icon: "target", title: "Roteiro", paragraphs: ["Minion Mayhem."] },
         ],
       },
       {
-        id: "parada-natal",
-        name: "Parada de Natal e árvore",
-        // REVISAR (área a definir)
-        area: "a definir",
-        icon: "tree",
+        id: "dreamworks-minios-vilains",
+        attractionId: "villain-con-minion-blast",
+        name: "Minios vilains",
+        area: "DreamWorks",
+        icon: "target",
         sections: [
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Horário sugerido",
-            paragraphs: ["Por volta das 21h00."],
-          },
-          {
-            color: "citrus",
-            icon: "tree",
-            title: "Sobre",
-            paragraphs: [
-              "Durante o Universal Holidays (**14/11/2026 a 03/01/2027**) há parada noturna no Studios que termina com o acendimento da árvore de Natal de 80 pés.",
-            ],
-          },
-          {
-            color: "attn",
-            icon: "alert",
-            title: "Atenção",
-            paragraphs: [
-              "O horário exato só aparece no app. Chegar 30–40 min antes para ter lugar. Sair do parque **por volta das 22h30** para **evitar a multidão final**.",
-            ],
-          },
+          { color: "gold", icon: "lightbulb", title: "Atenção", paragraphs: ["Nome como escrito no roteiro original. Confirmar o nome da atração no app."] },
         ],
       },
       {
-        id: "fogos",
+        id: "fim-do-dia-fogos",
         name: "Show de fogos",
-        // REVISAR (área a definir)
-        area: "a definir",
-        icon: "sparkle",
+        area: "Fim do dia",
+        icon: "camera",
         sections: [
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Horário sugerido",
-            paragraphs: ["Noite, no fim do dia."],
-          },
-          {
-            color: "citrus",
-            icon: "sparkle",
-            title: "Observação",
-            paragraphs: ["Verificar no app se há show neste dia."],
-          },
+          { color: "gold", icon: "lightbulb", title: "Roteiro", paragraphs: ["Assistir o show de fogos. Verificar no app se há show no dia."] },
         ],
       },
     ],

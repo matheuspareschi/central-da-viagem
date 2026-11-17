@@ -24,130 +24,140 @@ export default {
         mode: "checklist",
         parkId: "hollywood-studios",
         // REVISAR (summary): Texto montado a partir da legenda da foto (heroCaption) removida; conferir redação.
-        summary: "Dia no Hollywood Studios, com portões das 09h às 21h.",
+        summary: "Dia no Hollywood Studios, com portões das 9h às 21h.",
         group: "Sandra, Thiago, Silvana, Gabriel, Renata e Isabela",
-        journey: {
-          tiles: [{ label: "Acordar", value: "7h00" }, { label: "Sair de casa", value: "7h45" }, { label: "Estacionamento abre", value: "8h" }, { label: "Parque aberto", value: "9h–21h" }],
+            journey: {
+          tiles: [{ label: "Acordar", value: "7h15" }, { label: "Sair de casa", value: "7h45" }, { label: "Estacionamento abre", value: "8h00" }, { label: "Parque aberto", value: "9h–21h" }],
           notes: [
-            { icon: "car", text: "Ida até os portões ~20 min." },
-            { icon: "info", text: "**Deixar os lanches** do parque separados no dia anterior. Mochilas com filtro solar, remédios etc." },
-            { icon: "info", text: "Fotos da Disney: compradas antes da viagem, **no Brasil**." },
+            { icon: "car", text: "Ida até os portões: em torno de 20 minutos." },
           ],
-          alerts: [],
+          alerts: ["**Deixar os lanches** do parque separados no dia anterior. Mochilas com filtro solar, remédios etc."],
         },
-        attractions: [
+            attractions: [
           {
-            id: "mickey-minnie-runaway-railway",
+            id: "runaway-railway",
             attractionId: "mickey-and-minnies-runaway-railway",
-            name: "Hollywood Boulevard · Mickey and Minnie's Runaway Railway",
+            name: "Mickey & Minnie's Runaway Railway",
             area: "Hollywood Boulevard",
             icon: "target",
             sections: [
               {
-                color: "gold",
-                icon: "camera",
-                title: "Foto",
-                list: [
-                  "Onde: fachada do teatro (**antes de entrar** na fila).",
-                  "Melhor horário: **11h** (luz boa, não muito cheio).",
-                  "Dica: fotografar de frente, com a **fachada colorida ao fundo** — fica melhor com luz natural do meio-dia.",
-                ],
+                color: "citrus",
+                icon: "target",
+                title: "Roteiro",
+                paragraphs: ["Atração."],
               },
             ],
           },
           {
-            id: "tower-of-terror",
+            id: "foto-fachada-teatro",
+            name: "Foto: fachada do teatro",
+            area: "Hollywood Boulevard",
+            icon: "camera",
+            sections: [
+              {
+                color: "palm",
+                icon: "camera",
+                title: "Foto",
+                paragraphs: ["Onde: fachada do teatro (antes de entrar na fila). Fotografem de frente com a fachada colorida ao fundo; fica melhor com luz natural do meio-dia."],
+              },
+            ],
+          },
+          {
+            id: "torre-terror",
             attractionId: "tower-of-terror",
-            name: "Sunset Boulevard · Torre do Terror",
+            name: "Torre do Terror",
             area: "Sunset Boulevard",
             icon: "target",
             sections: [
               {
-                color: "gold",
-                icon: "camera",
-                title: "Foto",
-                list: [
-                  "Onde: frente do prédio da torre (à distância, **no pátio**).",
-                  "De dia: **10h–11h** (sol ainda alto, bom contraste).",
-                  "De noite: **19h30+** (iluminação dramática, mais atmosférico).",
-                ],
-              },
-              {
-                color: "gold",
-                icon: "lightbulb",
-                title: "Dica",
-                paragraphs: [
-                  "A torre fica impressionante com a **iluminação roxa/dourada** à noite — melhor que de dia para uma foto mágica.",
-                ],
+                color: "citrus",
+                icon: "target",
+                title: "Roteiro",
+                paragraphs: ["Atração."],
               },
             ],
           },
           {
-            id: "rock-n-roller-coaster",
+            id: "foto-torre",
+            name: "Foto: frente da torre",
+            area: "Sunset Boulevard",
+            icon: "camera",
+            sections: [
+              {
+                color: "palm",
+                icon: "camera",
+                title: "Foto",
+                paragraphs: ["Onde: frente do prédio da torre (à distância, no pátio). A torre fica impressionante com a iluminação roxa/dourada à noite; melhor que de dia para foto mágica."],
+              },
+            ],
+          },
+          {
+            id: "rock-roller",
             attractionId: "rock-n-roller-coaster-aerosmith",
-            name: "Sunset Boulevard · Rock 'n' Roller Coaster",
+            name: "Rock 'n' Roller Coaster",
             area: "Sunset Boulevard",
             icon: "target",
             sections: [
               {
-                color: "gold",
+                color: "citrus",
+                icon: "target",
+                title: "Roteiro",
+                paragraphs: ["Atração."],
+              },
+            ],
+          },
+          {
+            id: "foto-rock-roller",
+            name: "Foto: fachada do Rock 'n' Roller",
+            area: "Sunset Boulevard",
+            icon: "camera",
+            sections: [
+              {
+                color: "palm",
                 icon: "camera",
                 title: "Foto",
-                list: [
-                  "Onde: fachada frontal com o logo do carro de rodas (**do lado de fora da fila**).",
-                  "Melhor horário: **10h–11h** ou 19h+ (à noite a iluminação de neon fica linda).",
-                ],
-              },
-              {
-                color: "gold",
-                icon: "lightbulb",
-                title: "Dica",
-                paragraphs: [
-                  "De dia, peguem a posição com o **sol ao fundo**; de noite, as luzes rosa/azul da fachada ficam incríveis.",
-                ],
+                paragraphs: ["Onde: fachada frontal com o logo do carro de rodas (do lado de fora da fila)."],
               },
             ],
           },
           {
-            id: "beauty-and-the-beast-show",
+            id: "bela-fera",
             attractionId: "beauty-and-the-beast-live-on-stage",
-            name: "Sunset Boulevard · Show da Bela e a Fera",
-            area: "Sunset Boulevard",
-            icon: "target",
-            sections: [
-              {
-                color: "attn",
-                icon: "alert",
-                title: "Atenção",
-                paragraphs: ["Ver o horário dos shows no dia."],
-              },
-            ],
-          },
-          {
-            id: "pausa-lanchinhos",
-            name: "Pausa para alimentação · Lanchinhos",
-            // REVISAR (área a definir)
-            area: "a definir",
-            icon: "burger",
-            sections: [
-              {
-                color: "gold",
-                icon: "lightbulb",
-                title: "Dica",
-                paragraphs: [
-                  "Usar os **lanches do parque** separados no dia anterior.",
-                ],
-              },
-            ],
-          },
-          {
-            id: "foto-mickey-minnie",
-            name: "Sunset Boulevard · Foto com Mickey e Minnie",
+            name: "Show Bela e a Fera",
             area: "Sunset Boulevard",
             icon: "camera",
             sections: [
               {
                 color: "gold",
+                icon: "lightbulb",
+                title: "Roteiro",
+                paragraphs: ["Ver horário no dia."],
+              },
+            ],
+          },
+          {
+            id: "lanche",
+            name: "Pausa para alimentação",
+            area: "Sunset Boulevard",
+            icon: "bag",
+            sections: [
+              {
+                color: "gold",
+                icon: "bag",
+                title: "Roteiro",
+                paragraphs: ["Lanchinhos."],
+              },
+            ],
+          },
+          {
+            id: "mickey-minnie-foto",
+            name: "Foto com Mickey e Minnie",
+            area: "Sunset Boulevard",
+            icon: "camera",
+            sections: [
+              {
+                color: "palm",
                 icon: "camera",
                 title: "Foto",
                 paragraphs: ["Tirar foto com Mickey e Minnie."],
@@ -157,171 +167,121 @@ export default {
           {
             id: "star-tours",
             attractionId: "star-tours-the-adventures-continue",
-            name: "Echo Lake · Star Tours",
+            name: "Star Tours",
             area: "Echo Lake",
             icon: "target",
             sections: [
               {
-                color: "attn",
-                icon: "alert",
-                title: "Atenção",
-                paragraphs: ["Fazer se não tiver fila."],
+                color: "citrus",
+                icon: "target",
+                title: "Roteiro",
+                paragraphs: ["Se não tiver fila."],
               },
             ],
           },
           {
-            id: "pixar-plaza-personagens",
-            name: "Pixar Plaza · Fotos com personagens",
+            id: "pixar-personagens",
+            name: "Personagens da Pixar Plaza",
             area: "Pixar Plaza",
             icon: "camera",
             sections: [
               {
-                color: "citrus",
+                color: "palm",
                 icon: "camera",
-                title: "Personagens",
-                paragraphs: [
-                  "**Fotos com personagens**: Os Incríveis, Divertida Mente, Monstros S.A. e outros.",
-                ],
-              },
-              {
-                color: "gold",
-                icon: "camera",
-                title: "Melhor horário",
-                list: [
-                  "Evitem: **10h–13h** (aglomerado, filas de 30+ min por personagem).",
-                  "Ideal: **15h–16h** (meio da tarde, filas menores que 10 min).",
-                  "Backup: **19h–20h** (antes do Fantasmic).",
-                ],
+                title: "Foto",
+                paragraphs: ["Tirar fotos com personagens: Incríveis, Divertidamente, Monstros S.A. Evitem 10h–13h (aglomerado, filas de 30+ min por personagem). Ideal: 15h–16h (meio da tarde, filas abaixo de 10 min)."],
               },
             ],
           },
           {
-            id: "slinky-dog-dash",
+            id: "slinky",
             attractionId: "slinky-dog-dash",
-            name: "Pixar Plaza · Slinky Dog Dash",
+            name: "Slinky Dog Dash",
             area: "Pixar Plaza",
-            icon: "target",
+            icon: "camera",
             sections: [
               {
-                color: "gold",
+                color: "palm",
                 icon: "camera",
                 title: "Foto",
-                list: [
-                  "De dia: **10h–11h** (luz clara).",
-                  "De noite: **19h+** (imperdível — luzes coloridas, ambiente mágico).",
-                ],
+                paragraphs: ["Foto de dia: 10h–11h (luz clara). Foto de noite: 19h ou mais (imperdível, luzes coloridas, ambiente mágico)."],
               },
             ],
           },
           {
             id: "millennium-falcon",
             attractionId: "millennium-falcon-smugglers-run",
-            name: "Star Wars: Galaxy's Edge · Millennium Falcon: Smugglers Run",
-            area: "Star Wars: Galaxy's Edge",
-            icon: "target",
+            name: "Millennium Falcon",
+            area: "Galaxy's Edge",
+            icon: "camera",
             sections: [
               {
-                color: "gold",
+                color: "palm",
                 icon: "camera",
                 title: "Foto",
-                list: [
-                  "De dia: **9h–10h** (mais iluminado, menos gente para foto limpa).",
-                  "De noite: **18h+** (atmosfera escura e imersiva, muito mais mágica — luzes de neon dos estabelecimentos).",
-                ],
+                paragraphs: ["Atração. Foto de dia: 9h–10h (mais iluminado, menos pessoas para foto limpa). Foto de noite: 18h ou mais (atmosfera escura e imersiva, luzes de neon)."],
               },
             ],
           },
           {
-            id: "rise-of-the-resistance",
+            id: "rise",
             attractionId: "star-wars-rise-of-the-resistance",
-            name: "Star Wars: Galaxy's Edge · Rise of the Resistance",
-            area: "Star Wars: Galaxy's Edge",
+            name: "Rise of the Resistance",
+            area: "Galaxy's Edge",
             icon: "target",
             sections: [
               {
-                color: "attn",
-                icon: "alert",
-                title: "Atenção",
-                paragraphs: [
-                  "Atração mais disputada do parque — **conferir a fila e o horário** de funcionamento no dia.",
-                ],
+                color: "citrus",
+                icon: "target",
+                title: "Roteiro",
+                paragraphs: ["Atração."],
               },
             ],
           },
           {
-            id: "toy-story-land-noite",
-            name: "Toy Story Land · Fotos à noite",
+            id: "toy-story-noite",
+            name: "Toy Story Land à noite",
             area: "Toy Story Land",
             icon: "camera",
             sections: [
               {
-                color: "gold",
+                color: "palm",
                 icon: "camera",
-                title: "Foto",
-                paragraphs: [
-                  "Voltar para Toy Story Land e tirar fotos à noite (**a partir das 19h**).",
-                ],
+                title: "Roteiro",
+                paragraphs: ["Voltar para Toy Story Land e tirar fotos à noite."],
               },
             ],
           },
           {
             id: "fantasmic",
             attractionId: "fantasmic",
-            name: "Sunset Boulevard · Fantasmic!",
+            name: "Fantasmic!",
             area: "Sunset Boulevard",
             icon: "camera",
             sections: [
               {
-                color: "navy",
-                icon: "target",
-                title: "Onde ficar",
-                paragraphs: [
-                  "**Sunset Boulevard** (melhor vista), ou perto da água entre as atrações.",
-                ],
-              },
-              {
-                color: "gold",
-                icon: "camera",
-                title: "Melhor horário",
-                paragraphs: [
-                  "Chegar 45 min a 1h antes (geralmente 19h45, se o show sair **às 20h30**).",
-                ],
-              },
-              {
                 color: "gold",
                 icon: "lightbulb",
-                title: "Dica para fotos",
-                paragraphs: [
-                  "Posicionem-se **perto da água**, sem árvores/pessoas bloqueando. As explosões de fogo e fumaça são os melhores momentos para fotografar — estejam prontos quando as chamas começarem.",
-                ],
+                title: "Foto",
+                paragraphs: ["Onde: ficar em Sunset Boulevard (melhor vista) ou perto da água entre atrações. Melhor horário: chegar 45 min a 1h antes (geralmente 19h45 se o show sair às 20h30). Posicionem-se perto da água, sem árvores ou pessoas bloqueando; as explosões de fogo e fumaça são os melhores momentos para fotografar."],
               },
             ],
           },
           {
-            id: "world-of-animation",
-            name: "Animation Courtyard · Show World of Animation",
+            id: "world-animation",
+            name: "Show World of Animation",
             area: "Animation Courtyard",
             icon: "camera",
             sections: [
               {
-                color: "navy",
-                icon: "target",
-                title: "Onde",
-                paragraphs: [
-                  "**Animation Courtyard** (projeções em tela gigante).",
-                ],
-              },
-              {
                 color: "gold",
-                icon: "camera",
-                title: "Melhor horário",
-                paragraphs: [
-                  "**17h–18h30** (se houver sessão) ou 20h (se houver sessão pós-Fantasmic).",
-                ],
+                icon: "lightbulb",
+                title: "Roteiro",
+                paragraphs: ["Assistir o show World of Animation."],
               },
             ],
           },
-        ],
+            ],
       },
       {
         key: "matheus-jairo",

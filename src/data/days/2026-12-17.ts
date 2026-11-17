@@ -22,40 +22,13 @@ export default {
   itinerary: {
     kind: "checklist",
     parkId: "epic-universe",
-    summary: "Visita intensa, na ordem do dia. Sem Express Pass, com Single Rider nas filas acima de 75 min.",
+    summary: "Primeira visita ao Epic Universe, na ordem do roteiro.",
     journey: {
-      tiles: [
-        { label: "Acordar", value: "6h15" },
-        { label: "Sair de casa", value: "7h15" },
-        { label: "Entrada antecipada", value: "9h" },
-        { label: "Parque aberto", value: "10h–21h" },
-      ],
+      tiles: [{ label: "Acordar", value: "6h15" }, { label: "Sair de casa", value: "7h15" }, { label: "Entrada antecipada", value: "9h" }, { label: "Parque aberto", value: "10h–21h" }],
       notes: [
-        { icon: "info", text: "Regra de ouro: não começar pelo Harry Potter, começar pela **Isle of Berk**." },
+        { icon: "info", text: "Ida até os portões: mesmos horários do Universal Studios." },
       ],
-      alerts: ["**Confirmar no app**: horário de 17/12 não publicado; assumido **das 10h às 21h**. Deslocar tudo pela diferença."],
-      // REVISAR: texto movido sem reescrever; "09h00 abertura" em Chegada ainda cita a abertura antiga (agora 10h, entrada antecipada 9h).
-      guide: {
-        title: "Regras do dia",
-        items: [
-          {
-            label: "Chegada",
-            text: "06h15 acordar\n**07h15 sair de Storey Lake** (~30 min de carro; rota I-4 oeste, saída Kirkman Rd/International Dr)\n~07h45 estacionar\n~08h15 no portão, com o ingresso já aberto no app\n**09h00 abertura**",
-          },
-          {
-            label: "Estacionamento",
-            text: "1001 Epic Blvd, Orlando, FL 32819. Entrada e estacionamento próprios, a ~3,5 km do CityWalk (não dá para ir a pé até lá).\nEstacionamento: **US$ 32 a 35 por dia**. Caminhada do carro ao portão: ~5 a 7 min. Tirar foto da placa e da fileira.",
-          },
-          {
-            label: "Filas",
-            text: "• App Universal Orlando Resort: criar alerta de fila (≤30 min) para Mario Kart, Battle at the Ministry, Stardust e Monsters Unchained.\n• Single Rider: Mario Kart, Stardust, Battle at the Ministry e Monsters Unchained. O tempo não aparece no app: perguntar ao funcionário. O grupo se divide e a fila fecha quando lota.\n• Armários **grátis** nas atrações (reconhecimento facial); na Stardust é **obrigatório**.\n• O parque ainda é instável: não deixar brinquedo importante para o fim do dia.",
-          },
-          {
-            label: "Atenção",
-            text: "• **Confirmar no voucher** que o ingresso de 14 dias vale no Epic nos dois dias (17 e 22).\n• Dia 16 termina tarde para parte do grupo (jogo do Magic): se voltarem **depois das 23h**, empurrar o despertar em 30 min.\n• Mais da metade das atrações fecha com chuva forte ou raio.",
-          },
-        ],
-      },
+      alerts: ["Confirmar no app o horário de abertura."],
     },
     attractions: [
       {
@@ -66,309 +39,167 @@ export default {
         icon: "target",
         sections: [
           {
-            color: "navy",
-            icon: "target",
-            title: "Onde",
-            paragraphs: ["Super Nintendo World (entrada pelo cano verde). Altura mínima: 1,02 m. Por volta **das 15h40**."],
-          },
-          {
             color: "citrus",
             icon: "target",
-            title: "Sobre",
-            paragraphs: [
-              "Corrida com óculos de realidade aumentada e projeção mapeada, em carrinhos de 4 lugares. O objetivo é **coletar 100 moedas** e vencer o Bowser. A fila no castelo do Bowser faz parte da graça.",
-            ],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Dica",
-            paragraphs: [
-              "Ouvir as instruções antes de começar: a atração não é intuitiva. Fila ~60 a 90 min; Single Rider. Se passar de 75 min, deixar para **depois das 19h30**.",
-            ],
+            title: "Roteiro",
+            paragraphs: ["Pegar single rider."],
           },
         ],
       },
       {
-        id: "mine-cart-madness",
+        id: "yoshi",
+        name: "Yoshi's Adventure",
+        area: "Super Nintendo World",
+        icon: "target",
+        sections: [
+          {
+            color: "citrus",
+            icon: "target",
+            title: "Roteiro",
+            paragraphs: ["Se der tempo."],
+          },
+        ],
+      },
+      {
+        id: "mine-cart",
         attractionId: "mine-cart-madness",
-        name: "Mine-Cart Madness e fotos com personagens",
-        // REVISAR (área a definir)
-        area: "a definir",
+        name: "Mine-Cart Madness",
+        area: "Super Nintendo World",
         icon: "target",
         sections: [
           {
             color: "citrus",
             icon: "target",
-            title: "Sobre",
-            paragraphs: [
-              "Montanha-russa familiar do Donkey Kong (altura mínima 1,02 m). O trilho parece incompleto e o carrinho salta entre trechos. Por volta **das 16h50**.",
-            ],
-          },
-          {
-            color: "gold",
-            icon: "camera",
-            title: "Dica",
-            paragraphs: [
-              "Fotos com Mario, Luigi, Peach, Toad e Donkey Kong (horários no app). **Pular a Yoshi's Adventure**. Paninis no Yoshi's Snack Stand. Power-Up Band: **decidir só no dia 22**.",
-            ],
+            title: "Roteiro",
+            paragraphs: ["Pegar single rider."],
           },
         ],
       },
       {
-        id: "battle-at-the-ministry",
-        attractionId: "battle-at-the-ministry",
-        name: "Harry Potter and the Battle at the Ministry",
-        area: "Ministry of Magic",
+        id: "arcanum-circle",
+        name: "The Arcanum Circle",
+        area: "Harry Potter",
         icon: "target",
         sections: [
           {
-            color: "navy",
-            icon: "target",
-            title: "Onde",
-            paragraphs: ["Ministry of Magic. Altura mínima: 1,02 m. Por volta **das 13h50**."],
-          },
-          {
             color: "citrus",
             icon: "target",
-            title: "Sobre",
-            paragraphs: [
-              "Simulador com animatrônicos e efeitos. Você entra no **Métro-Floo em Paris**, chega ao Ministério da Magia britânico e ajuda a impedir a fuga de Dolores Umbridge. A fila é um espetáculo à parte.",
-            ],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Dica",
-            paragraphs: [
-              "É a atração mais concorrida (fila ~45 a 90 min o dia todo). Por isso **NÃO é a primeira**. Single Rider; armário. **Se passar de 75 min**, voltar à noite.",
-            ],
+            title: "Roteiro",
+            paragraphs: ["Olhar horário."],
           },
         ],
       },
       {
-        id: "ministry-paris-lojas",
-        name: "Ruas de Paris: varinhas, doces e crepe",
-        // REVISAR (área a definir)
-        area: "a definir",
-        icon: "bag",
+        id: "metro-flu",
+        name: "Metro Flu",
+        area: "Harry Potter",
+        icon: "target",
         sections: [
           {
             color: "citrus",
-            icon: "bag",
-            title: "Lojas",
-            list: [
-              "Cosme Acajor Baguettes Magique: varinhas do Epic (**só funcionam no Epic**; vêm com mapa de pontos).",
-              "K. Rammelle: confeitaria com doces da saga.",
-              "Vitrine de quadros perto do Le Gobelet Noir: **ensina um feitiço** a quem tem varinha.",
-            ],
-          },
-          {
-            color: "gold",
-            icon: "burger",
-            title: "Dica",
-            paragraphs: [
-              "Crepe de cerveja amanteigada no Café L'Air de la Sirène, para dividir. Le Cirque Arcanus **fica para o dia 22** (os guias divergem sobre o show).",
-            ],
+            icon: "target",
+            title: "Roteiro",
+            paragraphs: ["Single rider; ver se vale a pena."],
           },
         ],
       },
       {
-        id: "untrainable-dragon",
-        name: "The Untrainable Dragon",
-        area: "Isle of Berk",
+        id: "portal-foto",
+        name: "Foto no caminho do portal",
+        area: "Harry Potter",
         icon: "camera",
         sections: [
           {
-            color: "navy",
+            color: "palm",
             icon: "camera",
-            title: "Onde",
-            paragraphs: ["Isle of Berk. Show de **~18 a 20 min**, com ar-condicionado."],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Horário",
-            paragraphs: [
-              "Estimativa de um site: 11h00, 13h30 e 16h (**confirmar no app**). Chegar 15 a 20 min antes. Se o **das 11h** não encaixar, usar o **das 13h30**.",
-            ],
-          },
-          {
-            color: "citrus",
-            icon: "camera",
-            title: "Sobre",
-            paragraphs: ["Espetáculo com dragões animatrônicos e acrobacias. O ponto alto é o **Banguela voando sobre o público**."],
+            title: "Foto",
+            paragraphs: ["Tirar foto no caminho do portal."],
           },
         ],
       },
       {
-        id: "banguela-isle-of-berk",
-        name: "Banguela e passeio na Isle of Berk",
-        area: "Isle of Berk",
-        icon: "camera",
-        sections: [
-          {
-            color: "citrus",
-            icon: "camera",
-            title: "Sobre",
-            paragraphs: [
-              "Meet & Greet com o Banguela **por volta das 10h40** (ele fica numa área externa, dá para vê-lo de fora da fila). Personagens andam pela ilha. A decoração de Natal (Snoggletog) está nas lojas Hiccup's Work Shop, How to Treat Your Dragon e Toothless' Treasures.",
-            ],
-          },
-          {
-            color: "gold",
-            icon: "camera",
-            title: "Foto de capa",
-            paragraphs: ["As duas estátuas vikings de 12 m na lagoa, **por volta das 10h30**: luz boa e área ainda vazia."],
-          },
-        ],
-      },
-      {
-        id: "spit-fyre-grill",
-        name: "Almoço no Spit Fyre Grill",
-        area: "Isle of Berk",
-        icon: "burger",
-        sections: [
-          {
-            color: "navy",
-            icon: "burger",
-            title: "Onde",
-            paragraphs: ["Isle of Berk, com vista para a Fyre Drill. Chegar ~11h40, antes do pico **das 12h**."],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Dica",
-            paragraphs: [
-              "Bowls e grelhados, o preferido do guia VPD. **Evitar o cone** de pão de alho com macarrão e queijo (**~US$ 20**), que o guia não recomenda.",
-            ],
-          },
-        ],
-      },
-      {
-        id: "fyre-drill",
-        name: "Fyre Drill (opcional)",
-        // REVISAR (área a definir)
-        area: "a definir",
+        id: "show-dragao",
+        name: "Show de Como Treinar Seu Dragão",
+        area: "Como Treinar Seu Dragão",
         icon: "target",
         sections: [
           {
             color: "citrus",
             icon: "target",
-            title: "Sobre",
-            paragraphs: ["Passeio de barco com canhões d'água para acertar alvos. **Molha MUITO**. **Sem altura mínima**."],
-          },
-          {
-            color: "attn",
-            icon: "alert",
-            title: "Atenção",
-            paragraphs: ["**Só se a máxima** do dia passar de ~21 °C; senão, pular. Guardar as bolsas no baú do barco."],
+            title: "Roteiro",
+            paragraphs: ["Show."],
           },
         ],
       },
       {
-        id: "hiccups-wing-gliders",
+        id: "fire-dreel",
+        name: "Fire Dreel",
+        area: "Como Treinar Seu Dragão",
+        icon: "target",
+        sections: [
+          {
+            color: "citrus",
+            icon: "target",
+            title: "Roteiro",
+            paragraphs: ["Atração."],
+          },
+        ],
+      },
+      {
+        id: "hiccups-ring-gliders",
         attractionId: "hiccups-wing-gliders",
-        name: "Hiccup's Wing Gliders",
-        area: "Isle of Berk",
-        icon: "target",
-        sections: [
-          {
-            color: "navy",
-            icon: "target",
-            title: "Onde",
-            paragraphs: ["Isle of Berk (Como Treinar o Seu Dragão). Altura mínima: 1,02 m. Abertura **às 09h00**."],
-          },
-          {
-            color: "citrus",
-            icon: "target",
-            title: "Sobre",
-            paragraphs: [
-              "Montanha-russa familiar de **~72 km/h**, sem inversões. Simula um voo sobre a ilha ao lado de Soluço e Banguela e passa perto da lagoa.",
-            ],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Dica",
-            paragraphs: [
-              "Primeira atração do dia: a fila é de ~10 a 25 min na abertura e cresce o dia todo. Pedir a primeira fileira **só se a fila estiver** curta, pois o cenário fica mais bonito.",
-            ],
-          },
-        ],
-      },
-      {
-        id: "dragon-racers-rally",
-        name: "Dragon Racer's Rally (opcional)",
-        // REVISAR (área a definir)
-        area: "a definir",
+        name: "Hiccup's Ring Gliders",
+        area: "Como Treinar Seu Dragão",
         icon: "target",
         sections: [
           {
             color: "citrus",
             icon: "target",
-            title: "Sobre",
-            paragraphs: [
-              "Giro aéreo com asas controláveis. Dura pouco mais de 1 min e há pouca explicação. **Altura mínima: 1,22 m**.",
-            ],
-          },
-          {
-            color: "attn",
-            icon: "alert",
-            title: "Atenção",
-            paragraphs: ["Só vale com fila de até 20 min. **Não aceita Express Pass**. Primeira da lista de cortes."],
+            title: "Roteiro",
+            paragraphs: ["Atração."],
           },
         ],
       },
       {
-        id: "monsters-unchained",
+        id: "dragon-racers",
+        name: "Dragon Racers",
+        area: "Como Treinar Seu Dragão",
+        icon: "target",
+        sections: [
+          {
+            color: "citrus",
+            icon: "target",
+            title: "Roteiro",
+            paragraphs: ["Atração."],
+          },
+        ],
+      },
+      {
+        id: "frankenstein",
         attractionId: "monsters-unchained",
-        name: "Monsters Unchained: The Frankenstein Experiment",
+        name: "Castelo do Frankenstein",
         area: "Dark Universe",
         icon: "target",
         sections: [
           {
-            color: "navy",
-            icon: "target",
-            title: "Onde",
-            paragraphs: ["Dark Universe (Frankenstein Manor). Altura mínima: 1,22 m. Por volta **das 12h35**."],
-          },
-          {
             color: "citrus",
             icon: "target",
-            title: "Sobre",
-            paragraphs: [
-              "Simulador com movimento e **15 animatrônicos**. Drácula liberta Lobisomem, Múmia e outros monstros no experimento da Dra. Victoria Frankenstein.",
-            ],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Dica",
-            paragraphs: ["Fila ~30 a 60 min; **Single Rider disponível**; **armário**. Quem enjoa fácil com movimento deve ter cuidado."],
+            title: "Roteiro",
+            paragraphs: ["Single rider."],
           },
         ],
       },
       {
-        id: "curse-of-the-werewolf",
-        name: "Curse of the Werewolf e fotos com monstros (opcional)",
-        // REVISAR (área a definir)
-        area: "a definir",
-        icon: "camera",
+        id: "curse-werewolf",
+        name: "Curse of the Werewolf",
+        area: "Dark Universe",
+        icon: "target",
         sections: [
           {
             color: "citrus",
             icon: "target",
-            title: "Sobre",
-            paragraphs: [
-              "Montanha-russa giratória familiar (altura mínima 1,02 m). O carrinho gira no próprio eixo, então **pular se alguém não curte giro**. Fotos com Noiva de Frankenstein, Homem Invisível e Ygor.",
-            ],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Dica",
-            paragraphs: ["Olhar o The Burning Blade Tavern: a hélice do moinho pega fogo **a cada 20 min**."],
+            title: "Roteiro",
+            paragraphs: ["Single rider."],
           },
         ],
       },
@@ -376,123 +207,28 @@ export default {
         id: "stardust-racers",
         attractionId: "stardust-racers",
         name: "Stardust Racers",
-        area: "Celestial Park",
+        area: "Dark Universe",
         icon: "target",
         sections: [
           {
-            color: "navy",
-            icon: "target",
-            title: "Onde",
-            paragraphs: ["Celestial Park, do lado mais perto da Isle of Berk. Altura mínima: 1,22 m. Por volta **das 09h30**."],
-          },
-          {
             color: "citrus",
             icon: "target",
-            title: "Sobre",
-            paragraphs: [
-              "Montanha-russa de lançamento duplo: dois trens em corrida paralela, ~100 km/h, inversões e quedas. É a atração **mais radical do parque** e a favorita dos guias.",
-            ],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Dica",
-            paragraphs: [
-              "Fazer as DUAS pistas (a verde é um pouco mais intensa, segundo os guias). Armário **obrigatório** na fila. Segunda pista por Single Rider para ganhar tempo.",
-            ],
+            title: "Roteiro",
+            paragraphs: ["Atração."],
           },
         ],
       },
       {
-        id: "pizza-moon-jantar",
-        name: "Jantar no Pizza Moon",
-        area: "Celestial Park",
-        icon: "burger",
-        sections: [
-          {
-            color: "navy",
-            icon: "burger",
-            title: "Onde",
-            paragraphs: ["Celestial Park, ~17h30."],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Dica",
-            paragraphs: [
-              "Pizzas diferentes do básico de parque e massa gratinada. Alternativa: **Das Stakehaus**, na Dark Universe (muito temático, preço normal).",
-            ],
-          },
-        ],
-      },
-      {
-        id: "lojas-celestial-park",
-        name: "Lojas do Celestial Park",
-        area: "Celestial Park",
-        icon: "bag",
-        sections: [
-          {
-            color: "citrus",
-            icon: "bag",
-            title: "Lojas",
-            list: [
-              "**Other Worlds Mercantile**: a mais completa, com produtos de todas as áreas.",
-              "**Sensorium Emporium**: acessórios temáticos do parque.",
-              "North Star – **Wintry Wonders**: produtos de Natal.",
-            ],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Dica",
-            paragraphs: ["Ir por volta das **18h15**, antes da fila do fim do dia."],
-          },
-        ],
-      },
-      {
-        id: "stardust-noite-snw-noite",
-        name: "Noite: Stardust iluminada e Super Nintendo World",
-        // REVISAR (área a definir)
-        area: "a definir",
+        id: "encerramento",
+        name: "Encerramento",
+        area: "Fim do dia",
         icon: "camera",
         sections: [
           {
             color: "gold",
             icon: "lightbulb",
-            title: "Dica",
-            list: [
-              "18h45 **Stardust Racers** à noite: o trilho imita um cometa e fica iluminado. Single Rider; **a fila fecha no encerramento**.",
-              "**19h30** Voltar à Super Nintendo World iluminada. Se a fila do Mario Kart caiu, fazer agora.",
-              "**20h15** Constellation Carousel iluminado (sem altura mínima; bom para descansar).",
-            ],
-          },
-        ],
-      },
-      {
-        id: "celestial-goodnight",
-        name: "Universal Celestial Goodnight",
-        area: "Celestial Park",
-        icon: "camera",
-        sections: [
-          {
-            color: "navy",
-            icon: "camera",
-            title: "Onde",
-            paragraphs: ["Ao redor do lago do Celestial Park. Fechamento previsto **às 21h00**; foto da placa do carro na saída."],
-          },
-          {
-            color: "citrus",
-            icon: "camera",
-            title: "Sobre",
-            paragraphs: [
-              "**Espetáculo noturno** com fontes, luzes, música e fogos (substituiu o Cosmos Fountain em 07/07/2026). Traz canções de Super Nintendo, Como Treinar o Seu Dragão, Harry Potter e monstros.",
-            ],
-          },
-          {
-            color: "attn",
-            icon: "alert",
-            title: "Atenção",
-            paragraphs: ["**Horário só no app**: chegar **20 a 30 min antes**. Corte da noite: se faltar tempo, cortar nesta ordem Dragon Racer's Rally, Fyre Drill, Werewolf, Yoshi's e Carousel."],
+            title: "Roteiro",
+            paragraphs: ["Assistir ao encerramento."],
           },
         ],
       },
