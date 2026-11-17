@@ -1,4 +1,4 @@
-import type { ChecklistItem, DayData, SplitTrack } from "../../types";
+import type { ChecklistItem, DayData, JourneyNote, SplitTrack } from "../../types";
 
 const islandsAttractions: ChecklistItem[] = [
           {
@@ -121,61 +121,46 @@ const islandsAttractions: ChecklistItem[] = [
           },
 ];
 
-const dailyDealzTrack: SplitTrack = {
-  key: "daily-dealz",
-  category: "compras",
-  title: "Daily Dealz",
-  mode: "schedule",
-  summary: "Manhã de compras antes do parque.",
-  journey: {
-    tiles: [],
-    notes: [
-      { icon: "info", text: "Sair **às 11h30 no máximo** para entrar no Islands por volta das 13h." },
-    ],
-    alerts: ["Confirmar: horário de abertura."],
-  },
-  periods: [
-    {
-      title: "Manhã",
-      steps: [
-        { kind: "stop", time: "10:00", stopId: "daily-dealz", name: "Daily Dealz", icon: "bag" },
-        { kind: "transit", time: "11:30", duration: "~25 min", destinationName: "Universal Orlando (Islands of Adventure)" },
-      ],
-    },
-  ],
-  cards: [
-    {
-      id: "daily-dealz",
-      name: "Daily Dealz",
-      icon: "bag",
-      time: "10:00",
-      sections: [
-        { color: "navy", icon: "parking", title: "Endereço", paragraphs: ["7802 S Orange Blossom Trl, Orlando, FL. Mesma área da Aviva Florida."] },
-        { color: "citrus", icon: "bag", title: "Sobre", paragraphs: ["Loja de devoluções e liquidação da Amazon, com preços por caixa/lote. O estoque muda todo dia, então **não dá para planejar** o que vai achar."] },
-        { color: "attn", icon: "alert", title: "Atenção", paragraphs: ["Horário de funcionamento **a confirmar**. Se não houver tempo, a ordem pode ser invertida: parque à tarde e loja em outro dia."] },
-      ],
-    },
+const dailyDealzItem: ChecklistItem = {
+  id: "daily-dealz",
+  name: "Daily Dealz",
+  area: "Antes do parque",
+  icon: "bag",
+  sections: [
+    { color: "gold", icon: "lightbulb", title: "Horário sugerido", paragraphs: ["Por volta das 10h00. Sair **às 11h30 no máximo** (~25 min até o Islands) para entrar no parque por volta das 13h."] },
+    { color: "navy", icon: "parking", title: "Endereço", paragraphs: ["7802 S Orange Blossom Trl, Orlando, FL. Mesma área da Aviva Florida."] },
+    { color: "citrus", icon: "bag", title: "Sobre", paragraphs: ["Loja de devoluções e liquidação da Amazon, com preços por caixa/lote. O estoque muda todo dia, então **não dá para planejar** o que vai achar."] },
+    { color: "attn", icon: "alert", title: "Atenção", paragraphs: ["Horário de funcionamento **a confirmar**. Se não houver tempo, a ordem pode ser invertida: parque à tarde e loja em outro dia."] },
   ],
 };
 
-const islandsOfAdventureTrack: SplitTrack = {
+const ISLANDS_SUMMARY = "segunda visita ao Islands: só as favoritas e o que faltou no dia 15, com Hogwarts Express de ida e volta no fim da tarde.";
+const ISLANDS_NOTES: JourneyNote[] = [
+  { icon: "info", text: "Entrada pela esquerda (**Marvel primeiro**, sentido horário)." },
+  { icon: "info", text: "A **janela do Hogwarts Express** é fixa; o resto se ajusta em torno dela." },
+  { icon: "info", text: "CityWalk depois, decidir na hora." },
+];
+const ISLANDS_ALERT = "Confirmar no app Universal Orlando Resort: **horário assumido 09h–20h**.";
+const HOGWARTS_EXPRESS_TILE = { label: "Hogwarts Express", value: "17h45–19h15" };
+const PARK_CLOSING_TILE = { label: "Parque fecha", value: "~20h" };
+
+/** Roteiro único do dia: Daily Dealz de manhã e Islands à tarde e à noite, numa só tela. */
+const dailyDealzAndIslandsTrack: SplitTrack = {
   key: "islands-of-adventure",
   category: "parque",
-  title: "Islands of Adventure",
+  title: "Daily Dealz e Islands of Adventure",
   mode: "checklist",
   parkId: "islands-of-adventure",
-  // REVISAR (summary): Texto vindo da legenda da foto (heroCaption) removida.
-  summary: "Segunda visita ao Islands: só as favoritas e o que faltou no dia 15, com Hogwarts Express de ida e volta no fim da tarde.",
+  summary: `Manhã de compras no Daily Dealz e, à tarde, ${ISLANDS_SUMMARY}`,
   journey: {
-    tiles: [{ label: "Entrada", value: "~13h" }, { label: "Hogwarts Express", value: "17h45–19h15" }, { label: "Parque fecha", value: "~20h" }],
+    tiles: [{ label: "Daily Dealz", value: "~10h" }, { label: "Entrada", value: "~13h" }, HOGWARTS_EXPRESS_TILE, PARK_CLOSING_TILE],
     notes: [
-      { icon: "info", text: "Entrada pela esquerda (**Marvel primeiro**, sentido horário)." },
-      { icon: "info", text: "A **janela do Hogwarts Express** é fixa; o resto se ajusta em torno dela." },
-      { icon: "info", text: "CityWalk depois, decidir na hora." },
+      { icon: "info", text: "Sair do Daily Dealz **às 11h30 no máximo** (~25 min até o Islands) para entrar por volta das 13h." },
+      ...ISLANDS_NOTES,
     ],
-    alerts: ["Confirmar no app Universal Orlando Resort: **horário assumido 09h–20h**."],
+    alerts: ["Confirmar: horário de abertura do Daily Dealz.", ISLANDS_ALERT],
   },
-  attractions: islandsAttractions,
+  attractions: [dailyDealzItem, ...islandsAttractions],
 };
 
 const islandsOnlyTrack: SplitTrack = {
@@ -185,20 +170,16 @@ const islandsOnlyTrack: SplitTrack = {
   mode: "checklist",
   park: { name: "Islands of Adventure", departure: "12h" }, // REVISAR
   parkId: "islands-of-adventure",
-  summary: "Segunda visita ao Islands: só as favoritas e o que faltou no dia 15, com Hogwarts Express de ida e volta no fim da tarde.",
+  summary: `Só o parque: ${ISLANDS_SUMMARY}`,
   journey: {
     tiles: [
       { label: "Sair de casa", value: "~12h00" }, // REVISAR: sem o Daily Dealz, saída derivada de entrada ~13h menos ~35 min de carro e a caminhada até o portão
       { label: "Entrada", value: "~13h" },
-      { label: "Hogwarts Express", value: "17h45–19h15" },
-      { label: "Parque fecha", value: "~20h" },
+      HOGWARTS_EXPRESS_TILE,
+      PARK_CLOSING_TILE,
     ],
-    notes: [
-      { icon: "info", text: "Entrada pela esquerda (**Marvel primeiro**, sentido horário)." },
-      { icon: "info", text: "A **janela do Hogwarts Express** é fixa; o resto se ajusta em torno dela." },
-      { icon: "info", text: "CityWalk depois, decidir na hora." },
-    ],
-    alerts: ["Confirmar no app Universal Orlando Resort: **horário assumido 09h–20h**."],
+    notes: ISLANDS_NOTES,
+    alerts: [ISLANDS_ALERT],
   },
   attractions: islandsAttractions,
 };
@@ -217,13 +198,13 @@ export default {
   },
   split: ["compras", "parque"],
   title: "Daily Dealz, Islands of Adventure e CityWalk",
-  itinerary: { kind: "split", tracks: [dailyDealzTrack, islandsOfAdventureTrack, islandsOnlyTrack] },
+  itinerary: { kind: "split", tracks: [dailyDealzAndIslandsTrack, islandsOnlyTrack] },
   options: [
     {
       id: "daily-dealz-e-islands",
       label: "Daily Dealz + Islands of Adventure",
       supportLine: "Manhã de compras e tarde no parque", // REVISAR: dados não dizem quem vai
-      trackKeys: ["daily-dealz", "islands-of-adventure"],
+      trackKeys: ["islands-of-adventure"],
       isDefault: true,
     },
     {
