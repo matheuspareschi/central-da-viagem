@@ -61,12 +61,17 @@ const tests: Array<[string, () => void]> = [
     assert.equal(optionQuestion("2026-12-19", "2026-12-18"), "Qual roteiro você quer seguir neste dia?");
     assert.equal(optionQuestion("2026-12-17", "2026-12-18"), "Qual roteiro você fez neste dia?");
   }],
-  ["dia 18: 'Só Islands' fica sem o Daily Dealz e com categoria só de parque", () => {
-    const option = findOption(day18, "so-islands");
+  ["dia 18: só o Islands, sem opções de roteiro", () => {
+    assert.equal("options" in day18, false);
+    assert.equal(day18.itinerary.kind, "checklist");
+    assert.equal(day18.category, "parque");
+  }],
+  ["dia 10: escolher uma opção deixa só a trilha dela", () => {
+    const option = findOption(day10, "daily-dealz-outlet-e-islands");
     assert.ok(option);
-    const day = applyOption(day18, option);
-    assert.equal(day.itinerary?.kind === "split" && day.itinerary.tracks.length, 1);
-    assert.equal(day.category, "parque");
+    const day = applyOption(day10, option);
+    assert.deepEqual(day.itinerary?.kind === "split" && day.itinerary.tracks.map((track) => track.key), ["daily-dealz-outlet-e-islands"]);
+    assert.equal(day.category, "compras");
     assert.equal(day.split, undefined);
   }],
   ["dia 16: cada opção é um roteiro único, com a mesma manhã e noite diferente", () => {
