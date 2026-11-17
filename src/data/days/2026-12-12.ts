@@ -51,8 +51,8 @@ export default {
           { kind: "transit", time: "14:30", duration: "20 min", destinationName: "WonderWorks (casa torta)" },
           { kind: "stop", time: "15:00", stopId: "wonderworks", name: "WonderWorks (casa torta)", icon: "camera" },
           { kind: "stop", time: "15:30", stopId: "icon-park", name: "ICON Park", icon: "sparkle" },
-          { kind: "transit", time: "16:00", duration: "25–30 min", destinationName: "Lake Eola Park" },
-          { kind: "stop", time: "16:45", stopId: "lake-eola", name: "Lake Eola: decoração, mercado e show da árvore", icon: "tree" },
+          { kind: "transit", time: "16:00", duration: "25–30 min", destinationName: "Lake Eola" },
+          { kind: "stop", time: "16:45", stopId: "lake-eola", name: "Lake Eola", icon: "tree" },
         ],
       },
       {
@@ -220,7 +220,7 @@ export default {
       },
       {
         id: "lake-eola",
-        name: "Lake Eola Park",
+        name: "Lake Eola",
         address: ADDRESSES.lakeEola,
         icon: "tree",
         time: "16:45",
