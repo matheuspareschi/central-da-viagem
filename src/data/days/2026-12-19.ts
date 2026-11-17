@@ -158,7 +158,7 @@ const afternoonPeriod: DayPeriod = {
   steps: [
     { kind: "transit", time: "13:00", duration: "~30–35 min", destinationName: "Casa — almoço" },
     { kind: "stop", time: "13:00", stopId: "casa-almoco", name: "Casa — almoço", icon: "house" },
-    { kind: "transit", time: "15:00", duration: "", destinationName: "Nike Factory Store" },
+    { kind: "transit", time: "15:00", duration: "~30–35 min", destinationName: "Nike Factory Store" }, // REVISAR: tempo da casa ao Village, assumido igual ao da manhã
     { kind: "stop", time: "15:00", stopId: "nike", name: "Nike Factory Store", icon: "bag" },
   ],
 };
@@ -196,7 +196,7 @@ export default {
         mode: "schedule",
         summary: "Feira de Winter Garden de manhã, Winter Garden Village, almoço em casa, Nike Factory Store e Celebration à noite.",
         journey: {
-          tiles: [{ label: "Acordar", value: "7h00" }, { label: "Sair de casa", value: "7h30" }],
+          tiles: [{ label: "Acordar", value: "7h00" }, { label: "Sair de casa", value: "7h30" }, { label: "Celebration", value: "16h30" }, { label: "Deslocamento", value: "~1h55 no total" }], // REVISAR: soma dos trajetos do dia, sem a volta para casa
           notes: [],
           alerts: [],
         },
@@ -222,7 +222,7 @@ export default {
         mode: "schedule",
         summary: "Direto ao Winter Garden Village, almoço em casa, Nike Factory Store e Celebration à noite.",
         journey: {
-          tiles: [{ label: "Acordar", value: "8h30" }, { label: "Sair de casa", value: "9h25" }],
+          tiles: [{ label: "Acordar", value: "8h30" }, { label: "Sair de casa", value: "9h25" }, { label: "Celebration", value: "16h30" }, { label: "Deslocamento", value: "~1h50 no total" }], // REVISAR: soma dos trajetos do dia, sem a volta para casa
           notes: [],
           alerts: [],
         },
