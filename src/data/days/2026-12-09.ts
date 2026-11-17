@@ -6,7 +6,7 @@ export default {
   day: 9,
   park: {
     name: "Epcot",
-    departure: "7h30",
+    departure: "7h40",
     opening: "9h",
     closing: "21h",
   },
@@ -24,7 +24,7 @@ export default {
     parkId: "epcot",
     summary: "Dia de parque único, sem trilha paralela de compras. Ritmo rápido em World Celebration, World of Nature e World Discovery pela manhã, para deixar o World Showcase com calma.",
     journey: {
-      tiles: [{ label: "Acordar", value: "7h00" }, { label: "Sair do resort", value: "7h30" }, { label: "Estacionamento abre", value: "8h00" }, { label: "Parque aberto", value: "9h–21h" }],
+      tiles: [{ label: "Acordar", value: "6h40" }, { label: "Sair do resort", value: "7h40" }, { label: "Estacionamento abre", value: "8h00" }, { label: "Parque aberto", value: "9h–21h" }],
       notes: [
         { icon: "car", text: "Ida até os portões: em torno de 25 minutos." },
       ],
