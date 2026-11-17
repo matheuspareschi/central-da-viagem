@@ -16,7 +16,6 @@ const universal: Omit<Estacionamento, "id" | "nome"> = {
   endereco: "6000 Universal Blvd, Orlando, FL 32819",
   valores: [
     { rotulo: "Padrão", valor: "**US$ 35**/dia" },
-    { rotulo: "Depois das 18h", valor: "**grátis**" },
   ],
   comoChegar: "Da garagem, siga a pé pelo **CityWalk**; esteiras rolantes cobrem boa parte do caminho.",
   meio: "a-pe",
@@ -58,7 +57,6 @@ export const estacionamentos: Record<string, Estacionamento> = {
     endereco: "1001 Epic Blvd, Orlando, FL 32819",
     valores: [
       { rotulo: "Padrão", valor: "**US$ 32**/dia" },
-      { rotulo: "Depois das 18h", valor: "**não é grátis** no Epic" },
     ],
     comoChegar: "Do estacionamento até a entrada: **5 a 7 min** a pé.",
     meio: "a-pe",
