@@ -2,7 +2,7 @@
 
 Fonte: `docs/fontes/Guia_Completo_de_Atracoes_dos_Parques_de_Orlando.pdf` (7 páginas). Os textos foram transcritos sem alterações; apóstrofos tipográficos (’) do PDF foram preservados.
 
-Status: todos os parques do PDF feitos (EPCOT, Universal Studios Florida, Islands of Adventure, Hollywood Studios, Epic Universe, Busch Gardens Tampa). Magic Kingdom só comparado.
+Status: todos os parques do PDF feitos (EPCOT, Universal Studios Florida, Islands of Adventure, Hollywood Studios, Epic Universe, Busch Gardens Tampa). Magic Kingdom agora também usa tipo e descrição do PDF (shows e desfiles seguem da lista original). Itens dos dias ligados ao catálogo mostram categoria e "Curiosidades" automaticamente; itens que juntam várias atrações usam `attractionIds`.
 
 Regra de ligação usada nos dias: só liga quando o nome é igual ou muda só caixa, acento, aspas, "&"/"and", parênteses ou o prefixo "Área ·" do dia 11. Tradução, subtítulo extra ou item que combina várias atrações fica sem ligação.
 

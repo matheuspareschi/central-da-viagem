@@ -224,6 +224,7 @@ export default {
       },
       {
         id: "moana-photo",
+        attractionId: "journey-of-water-moana",
         name: "Fotos na área temática de Moana",
         area: "World Nature",
         icon: "camera",
@@ -254,6 +255,7 @@ export default {
       },
       {
         id: "guardians-cosmic-rewind",
+        attractionId: "guardians-of-the-galaxy-cosmic-rewind",
         name: "Guardiões da Galáxia: Cosmic Rewind",
         area: "World Discovery",
         icon: "target",
@@ -386,6 +388,7 @@ export default {
       },
       {
         id: "showcase-canada",
+        attractionId: "canada-china-far-and-wide",
         name: "World Showcase — Canadá",
         area: "World Showcase",
         icon: "target",
@@ -450,6 +453,7 @@ export default {
       },
       {
         id: "showcase-france",
+        attractionId: "remys-ratatouille-adventure-franca",
         name: "World Showcase — França (Remy's Ratatouille Adventure)",
         area: "World Showcase",
         icon: "target",
@@ -646,6 +650,7 @@ export default {
       },
       {
         id: "showcase-china",
+        attractionId: "canada-china-far-and-wide",
         name: "World Showcase — China",
         area: "World Showcase",
         icon: "target",
@@ -682,6 +687,7 @@ export default {
       },
       {
         id: "showcase-norway",
+        attractionId: "frozen-ever-after-noruega",
         name: "World Showcase — Noruega (Frozen Ever After)",
         area: "World Showcase",
         icon: "target",
@@ -718,6 +724,7 @@ export default {
       },
       {
         id: "showcase-mexico",
+        attractionId: "grand-fiesta-tour-mexico",
         name: "World Showcase — México (Gran Fiesta Tour)",
         area: "World Showcase",
         icon: "target",
@@ -754,6 +761,7 @@ export default {
       },
       {
         id: "epcot-fireworks",
+        attractionId: "luminous-the-symphony-of-us",
         name: "Fogos (show noturno)",
         area: "World Showcase",
         icon: "tree",

@@ -5,6 +5,7 @@ import { parkCatalogs } from "../src/data/parks/index.ts";
 import { shopRegions } from "../src/data/shopping/index.ts";
 import { applyOption } from "../src/lib/dayOption.ts";
 import { listDayTracks, type DayTrack } from "../src/lib/dayTracks.ts";
+import { linkedAttractionIds } from "../src/lib/parkChecklist.ts";
 import { beforeTravelItems } from "../src/data/global/beforeTravel.ts";
 import { trashInstructions } from "../src/data/global/trashInstructions.ts";
 import { tollStages } from "../src/data/pedagio.ts";
@@ -53,9 +54,11 @@ function checkChecklist(where: string, { extras, content }: DayTrack): string[] 
   if (!catalog) return [...errors, `${where}: parkId "${extras.parkId}" não existe em data/parks`];
 
   const catalogIds = new Set(catalog.attractions.map((attraction) => attraction.id));
-  const unknownLinks = content.attractions
-    .filter((item) => item.attractionId && !catalogIds.has(item.attractionId))
-    .map((item) => `${where}: attractionId "${item.attractionId}" (item "${item.id}") não existe no catálogo "${extras.parkId}"`);
+  const unknownLinks = content.attractions.flatMap((item) =>
+    linkedAttractionIds(item)
+      .filter((attractionId) => !catalogIds.has(attractionId))
+      .map((attractionId) => `${where}: attractionId "${attractionId}" (item "${item.id}") não existe no catálogo "${extras.parkId}"`),
+  );
   return [...errors, ...unknownLinks];
 }
 

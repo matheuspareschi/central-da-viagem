@@ -91,6 +91,7 @@ export default {
       },
       {
         id: "mine-cart-madness",
+        attractionId: "mine-cart-madness",
         name: "Mine-Cart Madness e fotos com personagens",
         // REVISAR (área a definir)
         area: "a definir",
@@ -116,6 +117,7 @@ export default {
       },
       {
         id: "battle-at-the-ministry",
+        attractionId: "battle-at-the-ministry",
         name: "Harry Potter and the Battle at the Ministry",
         area: "Ministry of Magic",
         icon: "target",
@@ -320,6 +322,7 @@ export default {
       },
       {
         id: "monsters-unchained",
+        attractionId: "monsters-unchained",
         name: "Monsters Unchained: The Frankenstein Experiment",
         area: "Dark Universe",
         icon: "target",

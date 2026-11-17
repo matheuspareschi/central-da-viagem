@@ -257,7 +257,7 @@ export default {
             title: "Onde tirar foto",
             list: [
               "**Árvore de Natal gigante** (quando a decoração estiver montada): foto com as luzes acesas ao anoitecer.",
-              "**Beira do lago, de frente para o centro**: o skyline de Orlando refletido na água ao pôr do sol.",
+              "**Beira do lago**, de frente para o centro: o skyline de Orlando refletido na água ao pôr do sol.",
               "**Chafariz** iluminado, com o lago ao fundo.",
               "**Pedalinhos de cisne** e os cisnes de verdade, na margem.",
               "**Anfiteatro** (Walt Disney Amphitheater), com o lago atrás.",

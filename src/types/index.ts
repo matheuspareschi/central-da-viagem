@@ -86,10 +86,11 @@ export interface ScheduleDay {
   cards: StopCard[];
 }
 
-/** Item do checklist de um dia de parque; `attractionId` liga ao catálogo do parque. */
+/** Item do checklist de um dia de parque; `attractionId` liga ao catálogo do parque (`attractionIds`, quando o item junta várias atrações). */
 export interface ChecklistItem {
   id: string;
   attractionId?: string;
+  attractionIds?: string[];
   name: string;
   /** Área ou pavilhão do parque, exibido sob o título na lista. */
   area?: string;

@@ -213,6 +213,7 @@ export default {
       },
       {
         id: "dark-universe-22",
+        attractionId: "monsters-unchained",
         name: "Dark Universe: Monsters Unchained e Das Stakehaus",
         area: "Dark Universe",
         icon: "target",

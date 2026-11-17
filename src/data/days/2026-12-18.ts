@@ -3,6 +3,7 @@ import type { ChecklistItem, DayData, SplitTrack } from "../../types";
 const islandsAttractions: ChecklistItem[] = [
           {
             id: "marvel",
+            attractionIds: ["the-incredible-hulk-coaster", "the-amazing-adventures-of-spider-man"],
             name: "Marvel: Hulk e Spider-Man",
             area: "Marvel Super Hero Island",
             icon: "target",
@@ -40,6 +41,7 @@ const islandsAttractions: ChecklistItem[] = [
           },
           {
             id: "hagrids",
+            attractionId: "hagrids-magical-creatures-motorbike",
             name: "Hagrid's Motorbike Adventure",
             area: "The Wizarding World of Harry Potter - Hogsmeade",
             icon: "target",

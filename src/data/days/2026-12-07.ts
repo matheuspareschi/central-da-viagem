@@ -100,6 +100,7 @@ export default {
           },
           {
             id: "mk-liberty-photos",
+            attractionId: "hall",
             name: "Liberty Tree e Hall of the Presidents",
             area: "Liberty Square",
             icon: "camera",
@@ -182,6 +183,7 @@ export default {
           },
           {
             id: "mk-fireworks",
+            attractionId: "happily",
             name: "Show de fogos (Main Street, U.S.A.)",
             area: "Main Street, U.S.A.",
             icon: "tree",

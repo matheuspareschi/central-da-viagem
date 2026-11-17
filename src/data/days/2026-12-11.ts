@@ -57,6 +57,7 @@ export default {
           },
           {
             id: "tower-of-terror",
+            attractionId: "tower-of-terror",
             name: "Sunset Boulevard · Torre do Terror",
             area: "Sunset Boulevard",
             icon: "target",
@@ -83,6 +84,7 @@ export default {
           },
           {
             id: "rock-n-roller-coaster",
+            attractionId: "rock-n-roller-coaster-aerosmith",
             name: "Sunset Boulevard · Rock 'n' Roller Coaster",
             area: "Sunset Boulevard",
             icon: "target",
@@ -108,6 +110,7 @@ export default {
           },
           {
             id: "beauty-and-the-beast-show",
+            attractionId: "beauty-and-the-beast-live-on-stage",
             name: "Sunset Boulevard · Show da Bela e a Fera",
             area: "Sunset Boulevard",
             icon: "target",
@@ -153,6 +156,7 @@ export default {
           },
           {
             id: "star-tours",
+            attractionId: "star-tours-the-adventures-continue",
             name: "Echo Lake · Star Tours",
             area: "Echo Lake",
             icon: "target",

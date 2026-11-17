@@ -112,6 +112,7 @@ export default {
       },
       {
         id: "ollivanders",
+        attractionId: "ollivanders-wand-shop",
         name: "Ollivanders e varinhas",
         area: "Beco Diagonal",
         icon: "bag",
@@ -150,6 +151,7 @@ export default {
       },
       {
         id: "gringotts",
+        attractionId: "harry-potter-and-escape-from-gringotts",
         name: "Harry Potter and the Escape from Gringotts",
         area: "Beco Diagonal / Londres",
         icon: "target",
@@ -231,6 +233,7 @@ export default {
       },
       {
         id: "simpsons",
+        attractionId: "the-simpsons-ride",
         name: "The Simpsons Ride e donut Lard Lad",
         // REVISAR (área a definir)
         area: "a definir",
@@ -402,6 +405,7 @@ export default {
       },
       {
         id: "minion-land",
+        attractionIds: ["despicable-me-minion-mayhem", "villain-con-minion-blast"],
         name: "Minion Mayhem e Villain-Con Minion Blast",
         // REVISAR (área a definir)
         area: "a definir",
@@ -464,6 +468,7 @@ export default {
       },
       {
         id: "gringotts-segunda-volta",
+        attractionId: "harry-potter-and-escape-from-gringotts",
         name: "Gringotts (2ª vez)",
         area: "Beco Diagonal / Londres",
         icon: "target",

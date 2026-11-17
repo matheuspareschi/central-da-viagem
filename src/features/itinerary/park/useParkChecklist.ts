@@ -3,6 +3,7 @@ import { parkCatalogs, type ParkCatalog } from "../../../data/parks";
 import { useLocalStorageSet } from "../../../hooks/useLocalStorageSet";
 import {
   isAddedEntryId,
+  linkedAttractionIds,
   moveEntry,
   reconcileOrder,
   restoreOriginalOrder,
@@ -34,10 +35,10 @@ export function useParkChecklist({ storageId, dateISO, trackKey, items, parkId }
   const catalog = (parkId && parkCatalogs[parkId]) || NO_CATALOG;
 
   const model = useMemo(() => {
-    const linkedIds = new Set(items.map((item) => item.attractionId));
+    const linkedIds = new Set(items.flatMap(linkedAttractionIds));
     const addable = catalog.attractions.filter((attraction) => !linkedIds.has(attraction.id));
     const dayEntries = items.map((item) =>
-      toDayEntry(item, catalog.attractions.find((attraction) => attraction.id === item.attractionId), catalog.areas),
+      toDayEntry(item, catalog.attractions.filter((attraction) => linkedAttractionIds(item).includes(attraction.id)), catalog.areas),
     );
     const addedEntries = addable.map((attraction) => toAddedEntry(attraction, catalog.areas));
     const entriesById = new Map<string, ChecklistEntry>([...dayEntries, ...addedEntries].map((entry) => [entry.id, entry]));

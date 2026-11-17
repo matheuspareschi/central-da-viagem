@@ -2,11 +2,18 @@ import assert from "node:assert/strict";
 import { allTollSteps, tollStages } from "../src/data/pedagio.ts";
 import day18 from "../src/data/days/2026-12-18.ts";
 import day16 from "../src/data/days/2026-12-16.ts";
+import { toDayEntry } from "../src/lib/parkChecklist.ts";
+import type { ChecklistItem, ParkAttraction } from "../src/types";
 import { boldShare, hasUnclosedBoldMark, parseRichText } from "../src/lib/richText.ts";
 import { applyOption, findOption, optionQuestion } from "../src/lib/dayOption.ts";
 import { formatDecimal, formatFixedDecimal, parseDecimal } from "../src/utils/decimal.ts";
 import { calcularPreco, readPercent } from "../src/utils/price.ts";
 import { convertTyped, kgParaLb, lbParaKg } from "../src/utils/weight.ts";
+
+const areas = [{ key: "a", label: "Área" }];
+const attraction = (name: string, type: string, description: string): ParkAttraction =>
+  ({ id: name, parkId: "p", area: "a", name, type, kind: "attraction", description });
+const item = (sections: ChecklistItem["sections"] = []): ChecklistItem => ({ id: "i", name: "Item", icon: "target", sections });
 
 const tests: Array<[string, () => void]> = [
   ["1 lb → 0,45 kg", () => assert.equal(convertTyped("1", lbParaKg), "0,45")],
@@ -82,6 +89,25 @@ const tests: Array<[string, () => void]> = [
     assert.equal(boldShare(""), 0);
   }],
   ["negrito: fração em negrito", () => assert.equal(boldShare("**ab** cde"), 2 / 6)],
+  ["checklist: atração ligada mostra categoria e curiosidades", () => {
+    const entry = toDayEntry(item(), [attraction("Hulk", "Montanha-Russa", "Rápida.")], areas);
+    assert.equal(entry.subtitle, "Área · Montanha-Russa");
+    assert.deepEqual(entry.sections.map((section) => [section.title, section.paragraphs]), [["Curiosidades", ["Rápida."]]]);
+  }],
+  ["checklist: item com várias atrações lista todas", () => {
+    const entry = toDayEntry(item(), [attraction("A", "Tipo 1", "d1"), attraction("B", "Tipo 2", "d2")], areas);
+    assert.equal(entry.subtitle, "Área · Tipo 1 + Tipo 2");
+    assert.deepEqual(entry.sections[0].paragraphs, ["**A:** d1", "**B:** d2"]);
+  }],
+  ["checklist: não duplica Curiosidades já escritas no dia", () => {
+    const own = { color: "palm" as const, icon: "camera" as const, title: "Curiosidades", paragraphs: ["própria"] };
+    assert.deepEqual(toDayEntry(item([own]), [attraction("A", "T", "d")], areas).sections, [own]);
+  }],
+  ["checklist: sem ligação não ganha subtítulo nem seção", () => {
+    const entry = toDayEntry(item(), [], areas);
+    assert.equal(entry.subtitle, undefined);
+    assert.deepEqual(entry.sections, []);
+  }],
   ["nenhum resultado vira NaN", () => {
     const result = calcularPreco({ preco: 0, d1: 100, d2: 100, imposto: 100 });
     for (const value of Object.values(result)) assert.ok(Number.isFinite(value));

@@ -1,6 +1,7 @@
 import type { ChecklistItem, DetailSection, IconName, ParkAttraction, ParkArea } from "../types";
 
 const ADDED_ENTRY_PREFIX = "catalogo:";
+const CURIOSITIES_TITLE = "Curiosidades";
 
 /** Linha do checklist de parque: item do dia ou atração incluída do catálogo. */
 export interface ChecklistEntry {
@@ -26,14 +27,36 @@ export function describeAttraction(attraction: ParkAttraction, areas: ParkArea[]
   return `${findAreaLabel(attraction, areas)} · ${attraction.type}`;
 }
 
-export function toDayEntry(item: ChecklistItem, linked: ParkAttraction | undefined, areas: ParkArea[]): ChecklistEntry {
+export const linkedAttractionIds = (item: ChecklistItem): string[] =>
+  [item.attractionId, ...(item.attractionIds ?? [])].filter((id): id is string => Boolean(id));
+
+/** Área e categoria da atração; item que junta várias atrações lista as categorias de todas. */
+function describeLinked(linked: ParkAttraction[], areas: ParkArea[]): string | undefined {
+  if (linked.length === 0) return undefined;
+  if (linked.length === 1) return describeAttraction(linked[0], areas);
+  return `${findAreaLabel(linked[0], areas)} · ${linked.map((attraction) => attraction.type).join(" + ")}`;
+}
+
+function curiositiesSection(linked: ParkAttraction[]): DetailSection {
+  const paragraphs =
+    linked.length === 1 ? [linked[0].description] : linked.map((attraction) => `**${attraction.name}:** ${attraction.description}`);
+  return { color: "palm", icon: "camera", title: CURIOSITIES_TITLE, paragraphs };
+}
+
+/** A descrição do catálogo vira "Curiosidades", salvo quando o item do dia já tem a sua. */
+function withCuriosities(sections: DetailSection[], linked: ParkAttraction[]): DetailSection[] {
+  const alreadyHasCuriosities = sections.some((section) => section.title === CURIOSITIES_TITLE);
+  return linked.length === 0 || alreadyHasCuriosities ? sections : [...sections, curiositiesSection(linked)];
+}
+
+export function toDayEntry(item: ChecklistItem, linked: ParkAttraction[], areas: ParkArea[]): ChecklistEntry {
   return {
     id: item.id,
     name: item.name,
     icon: item.icon,
-    subtitle: linked ? describeAttraction(linked, areas) : undefined,
+    subtitle: describeLinked(linked, areas),
     areaLabel: item.area,
-    sections: item.sections,
+    sections: withCuriosities(item.sections, linked),
     isAdded: false,
   };
 }

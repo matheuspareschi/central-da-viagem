@@ -62,6 +62,7 @@ export default {
       },
       {
         id: "hagrids",
+        attractionId: "hagrids-magical-creatures-motorbike",
         name: "Hagrid's Motorbike Adventure",
         area: "The Wizarding World of Harry Potter - Hogsmeade",
         icon: "target",
@@ -118,6 +119,7 @@ export default {
       },
       {
         id: "toon-lagoon",
+        attractionIds: ["dudley-do-rights-ripsaw-falls", "popeye-and-blutos-bilge-rat-barges"],
         name: "Toon Lagoon: Ripsaw Falls e Bilge-Rat Barges",
         area: "Toon Lagoon",
         icon: "target",
@@ -130,6 +132,7 @@ export default {
       },
       {
         id: "marvel",
+        attractionIds: ["the-incredible-hulk-coaster", "the-amazing-adventures-of-spider-man"],
         name: "Marvel: Spider-Man e Hulk",
         area: "Marvel Super Hero Island",
         icon: "target",
