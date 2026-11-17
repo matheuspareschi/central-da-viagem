@@ -281,7 +281,7 @@ export default {
     },
     {
       id: "daily-dealz-outlet-e-islands",
-      label: "Daily Dealz + Outlet e Islands",
+      label: "Daily Dealz, Outlet e Islands",
       supportLine: "Grupo completo · Daily Dealz antes do outlet, compras das 11h30 às 16h", // REVISAR: dados não dizem quem vai
       trackKeys: ["daily-dealz-outlet-e-islands"],
     },
