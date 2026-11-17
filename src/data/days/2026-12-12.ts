@@ -48,9 +48,9 @@ export default {
       {
         title: "Tarde",
         steps: [
-          { kind: "transit", time: "14:30", duration: "20 min", destinationName: "WonderWorks (casa torta)" },
-          { kind: "stop", time: "15:00", stopId: "wonderworks", name: "WonderWorks (casa torta)", icon: "camera" },
-          { kind: "stop", time: "15:30", stopId: "icon-park", name: "ICON Park", icon: "sparkle" },
+          { kind: "transit", time: "14:30", duration: "20 min", destinationName: "ICON Park" },
+          { kind: "stop", time: "15:00", stopId: "icon-park", name: "ICON Park", icon: "sparkle" },
+          { kind: "stop", time: "15:30", stopId: "wonderworks", name: "WonderWorks (casa torta)", icon: "camera" },
           { kind: "transit", time: "16:00", duration: "25–30 min", destinationName: "Lake Eola" },
           { kind: "stop", time: "16:45", stopId: "lake-eola", name: "Lake Eola", icon: "tree" },
         ],
@@ -113,11 +113,62 @@ export default {
         ],
       },
       {
+        id: "icon-park",
+        name: "ICON Park",
+        address: ADDRESSES.iconPark,
+        icon: "sparkle",
+        time: "15:00",
+        sections: [
+          {
+            color: "navy",
+            icon: "parking",
+            title: "Endereço",
+            paragraphs: [
+              "8375 International Dr, Orlando, FL 32819. Fica a uma **curta caminhada** do WonderWorks, segunda parada.",
+            ],
+          },
+          {
+            color: "citrus",
+            icon: "sparkle",
+            title: "Sobre",
+            paragraphs: [
+              "Entrar no ICON Park é **grátis**, e a The Wheel já aparece iluminada ao entardecer. Subir na roda é opcional e pago.",
+            ],
+          },
+          {
+            color: "palm",
+            icon: "sparkle",
+            title: "Curiosidades",
+            list: [
+              "**The Wheel** tem cerca de **122 m (400 pés)** de altura e 30 cabines climatizadas. A volta completa dura uns **20 minutos**.",
+              "O parque ainda reúne o **StarFlyer**, um balanço de torre com cerca de 137 m (450 pés), além de aquário, museu de cera e museu das ilusões (**ingressos à parte**).",
+              "A entrada é gratuita: dá para passear pelas lojas, restaurantes e pela área da roda sem pagar nada.",
+            ],
+          },
+          {
+            color: "palm",
+            icon: "camera",
+            title: "Onde tirar foto",
+            list: [
+              "**Base da The Wheel**: foto olhando para cima, com a roda inteira no quadro. Fica ainda melhor ao entardecer, com as luzes acesas.",
+              "**Praça central**, com a roda ao fundo e o movimento do parque.",
+              "**Lá de cima da roda** (se subirem): vista panorâmica de Orlando e da International Drive.",
+            ],
+          },
+          {
+            color: "attn",
+            icon: "alert",
+            title: "Atenção",
+            paragraphs: ["Estacionamento na garagem do ICON Park, **do 4º ao 7º andar**. É **pago**: **confirme o valor** no dia."],
+          },
+        ],
+      },
+      {
         id: "wonderworks",
         name: "WonderWorks (casa torta)",
         address: ADDRESSES.wonderWorks,
         icon: "camera",
-        time: "15:00",
+        time: "15:30",
         sections: [
           {
             color: "navy",
@@ -164,57 +215,6 @@ export default {
             icon: "alert",
             title: "Atenção",
             paragraphs: ["Estacionamento no Pointe Orlando **é pago**. **Confirme o valor** no dia."],
-          },
-        ],
-      },
-      {
-        id: "icon-park",
-        name: "ICON Park",
-        address: ADDRESSES.iconPark,
-        icon: "sparkle",
-        time: "15:30",
-        sections: [
-          {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: [
-              "8375 International Dr, Orlando, FL 32819. Fica a uma **curta caminhada** do WonderWorks.",
-            ],
-          },
-          {
-            color: "citrus",
-            icon: "sparkle",
-            title: "Sobre",
-            paragraphs: [
-              "Entrar no ICON Park é **grátis**, e a The Wheel já aparece iluminada ao entardecer. Subir na roda é opcional e pago.",
-            ],
-          },
-          {
-            color: "palm",
-            icon: "sparkle",
-            title: "Curiosidades",
-            list: [
-              "**The Wheel** tem cerca de **122 m (400 pés)** de altura e 30 cabines climatizadas. A volta completa dura uns **20 minutos**.",
-              "O parque ainda reúne o **StarFlyer**, um balanço de torre com cerca de 137 m (450 pés), além de aquário, museu de cera e museu das ilusões (**ingressos à parte**).",
-              "A entrada é gratuita: dá para passear pelas lojas, restaurantes e pela área da roda sem pagar nada.",
-            ],
-          },
-          {
-            color: "palm",
-            icon: "camera",
-            title: "Onde tirar foto",
-            list: [
-              "**Base da The Wheel**: foto olhando para cima, com a roda inteira no quadro. Fica ainda melhor ao entardecer, com as luzes acesas.",
-              "**Praça central**, com a roda ao fundo e o movimento do parque.",
-              "**Lá de cima da roda** (se subirem): vista panorâmica de Orlando e da International Drive.",
-            ],
-          },
-          {
-            color: "attn",
-            icon: "alert",
-            title: "Atenção",
-            paragraphs: ["Estacionamento no ICON Park **é pago**. **Confirme o valor** no dia."],
           },
         ],
       },
