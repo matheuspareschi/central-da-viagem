@@ -12,6 +12,8 @@ export default defineConfig({
     tailwindcss(),
     VitePWA({
       registerType: 'autoUpdate',
+      // O registro é feito em src/lib/serviceWorker.ts, que também recarrega o app quando sai versão nova.
+      injectRegister: false,
       includeAssets: ['apple-touch-icon.png'],
       manifest: {
         name: 'Central da Viagem — Flórida 2026',
