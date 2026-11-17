@@ -28,14 +28,10 @@ export default {
       tiles: [{ label: "Acordar", value: "7h45" }, { label: "Sair de casa", value: "8h30" }, { label: "Estacionamento", value: "8h00" }, { label: "Chegada", value: "10h00" }],
       notes: [
         { icon: "car", text: "~15 min até os portões." },
-        { icon: "info", text: "**Às 10h00**, seguir a pé para o Beco Diagonal via New York e San Francisco (**~12 min**)." },
-        { icon: "info", text: "6000 Universal Blvd, Orlando, FL 32819. Estacionamento **a partir de US$35 por dia** (2026). São duas garagens enormes: **anote o setor e o andar**." },
-        { icon: "info", text: "Da garagem ao portão pelo CityWalk são cerca de **15–20 min a pé**." },
         { icon: "info", text: "Água filtrada **grátis** nas máquinas Coca-Cola Freestyle." },
       ],
       alerts: [
-        "**Levar só bolsa pequena** (armários), carregador portátil e protetor solar.",
-        "Universal **não permite cooler**: levar muffin ou barrinha de whey assado.",
+        "**Levar só bolsa pequena** (armários), carregador portátil e protetor solar. Universal **não permite cooler**: levar muffin ou barrinha de whey assado.",
       ],
     },
     attractions: [
