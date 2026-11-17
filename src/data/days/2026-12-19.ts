@@ -175,7 +175,7 @@ const SHARED_CARDS = [nikeCard, celebrationCard, homeLunchCard];
 
 export default {
   dateISO: "2026-12-19",
-  calendarTitle: "Winter Garden",
+  calendarTitle: "Winter Garden e Celebration",
   day: 19,
   weekday: "Sáb",
   liturgicalWeekday: "4ª sem. do Advento",
@@ -218,7 +218,7 @@ export default {
       {
         key: "sem-feira",
         category: "compras",
-        title: "Winter Garden, Celebration",
+        title: "Winter Garden e Celebration",
         mode: "schedule",
         summary: "Direto ao Winter Garden Village, almoço em casa, Nike Factory Store e Celebration à noite.",
         journey: {
