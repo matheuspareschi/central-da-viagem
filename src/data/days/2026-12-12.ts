@@ -140,6 +140,26 @@ export default {
             ],
           },
           {
+            color: "palm",
+            icon: "sparkle",
+            title: "Curiosidades",
+            list: [
+              "A história do lugar: um laboratório secreto teria sido **arrancado do Triângulo das Bermudas por uma tempestade** e caído de cabeça para baixo em Orlando.",
+              "A fachada inteira é o \"laboratório\" virado de cabeça para baixo, com a casa torta emborcada sobre o prédio.",
+              "Por dentro há mais de **100 atrações interativas** de ciência, como simuladores, realidade virtual e salas de ilusão de ótica (**confirmar a lista atual** no local).",
+            ],
+          },
+          {
+            color: "palm",
+            icon: "camera",
+            title: "Onde tirar foto",
+            list: [
+              "**Calçada em frente à fachada**: de lá a casa de cabeça para baixo aparece inteira no quadro.",
+              "**Deitar ou inclinar a câmera** na fachada: fotos com o grupo \"em pé\" na parede ficam engraçadas.",
+              "À noite a fachada ilumina, então vale uma segunda foto na saída, já com as luzes do Pointe Orlando.",
+            ],
+          },
+          {
             color: "attn",
             icon: "alert",
             title: "Atenção",
@@ -171,6 +191,26 @@ export default {
             ],
           },
           {
+            color: "palm",
+            icon: "sparkle",
+            title: "Curiosidades",
+            list: [
+              "**The Wheel** tem cerca de **122 m (400 pés)** de altura e 30 cabines climatizadas. A volta completa dura uns **20 minutos**.",
+              "O parque ainda reúne o **StarFlyer**, um balanço de torre com cerca de 137 m (450 pés), além de aquário, museu de cera e museu das ilusões (**ingressos à parte**).",
+              "A entrada é gratuita: dá para passear pelas lojas, restaurantes e pela área da roda sem pagar nada.",
+            ],
+          },
+          {
+            color: "palm",
+            icon: "camera",
+            title: "Onde tirar foto",
+            list: [
+              "**Base da The Wheel**: foto olhando para cima, com a roda inteira no quadro. Fica ainda melhor ao entardecer, com as luzes acesas.",
+              "**Praça central**, com a roda ao fundo e o movimento do parque.",
+              "**Lá de cima da roda** (se subirem): vista panorâmica de Orlando e da International Drive.",
+            ],
+          },
+          {
             color: "attn",
             icon: "alert",
             title: "Atenção",
@@ -199,6 +239,28 @@ export default {
             title: "Sobre",
             paragraphs: [
               "Na edição de 2025 a árvore tinha 64 pés e mais de 88.000 luzes sincronizadas com a música e a fonte do lago. O mercado funcionava de sexta a domingo, e a neve com Papai Noel nos fins de semana. O show da árvore rodava de hora em hora **das 17h45 às 21h45**.",
+            ],
+          },
+          {
+            color: "palm",
+            icon: "sparkle",
+            title: "Curiosidades",
+            list: [
+              "O **chafariz** do centro do lago, o Linton E. Allen Memorial Fountain, existe desde **1957** e tem luzes coloridas à noite.",
+              "Os **cisnes** são marca do lago: há cisnes de verdade circulando e os **pedalinhos em forma de cisne**, que se alugam por tempo curto (**confirmar preço e horário** no dia).",
+              "O parque tem uma pista de **cerca de 1,6 km** (1 milha) em volta do lago, e o anfiteatro, o Walt Disney Amphitheater, recebe shows.",
+            ],
+          },
+          {
+            color: "palm",
+            icon: "camera",
+            title: "Onde tirar foto",
+            list: [
+              "**Árvore de Natal gigante** (quando a decoração estiver montada): foto com as luzes acesas ao anoitecer.",
+              "**Beira do lago, de frente para o centro**: o skyline de Orlando refletido na água ao pôr do sol.",
+              "**Chafariz** iluminado, com o lago ao fundo.",
+              "**Pedalinhos de cisne** e os cisnes de verdade, na margem.",
+              "**Anfiteatro** (Walt Disney Amphitheater), com o lago atrás.",
             ],
           },
           {
