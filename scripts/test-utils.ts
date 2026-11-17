@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { allTollSteps, tollStages } from "../src/data/pedagio.ts";
 import day18 from "../src/data/days/2026-12-18.ts";
+import day10 from "../src/data/days/2026-12-10.ts";
 import day16 from "../src/data/days/2026-12-16.ts";
 import { toDayEntry } from "../src/lib/parkChecklist.ts";
 import { isGratis } from "../src/lib/estacionamento.ts";
@@ -68,10 +69,18 @@ const tests: Array<[string, () => void]> = [
     assert.equal(day.category, "parque");
     assert.equal(day.split, undefined);
   }],
-  ["dia 16: a trilha do dia entra nas duas opções, só a noite muda", () => {
+  ["dia 16: cada opção é um roteiro único, com a mesma manhã e noite diferente", () => {
     const keysOf = (id: string) => day16.options.find((option) => option.id === id)?.trackKeys;
-    assert.deepEqual(keysOf("noite-do-jogo"), ["international-premium-outlets", "noite-jogo"]);
-    assert.deepEqual(keysOf("noite-de-natal"), ["international-premium-outlets", "noite-natal"]);
+    assert.deepEqual(keysOf("noite-do-jogo"), ["noite-jogo"]);
+    assert.deepEqual(keysOf("noite-de-natal"), ["noite-natal"]);
+    const tracks = day16.itinerary.tracks;
+    const morningOf = (key: string) => tracks.find((track) => track.key === key)?.periods[0];
+    assert.deepEqual(morningOf("noite-jogo"), morningOf("noite-natal"));
+  }],
+  ["dia 10: com o Daily Dealz ele vem antes do outlet, que começa às 11h30", () => {
+    const track = day10.itinerary.tracks.find((candidate) => candidate.key === "daily-dealz-outlet-e-islands");
+    const stops = track?.periods[0].steps.flatMap((step) => (step.kind === "stop" ? [[step.stopId, step.time]] : []));
+    assert.deepEqual(stops, [["daily-dealz", "10:00"], ["outlet-marketplace", "11:30"]]);
   }],
   ["negrito: 'a **b** c' vira três trechos", () => {
     assert.deepEqual(parseRichText("a **b** c"), [

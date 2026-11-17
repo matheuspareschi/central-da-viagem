@@ -1,3 +1,4 @@
+import { dailyDealzAboutSections } from "../dailyDealz";
 import type { ChecklistItem, DayData, JourneyNote, SplitTrack } from "../../types";
 
 const islandsAttractions: ChecklistItem[] = [
@@ -128,8 +129,7 @@ const dailyDealzItem: ChecklistItem = {
   icon: "bag",
   sections: [
     { color: "gold", icon: "lightbulb", title: "Horário sugerido", paragraphs: ["Por volta das 10h00. Sair **às 11h30 no máximo** (~25 min até o Islands) para entrar no parque por volta das 13h."] },
-    { color: "navy", icon: "parking", title: "Endereço", paragraphs: ["7802 S Orange Blossom Trl, Orlando, FL. Mesma área da Aviva Florida."] },
-    { color: "citrus", icon: "bag", title: "Sobre", paragraphs: ["Loja de devoluções e liquidação da Amazon, com preços por caixa/lote. O estoque muda todo dia, então **não dá para planejar** o que vai achar."] },
+    ...dailyDealzAboutSections,
     { color: "attn", icon: "alert", title: "Atenção", paragraphs: ["Horário de funcionamento **a confirmar**. Se não houver tempo, a ordem pode ser invertida: parque à tarde e loja em outro dia."] },
   ],
 };
