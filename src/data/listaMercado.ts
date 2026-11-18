@@ -3,7 +3,7 @@ export interface GroceryItem {
   name: string;
 }
 
-/** Itens básicos do mercado, na ordem e com a escrita do Thiago. Os originais não podem ser apagados, só desmarcados. */
+/** Itens básicos do mercado, na ordem e com a escrita do Thiago. */
 export const baseGroceryItems: GroceryItem[] = [
   "Papel higiênico",
   "Açúcar cristal",
@@ -29,3 +29,5 @@ export const baseGroceryItems: GroceryItem[] = [
 
 export const GROCERY_CHECKED_STORAGE_KEY = "lista:mercado";
 export const GROCERY_CUSTOM_STORAGE_KEY = "lista:mercado:proprios";
+/** Ids de itens apagados (base ou próprios); guardados à parte para o "Desfazer" devolver o item na mesma posição. */
+export const GROCERY_REMOVED_STORAGE_KEY = "lista:mercado:removidos";

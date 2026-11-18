@@ -1,6 +1,6 @@
-import { useEffect, useId, useState } from "react";
+import { useId, useState } from "react";
 import { ArrowDown, ArrowUp, ArrowUpDown, ChevronRight, Plus } from "lucide-react";
-import { IconBadge, TapCheckbox } from "../../../components";
+import { IconBadge, TapCheckbox, UndoToast } from "../../../components";
 import type { ChecklistEntry } from "../../../lib/parkChecklist";
 import type { ChecklistItem } from "../../../types";
 import { AddAttractionSheet } from "./AddAttractionSheet";
@@ -14,8 +14,6 @@ interface ParkChecklistProps {
   items: ChecklistItem[];
   parkId?: string;
 }
-
-const UNDO_WINDOW_MS = 5000;
 
 const toolbarButtonClasses =
   "flex min-h-11 items-center gap-1.5 rounded-xl border-[1.5px] bg-transparent px-3.5 text-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-citrus";
@@ -35,12 +33,6 @@ export function ParkChecklist({ storageId, dateISO, trackKey, items, parkId }: P
   const { entries, doneIds } = checklist;
   const doneCount = entries.filter((entry) => doneIds.has(entry.id)).length;
   const detailsEntry = entries.find((entry) => entry.id === detailsEntryId);
-
-  useEffect(() => {
-    if (!justRemoved) return;
-    const timer = setTimeout(() => setJustRemoved(null), UNDO_WINDOW_MS);
-    return () => clearTimeout(timer);
-  }, [justRemoved]);
 
   function removeEntry(entry: ChecklistEntry) {
     checklist.removeFromItinerary(entry.id);
@@ -124,12 +116,7 @@ export function ParkChecklist({ storageId, dateISO, trackKey, items, parkId }: P
         />
       )}
       {justRemoved && (
-        <div role="status" className="fixed inset-x-4 bottom-[calc(var(--spacing-bottom-nav)+env(safe-area-inset-bottom)+0.75rem)] z-40 mx-auto flex max-w-[448px] items-center justify-between gap-3 rounded-xl bg-ink px-4 py-2 text-sm text-paper shadow-sheet">
-          <span className="min-w-0 [overflow-wrap:anywhere]">{justRemoved.name} saiu do roteiro.</span>
-          <button type="button" onClick={undoRemoval} className="min-h-11 shrink-0 px-2 font-bold text-advent-gold focus-visible:outline-2 focus-visible:outline-citrus">
-            Desfazer
-          </button>
-        </div>
+        <UndoToast key={justRemoved.id} message={`${justRemoved.name} saiu do roteiro.`} onUndo={undoRemoval} onDismiss={() => setJustRemoved(null)} />
       )}
     </section>
   );

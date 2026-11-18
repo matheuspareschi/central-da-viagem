@@ -1,6 +1,6 @@
 import { useState, type FormEvent } from "react";
-import { Plus, X } from "lucide-react";
-import { TapCheckbox } from "../../components";
+import { Plus, Trash2 } from "lucide-react";
+import { TapCheckbox, UndoToast } from "../../components";
 import { useGroceryList } from "../../hooks/useGroceryList";
 import { CheckProgress } from "./CheckProgress";
 import { ConfirmClearButton } from "./ConfirmClearButton";
@@ -8,9 +8,21 @@ import { ConfirmClearButton } from "./ConfirmClearButton";
 const secondaryButtonClasses =
   "min-h-11 rounded-xl border border-line px-3.5 text-sm font-semibold text-ink focus-visible:outline-2 focus-visible:outline-citrus";
 
-/** Compras básicas de mercado: marcar o que já foi comprado e incluir itens próprios. */
+/** Compras básicas de mercado: marcar o que já foi comprado, incluir itens próprios e apagar qualquer item (com "Desfazer"). */
 export function GroceryList() {
   const list = useGroceryList();
+  const [justRemoved, setJustRemoved] = useState<{ id: string; name: string } | null>(null);
+
+  function removeItem(item: { id: string; name: string }) {
+    list.removeItem(item.id);
+    setJustRemoved({ id: item.id, name: item.name });
+  }
+
+  function undoRemoval() {
+    if (justRemoved) list.restoreItem(justRemoved.id);
+    setJustRemoved(null);
+  }
+
   return (
     <div>
       <CheckProgress
@@ -27,16 +39,14 @@ export function GroceryList() {
               <TapCheckbox checked={isChecked} onToggle={() => list.checked.toggle(item.id)} label={isChecked ? `Desmarcar ${item.name}` : `Marcar ${item.name}`}>
                 <span className={`min-w-0 flex-1 text-[15px] ${isChecked ? "text-ink-soft line-through" : "text-ink"}`}>{item.name}</span>
               </TapCheckbox>
-              {list.customIds.has(item.id) && (
-                <button
-                  type="button"
-                  onClick={() => list.removeItem(item.id)}
-                  aria-label={`Remover ${item.name} da lista`}
-                  className="flex h-11 w-11 shrink-0 items-center justify-center text-ink-soft focus-visible:outline-2 focus-visible:outline-citrus"
-                >
-                  <X className="h-5 w-5" aria-hidden="true" />
-                </button>
-              )}
+              <button
+                type="button"
+                onClick={() => removeItem(item)}
+                aria-label={`Apagar ${item.name}`}
+                className="flex h-11 w-11 shrink-0 items-center justify-center text-ink-soft focus-visible:outline-2 focus-visible:outline-citrus"
+              >
+                <Trash2 className="h-5 w-5" aria-hidden="true" />
+              </button>
             </li>
           );
         })}
@@ -45,6 +55,9 @@ export function GroceryList() {
       <div className="mt-3 flex flex-wrap items-center gap-2">
         <ConfirmClearButton onConfirm={() => list.checked.replace([])} disabled={list.checkedCount === 0} question="Desmarcar todos os itens?" />
       </div>
+      {justRemoved && (
+        <UndoToast key={justRemoved.id} message={`${justRemoved.name} apagado.`} onUndo={undoRemoval} onDismiss={() => setJustRemoved(null)} />
+      )}
     </div>
   );
 }
