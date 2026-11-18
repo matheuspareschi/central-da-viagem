@@ -309,7 +309,7 @@ const christmasCards: StopCard[] = [
 
 export default {
   dateISO: "2026-12-16",
-  calendarTitle: "IHOP, compras e noite em Orlando",
+  calendarTitle: "Compras em Orlando e noite de jogo ou de natal",
   day: 16,
   weekday: "Qua",
   liturgicalWeekday: "4ª sem. do Advento",
@@ -382,6 +382,7 @@ export default {
     {
       id: "noite-do-jogo",
       label: "Noite do jogo",
+      calendarTitle: "Compras em Orlando e noite de jogo",
       supportLine: "Grupo todo de dia · **os meninos** no jogo à noite",
       trackKeys: ["noite-jogo"],
       isDefault: true,
@@ -389,6 +390,7 @@ export default {
     {
       id: "noite-de-natal",
       label: "Noite de Natal",
+      calendarTitle: "Compras em Orlando e noite de natal",
       supportLine: "Grupo todo de dia · **outro grupo** na decoração à noite",
       trackKeys: ["noite-natal"],
     },
