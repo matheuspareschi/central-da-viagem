@@ -92,6 +92,7 @@ export const epicUniverseAttractions: ChecklistItem[] = [
   },
   {
     id: "metro-flu",
+    attractionId: "battle-at-the-ministry",
     name: "Metro Flu",
     area: "Harry Potter",
     icon: "target",
