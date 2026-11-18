@@ -3,8 +3,8 @@ import { Layers } from "lucide-react";
 import { Link } from "react-router-dom";
 import { CategoryIcon, SpecialDayIcon, type BackTarget } from "../../components";
 import { categoryStyles } from "../../data/presentation/categoryStyles";
-import { narcizoStyle } from "../../data/presentation/narcizoStyle";
-import { isNarcizoDay } from "../../data/narcizo/types";
+import { narcizoCities, narcizoCityStyles } from "../../data/presentation/narcizoStyle";
+import { isNarcizoDay, type NarcizoCity } from "../../data/narcizo/types";
 import { useNarcizoMode } from "../../hooks/useNarcizoMode";
 import { useNow } from "../../hooks/useNow";
 import { useTripDays } from "../../hooks/useTripDays";
@@ -66,12 +66,12 @@ function CategoryLegend({ showsNarcizo }: { showsNarcizo: boolean }) {
           {categoryStyles[category].label}
         </li>
       ))}
-      {showsNarcizo && (
-        <li className="inline-flex items-center gap-1.5">
-          <span aria-hidden="true" className="h-4 w-[5px] rounded-full" style={{ backgroundColor: narcizoStyle.hex }} />
-          {narcizoStyle.label}
+      {showsNarcizo && narcizoCities.map((city) => (
+        <li key={city} className="inline-flex items-center gap-1.5">
+          <span aria-hidden="true" className="h-4 w-[5px] rounded-full" style={{ backgroundColor: narcizoCityStyles[city].hex }} />
+          {city}
         </li>
-      )}
+      ))}
     </ul>
   );
 }
@@ -125,9 +125,9 @@ function DayTileIcon({ categories, specialIcon }: { categories: DayCategory[]; s
   );
 }
 
-/** Dia da família Narcizo tem barra própria; os demais usam a cor da categoria (duas, no dia dividido). */
+/** Dia da família Narcizo tem a barra da cor da cidade; os demais usam a cor da categoria (duas, no dia dividido). */
 function stripeColors(day: DayData): string[] {
-  if (isNarcizoDay(day)) return [narcizoStyle.hex];
+  if (isNarcizoDay(day)) return [narcizoCityStyles[day.cidade].hex];
   return getDayCategories(day).map((category) => categoryStyles[category].hex);
 }
 
@@ -141,9 +141,13 @@ function SideStripe({ colors }: { colors: string[] }) {
   );
 }
 
-function CityBadge({ city }: { city: string }) {
+function CityBadge({ city }: { city: NarcizoCity }) {
+  const { tint, text } = narcizoCityStyles[city];
   return (
-    <span className="mt-0.5 self-start rounded-md bg-narcizo-tint px-1.5 py-0.5 font-mono text-xs uppercase tracking-[0.06em] text-narcizo-text">
+    <span
+      className="mt-0.5 self-start rounded-md px-1.5 py-0.5 font-mono text-xs uppercase tracking-[0.06em]"
+      style={{ backgroundColor: tint, color: text }}
+    >
       {city}
     </span>
   );
