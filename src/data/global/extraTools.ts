@@ -1,6 +1,6 @@
-import { Calculator, Car, Footprints, ListChecks, Sandwich, Scale, ShoppingCart, Trash2, type LucideIcon } from "lucide-react";
+import { Apple, Calculator, Car, Footprints, ListChecks, Sandwich, Scale, ShoppingCart, Trash2, TreePine, type LucideIcon } from "lucide-react";
 
-export type ExtraToolId = "conversor" | "desconto-imposto" | "mercado" | "lixo" | "antes-de-viajar" | "pedagio" | "calcado" | "lanches";
+export type ExtraToolId = "conversor" | "desconto-imposto" | "mercado" | "lixo" | "antes-de-viajar" | "pedagio" | "calcado" | "lanches" | "lanches-parque" | "kissimmee";
 
 export interface ExtraTool {
   id: ExtraToolId;
@@ -101,6 +101,28 @@ export const extraTools: ExtraTool[] = [
     tileAriaLabel: "Abrir Lanches e fast food",
     icon: Sandwich,
     iconClasses: "bg-house text-house-label",
+    hasOwnCards: true,
+  },
+  {
+    id: "lanches-parque",
+    tileTitle: "Lanches para o parque",
+    pageTitle: "Lanches para o parque",
+    tileSupport: "Disney e Universal",
+    description: "Sugestões simples para economizar. Compre no **Walmart** ou no **Publix**.",
+    tileAriaLabel: "Abrir Lanches para o parque",
+    icon: Apple,
+    iconClasses: "bg-gold-tint text-[#6b4a0b]",
+    hasOwnCards: true,
+  },
+  {
+    id: "kissimmee",
+    tileTitle: "Atividades em Kissimmee",
+    pageTitle: "Atividades em Kissimmee",
+    tileSupport: "Passeios gratuitos",
+    description: "Passeios **gratuitos**: parques públicos, monumentos e centro histórico.",
+    tileAriaLabel: "Abrir Atividades em Kissimmee",
+    icon: TreePine,
+    iconClasses: "bg-palm-tint text-[#1f5a40]",
     hasOwnCards: true,
   },
 ];

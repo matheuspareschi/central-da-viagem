@@ -10,6 +10,9 @@ import { linkedAttractionIds } from "../src/lib/parkChecklist.ts";
 import { beforeTravelItems } from "../src/data/global/beforeTravel.ts";
 import { trashInstructions } from "../src/data/global/trashInstructions.ts";
 import { tollStages } from "../src/data/pedagio.ts";
+import { parkSnacksGuide } from "../src/data/global/parkSnacks.ts";
+import { kissimmeeActivitiesGuide } from "../src/data/global/kissimmeeActivities.ts";
+import { extraTools } from "../src/data/global/extraTools.ts";
 import { lanchesCategories, lanchesChains } from "../src/data/global/lanches.ts";
 import { boldShare, hasUnclosedBoldMark } from "../src/lib/richText.ts";
 import { toMinutes } from "../src/lib/schedule.ts";
@@ -337,7 +340,7 @@ function collectTexts(value: unknown, path: string): { path: string; text: strin
 function collectContentTexts(days: DayData[]): { path: string; text: string }[] {
   return [
     ...days.flatMap((day) => collectTexts(day, `dia ${day.day}`)),
-    ...collectTexts({ tollStages, beforeTravelItems, trashInstructions, lanchesChains }, "extras"),
+    ...collectTexts({ tollStages, beforeTravelItems, trashInstructions, lanchesChains, parkSnacksGuide, kissimmeeActivitiesGuide, extraToolDescriptions: extraTools.map((tool) => tool.description) }, "extras"),
   ];
 }
 

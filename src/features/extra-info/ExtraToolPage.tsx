@@ -1,12 +1,15 @@
 import { useEffect, useRef } from "react";
 import { ChevronLeft } from "lucide-react";
 import { Link, Navigate, useLocation, useNavigate, useParams } from "react-router-dom";
+import { RichText } from "../../components";
 import { EXTRAS_PATH } from "../../components/navigationDestinations";
 import { findExtraTool, type ExtraToolId } from "../../data/global/extraTools";
 import { BeforeTravelList } from "./BeforeTravelList";
 import { DiscountTaxCalculator } from "./DiscountTaxCalculator";
 import { GroceryList } from "./GroceryList";
+import { KissimmeeActivities } from "./KissimmeeActivities";
 import { LanchesList } from "./LanchesList";
+import { ParkSnacks } from "./ParkSnacks";
 import { TollPassSteps } from "./TollPassSteps";
 import { ShoeSizeChart } from "./ShoeSizeChart";
 import { TrashInstructions } from "./TrashInstructions";
@@ -21,6 +24,8 @@ const toolBodies: Record<ExtraToolId, () => React.JSX.Element> = {
   pedagio: TollPassSteps,
   calcado: ShoeSizeChart,
   lanches: LanchesList,
+  "lanches-parque": ParkSnacks,
+  kissimmee: KissimmeeActivities,
 };
 
 /** Subpágina de uma ferramenta de Extras; o foco vai para o título ao abrir. */
@@ -58,7 +63,7 @@ export function ExtraToolPage() {
       <h1 ref={titleRef} tabIndex={-1} className="font-serif text-[28px] font-bold leading-tight tracking-tight outline-none">
         {tool.pageTitle}
       </h1>
-      <p className="mb-4 mt-1 text-[13.5px] text-ink-soft">{tool.description}</p>
+      <p className="mb-4 mt-1 text-[13.5px] text-ink-soft"><RichText text={tool.description} /></p>
       {tool.hasOwnCards ? (
         <ToolBody />
       ) : (
