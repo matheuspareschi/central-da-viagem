@@ -3,7 +3,7 @@ import type { DayData } from "../../types";
 
 export default {
   dateISO: "2026-12-20",
-  calendarTitle: "Compras",
+  calendarTitle: "Compras e Islands of Adventure",
   day: 20,
   weekday: "Dom",
   liturgicalWeekday: "4º Domingo do Advento",
@@ -24,11 +24,11 @@ export default {
         { label: "Islands fecha", value: "22h" },
         { label: "Deslocamento", value: "~1h20 no total" }, // REVISAR: soma dos trajetos do dia, sem a volta para casa
       ],
-      notes: [
-        { icon: "info", text: "Chegada do Rafael Narcizo neste dia — **sem compromisso de missa**." },
-        { icon: "info", text: "Horários sugeridos, ajustáveis." },
+      notes: [],
+      alerts: [
+        "**Almoço livre**: cada um come quando quiser, com os snacks do carro ou algo rápido no local.",
+        "**Alimentos** comprados no Super Target e no Walmart ficam no carro até a noite: use **bolsa térmica** para refrigerados e congelados.",
       ],
-      alerts: [],
     },
     periods: [
       {

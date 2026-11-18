@@ -2,6 +2,8 @@ import { houseInfo } from "../global/contacts";
 import { shopRegions } from "../shopping";
 import type { DayData, DayPeriod, StopCard } from "../../types";
 
+const SNACK_ALERT = "**Lanche**: levar snacks no carro para a manhã; o almoço é em casa, às 13h.";
+
 const FEIRA_ADDRESS = "104 S Lakeview Ave, Winter Garden, FL 34787";
 const VILLAGE_ADDRESS = shopRegions["winter-garden-village"].address;
 
@@ -75,14 +77,14 @@ const villageCard = (time: string): StopCard => ({
   ],
 });
 
-const WINTER_GARDEN_WALK_TIME = "A definir";
+const UNDEFINED_TIME = "A definir";
 
-const walkCard: StopCard = {
+const walkCard = (time: string): StopCard => ({
   id: "winter-garden-passeio",
   address: "Plant St, Winter Garden, FL 34787",
   name: "Winter Garden: Passeio",
   icon: "tree",
-  time: WINTER_GARDEN_WALK_TIME,
+  time,
   sections: [
     {
       color: "palm",
@@ -118,7 +120,7 @@ const walkCard: StopCard = {
       ],
     },
   ],
-};
+});
 
 const nikeCard: StopCard = {
   id: "nike",
@@ -276,7 +278,7 @@ export default {
         journey: {
           tiles: [{ label: "Acordar", value: "7h00" }, { label: "Sair de casa", value: "7h30" }, { label: "Celebration", value: "16h30" }, { label: "Deslocamento", value: "~1h55 no total" }], // REVISAR: soma dos trajetos do dia, sem a volta para casa
           notes: [],
-          alerts: [],
+          alerts: [SNACK_ALERT],
         },
         periods: [
           {
@@ -284,15 +286,14 @@ export default {
             steps: [
               { kind: "transit", time: "07:30", duration: "~30–35 min", destinationName: "Feira de Winter Garden" },
               { kind: "stop", time: "08:00", stopId: "feira", name: "Feira Winter Garden", icon: "corn" },
-              { kind: "stop", time: WINTER_GARDEN_WALK_TIME, stopId: "winter-garden-passeio", name: "Winter Garden: Passeio", icon: "tree" },
-              { kind: "transit", time: "10:00", duration: "~5–10 min", destinationName: "Winter Garden Village" },
+              { kind: "stop", time: "09:00", stopId: "winter-garden-passeio", name: "Winter Garden: Passeio", icon: "tree" },
               { kind: "stop", time: "10:15", stopId: "village", name: "Winter Garden: Compras", icon: "bag" },
             ],
           },
           afternoonPeriod,
           nightPeriod,
         ],
-        cards: [feiraCard, walkCard, villageCard("10:15"), ...SHARED_CARDS],
+        cards: [feiraCard, walkCard("09:00"), villageCard("10:15"), ...SHARED_CARDS],
       },
       {
         key: "sem-feira",
@@ -303,7 +304,7 @@ export default {
         journey: {
           tiles: [{ label: "Acordar", value: "8h30" }, { label: "Sair de casa", value: "9h25" }, { label: "Celebration", value: "16h30" }, { label: "Deslocamento", value: "~1h50 no total" }], // REVISAR: soma dos trajetos do dia, sem a volta para casa
           notes: [],
-          alerts: [],
+          alerts: [SNACK_ALERT],
         },
         periods: [
           {
@@ -311,13 +312,13 @@ export default {
             steps: [
               { kind: "transit", time: "09:25", duration: "~30–35 min", destinationName: "Winter Garden Village" },
               { kind: "stop", time: "10:00", stopId: "village", name: "Winter Garden: Compras", icon: "bag" },
-              { kind: "stop", time: WINTER_GARDEN_WALK_TIME, stopId: "winter-garden-passeio", name: "Winter Garden: Passeio", icon: "tree" },
+              { kind: "stop", time: UNDEFINED_TIME, stopId: "winter-garden-passeio", name: "Winter Garden: Passeio", icon: "tree" },
             ],
           },
           afternoonPeriod,
           nightPeriod,
         ],
-        cards: [villageCard("10:00"), walkCard, ...SHARED_CARDS],
+        cards: [villageCard("10:00"), walkCard(UNDEFINED_TIME), ...SHARED_CARDS],
       },
     ],
   },
