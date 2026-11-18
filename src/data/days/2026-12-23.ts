@@ -137,6 +137,7 @@ export default {
     cards: [
       {
         id: "daytona-speedway",
+        address: "1801 W International Speedway Blvd, Daytona Beach, FL 32114",
         name: "Daytona International Speedway",
         icon: "camera",
         time: "11:00",
@@ -178,6 +179,7 @@ export default {
       },
       {
         id: "riverfront-esplanade",
+        address: "249 N Beach St, Daytona Beach, FL 32114",
         name: "Riverfront Esplanade e Beach Street",
         icon: "leaf",
         time: "12:00",
@@ -211,6 +213,7 @@ export default {
       },
       {
         id: "daytona-bandshell",
+        address: "70 Boardwalk, Daytona Beach, FL 32118",
         name: "Daytona Beach Bandshell",
         icon: "camera",
         time: "13:00",
@@ -236,6 +239,7 @@ export default {
       },
       {
         id: "boardwalk-praia",
+        address: "13 S Atlantic Ave, Daytona Beach, FL 32118",
         name: "Boardwalk, Ocean Walk Shoppes e praia",
         icon: "tree",
         time: "13:20",
@@ -276,6 +280,7 @@ export default {
       },
       {
         id: "main-street-pier",
+        address: "Main Street Pier, Daytona Beach, FL 32118",
         name: "Main Street Pier",
         icon: "camera",
         time: "13:55",
