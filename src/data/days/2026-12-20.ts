@@ -7,7 +7,7 @@ export default {
   weekday: "Dom",
   liturgicalWeekday: "4º Domingo do Advento",
   category: "compras",
-  title: "Vineland, Walmart, Super Target Millenia e Universal Studios",
+  title: "Super Target, Walmart, Vineland e Islands of Adventure",
   reading: {
     label: "4º Domingo do Advento",
     oldTestamentReading: "2 Samuel 7:1–11, 16",
@@ -15,10 +15,14 @@ export default {
   },
   itinerary: {
     kind: "schedule",
-    parkId: "universal-studios-florida",
-    summary: "Dia de compras em ordem de proximidade: Vineland (manhã), Walmart (mais perto do Vineland), Super Target Millenia (mais longe) e Universal Studios Florida à noite.",
+    summary: "Dia de compras do mais longe para o mais perto do Vineland: Super Target (Millenia), Walmart Supercenter e Vineland Premium Outlets, com a Basílica ao lado. À noite, Islands of Adventure.",
     journey: {
-      tiles: [],
+      tiles: [
+        { label: "Acordar", value: "8h30" },
+        { label: "Sair de casa", value: "9h30" },
+        { label: "Islands fecha", value: "22h" },
+        { label: "Deslocamento", value: "~1h20 no total" }, // REVISAR: soma dos trajetos do dia, sem a volta para casa
+      ],
       notes: [
         { icon: "info", text: "Chegada do Rafael Narcizo neste dia — **sem compromisso de missa**." },
         { icon: "info", text: "Horários sugeridos, ajustáveis." },
@@ -29,133 +33,35 @@ export default {
       {
         title: "Manhã",
         steps: [
-          {
-            kind: "stop",
-            time: "10:00",
-            stopId: "vineland-premium-outlets",
-            name: "Vineland Premium Outlets",
-            icon: "bag",
-          },
+          { kind: "transit", time: "09:30", duration: "~30–35 min", destinationName: "Super Target (Millenia)" }, // REVISAR: tempo e horários do dia estimados
+          { kind: "stop", time: "10:00", stopId: "super-target-millenia", name: "Super Target (Millenia)", icon: "bag" },
+          { kind: "transit", time: "11:30", duration: "~15 min", destinationName: "Walmart Supercenter (Turkey Lake)" },
+          { kind: "stop", time: "11:45", stopId: "walmart-turkey-lake", name: "Walmart Supercenter (Turkey Lake)", icon: "bag" },
         ],
       },
       {
         title: "Tarde",
         steps: [
-          { kind: "transit", time: "14:00", destinationName: "Walmart Supercenter (Turkey Lake)" },
-          {
-            kind: "stop",
-            time: "14:30",
-            stopId: "walmart-turkey-lake",
-            name: "Walmart Supercenter (Turkey Lake)",
-            icon: "bag",
-          },
-          { kind: "transit", time: "16:00", destinationName: "Super Target (Millenia)" },
-          {
-            kind: "stop",
-            time: "16:30",
-            stopId: "super-target-millenia",
-            name: "Super Target (Millenia)",
-            icon: "bag",
-          },
+          { kind: "transit", time: "12:45", duration: "~10 min", destinationName: "Vineland Premium Outlets" },
+          { kind: "stop", time: "13:00", stopId: "vineland-premium-outlets", name: "Vineland Premium Outlets", icon: "bag" },
+          { kind: "stop", time: "17:15", stopId: "basilica-maria-rainha", name: "Basílica de Maria, Rainha do Universo (opcional)", icon: "house" },
         ],
       },
       {
         title: "Noite",
         steps: [
-          { kind: "transit", time: "18:00", destinationName: "Universal Studios Florida" }, // REVISAR: trocado de CityWalk, mesmo horário
-          {
-            kind: "stop",
-            time: "18:30",
-            stopId: "universal-studios-florida",
-            name: "Universal Studios Florida (fecha às 21h00)",
-            icon: "target",
-          },
+          { kind: "transit", time: "18:00", duration: "~20 min", destinationName: "Islands of Adventure" },
+          { kind: "stop", time: "18:30", stopId: "islands-of-adventure", name: "Islands of Adventure (fecha às 22h)", icon: "target" },
         ],
       },
     ],
     cards: [
       {
-        id: "vineland-premium-outlets",
-        name: "Vineland Premium Outlets",
-        icon: "bag",
-        time: "10:00",
-        shopRegionId: "vineland-premium-outlets",
-        sections: [
-          {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: ["8200 Vineland Ave, Orlando, FL 32821."],
-          },
-          {
-            color: "citrus",
-            icon: "bag",
-            title: "Sobre",
-            paragraphs: [
-              "**Mais de 160 lojas** e uma praça de alimentação grande, perto da Disney e do SeaWorld. Entre as lojas estão Polo Ralph Lauren, Coach e Burberry.",
-            ],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Dica",
-            paragraphs: [
-              "Vindo da região da Disney, o caminho mais usado é pela **Hwy 535**, por baixo da I-4, e depois a Vineland Ave. Almoço livre na praça de alimentação do próprio outlet.",
-            ],
-          },
-          {
-            color: "attn",
-            icon: "alert",
-            title: "Atenção",
-            paragraphs: [
-              "Horário de funcionamento em dezembro ainda a **confirmar no site oficial** do outlet.",
-            ],
-          },
-        ],
-      },
-      {
-        id: "walmart-turkey-lake",
-        name: "Walmart Supercenter (Turkey Lake)",
-        icon: "bag",
-        time: "14:30",
-        sections: [
-          {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: ["8990 Turkey Lake Rd, Orlando, FL 32819 (loja nº 4332)."],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Horário",
-            paragraphs: [
-              "Segunda a domingo, **das 6h às 23h59** (segundo o site do Walmart). A seção de bebidas alcoólicas fecha à meia-noite.",
-            ],
-          },
-          {
-            color: "citrus",
-            icon: "bag",
-            title: "Sobre",
-            paragraphs: [
-              "É a parada mais próxima do Vineland. Boa para compras de mercado em volume: o Walmart costuma sair entre **22%** e **28%** mais barato que o Publix nesse tipo de compra.",
-            ],
-          },
-          {
-            color: "attn",
-            icon: "alert",
-            title: "Atenção",
-            paragraphs: [
-              "As compras vão ficar no carro até a noite no CityWalk. Prefira deixar refrigerados e congelados para a **última parada** ou use **bolsa térmica**.",
-            ],
-          },
-        ],
-      },
-      {
         id: "super-target-millenia",
+        address: "4750 Millenia Plaza Way, Orlando, FL 32839",
         name: "Super Target (Millenia)",
         icon: "bag",
-        time: "16:30",
+        time: "10:00",
         sections: [
           {
             color: "navy",
@@ -184,14 +90,129 @@ export default {
             icon: "leaf",
             title: "Observação",
             paragraphs: [
-              "É a parada **mais longe do Vineland**, mas fica já na região do Universal, o que facilita a ida ao CityWalk. O Total Wine fica no mesmo complexo, então dá para fechar a lista de vinhos aqui.",
+              "É a parada **mais longe do Vineland**, por isso abre o dia. O Total Wine fica no mesmo complexo, então dá para fechar a lista de vinhos aqui.",
             ],
           },
         ],
       },
       {
-        id: "universal-studios-florida",
-        name: "Universal Studios Florida",
+        id: "walmart-turkey-lake",
+        address: "8990 Turkey Lake Rd, Orlando, FL 32819",
+        name: "Walmart Supercenter (Turkey Lake)",
+        icon: "bag",
+        time: "11:45",
+        sections: [
+          {
+            color: "navy",
+            icon: "parking",
+            title: "Endereço",
+            paragraphs: ["8990 Turkey Lake Rd, Orlando, FL 32819 (loja nº 4332)."],
+          },
+          {
+            color: "gold",
+            icon: "lightbulb",
+            title: "Horário",
+            paragraphs: [
+              "Segunda a domingo, **das 6h às 23h59** (segundo o site do Walmart). A seção de bebidas alcoólicas fecha à meia-noite.",
+            ],
+          },
+          {
+            color: "citrus",
+            icon: "bag",
+            title: "Sobre",
+            paragraphs: [
+              "É a parada do meio do dia, a mais próxima do Vineland. Boa para compras de mercado em volume: o Walmart costuma sair entre **22%** e **28%** mais barato que o Publix nesse tipo de compra.",
+            ],
+          },
+          {
+            color: "attn",
+            icon: "alert",
+            title: "Atenção",
+            paragraphs: [
+              "As compras do Super Target e do Walmart vão ficar no carro até a noite no Islands. Para **refrigerados e congelados**, use **bolsa térmica**.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "vineland-premium-outlets",
+        address: "8200 Vineland Ave, Orlando, FL 32821",
+        name: "Vineland Premium Outlets",
+        icon: "bag",
+        time: "13:00",
+        shopRegionId: "vineland-premium-outlets",
+        sections: [
+          {
+            color: "navy",
+            icon: "parking",
+            title: "Endereço",
+            paragraphs: ["8200 Vineland Ave, Orlando, FL 32821."],
+          },
+          {
+            color: "citrus",
+            icon: "bag",
+            title: "Sobre",
+            paragraphs: [
+              "**Mais de 160 lojas** e uma praça de alimentação grande, perto da Disney e do SeaWorld. Entre as lojas estão Polo Ralph Lauren, Coach e Burberry.",
+            ],
+          },
+          {
+            color: "gold",
+            icon: "lightbulb",
+            title: "Dica",
+            paragraphs: [
+              "Vindo da região da Disney, o caminho mais usado é pela **Hwy 535**, por baixo da I-4, e depois a Vineland Ave. Almoço livre na praça de alimentação do próprio outlet.",
+            ],
+          },
+          {
+            color: "palm",
+            icon: "leaf",
+            title: "Ao lado",
+            paragraphs: [
+              "Ao lado do Vineland fica a Basílica do Santuário Nacional de Maria, Rainha do Universo (8300 Vineland Ave), que **dá para visitar** no mesmo dia.",
+            ],
+          },
+          {
+            color: "attn",
+            icon: "alert",
+            title: "Atenção",
+            paragraphs: [
+              "Horário de funcionamento em dezembro ainda a **confirmar no site oficial** do outlet.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "basilica-maria-rainha",
+        address: "8300 Vineland Ave, Orlando, FL 32821",
+        name: "Basílica de Maria, Rainha do Universo",
+        icon: "house",
+        time: "17:15",
+        sections: [
+          {
+            color: "navy",
+            icon: "parking",
+            title: "Endereço",
+            paragraphs: ["Basilica of the National Shrine of Mary, Queen of the Universe, 8300 Vineland Ave, Orlando, FL 32821."],
+          },
+          {
+            color: "palm",
+            icon: "leaf",
+            title: "Sobre",
+            paragraphs: ["Fica **ao lado do Vineland Premium Outlets**: dá para visitar no fim das compras. Parada opcional."],
+          },
+          {
+            color: "attn",
+            icon: "alert",
+            title: "Atenção",
+            paragraphs: ["Horários de visita e de missas **não confirmados**: conferir antes de ir."],
+          },
+        ],
+      },
+      {
+        id: "islands-of-adventure",
+        address: "6000 Universal Blvd, Orlando, FL 32819",
+        name: "Islands of Adventure",
         icon: "target",
         time: "18:30",
         sections: [
@@ -205,14 +226,14 @@ export default {
             color: "gold",
             icon: "lightbulb",
             title: "Horário",
-            paragraphs: ["Fecha às 21h00."],
+            paragraphs: ["Fecha às **22h**."],
           },
           {
             color: "gold",
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "Chegar **depois das 18h** costuma dar estacionamento **grátis** nos garagens do Universal, como previsto no plano do Dia 10. Vale **confirmar a regra perto** da data.",
+              "Chegar **depois das 18h** costuma dar estacionamento **grátis** nas garagens do Universal, como previsto no plano do Dia 10. Vale **confirmar a regra perto** da data.",
             ],
           },
           {
