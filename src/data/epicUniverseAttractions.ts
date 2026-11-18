@@ -317,7 +317,7 @@ export const epicUniverseAttractions: ChecklistItem[] = [
     id: "stardust-racers",
     attractionId: "stardust-racers",
     name: "Stardust Racers",
-    area: "Dark Universe",
+    area: "Celestial Park",
     icon: "target",
     sections: [
       {
