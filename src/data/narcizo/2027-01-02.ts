@@ -10,7 +10,7 @@ export default {
   weekday: "Sáb",
   liturgicalWeekday: "",
   reading: {
-    label: "Tempo do Natal",
+    label: "Natal",
     oldTestamentReading: "Provérbios 1:1–7",
     epistleReading: "Tiago 3:13–18",
     gospelReading: "Mateus 12:38–42",

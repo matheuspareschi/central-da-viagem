@@ -11,7 +11,7 @@ export default {
   weekday: "Sex",
   liturgicalWeekday: "",
   reading: {
-    label: "Natal do Senhor",
+    label: "Natividade do Senhor",
     oldTestamentReading: "Isaías 52:7–10",
     epistleReading: "Hebreus 1:1–4 [5–12]",
     gospelReading: "João 1:1–14",

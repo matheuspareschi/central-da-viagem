@@ -11,7 +11,7 @@ export default {
   weekday: "Qua",
   liturgicalWeekday: "",
   reading: {
-    label: "Tempo do Natal",
+    label: "Natal",
     oldTestamentReading: "Provérbios 9:1–12",
     epistleReading: "2 Pedro 3:8–13",
     gospelReading: "João 21:24–25",

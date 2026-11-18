@@ -10,7 +10,7 @@ export default {
   weekday: "Dom",
   liturgicalWeekday: "",
   reading: {
-    label: "2º Domingo após o Natal",
+    label: "2º Domingo após o Dia de Natal",
     oldTestamentReading: "Jeremias 31:7–14",
     epistleReading: "Efésios 1:3–14",
     gospelReading: "João 1:[1–9] 10–18",

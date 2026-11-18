@@ -16,9 +16,9 @@ export type IconName =
 
 export type DayCategory = "parque" | "compras" | "turismo";
 
-/** Leituras do dia (lecionário diário, Ano B): 1ª leitura, epístola, Evangelho e salmo. */
+/** Leituras do dia (Lecionário Comum Revisado Expandido, Ano B): 1ª leitura, epístola, Evangelho e salmo. */
 export interface AdventReading {
-  /** Tempo litúrgico do dia, ex.: "2º Domingo do Advento" ou "Santo Nome de Jesus". */
+  /** Tempo litúrgico do dia, ex.: "2º Domingo do Advento" ou "Santo Nome de Jesus", como no livro. */
   label: string;
   oldTestamentReading: string;
   epistleReading: string;
