@@ -33,89 +33,53 @@ export default {
       notes: [
         { icon: "info", text: "O Epic Universe **abre às 10h** (entrada antecipada às 9h). **Fecha às 21h**." },
       ],
-      alerts: ["**Confirmar no app**: horário do parque assumido **das 10h às 21h**. Deslocar tudo pela diferença."],
+      alerts: ["**Alimentação**: Universal **não permite cooler**: levar muffin ou barrinha de whey assado."],
     },
     attractions: [
       {
-        id: "chegada-epic-22",
-        name: "Chegada e estacionamento",
+        id: "power-up-band",
+        name: "Power-Up Band e Key Challenges (opcional)",
         // REVISAR (área a definir)
         area: "a definir",
-        icon: "parking",
-        sections: [
-          {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço e estacionamento",
-            paragraphs: [
-              "1001 Epic Blvd, Orlando, FL 32819. Estacionamento **US$ 32 a 35 por dia**. Foto da placa e da fileira.",
-            ],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Horários",
-            list: [
-              "08h00 acordar",
-              "09h00 sair de Storey Lake",
-              "09h30 entrar",
-              "10h00 chegar ao parque; **abertura 10h** (entrada antecipada 9h)", // REVISAR: horários substituídos conforme o novo pedido
-              "~21h00 fechamento",
-            ],
-          },
-          {
-            color: "attn",
-            icon: "alert",
-            title: "Atenção",
-            list: [
-              "Perto do Natal o parque tende a estar mais cheio que no dia 17: usar o **alerta de fila no app**.",
-              "Antes de sair no dia 17, o grupo escolhe as **2 favoritas para repetir** (padrão: Stardust Racers e Battle at the Ministry).",
-              "Dia 23 é Daytona, com saída cedo: **dormir assim que chegar**.",
-            ],
-          },
-        ],
-      },
-      {
-        id: "wing-gliders-22",
-        attractionId: "hiccups-wing-gliders",
-        name: "Hiccup's Wing Gliders (repetição)",
-        area: "Isle of Berk",
         icon: "target",
         sections: [
           {
-            color: "navy",
+            color: "citrus",
             icon: "target",
-            title: "Onde",
-            paragraphs: ["Isle of Berk, 09h00. Altura mínima: 1,02 m."],
+            title: "Sobre",
+            paragraphs: [
+              "Pulseira interativa (cerca de **US$ 45** + taxas) com 5 minijogos: Goomba Crazy Crank, Piranha Plant Nap Mishap, Koopa Troopa POWer Punch, Bob-omb Kaboom Room e Thwomp Panel Panic. Com 3 chaves, todo o grupo joga o Bowser Jr. Shadow Showdown. A pontuação aparece no app.",
+            ],
           },
           {
             color: "gold",
             icon: "lightbulb",
             title: "Dica",
-            paragraphs: ["Pedir a primeira fileira, aproveitando a fila curta da abertura. É a única atração **obrigatória** da manhã."],
+            paragraphs: [
+              "**Comprar uma só e revezar** (**~14h00**). O Bob-omb Kaboom Room é exclusivo da Super Nintendo World de Orlando. Se ninguém quiser, usar o tempo na Mine-Cart Madness (se a fila for baixa) e nas lojas 1-Up Factory e Mario Motors.",
+            ],
           },
         ],
       },
       {
-        id: "toothless-treasures",
-        name: "Adotar um dragão e decoração Snoggletog",
-        // REVISAR (área a definir)
-        area: "a definir",
-        icon: "bag",
+        id: "toadstool-cafe",
+        name: "Almoço no Toadstool Café",
+        area: "Super Nintendo World",
+        icon: "burger",
         sections: [
           {
-            color: "citrus",
-            icon: "bag",
-            title: "Lojas",
-            paragraphs: [
-              "Toothless' Treasures: adoção de dragão de pelúcia (**US$ 21**). Escolhe a cor do ovo, faz o juramento viking, dá o nome e há uma cerimônia de nascimento. Hiccup's Work Shop e How to Treat Your Dragon têm decoração de Natal.",
-            ],
+            color: "navy",
+            icon: "burger",
+            title: "Onde",
+            paragraphs: ["Super Nintendo World, **~13h00**. Reservar ou pedir pelo app."],
           },
           {
             color: "gold",
-            icon: "camera",
+            icon: "lightbulb",
             title: "Dica",
-            paragraphs: ["Passeio com calma **por volta das 09h30 a 10h45**, com fotos e personagens."],
+            paragraphs: [
+              "A comida é só ok, mas o ambiente é **o mais temático do parque** (Mario Burger, Super Mushroom Soup). Vale a experiência.",
+            ],
           },
         ],
       },
@@ -165,48 +129,67 @@ export default {
         ],
       },
       {
-        id: "toadstool-cafe",
-        name: "Almoço no Toadstool Café",
-        area: "Super Nintendo World",
+        id: "wing-gliders-22",
+        attractionId: "hiccups-wing-gliders",
+        name: "Hiccup's Wing Gliders (repetição)",
+        area: "Isle of Berk",
+        icon: "target",
+        sections: [
+          {
+            color: "navy",
+            icon: "target",
+            title: "Onde",
+            paragraphs: ["Isle of Berk, 09h00. Altura mínima: 1,02 m."],
+          },
+          {
+            color: "gold",
+            icon: "lightbulb",
+            title: "Dica",
+            paragraphs: ["Pedir a primeira fileira, aproveitando a fila curta da abertura. É a única atração **obrigatória** da manhã."],
+          },
+        ],
+      },
+      {
+        id: "toothless-treasures",
+        name: "Adotar um dragão e decoração Snoggletog",
+        // REVISAR (área a definir)
+        area: "a definir",
+        icon: "bag",
+        sections: [
+          {
+            color: "citrus",
+            icon: "bag",
+            title: "Lojas",
+            paragraphs: [
+              "Toothless' Treasures: adoção de dragão de pelúcia (**US$ 21**). Escolhe a cor do ovo, faz o juramento viking, dá o nome e há uma cerimônia de nascimento. Hiccup's Work Shop e How to Treat Your Dragon têm decoração de Natal.",
+            ],
+          },
+          {
+            color: "gold",
+            icon: "camera",
+            title: "Dica",
+            paragraphs: ["Passeio com calma **por volta das 09h30 a 10h45**, com fotos e personagens."],
+          },
+        ],
+      },
+      {
+        id: "mead-hall",
+        name: "Jantar no Mead Hall",
+        area: "Isle of Berk",
         icon: "burger",
         sections: [
           {
             color: "navy",
             icon: "burger",
             title: "Onde",
-            paragraphs: ["Super Nintendo World, **~13h00**. Reservar ou pedir pelo app."],
+            paragraphs: ["Isle of Berk, ~17h15. **Reservar pelo app**: perto do Natal enche."],
           },
           {
             color: "gold",
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "A comida é só ok, mas o ambiente é **o mais temático do parque** (Mario Burger, Super Mushroom Soup). Vale a experiência.",
-            ],
-          },
-        ],
-      },
-      {
-        id: "power-up-band",
-        name: "Power-Up Band e Key Challenges (opcional)",
-        // REVISAR (área a definir)
-        area: "a definir",
-        icon: "target",
-        sections: [
-          {
-            color: "citrus",
-            icon: "target",
-            title: "Sobre",
-            paragraphs: [
-              "Pulseira interativa (cerca de **US$ 45** + taxas) com 5 minijogos: Goomba Crazy Crank, Piranha Plant Nap Mishap, Koopa Troopa POWer Punch, Bob-omb Kaboom Room e Thwomp Panel Panic. Com 3 chaves, todo o grupo joga o Bowser Jr. Shadow Showdown. A pontuação aparece no app.",
-            ],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Dica",
-            paragraphs: [
-              "**Comprar uma só e revezar** (**~14h00**). O Bob-omb Kaboom Room é exclusivo da Super Nintendo World de Orlando. Se ninguém quiser, usar o tempo na Mine-Cart Madness (se a fila for baixa) e nas lojas 1-Up Factory e Mario Motors.",
+              "Salão de banquete viking. **Thawfest Platter**: frango glaceado com barbecue de frutas silvestres, salmão grelhado e salsicha. A Berk ao entardecer fica com a decoração de Natal.",
             ],
           },
         ],
@@ -238,28 +221,6 @@ export default {
             title: "Atenção",
             paragraphs: [
               "Darkmoor Monster Makeup é opcional, com **reserva no site** da Universal (**US$ 45** só a maquiagem; **US$ 169**+ o pacote). Adultos maquiados não podem beber álcool.",
-            ],
-          },
-        ],
-      },
-      {
-        id: "mead-hall",
-        name: "Jantar no Mead Hall",
-        area: "Isle of Berk",
-        icon: "burger",
-        sections: [
-          {
-            color: "navy",
-            icon: "burger",
-            title: "Onde",
-            paragraphs: ["Isle of Berk, ~17h15. **Reservar pelo app**: perto do Natal enche."],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Dica",
-            paragraphs: [
-              "Salão de banquete viking. **Thawfest Platter**: frango glaceado com barbecue de frutas silvestres, salmão grelhado e salsicha. A Berk ao entardecer fica com a decoração de Natal.",
             ],
           },
         ],
