@@ -1,6 +1,5 @@
 import { BookOpen } from "lucide-react";
 import { useState } from "react";
-import { preTripReadings } from "../../data/preTripReadings";
 import { useTripDays } from "../../hooks/useTripDays";
 import { readStorage, writeStorage } from "../../lib/storage";
 import type { AdventReading } from "../../types";
@@ -25,7 +24,7 @@ function useCheckedReadings(dateISO: string) {
 
 /** Leituras do dia (Advento, Natal e Epifania), sempre abertas, com marcação salva por dia. */
 export function AdventCard({ dateISO }: { dateISO: string }) {
-  const reading = useTripDays().daysByDate[dateISO]?.reading ?? preTripReadings[dateISO];
+  const reading = useTripDays().daysByDate[dateISO]?.reading;
   if (!reading) return null;
 
   return <ReadingsChecklist key={dateISO} dateISO={dateISO} label={reading.label} readings={listReadings(reading)} />;
