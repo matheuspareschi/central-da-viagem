@@ -38,51 +38,6 @@ export default {
     },
     attractions: [
       {
-        id: "visao-geral",
-        name: "Visão geral e logística",
-        icon: "parking",
-        sections: [
-          {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço / Estacionamento",
-            paragraphs: [
-              "10165 McKinley Dr, Tampa, FL. Cerca de 1h30 a 1h45 de carro de Orlando pela I-4 Oeste (~100 km, sujeito a trânsito). **Estacionamento pago à parte**.",
-              "Sugestão: acordar 8h00, sair do Storey Lake **às 9h00** e chegar entre ~10h30 e ~10h45, com o parque já aberto.",
-            ],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Horário",
-            paragraphs: [
-              "**Confirmar no site oficial** o horário de abertura e fechamento de 21/12 e se há evento de Natal com programação diferente.",
-            ],
-          },
-          {
-            color: "palm",
-            icon: "lightbulb",
-            title: "Fura-fila e transporte interno",
-            list: [
-              "**Quick Queue**: comprar no dia, depois de ver as filas. Em dezembro vale considerar para Iron Gwazi, SheiKra e Tigris.",
-              "Serengeti Railway (trenzinho): **gratuito**, dá a volta na savana e poupa as pernas.",
-              "Skyride: **US$ 5 por viagem** entre Edge of Africa e Stanleyville.",
-              "**Rider Switch**: permite revezar numa atração sem pegar a fila de novo.",
-            ],
-          },
-          {
-            color: "attn",
-            icon: "alert",
-            title: "Atenção",
-            list: [
-              "Conferir no app/mapa se há atrações **fechadas** e onde fica a entrada em relação a Morocco e Egypt.",
-              "A Kumba fechou em 2026 e não entra no plano.",
-              "**Confirmar se pode entrar** com comida e se aceitam dinheiro (leitora relata que não aceitam dinheiro, não permitem comida de fora e só há armários pagos).",
-            ],
-          },
-        ],
-      },
-      {
         id: "cheetah-hunt",
         attractionId: "cheetah-hunt",
         name: "Cheetah Hunt",
