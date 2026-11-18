@@ -555,8 +555,7 @@ export default {
     },
     {
       id: "dia-livre",
-      label: "Dia livre",
-      calendarTitle: "Lojas de música e Epic Universe",
+      label: "Lojas de música e Epic Universe",
       supportLine: "Matheus e Jairo · de carro",
       trackKeys: ["matheus-jairo"],
     },
