@@ -88,8 +88,7 @@ export default {
         id: "cheetah-hunt",
         attractionId: "cheetah-hunt",
         name: "Cheetah Hunt",
-        // REVISAR (área a definir)
-        area: "a definir",
+        area: "Crown Colony Plaza",
         icon: "target",
         sections: [
           {
@@ -212,7 +211,7 @@ export default {
         id: "tigris",
         attractionId: "tigris",
         name: "Tigris",
-        area: "Jungala",
+        area: "Stanleyville",
         icon: "target",
         sections: [
           {
@@ -423,7 +422,7 @@ export default {
         id: "serengeti-flyer",
         attractionId: "serengeti-flyer",
         name: "Serengeti Flyer",
-        area: "Pantopia",
+        area: "Nairobi",
         icon: "target",
         sections: [
           {
@@ -517,8 +516,7 @@ export default {
       {
         id: "ubanga-banga-bumper-cars",
         name: "Ubanga-Banga Bumper Cars",
-        // REVISAR (área a definir)
-        area: "a definir",
+        area: "Congo",
         icon: "target",
         sections: [
           {
@@ -610,8 +608,7 @@ export default {
         id: "iron-gwazi",
         attractionId: "iron-gwazi",
         name: "Iron Gwazi",
-        // REVISAR (área a definir)
-        area: "a definir",
+        area: "Morocco",
         icon: "target",
         sections: [
           {
