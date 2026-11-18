@@ -1,20 +1,12 @@
 import type { ReactNode } from "react";
-import { ChevronDown } from "lucide-react";
 import { RichText } from "../../components";
 import { trashInstructions } from "../../data/global/trashInstructions";
 
-/** Recolhido por padrão: o resumo mostra só o horário da coleta. */
+/** Cartão sempre aberto: o título fixo mostra o horário da coleta. */
 export function TrashInstructions() {
   return (
-    <details className="group rounded-xl border border-ink/10">
-      <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between gap-3 px-4 py-2.5 text-[15px] font-semibold text-ink [&::-webkit-details-marker]:hidden">
-        {trashInstructions.collectionHoursSummary}
-        <span className="flex shrink-0 items-center gap-1 text-[12.5px] text-ink-soft">
-          <span className="group-open:hidden">Ver instruções</span>
-          <span className="hidden group-open:inline">Recolher</span>
-          <ChevronDown className="h-4 w-4 transition-transform group-open:rotate-180" />
-        </span>
-      </summary>
+    <section className="rounded-xl border border-ink/10">
+      <h2 className="min-h-11 px-4 py-2.5 text-[15px] font-semibold text-ink">{trashInstructions.collectionHoursSummary}</h2>
 
       <div className="space-y-6 border-t border-ink/10 px-4 pb-5 pt-4 text-[16px] leading-relaxed text-ink">
         <InstructionBlock title="Horário">
@@ -44,7 +36,7 @@ export function TrashInstructions() {
           <BulletList items={trashInstructions.notAllowed} />
         </InstructionBlock>
       </div>
-    </details>
+    </section>
   );
 }
 
