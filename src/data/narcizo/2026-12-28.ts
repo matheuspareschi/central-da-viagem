@@ -5,6 +5,7 @@ import type { NarcizoDay } from "./types";
 /** Dia de viagem: junta a última manhã do guia de Miami com a chegada do guia de Washington. */
 export default {
   origem: "narcizo",
+  cidade: "Washington",
   dateISO: "2026-12-28",
   calendarTitle: "Miami → Washington",
   day: 28,

@@ -3,6 +3,7 @@ import type { NarcizoDay } from "./types";
 
 export default {
   origem: "narcizo",
+  cidade: "Nova York",
   dateISO: "2026-12-31",
   calendarTitle: "Quinta Avenida, The Rink e Midnight Run",
   day: 31,

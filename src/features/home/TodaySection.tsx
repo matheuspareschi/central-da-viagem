@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { daysByDate } from "../../data/days";
+import { useTripDays } from "../../hooks/useTripDays";
 import { toISODate } from "../../lib/date";
 import { daysUntilTrip, getTripPhase } from "../../lib/tripPeriod";
 import { DayCard } from "./DayCard";
@@ -8,11 +8,12 @@ const cardClasses = "rounded-[22px] border border-line bg-cardbg p-5 text-center
 
 /** Cartão do dia durante a viagem; antes, a contagem regressiva; depois, o encerramento. */
 export function TodaySection({ now }: { now: Date }) {
+  const { days, daysByDate } = useTripDays();
   const day = daysByDate[toISODate(now)];
-  const phase = getTripPhase(now);
+  const phase = getTripPhase(now, days);
 
   if (day) return <DayCard key={day.dateISO} day={day} />;
-  if (phase === "before") return <Countdown days={daysUntilTrip(now)} />;
+  if (phase === "before") return <Countdown days={daysUntilTrip(now, days)} />;
   if (phase === "after") return <TripCompleted />;
   return <p className={`${cardClasses} text-[15px] font-semibold text-ink-soft`}>Roteiro deste dia ainda não fechado</p>;
 }

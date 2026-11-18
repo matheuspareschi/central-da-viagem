@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { allDays } from "../data/days";
 import type { DayData } from "../types";
+import { useTripDays } from "./useTripDays";
 
 // Dia com conteúdo mais completo — usado como padrão quando a URL não
 // especifica um dia.
@@ -20,18 +20,19 @@ interface DayNavigation {
  * corresponder a nenhum dia da viagem.
  */
 export function useDayNavigation(dateISOParam: string | undefined): DayNavigation {
+  const { days } = useTripDays();
   const navigate = useNavigate();
   const location = useLocation();
   const dateISO = dateISOParam || FALLBACK_DAY_ISO;
-  const dayIndex = allDays.findIndex((d) => d.dateISO === dateISO);
+  const dayIndex = days.findIndex((d) => d.dateISO === dateISO);
 
   useEffect(() => {
     if (dayIndex === -1) navigate("/", { replace: true });
   }, [dayIndex, navigate]);
 
-  const dayInfo = allDays[dayIndex];
-  const prevDay = dayIndex > 0 ? allDays[dayIndex - 1] : null;
-  const nextDay = dayIndex >= 0 && dayIndex < allDays.length - 1 ? allDays[dayIndex + 1] : null;
+  const dayInfo = days[dayIndex];
+  const prevDay = dayIndex > 0 ? days[dayIndex - 1] : null;
+  const nextDay = dayIndex >= 0 && dayIndex < days.length - 1 ? days[dayIndex + 1] : null;
 
   function navigateToDay(nextDateISO: string) {
     // Mantém o `state` (ex.: origem do botão "Voltar") ao trocar de dia.

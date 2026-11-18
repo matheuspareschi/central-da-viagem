@@ -3,6 +3,7 @@ import type { NarcizoDay } from "./types";
 
 export default {
   origem: "narcizo",
+  cidade: "Nova York",
   dateISO: "2027-01-04",
   calendarTitle: "High Line, SUMMIT e teleférico",
   day: 4,

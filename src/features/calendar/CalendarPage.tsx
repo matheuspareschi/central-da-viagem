@@ -2,13 +2,17 @@ import { useEffect } from "react";
 import { Layers } from "lucide-react";
 import { Link } from "react-router-dom";
 import { CategoryIcon, SpecialDayIcon, type BackTarget } from "../../components";
-import { allDays } from "../../data/days";
 import { categoryStyles } from "../../data/presentation/categoryStyles";
+import { narcizoStyle } from "../../data/presentation/narcizoStyle";
+import { isNarcizoDay } from "../../data/narcizo/types";
+import { useNarcizoMode } from "../../hooks/useNarcizoMode";
 import { useNow } from "../../hooks/useNow";
+import { useTripDays } from "../../hooks/useTripDays";
 import { getDayCategories } from "../../lib/dayCategories";
 import { formatWeekdayAbbreviation, toISODate } from "../../lib/date";
 import { applyOption, readSavedOption } from "../../lib/dayOption";
 import type { DayCategory, DayData, IconName } from "../../types";
+import { NarcizoToggle } from "./NarcizoToggle";
 
 const calendarBackTarget: BackTarget = { path: "/calendario", label: "Voltar para o Calendário" };
 const categories = Object.keys(categoryStyles) as DayCategory[];
@@ -16,7 +20,11 @@ const monoLabelClasses = "font-mono text-xs uppercase tracking-[0.06em] text-ink
 
 export function CalendarPage() {
   const todayISO = toISODate(useNow());
-  const isTripDay = allDays.some((day) => day.dateISO === todayISO);
+  const { isEnabled: isNarcizoEnabled } = useNarcizoMode();
+  const { days } = useTripDays();
+  const isTripDay = days.some((day) => day.dateISO === todayISO);
+  const mainDays = days.filter((day) => !isNarcizoDay(day));
+  const narcizoDays = days.filter(isNarcizoDay);
 
   useEffect(() => {
     if (!isTripDay) window.scrollTo(0, 0);
@@ -25,19 +33,31 @@ export function CalendarPage() {
   return (
     <div className="-mx-4 -mt-7">
       <h1 className="px-4 pt-7 font-serif text-[28px] font-bold leading-tight tracking-tight">Calendário</h1>
-      <CategoryLegend />
+      <CategoryLegend showsNarcizo={isNarcizoEnabled} />
       <ul className="m-0 mt-4 grid list-none grid-cols-[repeat(2,minmax(0,1fr))] gap-3 p-0 px-4">
-        {allDays.map((day) => (
-          <li key={day.dateISO} className="flex">
-            <DayTile day={day} isToday={day.dateISO === todayISO} />
-          </li>
+        {mainDays.map((day) => (
+          <DayTileItem key={day.dateISO} day={day} todayISO={todayISO} />
+        ))}
+        <li className="col-span-2 -mt-1 flex justify-end">
+          <NarcizoToggle />
+        </li>
+        {narcizoDays.map((day) => (
+          <DayTileItem key={day.dateISO} day={day} todayISO={todayISO} />
         ))}
       </ul>
     </div>
   );
 }
 
-function CategoryLegend() {
+function DayTileItem({ day, todayISO }: { day: DayData; todayISO: string }) {
+  return (
+    <li className="flex">
+      <DayTile day={day} isToday={day.dateISO === todayISO} />
+    </li>
+  );
+}
+
+function CategoryLegend({ showsNarcizo }: { showsNarcizo: boolean }) {
   return (
     <ul className={`m-0 mt-2 flex list-none flex-wrap gap-x-[18px] gap-y-1.5 p-0 px-4 ${monoLabelClasses}`}>
       {categories.map((category) => (
@@ -46,6 +66,12 @@ function CategoryLegend() {
           {categoryStyles[category].label}
         </li>
       ))}
+      {showsNarcizo && (
+        <li className="inline-flex items-center gap-1.5">
+          <span aria-hidden="true" className="h-4 w-[5px] rounded-full" style={{ backgroundColor: narcizoStyle.hex }} />
+          {narcizoStyle.label}
+        </li>
+      )}
     </ul>
   );
 }
@@ -70,7 +96,7 @@ function DayTile({ day: scheduledDay, isToday }: { day: DayData; isToday: boolea
         isToday ? "shadow-today" : "shadow-day-card"
       }`}
     >
-      <CategoryStripe categories={getDayCategories(day)} />
+      <SideStripe colors={stripeColors(day)} />
       <div className="flex items-center gap-2">
         <span className="font-serif text-[30px] font-semibold leading-none">{day.day}</span>
         <span className={`font-medium ${monoLabelClasses}`}>{formatWeekdayAbbreviation(day.dateISO)}</span>
@@ -78,6 +104,7 @@ function DayTile({ day: scheduledDay, isToday }: { day: DayData; isToday: boolea
         <DayTileIcon categories={getDayCategories(day)} specialIcon={day.specialIcon} />
       </div>
       <p className="text-sm font-semibold leading-[1.3] [overflow-wrap:anywhere]">{savedOption ? (savedOption.calendarTitle ?? savedOption.label) : day.calendarTitle}</p>
+      {isNarcizoDay(day) && <CityBadge city={day.cidade} />}
       {day.options && !savedOption && <p className="text-xs text-ink-soft">{CHOOSE_OPTION_HINT}</p>}
     </Link>
   );
@@ -98,12 +125,26 @@ function DayTileIcon({ categories, specialIcon }: { categories: DayCategory[]; s
   );
 }
 
-function CategoryStripe({ categories }: { categories: DayCategory[] }) {
+/** Dia da família Narcizo tem barra própria; os demais usam a cor da categoria (duas, no dia dividido). */
+function stripeColors(day: DayData): string[] {
+  if (isNarcizoDay(day)) return [narcizoStyle.hex];
+  return getDayCategories(day).map((category) => categoryStyles[category].hex);
+}
+
+function SideStripe({ colors }: { colors: string[] }) {
   return (
     <span aria-hidden="true" className="absolute inset-y-0 left-0 flex w-[5px] flex-col">
-      {categories.map((category) => (
-        <span key={category} className="flex-1" style={{ backgroundColor: categoryStyles[category].hex }} />
+      {colors.map((color) => (
+        <span key={color} className="flex-1" style={{ backgroundColor: color }} />
       ))}
+    </span>
+  );
+}
+
+function CityBadge({ city }: { city: string }) {
+  return (
+    <span className="mt-0.5 self-start rounded-md bg-narcizo-tint px-1.5 py-0.5 font-mono text-xs uppercase tracking-[0.06em] text-narcizo-text">
+      {city}
     </span>
   );
 }

@@ -3,6 +3,7 @@ import type { NarcizoDay } from "./types";
 
 export default {
   origem: "narcizo",
+  cidade: "Nova York",
   dateISO: "2027-01-02",
   calendarTitle: "Estátua da Liberdade e Lower Manhattan",
   day: 2,

@@ -3,6 +3,7 @@ import type { NarcizoDay } from "./types";
 
 export default {
   origem: "narcizo",
+  cidade: "Nova York",
   dateISO: "2027-01-01",
   calendarTitle: "Central Park e Museu de História Natural",
   day: 1,

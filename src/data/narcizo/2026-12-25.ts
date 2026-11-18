@@ -4,6 +4,7 @@ import type { NarcizoDay } from "./types";
 
 export default {
   origem: "narcizo",
+  cidade: "Miami",
   dateISO: "2026-12-25",
   calendarTitle: "Orlando → Miami e Natal no CRAFT Bayside",
   day: 25,

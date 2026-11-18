@@ -3,6 +3,7 @@ import type { NarcizoDay } from "./types";
 
 export default {
   origem: "narcizo",
+  cidade: "Washington",
   dateISO: "2026-12-29",
   calendarTitle: "Capitólio, Museus e Memoriais",
   day: 29,

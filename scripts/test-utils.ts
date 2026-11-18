@@ -8,7 +8,10 @@ import { describeParkingChoice, describeParkingOption, findChosenParking } from 
 import { formatPeriodRange } from "../src/lib/schedule.ts";
 import { isGratis } from "../src/lib/estacionamento.ts";
 import { estacionamentos } from "../src/data/estacionamentos.ts";
-import type { ChecklistItem, ParkAttraction } from "../src/types";
+import { formatDayMonth } from "../src/lib/date.ts";
+import { getNarcizoEnabled, setNarcizoEnabled, subscribeNarcizoMode } from "../src/lib/narcizoMode.ts";
+import { daysUntilTrip, getTripPhase } from "../src/lib/tripPeriod.ts";
+import type { ChecklistItem, DayData, ParkAttraction } from "../src/types";
 import { boldShare, hasUnclosedBoldMark, parseRichText } from "../src/lib/richText.ts";
 import { lanchesCategories, lanchesChains } from "../src/data/global/lanches.ts";
 import { countFavorites, formatFavoritesCount, groupByCategory, pickChains } from "../src/lib/lanches.ts";
@@ -20,6 +23,7 @@ import { convertTyped, kgParaLb, lbParaKg } from "../src/utils/weight.ts";
 const areas = [{ key: "a", label: "Área" }];
 const attraction = (name: string, type: string, description: string): ParkAttraction =>
   ({ id: name, parkId: "p", area: "a", name, type, kind: "attraction", description });
+const tripDays = (...dates: string[]) => dates.map((dateISO) => ({ dateISO }) as DayData);
 const item = (sections: ChecklistItem["sections"] = []): ChecklistItem => ({ id: "i", name: "Item", icon: "target", sections });
 
 const tests: Array<[string, () => void]> = [
@@ -188,6 +192,32 @@ const tests: Array<[string, () => void]> = [
   ["nenhum resultado vira NaN", () => {
     const result = calcularPreco({ preco: 0, d1: 100, d2: 100, imposto: 100 });
     for (const value of Object.values(result)) assert.ok(Number.isFinite(value));
+  }],
+  ["formatDayMonth: 2026-12-25 → 25/12", () => assert.equal(formatDayMonth("2026-12-25"), "25/12")],
+  ["fase da viagem: antes, durante e depois, pelo primeiro e último dia da lista", () => {
+    const days = tripDays("2026-12-06", "2026-12-24");
+    assert.equal(getTripPhase(new Date(2026, 11, 5), days), "before");
+    assert.equal(getTripPhase(new Date(2026, 11, 24, 23, 59), days), "during");
+    assert.equal(getTripPhase(new Date(2026, 11, 25), days), "after");
+  }],
+  ["fase da viagem: com dias da família Narcizo, 26/12 ainda é durante", () => {
+    assert.equal(getTripPhase(new Date(2026, 11, 26), tripDays("2026-12-06", "2026-12-24")), "after");
+    assert.equal(getTripPhase(new Date(2026, 11, 26), tripDays("2026-12-06", "2026-12-24", "2027-01-05")), "during");
+    assert.equal(getTripPhase(new Date(2027, 0, 6), tripDays("2026-12-06", "2027-01-05")), "after");
+  }],
+  ["contagem regressiva usa o primeiro dia da lista", () => assert.equal(daysUntilTrip(new Date(2026, 11, 1), tripDays("2026-12-06")), 5)],
+  ["modo Narcizo: começa desligado, avisa quem assina só quando muda e deixa de avisar ao cancelar", () => {
+    let calls = 0;
+    const unsubscribe = subscribeNarcizoMode(() => calls++);
+    assert.equal(getNarcizoEnabled(), false);
+    setNarcizoEnabled(true);
+    setNarcizoEnabled(true);
+    assert.equal(getNarcizoEnabled(), true);
+    assert.equal(calls, 1);
+    unsubscribe();
+    setNarcizoEnabled(false);
+    assert.equal(getNarcizoEnabled(), false);
+    assert.equal(calls, 1);
   }],
 ];
 

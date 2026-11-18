@@ -3,6 +3,7 @@ import type { NarcizoDay } from "./types";
 
 export default {
   origem: "narcizo",
+  cidade: "Miami",
   dateISO: "2026-12-26",
   calendarTitle: "Sawgrass Mills e Lincoln Road",
   day: 26,

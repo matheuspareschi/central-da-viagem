@@ -3,6 +3,7 @@ import type { NarcizoDay } from "./types";
 
 export default {
   origem: "narcizo",
+  cidade: "Miami",
   dateISO: "2026-12-27",
   calendarTitle: "Dolphins x Chargers e Wynwood",
   day: 27,

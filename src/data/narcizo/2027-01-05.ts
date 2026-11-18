@@ -3,6 +3,7 @@ import type { NarcizoDay } from "./types";
 
 export default {
   origem: "narcizo",
+  cidade: "Nova York",
   dateISO: "2027-01-05",
   calendarTitle: "Últimas compras e voo de volta",
   day: 5,

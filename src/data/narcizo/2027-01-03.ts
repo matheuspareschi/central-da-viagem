@@ -3,6 +3,7 @@ import type { NarcizoDay } from "./types";
 
 export default {
   origem: "narcizo",
+  cidade: "Nova York",
   dateISO: "2027-01-03",
   calendarTitle: "Brooklyn Bridge, DUMBO e MJ The Musical",
   day: 3,
