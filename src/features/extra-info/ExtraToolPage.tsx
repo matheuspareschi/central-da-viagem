@@ -6,6 +6,7 @@ import { findExtraTool, type ExtraToolId } from "../../data/global/extraTools";
 import { BeforeTravelList } from "./BeforeTravelList";
 import { DiscountTaxCalculator } from "./DiscountTaxCalculator";
 import { GroceryList } from "./GroceryList";
+import { LanchesList } from "./LanchesList";
 import { TollPassSteps } from "./TollPassSteps";
 import { ShoeSizeChart } from "./ShoeSizeChart";
 import { TrashInstructions } from "./TrashInstructions";
@@ -19,6 +20,7 @@ const toolBodies: Record<ExtraToolId, () => React.JSX.Element> = {
   "antes-de-viajar": BeforeTravelList,
   pedagio: TollPassSteps,
   calcado: ShoeSizeChart,
+  lanches: LanchesList,
 };
 
 /** Subpágina de uma ferramenta de Extras; o foco vai para o título ao abrir. */

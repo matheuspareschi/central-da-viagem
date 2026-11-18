@@ -1,6 +1,6 @@
-import { Calculator, Car, Footprints, ListChecks, Scale, ShoppingCart, Trash2, type LucideIcon } from "lucide-react";
+import { Calculator, Car, Footprints, ListChecks, Sandwich, Scale, ShoppingCart, Trash2, type LucideIcon } from "lucide-react";
 
-export type ExtraToolId = "conversor" | "desconto-imposto" | "mercado" | "lixo" | "antes-de-viajar" | "pedagio" | "calcado";
+export type ExtraToolId = "conversor" | "desconto-imposto" | "mercado" | "lixo" | "antes-de-viajar" | "pedagio" | "calcado" | "lanches";
 
 export interface ExtraTool {
   id: ExtraToolId;
@@ -91,6 +91,17 @@ export const extraTools: ExtraTool[] = [
     tileAriaLabel: "Abrir Conversor de tamanho de calçado",
     icon: Footprints,
     iconClasses: "bg-[#e3e2dc] text-ink",
+  },
+  {
+    id: "lanches",
+    tileTitle: "Lanches e fast food",
+    pageTitle: "Lanches e fast food",
+    tileSupport: "Redes e favoritos",
+    description: "Orlando e Kissimmee.",
+    tileAriaLabel: "Abrir Lanches e fast food",
+    icon: Sandwich,
+    iconClasses: "bg-house text-house-label",
+    hasOwnCards: true,
   },
 ];
 

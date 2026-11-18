@@ -10,6 +10,7 @@ import { linkedAttractionIds } from "../src/lib/parkChecklist.ts";
 import { beforeTravelItems } from "../src/data/global/beforeTravel.ts";
 import { trashInstructions } from "../src/data/global/trashInstructions.ts";
 import { tollStages } from "../src/data/pedagio.ts";
+import { lanchesCategories, lanchesChains } from "../src/data/global/lanches.ts";
 import { boldShare, hasUnclosedBoldMark } from "../src/lib/richText.ts";
 import { toMinutes } from "../src/lib/schedule.ts";
 import type { DayData, JourneyTile, ParkAttraction, StopStep, TransitStep } from "../src/types";
@@ -283,6 +284,17 @@ function checkCatalogs(): string[] {
   });
 }
 
+function checkLanches(): string[] {
+  const categoryIds = new Set(lanchesCategories.map((category) => category.id));
+  return [
+    ...checkUniqueIds("lanches", lanchesChains.map((chain) => chain.id)),
+    ...lanchesChains
+      .filter((chain) => !categoryIds.has(chain.categoria))
+      .map((chain) => `lanches: rede "${chain.id}" com categoria inexistente "${chain.categoria}"`),
+    ...lanchesChains.filter((chain) => !chain.nome.trim() || !chain.descricao.trim()).map((chain) => `lanches: rede "${chain.id}" com nome ou descrição vazio`),
+  ];
+}
+
 function checkDay(day: DayData): string[] {
   const trackErrors = listDayTracks(day).flatMap((track) => {
     const where = describeTrack(day, track);
@@ -325,7 +337,7 @@ function collectTexts(value: unknown, path: string): { path: string; text: strin
 function collectContentTexts(days: DayData[]): { path: string; text: string }[] {
   return [
     ...days.flatMap((day) => collectTexts(day, `dia ${day.day}`)),
-    ...collectTexts({ tollStages, beforeTravelItems, trashInstructions }, "extras"),
+    ...collectTexts({ tollStages, beforeTravelItems, trashInstructions, lanchesChains }, "extras"),
   ];
 }
 
@@ -341,6 +353,7 @@ const days = await loadDays();
 const errors = [
   ...checkUniqueIds("dias", days.map((day) => day.dateISO)),
   ...checkCatalogs(),
+  ...checkLanches(),
   ...days.flatMap(checkDayAndOptions),
   ...checkBoldMarks(collectContentTexts(days)),
 ];

@@ -10,6 +10,8 @@ import { isGratis } from "../src/lib/estacionamento.ts";
 import { estacionamentos } from "../src/data/estacionamentos.ts";
 import type { ChecklistItem, ParkAttraction } from "../src/types";
 import { boldShare, hasUnclosedBoldMark, parseRichText } from "../src/lib/richText.ts";
+import { lanchesCategories, lanchesChains } from "../src/data/global/lanches.ts";
+import { countFavorites, formatFavoritesCount, groupByCategory, pickChains } from "../src/lib/lanches.ts";
 import { applyOption, findOption, optionQuestion } from "../src/lib/dayOption.ts";
 import { formatDecimal, formatFixedDecimal, parseDecimal } from "../src/utils/decimal.ts";
 import { calcularPreco, readPercent } from "../src/utils/price.ts";
@@ -165,6 +167,23 @@ const tests: Array<[string, () => void]> = [
     const stop = (time: string) => ({ kind: "stop" as const, time, stopId: "x", name: "x", icon: "bag" as const });
     assert.equal(formatPeriodRange({ title: "Manhã", steps: [stop("09:25"), stop("10:00"), stop("A definir")] }), "09:25 – 10:00");
     assert.equal(formatPeriodRange({ title: "Manhã", steps: [stop("A definir")] }), "A definir");
+  }],
+  ["lanches: 8 categorias, 67 redes, todas em uma categoria existente", () => {
+    assert.equal(lanchesCategories.length, 8);
+    assert.equal(lanchesChains.length, 67);
+    const groups = groupByCategory(lanchesChains, lanchesCategories);
+    assert.equal(groups.reduce((total, group) => total + group.chains.length, 0), lanchesChains.length);
+  }],
+  ["lanches: filtro favoritos e categoria; sem favoritas fica vazio", () => {
+    const favorites = new Set(["mcd", "cfa", "id-antigo"]);
+    assert.deepEqual(pickChains(lanchesChains, "favoritos", favorites).map((chain) => chain.id), ["mcd", "cfa"]);
+    assert.equal(pickChains(lanchesChains, "favoritos", new Set()).length, 0);
+    assert.equal(pickChains(lanchesChains, "pizza", favorites).length, 8);
+    assert.equal(pickChains(lanchesChains, "todos", favorites).length, lanchesChains.length);
+    assert.equal(countFavorites(lanchesChains, favorites), 2);
+  }],
+  ["lanches: contador no singular e no plural", () => {
+    assert.deepEqual([0, 1, 2].map(formatFavoritesCount), ["0 favoritos", "1 favorito", "2 favoritos"]);
   }],
   ["nenhum resultado vira NaN", () => {
     const result = calcularPreco({ preco: 0, d1: 100, d2: 100, imposto: 100 });
