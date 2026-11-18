@@ -280,7 +280,7 @@ export default {
       },
       {
         id: "main-street-pier",
-        address: "Main Street Pier, Daytona Beach, FL 32118",
+        address: "Daytona Beach, FL 32118",
         name: "Main Street Pier",
         icon: "camera",
         time: "13:55",
