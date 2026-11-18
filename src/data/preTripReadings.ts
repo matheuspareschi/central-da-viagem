@@ -2,6 +2,7 @@ import type { AdventReading } from "../types";
 
 const SALMO_80 = "Salmo 80:1–7, 17–19";
 const SALMO_79 = "Salmo 79";
+const SALMO_85 = "Salmo 85:1–2, 8–13";
 
 /** Leituras do Advento (Ano B) nos dias anteriores ao primeiro dia do roteiro, por data ISO. */
 export const preTripReadings: Record<string, AdventReading> = {
@@ -46,5 +47,33 @@ export const preTripReadings: Record<string, AdventReading> = {
     epistleReading: "Apocalipse 18:1–3",
     gospelReading: "Lucas 21:34–38",
     psalm: SALMO_79,
+  },
+  "2026-12-02": {
+    label: "1ª sem. do Advento",
+    oldTestamentReading: "Miqueias 5:1–5a",
+    epistleReading: "Apocalipse 18:4–10",
+    gospelReading: "Marcos 14:26–31",
+    psalm: SALMO_79,
+  },
+  "2026-12-03": {
+    label: "2ª sem. do Advento",
+    oldTestamentReading: "Oseias 6:1–6",
+    epistleReading: "1 Tessalonicenses 1:2–10",
+    gospelReading: "Marcos 6:14–16",
+    psalm: SALMO_85,
+  },
+  "2026-12-04": {
+    label: "2ª sem. do Advento",
+    oldTestamentReading: "Jeremias 1:4–10",
+    epistleReading: "Atos 11:19–26",
+    gospelReading: "Marcos 8:27–30",
+    psalm: SALMO_85,
+  },
+  "2026-12-05": {
+    label: "2ª sem. do Advento",
+    oldTestamentReading: "Ezequiel 36:24–28",
+    epistleReading: "Atos 19:1–6",
+    gospelReading: "Marcos 11:27–33",
+    psalm: SALMO_85,
   },
 };
