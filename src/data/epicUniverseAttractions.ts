@@ -33,10 +33,28 @@ export const epicUniverseAttractions: ChecklistItem[] = [
         title: "Dica",
         paragraphs: ["Ouvir as instruções antes de começar: a atração não é intuitiva. Fila ~60 a 90 min; Single Rider. Se passar de 75 min, deixar para **depois das 19h30**."],
       },
+      {
+        color: "palm",
+        icon: "camera",
+        title: "Onde tirar foto",
+        list: [
+          "**Escadaria central e binóculos**: logo ao sair do cano verde de entrada, a vista elevada permite fotografar todo o Reino do Cogumelo ao fundo, incluindo o Castelo da Peach e o Mt. Beanpole.",
+          "**Cogumelos gigantes e cano verde**: pontos clássicos e muito coloridos para fotos sentadas ou em poses divertidas.",
+        ],
+      },
+      {
+        color: "palm",
+        icon: "camera",
+        title: "Dica rápida para fotos",
+        list: [
+          "**Melhores horários**: aproveite o início da manhã para fotos sem multidões, ou o fim da tarde (golden hour) e a noite, quando as luzes néon e os efeitos de fogo transformam o parque.",
+        ],
+      },
     ],
   },
   {
     id: "yoshi",
+    attractionId: "yoshis-adventure",
     name: "Yoshi's Adventure",
     area: "Super Nintendo World",
     icon: "target",
@@ -73,6 +91,14 @@ export const epicUniverseAttractions: ChecklistItem[] = [
         icon: "camera",
         title: "Dica",
         paragraphs: ["Fotos com Mario, Luigi, Peach, Toad e Donkey Kong (horários no app). **Pular a Yoshi's Adventure**. Paninis no Yoshi's Snack Stand. Power-Up Band: **decidir só no dia 22**."],
+      },
+      {
+        color: "palm",
+        icon: "camera",
+        title: "Onde tirar foto",
+        list: [
+          "**Área de Donkey Kong Country**: o cenário de selva e a entrada da Mine-Cart Madness têm um visual bem distinto da parte do Mario.",
+        ],
       },
     ],
   },
@@ -121,6 +147,14 @@ export const epicUniverseAttractions: ChecklistItem[] = [
         title: "Dica",
         paragraphs: ["É a atração mais concorrida (fila ~45 a 90 min o dia todo). Por isso **NÃO é a primeira**. Single Rider; armário. **Se passar de 75 min**, voltar à noite."],
       },
+      {
+        color: "palm",
+        icon: "camera",
+        title: "Onde tirar foto",
+        list: [
+          "**Interior do Ministério da Magia**: a fila tem um átrio monumental e iluminação dramática que valem o registro mesmo antes de embarcar.",
+        ],
+      },
     ],
   },
   {
@@ -135,10 +169,19 @@ export const epicUniverseAttractions: ChecklistItem[] = [
         title: "Foto",
         paragraphs: ["Tirar foto no caminho do portal."],
       },
+      {
+        color: "palm",
+        icon: "camera",
+        title: "Onde tirar foto",
+        list: [
+          "**Ruas de Paris (anos 1920) e Place Cachée**: a arquitetura parisiense em escala gigante, os cafés (como o Café L’Air de la Sirène) e os muros com cartazes mágicos criam um cenário de cinema.",
+        ],
+      },
     ],
   },
   {
     id: "show-dragao",
+    attractionId: "the-untrainable-dragon",
     name: "Show de Como Treinar Seu Dragão",
     area: "Como Treinar Seu Dragão",
     icon: "target",
@@ -167,10 +210,20 @@ export const epicUniverseAttractions: ChecklistItem[] = [
         title: "Sobre",
         paragraphs: ["Espetáculo com dragões animatrônicos e acrobacias. O ponto alto é o **Banguela voando sobre o público**."],
       },
+      {
+        color: "palm",
+        icon: "camera",
+        title: "Onde tirar foto",
+        list: [
+          "**Mirante da Baía (Harbor View)**: vista ampla da vila viking, da água e das estátuas gigantes de dragões.",
+          "**Encontro com o Banguela (Toothless)**: o espaço Haddock Paddock permite tirar fotos interagindo diretamente com o dragão.",
+        ],
+      },
     ],
   },
   {
     id: "fire-dreel",
+    attractionId: "fyre-drill",
     name: "Fire Dreel",
     area: "Como Treinar Seu Dragão",
     icon: "target",
@@ -230,6 +283,7 @@ export const epicUniverseAttractions: ChecklistItem[] = [
   },
   {
     id: "dragon-racers",
+    attractionId: "dragon-racers-rally",
     name: "Dragon Racers",
     area: "Como Treinar Seu Dragão",
     icon: "target",
@@ -285,10 +339,19 @@ export const epicUniverseAttractions: ChecklistItem[] = [
         title: "Dica",
         paragraphs: ["Fila ~30 a 60 min; **Single Rider disponível**; **armário**. Quem enjoa fácil com movimento deve ter cuidado."],
       },
+      {
+        color: "palm",
+        icon: "camera",
+        title: "Onde tirar foto",
+        list: [
+          "**Mansão Frankenstein (Frankenstein Manor)**: a fachada gótica do castelo é o ponto mais icônico da área.",
+        ],
+      },
     ],
   },
   {
     id: "curse-werewolf",
+    attractionId: "curse-of-the-werewolf",
     name: "Curse of the Werewolf",
     area: "Dark Universe",
     icon: "target",
@@ -310,6 +373,14 @@ export const epicUniverseAttractions: ChecklistItem[] = [
         icon: "lightbulb",
         title: "Dica",
         paragraphs: ["Olhar o The Burning Blade Tavern: a hélice do moinho pega fogo **a cada 20 min**."],
+      },
+      {
+        color: "palm",
+        icon: "camera",
+        title: "Onde tirar foto",
+        list: [
+          "**Burning Blade Tavern**: o moinho de vento no topo da taverna pega fogo periodicamente, criando um fundo impressionante para fotos ao entardecer ou à noite.",
+        ],
       },
     ],
   },
@@ -343,6 +414,16 @@ export const epicUniverseAttractions: ChecklistItem[] = [
         icon: "lightbulb",
         title: "Dica",
         paragraphs: ["Fazer as DUAS pistas (a verde é um pouco mais intensa, segundo os guias). Armário **obrigatório** na fila. Segunda pista por Single Rider para ganhar tempo."],
+      },
+      {
+        color: "palm",
+        icon: "camera",
+        title: "Onde tirar foto",
+        list: [
+          "**Portal Chronos (entrada principal)**: o cartão-postal do parque, equivalente ao globo da Universal. Funciona bem à tarde, quando a multidão da entrada já se dispersou, ou à noite, com a iluminação especial.",
+          "**Pontes e fontes**: as pontes ao redor do Constellation Carousel e das fontes iluminadas rendem ótimos registros, especialmente no pôr do sol e à noite.",
+          "**Vista do Bar Helios**: no topo do hotel dentro do parque, tem uma vista panorâmica de todo o Celestial Park iluminado.",
+        ],
       },
     ],
   },
