@@ -28,3 +28,9 @@ export function formatCardDate(dateISO: string): string {
 export function formatWeekdayAbbreviation(dateISO: string): string {
   return parseISODate(dateISO).toLocaleDateString("pt-BR", { weekday: "short" }).replace(".", "").toUpperCase();
 }
+
+/** Ex.: "25/12" — dia e mês de uma data ISO. */
+export function formatDayMonth(dateISO: string): string {
+  const [, month, day] = dateISO.split("-");
+  return `${day}/${month}`;
+}
