@@ -40,8 +40,6 @@ export default {
       {
         id: "visao-geral",
         name: "Visão geral e logística",
-        // REVISAR (área a definir)
-        area: "a definir",
         icon: "parking",
         sections: [
           {
@@ -104,7 +102,7 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "**Primeira do dia (~10h)**: a fila costuma ser grande porque aceita crianças maiores.",
+              "**Primeira do dia**: a fila costuma ser grande porque aceita crianças maiores.",
             ],
           },
         ],
@@ -112,8 +110,6 @@ export default {
       {
         id: "cheetah-run",
         name: "Cheetah Run",
-        // REVISAR (área a definir)
-        area: "a definir",
         icon: "leaf",
         sections: [
           {
@@ -129,7 +125,7 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "**Logo depois da Cheetah Hunt** (~10h40): de manhã os animais costumam estar mais ativos.",
+              "**Logo depois da Cheetah Hunt**: de manhã os animais costumam estar mais ativos.",
             ],
           },
         ],
@@ -137,8 +133,6 @@ export default {
       {
         id: "lion-hyena-ridge",
         name: "Lion & Hyena Ridge",
-        // REVISAR (área a definir)
-        area: "a definir",
         icon: "leaf",
         sections: [
           {
@@ -177,7 +171,7 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "**~11h30**. Na fila dá para ver cobras venenosas de perto, atrás de vidro.",
+              "Na fila dá para ver cobras venenosas de perto, atrás de vidro.",
             ],
           },
         ],
@@ -202,7 +196,7 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "**~16h15**. Usar o **Quick Queue** se a fila estiver grande.",
+              "Usar o **Quick Queue** se a fila estiver grande.",
             ],
           },
         ],
@@ -257,8 +251,6 @@ export default {
       {
         id: "serengeti-safari",
         name: "Serengeti Safari",
-        // REVISAR (área a definir)
-        area: "a definir",
         icon: "leaf",
         sections: [
           {
@@ -274,7 +266,7 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "~12h. **Reservar horário** com antecedência. É pago à parte, **a partir de US$ 39,99** em dia útil (confirmar valor de dezembro). Crianças menores de 5 anos não participam.",
+              "**Reservar horário** com antecedência. É pago à parte, **a partir de US$ 39,99** em dia útil (confirmar valor de dezembro). Crianças menores de 5 anos não participam.",
             ],
           },
         ],
@@ -282,8 +274,6 @@ export default {
       {
         id: "animal-care-center",
         name: "Animal Care Center",
-        // REVISAR (área a definir)
-        area: "a definir",
         icon: "leaf",
         sections: [
           {
@@ -298,15 +288,13 @@ export default {
             color: "gold",
             icon: "lightbulb",
             title: "Dica",
-            paragraphs: ["~12h45. Passe só se sobrar tempo."],
+            paragraphs: ["Passe só se sobrar tempo."],
           },
         ],
       },
       {
         id: "elephant-interaction-area",
         name: "Elephant Interaction Area",
-        // REVISAR (área a definir)
-        area: "a definir",
         icon: "leaf",
         sections: [
           {
@@ -326,8 +314,6 @@ export default {
       {
         id: "penguin-point",
         name: "Penguin Point",
-        // REVISAR (área a definir)
-        area: "a definir",
         icon: "leaf",
         sections: [
           {
@@ -347,8 +333,6 @@ export default {
       {
         id: "animal-connections",
         name: "Animal Connections",
-        // REVISAR (área a definir)
-        area: "a definir",
         icon: "leaf",
         sections: [
           {
@@ -378,7 +362,7 @@ export default {
           {
             color: "citrus",
             icon: "burger",
-            title: "Onde comer (~13h30)",
+            title: "Onde comer",
             list: [
               "Dragon Fire Grill & Pub (Pantopia): grande, coberto e com ar-condicionado, com comida americana, tex-mex, asiática e sanduíches. **Opção principal**.",
               "Serengeti Overlook (Edge of Africa): considerado o **melhor do parque**, um pouco mais caro, com vista para a savana.",
@@ -414,7 +398,7 @@ export default {
             color: "gold",
             icon: "lightbulb",
             title: "Dica",
-            paragraphs: ["~14h15. Altura mínima de 1,38 m."],
+            paragraphs: ["Altura mínima de 1,38 m."],
           },
         ],
       },
@@ -538,8 +522,6 @@ export default {
       {
         id: "habitat-hideaway",
         name: "Habitat Hideaway",
-        // REVISAR (área a definir)
-        area: "a definir",
         icon: "leaf",
         sections: [
           {
@@ -578,7 +560,7 @@ export default {
             color: "gold",
             icon: "lightbulb",
             title: "Dica",
-            paragraphs: ["~17h15. Leva menos de 10 minutos."],
+            paragraphs: ["Leva menos de 10 minutos."],
           },
         ],
       },
@@ -624,7 +606,7 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "**~17h40**. É a que mais enche: **usar o Quick Queue**. Se for a prioridade número 1 do grupo, considerar ir direto a ela na abertura (conferir o mapa).",
+              "É a que mais enche: **usar o Quick Queue**. Se for a prioridade número 1 do grupo, considerar ir direto a ela na abertura (conferir o mapa).",
             ],
           },
         ],
@@ -693,7 +675,7 @@ export default {
             icon: "alert",
             title: "Atenção",
             paragraphs: [
-              "É a última do dia (~18h40). Quem não for fazer espera na saída ou usa o Rider Switch. **Altura mínima de 1,38 m**.",
+              "É a última do dia. Quem não for fazer espera na saída ou usa o Rider Switch. **Altura mínima de 1,38 m**.",
             ],
           },
         ],

@@ -326,6 +326,7 @@ export default {
     {
       id: "com-feira",
       label: "Com a feira",
+      calendarTitle: "Winter Garden e Celebration",
       supportLine: "Feira de manhã · acordar às 7h00", // REVISAR: dados não dizem quem vai
       trackKeys: ["com-feira"],
       isDefault: true,
@@ -333,6 +334,7 @@ export default {
     {
       id: "sem-feira",
       label: "Sem a feira",
+      calendarTitle: "Winter Garden e Celebration",
       supportLine: "Direto ao Winter Garden Village · acordar às 8h30", // REVISAR: dados não dizem quem vai
       trackKeys: ["sem-feira"],
     },

@@ -27,7 +27,6 @@ export default {
       notes: [],
       alerts: [
         "**Almoço livre**: cada um come quando quiser, com os snacks do carro ou algo rápido no local.",
-        "**Alimentos** comprados no Super Target e no Walmart ficam no carro até a noite: use **bolsa térmica** para refrigerados e congelados.",
       ],
     },
     periods: [

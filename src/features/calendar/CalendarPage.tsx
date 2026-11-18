@@ -77,7 +77,7 @@ function DayTile({ day: scheduledDay, isToday }: { day: DayData; isToday: boolea
         {isToday && <TodayBadge />}
         <DayTileIcon categories={getDayCategories(day)} />
       </div>
-      <p className="text-sm font-semibold leading-[1.3] [overflow-wrap:anywhere]">{savedOption?.label ?? day.calendarTitle}</p>
+      <p className="text-sm font-semibold leading-[1.3] [overflow-wrap:anywhere]">{savedOption ? (savedOption.calendarTitle ?? savedOption.label) : day.calendarTitle}</p>
       {day.options && !savedOption && <p className="text-xs text-ink-soft">{CHOOSE_OPTION_HINT}</p>}
     </Link>
   );

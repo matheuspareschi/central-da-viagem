@@ -247,8 +247,10 @@ export interface ParkVisit {
 /** Um jeito de seguir um dia com mais de uma trilha (ex.: Magic Kingdom ou Compras e Jardins). */
 export interface DayOption {
   id: string;
-  /** Rótulo curto, usado no botão de variação, na folha de escolha e no Calendário. */
+  /** Rótulo curto, usado no botão de variação e na folha de escolha (e no Calendário, se não houver `calendarTitle`). */
   label: string;
+  /** Título do dia no Calendário quando esta opção está salva; sem ele, o Calendário mostra o `label`. */
+  calendarTitle?: string;
   /** Linha de apoio: quem vai. */
   supportLine: string;
   /** Trilhas do dia que compõem a opção; uma trilha pode entrar em mais de uma opção. */
