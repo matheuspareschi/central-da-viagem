@@ -7,7 +7,7 @@ export default {
   weekday: "Qua",
   liturgicalWeekday: "Preparação para o Natal",
   category: "turismo",
-  
+  specialIcon: "gift", // última noite juntos: ceia e amigo secreto
   reading: {
     label: "Preparação para o Natal",
     oldTestamentReading: "Sofonias 3:14–20",
@@ -18,66 +18,72 @@ export default {
     kind: "schedule",
     summary: "Grupo Daytona faz o passeio (turismo leve, sem compras e sem tour pago). À noite, todos juntos: ceia e amigo secreto.",
     journey: {
-      tiles: [],
+      tiles: [
+        { label: "Acordar", value: "8h00" },
+        { label: "Sair de casa", value: "9h30" },
+        { label: "Chegar em casa", value: "~16h30" },
+        { label: "Deslocamento", value: "~3h30" }, // REVISAR: soma dos trajetos do dia
+      ],
       notes: [
         { icon: "info", text: "Grupo Casa fica preparando a ceia e arrumando a casa; se faltar algo, **evitar compras no dia**." },
       ],
-      alerts: [],
+      alerts: [
+        "**Levar lanche de casa** (sanduíche, fruta, água) para beliscar durante o passeio, já que o fast food só acontece na volta. A ordem dos pontos da orla é flexível.",
+      ],
     },
     periods: [
       {
         title: "Manhã",
-        note: "Levar lanche de casa (sanduíche, fruta, água) para beliscar durante o passeio, já que o fast food só acontece na volta. Ordem dos pontos da orla é flexível.",
         steps: [
           {
             kind: "transit",
-            time: "09:00",
+            time: "09:30",
             duration: "~1h30",
             destinationName: "Daytona International Speedway",
           },
           {
             kind: "stop",
-            time: "10:30",
+            time: "11:00",
             stopId: "daytona-speedway",
             name: "Daytona International Speedway (foto)",
             icon: "camera",
           },
           {
             kind: "transit",
-            time: "11:15",
+            time: "11:45",
             duration: "~15 min",
             destinationName: "Riverfront Esplanade",
           },
           {
             kind: "stop",
-            time: "11:30",
+            time: "12:00",
             stopId: "riverfront-esplanade",
             name: "Riverfront Esplanade e Beach Street",
             icon: "leaf",
           },
           {
             kind: "transit",
-            time: "12:15",
+            time: "12:45",
             duration: "~15 min",
             destinationName: "Orla de Daytona Beach",
           },
           {
             kind: "stop",
-            time: "12:30",
+            time: "13:00",
             stopId: "daytona-bandshell",
             name: "Daytona Beach Bandshell",
             icon: "camera",
           },
           {
             kind: "stop",
-            time: "12:50",
+            time: "13:20",
             stopId: "boardwalk-praia",
             name: "Boardwalk, Ocean Walk Shoppes e praia",
             icon: "tree",
           },
           {
             kind: "stop",
-            time: "13:25",
+            time: "13:55",
             stopId: "main-street-pier",
             name: "Main Street Pier",
             icon: "camera",
@@ -86,30 +92,29 @@ export default {
       },
       {
         title: "Tarde",
-        note: "Saída de Daytona às 14h para chegar em casa por volta das 16h, a tempo de banho e preparativos.",
         steps: [
           {
             kind: "transit",
-            time: "14:00",
+            time: "14:30",
             duration: "~20 min",
             destinationName: "Fast food no caminho (I-4)",
           },
           {
             kind: "stop",
-            time: "14:20",
+            time: "14:50",
             stopId: "",
             name: "Lanche rápido (fast food)",
             icon: "burger",
           },
           {
             kind: "transit",
-            time: "14:50",
+            time: "15:20",
             duration: "~1h10",
             destinationName: "Storey Lake Resort",
           },
           {
             kind: "stop",
-            time: "16:00",
+            time: "16:30",
             stopId: "",
             name: "Chegada: banho e ajuda com os preparativos",
             icon: "house",
@@ -118,14 +123,13 @@ export default {
       },
       {
         title: "Noite",
-        note: "Horário da ceia a definir.",
         steps: [
           {
             kind: "stop",
-            time: "Noite",
+            time: "19:00",
             stopId: "",
             name: "Ceia e amigo secreto",
-            icon: "house",
+            icon: "christmas",
           },
         ],
       },
@@ -135,7 +139,7 @@ export default {
         id: "daytona-speedway",
         name: "Daytona International Speedway",
         icon: "camera",
-        time: "10:30",
+        time: "11:00",
         sections: [
           {
             color: "navy",
@@ -176,7 +180,7 @@ export default {
         id: "riverfront-esplanade",
         name: "Riverfront Esplanade e Beach Street",
         icon: "leaf",
-        time: "11:30",
+        time: "12:00",
         sections: [
           {
             color: "navy",
@@ -209,7 +213,7 @@ export default {
         id: "daytona-bandshell",
         name: "Daytona Beach Bandshell",
         icon: "camera",
-        time: "12:30",
+        time: "13:00",
         sections: [
           {
             color: "navy",
@@ -234,7 +238,7 @@ export default {
         id: "boardwalk-praia",
         name: "Boardwalk, Ocean Walk Shoppes e praia",
         icon: "tree",
-        time: "12:50",
+        time: "13:20",
         sections: [
           {
             color: "navy",
@@ -274,7 +278,7 @@ export default {
         id: "main-street-pier",
         name: "Main Street Pier",
         icon: "camera",
-        time: "13:25",
+        time: "13:55",
         sections: [
           {
             color: "navy",
@@ -297,7 +301,7 @@ export default {
             icon: "lightbulb",
             title: "Dica",
             paragraphs: [
-              "Ponto final do passeio: sair da orla **até 14h** para chegar em casa **por volta das 16h**.",
+              "Ponto final do passeio: sair da orla **até 14h30** para chegar em casa **por volta das 16h30**.",
             ],
           },
         ],

@@ -1,21 +1,22 @@
-import { CategoryIcon } from "../../../components";
+import { CategoryIcon, SpecialDayIcon } from "../../../components";
 import { categoryStyles } from "../../../data/presentation/categoryStyles";
-import type { DayCategory } from "../../../types";
+import type { DayCategory, IconName } from "../../../types";
 
 interface TrackHeaderProps {
   title: string;
   category?: DayCategory;
+  specialIcon?: IconName;
   group?: string;
   summary: string;
 }
 
-export function TrackHeader({ title, category }: TrackHeaderProps) {
+export function TrackHeader({ title, category, specialIcon }: TrackHeaderProps) {
   return (
     <header className="mt-5">
       <div className="flex min-w-0 items-center gap-3">
         {category && (
           <span className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full ${categoryStyles[category].badge}`}>
-            <CategoryIcon category={category} className="h-6 w-6" />
+            {specialIcon ? <SpecialDayIcon name={specialIcon} className="h-6 w-6" /> : <CategoryIcon category={category} className="h-6 w-6" />}
           </span>
         )}
         <h2 className="line-clamp-3 min-w-0 font-serif text-[32px] font-bold leading-tight text-ink [overflow-wrap:anywhere]">{title}</h2>

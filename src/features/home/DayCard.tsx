@@ -1,13 +1,13 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import { CategoryIcon } from "../../components";
+import { CategoryIcon, SpecialDayIcon } from "../../components";
 import { useDayOption } from "../../hooks/useDayOption";
 import { useNow } from "../../hooks/useNow";
 import { describeParkSchedule, getDayCardContent, type DayCardContent, type DayCardStop } from "../../lib/dayCard";
 import { getDayCategories } from "../../lib/dayCategories";
 import { formatCardDate, toISODate } from "../../lib/date";
 import { optionQuestion } from "../../lib/dayOption";
-import type { DayCategory, DayData, ParkVisit } from "../../types";
+import type { DayCategory, DayData, IconName, ParkVisit } from "../../types";
 import { DayOptionControl, OptionQuestionCard } from "../day-option";
 
 const focusRing = "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-citrus";
@@ -23,7 +23,7 @@ function SingleDayCard({ day }: { day: DayData }) {
 
   return (
     <Link to={`/roteiro/${day.dateISO}`} className={`block ${cardClasses} ${focusRing}`}>
-      <DateLine dateISO={day.dateISO} category={category} />
+      <DateLine dateISO={day.dateISO} category={category} specialIcon={day.specialIcon} />
       <DayContent dayNumber={day.day} content={getDayCardContent(day)} />
       <OpenItineraryButton />
     </Link>
@@ -42,7 +42,7 @@ function DayWithOptionsCard({ day }: { day: DayData }) {
   const [category] = getDayCategories(effectiveDay);
   return (
     <section aria-label="Hoje" className={cardClasses}>
-      <DateLine dateISO={day.dateISO} category={category} />
+      <DateLine dateISO={day.dateISO} category={category} specialIcon={day.specialIcon} />
       <DayOptionControl options={options} currentOption={currentOption} onChoose={choose} className="mt-3" />
       <Link to={`/roteiro/${day.dateISO}`} className={`block ${focusRing}`}>
         <DayContent dayNumber={day.day} content={getDayCardContent(effectiveDay)} />
@@ -52,11 +52,11 @@ function DayWithOptionsCard({ day }: { day: DayData }) {
   );
 }
 
-function DateLine({ dateISO, category }: { dateISO: string; category?: DayCategory }) {
+function DateLine({ dateISO, category, specialIcon }: { dateISO: string; category?: DayCategory; specialIcon?: IconName }) {
   return (
     <div className="flex items-center justify-between gap-2">
       <p className="text-xs font-bold uppercase tracking-widest text-ink-soft">{formatCardDate(dateISO)}</p>
-      {category && <CategoryIcon category={category} />}
+      {specialIcon ? <SpecialDayIcon name={specialIcon} /> : category && <CategoryIcon category={category} />}
     </div>
   );
 }

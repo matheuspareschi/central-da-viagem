@@ -3,6 +3,7 @@ import {
   ShoppingBag,
   Sandwich,
   Camera,
+  Gift,
   Wheat,
   Home,
   Leaf,
@@ -28,6 +29,8 @@ export const iconComponents: Record<IconName, LucideIcon> = {
   sparkle: Sparkles,
   target: Target,
   tree: TreePine,
+  christmas: TreePine,
+  gift: Gift,
 };
 
 export const iconBadgeClasses: Record<IconName, { bg: string; text: string }> = {
@@ -43,4 +46,6 @@ export const iconBadgeClasses: Record<IconName, { bg: string; text: string }> = 
   alert: { bg: "bg-citrus/15", text: "text-citrus-dark" },
   lightbulb: { bg: "bg-gold/18", text: "text-gold-dark" },
   camera: { bg: "bg-palm/12", text: "text-palm" },
+  christmas: { bg: "bg-emergency/12", text: "text-emergency" },
+  gift: { bg: "bg-emergency/12", text: "text-emergency" },
 };

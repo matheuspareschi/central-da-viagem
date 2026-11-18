@@ -18,7 +18,7 @@ export function ItineraryBody({ dayInfo }: { dayInfo: DayData }) {
   return (
     <>
       {tracks.map((track) => (
-        <TrackView key={track.key} dateISO={dayInfo.dateISO} track={track} />
+        <TrackView key={track.key} dateISO={dayInfo.dateISO} track={track} specialIcon={dayInfo.specialIcon} />
       ))}
     </>
   );

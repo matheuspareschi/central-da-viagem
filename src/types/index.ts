@@ -10,7 +10,9 @@ export type IconName =
   | "parking"
   | "sparkle"
   | "target"
-  | "tree";
+  | "tree"
+  | "christmas"
+  | "gift";
 
 export type DayCategory = "parque" | "compras" | "turismo";
 
@@ -274,6 +276,8 @@ export interface DayData {
   split?: [DayCategory, DayCategory];
   reading?: AdventReading;
   itinerary?: DayItinerary;
+  /** Ícone vermelho que substitui o da categoria na Home, no Calendário e no título do roteiro, para dias especiais. */
+  specialIcon?: IconName;
   /** Dia dividido em trilhas: as opções de roteiro entre as quais se escolhe (pelo menos duas). */
   options?: DayOption[];
 }

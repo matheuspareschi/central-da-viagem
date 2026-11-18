@@ -1,14 +1,14 @@
 import { useEffect } from "react";
 import { Layers } from "lucide-react";
 import { Link } from "react-router-dom";
-import { CategoryIcon, type BackTarget } from "../../components";
+import { CategoryIcon, SpecialDayIcon, type BackTarget } from "../../components";
 import { allDays } from "../../data/days";
 import { categoryStyles } from "../../data/presentation/categoryStyles";
 import { useNow } from "../../hooks/useNow";
 import { getDayCategories } from "../../lib/dayCategories";
 import { formatWeekdayAbbreviation, toISODate } from "../../lib/date";
 import { applyOption, readSavedOption } from "../../lib/dayOption";
-import type { DayCategory, DayData } from "../../types";
+import type { DayCategory, DayData, IconName } from "../../types";
 
 const calendarBackTarget: BackTarget = { path: "/calendario", label: "Voltar para o Calendário" };
 const categories = Object.keys(categoryStyles) as DayCategory[];
@@ -75,7 +75,7 @@ function DayTile({ day: scheduledDay, isToday }: { day: DayData; isToday: boolea
         <span className="font-serif text-[30px] font-semibold leading-none">{day.day}</span>
         <span className={`font-medium ${monoLabelClasses}`}>{formatWeekdayAbbreviation(day.dateISO)}</span>
         {isToday && <TodayBadge />}
-        <DayTileIcon categories={getDayCategories(day)} />
+        <DayTileIcon categories={getDayCategories(day)} specialIcon={day.specialIcon} />
       </div>
       <p className="text-sm font-semibold leading-[1.3] [overflow-wrap:anywhere]">{savedOption ? (savedOption.calendarTitle ?? savedOption.label) : day.calendarTitle}</p>
       {day.options && !savedOption && <p className="text-xs text-ink-soft">{CHOOSE_OPTION_HINT}</p>}
@@ -83,8 +83,9 @@ function DayTile({ day: scheduledDay, isToday }: { day: DayData; isToday: boolea
   );
 }
 
-function DayTileIcon({ categories }: { categories: DayCategory[] }) {
+function DayTileIcon({ categories, specialIcon }: { categories: DayCategory[]; specialIcon?: IconName }) {
   const isSplit = categories.length > 1;
+  if (specialIcon) return <span className="ml-auto"><SpecialDayIcon name={specialIcon} className="h-[18px] w-[18px]" /></span>;
 
   return (
     <span className="ml-auto">

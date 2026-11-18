@@ -1,4 +1,5 @@
 import type { DayTrack } from "../../lib/dayTracks";
+import type { IconName } from "../../types";
 import { ParkChecklist } from "./park/ParkChecklist";
 import { JourneyCard, TrackHeader } from "./components";
 import { ScheduleView } from "./schedule/ScheduleView";
@@ -6,15 +7,16 @@ import { ScheduleView } from "./schedule/ScheduleView";
 interface TrackViewProps {
   dateISO: string;
   track: DayTrack;
+  specialIcon?: IconName;
 }
 
 /** Uma trilha do dia: título, resumo, "Horários e trajeto" e o checklist ou cronograma. */
-export function TrackView({ dateISO, track }: TrackViewProps) {
+export function TrackView({ dateISO, track, specialIcon }: TrackViewProps) {
   const { title, category, extras, content, storageId } = track;
 
   return (
     <div>
-      <TrackHeader title={title} category={category} group={extras.group} summary={extras.summary} />
+      <TrackHeader title={title} category={category} specialIcon={specialIcon} group={extras.group} summary={extras.summary} />
       <JourneyCard journey={extras.journey} category={category} parkId={extras.parkId} />
       <div className="mt-5">
         {content.mode === "checklist" ? (

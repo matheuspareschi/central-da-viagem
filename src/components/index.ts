@@ -2,6 +2,7 @@ export { BottomNav } from "./BottomNav";
 export { useShowsBottomNav } from "./navigationDestinations";
 export { DayIcon } from "./icons";
 export { CategoryIcon } from "./CategoryIcon";
+export { SpecialDayIcon } from "./SpecialDayIcon";
 export { OfflineNotice } from "./OfflineNotice";
 export { Checkbox } from "./ui/Checkbox";
 export { SectionCard } from "./ui/SectionCard";
