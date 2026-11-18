@@ -264,7 +264,9 @@ export default {
   reading: {
     label: "4ª sem. do Advento",
     oldTestamentReading: "Juízes 13:2–24",
+    epistleReading: "Romanos 11:25–36",
     gospelReading: "Lucas 1:8–14, 18–25",
+    psalm: "Salmo 89:1–4, 19–26",
   },
   itinerary: {
     kind: "split",

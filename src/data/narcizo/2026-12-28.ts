@@ -11,6 +11,13 @@ export default {
   day: 28,
   weekday: "Seg",
   liturgicalWeekday: "",
+  reading: {
+    label: "Tempo do Natal",
+    oldTestamentReading: "Jeremias 31:15–17",
+    epistleReading: "1 João 1:5–9",
+    gospelReading: "Mateus 2:13–18",
+    psalm: "Salmo 148",
+  },
   category: "turismo",
   title: "Miami → Washington",
   itinerary: {

@@ -9,6 +9,13 @@ export default {
   day: 29,
   weekday: "Ter",
   liturgicalWeekday: "",
+  reading: {
+    label: "Tempo do Natal",
+    oldTestamentReading: "Isaías 49:5–15",
+    epistleReading: "Efésios 3:14–21",
+    gospelReading: "Mateus 12:46–50",
+    psalm: "Salmo 148",
+  },
   category: "turismo",
   title: "Capitólio, Museus e Memoriais",
   itinerary: {

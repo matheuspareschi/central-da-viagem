@@ -9,6 +9,13 @@ export default {
   day: 3,
   weekday: "Dom",
   liturgicalWeekday: "",
+  reading: {
+    label: "2º Domingo após o Natal",
+    oldTestamentReading: "Jeremias 31:7–14",
+    epistleReading: "Efésios 1:3–14",
+    gospelReading: "João 1:[1–9] 10–18",
+    psalm: "Salmo 147:12–20",
+  },
   category: "turismo",
   title: "Brooklyn Bridge, DUMBO e MJ The Musical",
   itinerary: {

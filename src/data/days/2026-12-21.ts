@@ -16,7 +16,9 @@ export default {
   reading: {
     label: "Semana de Natal",
     oldTestamentReading: "1 Samuel 1:1–18",
+    epistleReading: "Hebreus 9:1–14",
     gospelReading: "Mateus 1:18–25",
+    psalm: "Lucas 1:46b–55",
   },
  title: "Busch Gardens Tampa",
   itinerary: {

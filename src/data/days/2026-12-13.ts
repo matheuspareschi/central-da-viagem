@@ -15,7 +15,9 @@ export default {
   reading: {
     label: "3º Domingo do Advento (Gaudete)",
     oldTestamentReading: "Isaías 61:1–4, 8–11",
+    epistleReading: "1 Tessalonicenses 5:16–24",
     gospelReading: "João 1:6–8, 19–28",
+    psalm: "Salmo 126 ou Lucas 1:46b–55",
   },
   title: "Universal Studios Florida",
   itinerary: {

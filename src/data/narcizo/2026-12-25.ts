@@ -10,6 +10,13 @@ export default {
   day: 25,
   weekday: "Sex",
   liturgicalWeekday: "",
+  reading: {
+    label: "Natal do Senhor",
+    oldTestamentReading: "Isaías 52:7–10",
+    epistleReading: "Hebreus 1:1–4 [5–12]",
+    gospelReading: "João 1:1–14",
+    psalm: "Salmo 98",
+  },
   category: "turismo",
   specialIcon: "christmas",
   title: "Orlando → Miami e Natal no CRAFT Bayside",

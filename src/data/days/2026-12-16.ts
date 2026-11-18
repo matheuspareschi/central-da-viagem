@@ -312,13 +312,15 @@ export default {
   calendarTitle: "IHOP, compras e noite de jogo ou de natal",
   day: 16,
   weekday: "Qua",
-  liturgicalWeekday: "4ª sem. do Advento",
+  liturgicalWeekday: "3ª sem. do Advento",
   title: "Café da manhã no IHOP, compras e noite em Orlando",
   split: ["compras", "turismo"],
   reading: {
-    label: "4ª sem. do Advento",
+    label: "3ª sem. do Advento",
     oldTestamentReading: "Malaquias 3:16–4:6",
+    epistleReading: "Atos 4:1–4",
     gospelReading: "João 3:17–21",
+    psalm: "Salmo 125",
   },
   itinerary: {
     kind: "split",

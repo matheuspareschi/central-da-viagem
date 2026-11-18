@@ -214,7 +214,9 @@ export default {
   reading: {
     label: "3ª sem. do Advento",
     oldTestamentReading: "Habacuque 2:1–5",
+    epistleReading: "Filipenses 3:7–11",
     gospelReading: "Lucas 1:5–17",
+    psalm: "Salmo 126",
   },
   itinerary: {
     kind: "split",

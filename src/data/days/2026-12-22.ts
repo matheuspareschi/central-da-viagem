@@ -44,7 +44,9 @@ export default {
   reading: {
     label: "Preparação para o Natal",
     oldTestamentReading: "Sofonias 3:8–13",
+    epistleReading: "Romanos 10:5–13",
     gospelReading: "Lucas 1:39–45",
+    psalm: "Salmo 96",
   },
   title: "Epic Universe",
   itinerary: {

@@ -12,7 +12,9 @@ export default {
   reading: {
     label: "4º Domingo do Advento",
     oldTestamentReading: "2 Samuel 7:1–11, 16",
+    epistleReading: "Romanos 16:25–27",
     gospelReading: "Lucas 1:26–38",
+    psalm: "Lucas 1:46b–55 ou Salmo 89:1–4, 19–26",
   },
   itinerary: {
     kind: "schedule",

@@ -11,7 +11,9 @@ export default {
   reading: {
     label: "Preparação para o Natal",
     oldTestamentReading: "Sofonias 3:14–20",
+    epistleReading: "Romanos 13:11–14",
     gospelReading: "Marcos 11:1–11",
+    psalm: "Salmo 96",
   },
  title: "Daytona Beach, Ceia e Amigo Secreto",
   itinerary: {

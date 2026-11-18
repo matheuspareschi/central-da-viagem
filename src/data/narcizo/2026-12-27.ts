@@ -9,6 +9,13 @@ export default {
   day: 27,
   weekday: "Dom",
   liturgicalWeekday: "",
+  reading: {
+    label: "1º Domingo após o Natal",
+    oldTestamentReading: "Isaías 61:10–62:3",
+    epistleReading: "Gálatas 4:4–7",
+    gospelReading: "Lucas 2:22–40",
+    psalm: "Salmo 148",
+  },
   category: "turismo",
   title: "Dolphins x Chargers e Wynwood",
   itinerary: {

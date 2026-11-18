@@ -17,7 +17,9 @@ export default {
   reading: {
     label: "4ª sem. do Advento",
     oldTestamentReading: "2 Samuel 6:1–11",
+    epistleReading: "Hebreus 1:1–4",
     gospelReading: "Marcos 9:9–13",
+    psalm: "Salmo 89:1–4, 19–26",
   },
   title: "Epic Universe",
   itinerary: {

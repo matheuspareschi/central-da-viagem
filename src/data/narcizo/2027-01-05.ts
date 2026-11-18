@@ -9,6 +9,13 @@ export default {
   day: 5,
   weekday: "Ter",
   liturgicalWeekday: "",
+  reading: {
+    label: "Dias ao redor da Epifania",
+    oldTestamentReading: "Provérbios 22:1–9",
+    epistleReading: "Tiago 4:11–17",
+    gospelReading: "Lucas 6:27–31",
+    psalm: "Salmo 110",
+  },
   category: "compras",
   title: "Últimas compras e voo de volta",
   itinerary: {

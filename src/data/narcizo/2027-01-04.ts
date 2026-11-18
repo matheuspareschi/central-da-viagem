@@ -9,6 +9,13 @@ export default {
   day: 4,
   weekday: "Seg",
   liturgicalWeekday: "",
+  reading: {
+    label: "Dias ao redor da Epifania",
+    oldTestamentReading: "Provérbios 3:1–12",
+    epistleReading: "Tiago 4:5–10",
+    gospelReading: "Lucas 18:9–14",
+    psalm: "Salmo 110",
+  },
   category: "turismo",
   title: "High Line, SUMMIT e teleférico",
   itinerary: {

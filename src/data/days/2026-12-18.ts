@@ -12,7 +12,9 @@ export default {
   reading: {
     label: "4ª sem. do Advento",
     oldTestamentReading: "2 Samuel 6:12–19",
+    epistleReading: "Hebreus 1:5–14",
     gospelReading: "João 7:40–52",
+    psalm: "Salmo 89:1–4, 19–26",
   },
   title: "Islands of Adventure",
   itinerary: {

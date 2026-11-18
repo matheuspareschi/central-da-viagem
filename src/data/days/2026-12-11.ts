@@ -11,7 +11,9 @@ export default {
   reading: {
     label: "3ª sem. do Advento",
     oldTestamentReading: "Habacuque 3:2–6",
+    epistleReading: "Filipenses 3:12–16",
     gospelReading: "Mateus 21:28–32",
+    psalm: "Salmo 126",
   },
  split: ["parque", "turismo"],
  itinerary: {

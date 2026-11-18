@@ -18,7 +18,9 @@ export default {
   reading: {
     label: "2ª sem. do Advento",
     oldTestamentReading: "Isaías 4:2–6",
+    epistleReading: "Atos 8:9–13",
     gospelReading: "Lucas 3:1–18",
+    psalm: "Salmo 27",
   },
   category: "compras",
   title: "Loop West, The Loop, Crosslands e Disney Springs",

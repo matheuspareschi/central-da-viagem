@@ -13,6 +13,7 @@ import { tollStages } from "../src/data/pedagio.ts";
 import { parkSnacksGuide } from "../src/data/global/parkSnacks.ts";
 import { kissimmeeActivitiesGuide } from "../src/data/global/kissimmeeActivities.ts";
 import { extraTools } from "../src/data/global/extraTools.ts";
+import { narcizoDays } from "../src/data/narcizo/index.ts";
 import { lanchesCategories, lanchesChains } from "../src/data/global/lanches.ts";
 import { boldShare, hasUnclosedBoldMark } from "../src/lib/richText.ts";
 import { toMinutes } from "../src/lib/schedule.ts";
@@ -298,6 +299,14 @@ function checkLanches(): string[] {
   ];
 }
 
+/** Dia com leituras precisa das quatro (1ª leitura, epístola, Evangelho e salmo), todas preenchidas. */
+function checkReadings(day: DayData): string[] {
+  if (!day.reading) return [];
+  return Object.entries(day.reading)
+    .filter(([, text]) => !text.trim())
+    .map(([field]) => `dia ${day.dateISO}: leitura com "${field}" vazio`);
+}
+
 function checkDay(day: DayData): string[] {
   const trackErrors = listDayTracks(day).flatMap((track) => {
     const where = describeTrack(day, track);
@@ -358,6 +367,7 @@ const errors = [
   ...checkCatalogs(),
   ...checkLanches(),
   ...days.flatMap(checkDayAndOptions),
+  ...[...days, ...narcizoDays].flatMap(checkReadings),
   ...checkBoldMarks(collectContentTexts(days)),
 ];
 

@@ -25,7 +25,9 @@ export default {
   reading: {
     label: "2ª sem. do Advento",
     oldTestamentReading: "Isaías 26:7–15",
+    epistleReading: "Atos 2:37–42",
     gospelReading: "Mateus 3:1–12",
+    psalm: "Salmo 27",
   },
   itinerary: {
     kind: "split",

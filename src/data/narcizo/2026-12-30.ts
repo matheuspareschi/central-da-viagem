@@ -10,6 +10,13 @@ export default {
   day: 30,
   weekday: "Qua",
   liturgicalWeekday: "",
+  reading: {
+    label: "Tempo do Natal",
+    oldTestamentReading: "Provérbios 9:1–12",
+    epistleReading: "2 Pedro 3:8–13",
+    gospelReading: "João 21:24–25",
+    psalm: "Salmo 148",
+  },
   category: "turismo",
   title: "Washington → Nova York",
   itinerary: {

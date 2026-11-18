@@ -9,6 +9,13 @@ export default {
   day: 26,
   weekday: "Sáb",
   liturgicalWeekday: "",
+  reading: {
+    label: "Tempo do Natal",
+    oldTestamentReading: "Jeremias 26:1–9, 12–15",
+    epistleReading: "Atos 6:8–15; 7:51–60",
+    gospelReading: "Marcos 6:1–6a",
+    psalm: "Salmo 148",
+  },
   category: "compras",
   title: "Sawgrass Mills e Lincoln Road",
   itinerary: {

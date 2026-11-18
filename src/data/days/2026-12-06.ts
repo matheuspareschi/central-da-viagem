@@ -12,7 +12,9 @@ export default {
   reading: {
     label: "2º Domingo do Advento",
     oldTestamentReading: "Isaías 40:1–11",
+    epistleReading: "2 Pedro 3:8–15a",
     gospelReading: "Marcos 1:1–8",
+    psalm: "Salmo 85:1–2, 8–13",
   },
   itinerary: {
     kind: "schedule",

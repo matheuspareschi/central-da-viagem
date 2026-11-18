@@ -19,7 +19,9 @@ export default {
   reading: {
     label: "3ª sem. do Advento",
     oldTestamentReading: "Habacuque 3:13–19",
+    epistleReading: "Atos 3:1–10",
     gospelReading: "João 1:1–5",
+    psalm: "Salmo 126",
   },
   itinerary: {
     kind: "schedule",

@@ -15,7 +15,9 @@ export default {
   reading: {
     label: "Véspera de Natal",
     oldTestamentReading: "Eclesiastes 3:1–8",
+    epistleReading: "Tiago 1:17–18",
     gospelReading: "Lucas 1:57–64",
+    psalm: "Salmo 96",
   },
   itinerary: {
     kind: "checklist",

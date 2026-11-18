@@ -15,7 +15,9 @@ export default {
   reading: {
     label: "2ª sem. do Advento",
     oldTestamentReading: "Malaquias 2:10–3:1",
+    epistleReading: "Atos 11:1–18",
     gospelReading: "Marcos 2:18–22",
+    psalm: "Salmo 27",
   },
   category: "parque",
   title: "Epcot",

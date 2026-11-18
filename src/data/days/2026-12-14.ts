@@ -8,11 +8,13 @@ export default {
   weekday: "Seg",
   category: "turismo",
   title: "Saint Augustine",
-  liturgicalWeekday: "4ª sem. do Advento",
+  liturgicalWeekday: "3ª sem. do Advento",
   reading: {
-    label: "4ª sem. do Advento",
+    label: "3ª sem. do Advento",
     oldTestamentReading: "1 Reis 18:1–18",
+    epistleReading: "Atos 3:11–16",
     gospelReading: "Mateus 3:1–6",
+    psalm: "Salmo 125",
   },
   itinerary: {
     kind: "schedule",

@@ -12,12 +12,14 @@ export default {
     closing: "19h",
   },
   weekday: "Ter",
-  liturgicalWeekday: "4ª sem. do Advento",
+  liturgicalWeekday: "3ª sem. do Advento",
   category: "parque",
   reading: {
-    label: "4ª sem. do Advento",
+    label: "3ª sem. do Advento",
     oldTestamentReading: "2 Reis 2:9–22",
+    epistleReading: "Atos 3:17–26",
     gospelReading: "Lucas 3:1–6",
+    psalm: "Salmo 125",
   },
   title: "Islands of Adventure",
   itinerary: {

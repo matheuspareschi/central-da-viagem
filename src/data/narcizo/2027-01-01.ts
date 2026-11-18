@@ -9,6 +9,13 @@ export default {
   day: 1,
   weekday: "Sex",
   liturgicalWeekday: "",
+  reading: {
+    label: "Santo Nome de Jesus",
+    oldTestamentReading: "Números 6:22–27",
+    epistleReading: "Gálatas 4:4–7 ou Filipenses 2:5–11",
+    gospelReading: "Lucas 2:15–21",
+    psalm: "Salmo 8",
+  },
   category: "turismo",
   title: "Central Park e Museu de História Natural",
   itinerary: {
