@@ -6,9 +6,12 @@ export function isHomeDestination(destinationName: string): boolean {
   return HOME_DESTINATION.test(destinationName);
 }
 
-/** Do horário do primeiro passo ao do último passo do período. */
+const CLOCK_TIME = /^\d{1,2}:\d{2}$/;
+
+/** Do horário do primeiro passo ao do último passo do período; passos "A definir" ficam de fora. */
 export function formatPeriodRange({ steps }: DayPeriod): string {
-  return `${steps[0].time} – ${steps[steps.length - 1].time}`;
+  const times = steps.map((step) => step.time).filter((time) => CLOCK_TIME.test(time));
+  return times.length > 0 ? `${times[0]} – ${times[times.length - 1]}` : steps[0].time;
 }
 
 /** "Black Bean Deli (almoço)" vira nome "Black Bean Deli" e subtítulo "Almoço". */

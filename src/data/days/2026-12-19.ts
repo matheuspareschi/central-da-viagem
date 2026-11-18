@@ -43,7 +43,7 @@ const feiraCard: StopCard = {
 const villageCard = (time: string): StopCard => ({
   id: "village",
   address: VILLAGE_ADDRESS,
-  name: "Winter Garden Village",
+  name: "Winter Garden: Compras",
   icon: "bag",
   time,
   shopRegionId: "winter-garden-village",
@@ -74,6 +74,51 @@ const villageCard = (time: string): StopCard => ({
     },
   ],
 });
+
+const WINTER_GARDEN_WALK_TIME = "A definir";
+
+const walkCard: StopCard = {
+  id: "winter-garden-passeio",
+  address: "Plant St, Winter Garden, FL 34787",
+  name: "Winter Garden: Passeio",
+  icon: "tree",
+  time: WINTER_GARDEN_WALK_TIME,
+  sections: [
+    {
+      color: "palm",
+      icon: "sparkle",
+      title: "Curiosidades",
+      list: [
+        "**Antiga capital da laranja**: no século XX, a cidade era um importante polo de cultivo e transporte de frutas cítricas. A história da região é preservada até hoje nos trilhos e museus locais.",
+        "**Trilho virou parque**: a antiga linha férrea que cortava o centro foi transformada na West Orange Trail, uma ciclovia arborizada de mais de 35 km que passa bem no meio das lojas e restaurantes.",
+        "**Cinema histórico**: o Garden Theatre, inaugurado em 1935, foi um dos primeiros cinemas da Flórida a ter ar-condicionado. Hoje funciona como teatro e centro cultural restaurado.",
+        "**Clima de cidade pequena**: fica a cerca de 25 a 30 minutos dos parques da Disney, mas preserva uma atmosfera autêntica de interior americano, sem parecer um ponto turístico artificial.",
+      ],
+    },
+    {
+      color: "gold",
+      icon: "lightbulb",
+      title: "Dicas de passeio",
+      list: [
+        "**Sábado de manhã é o dia ouro**: visite entre 8h e 13h para aproveitar a Winter Garden Farmers Market, uma feira ao ar livre premiada com comidas artesanais, flores, frutas e música ao vivo.",
+        "**Almoce no Plant Street Market**: é um mercado gastronômico coberto estilo food hall com várias opções ótimas (hambúrgueres, comida mexicana, cafés e a cervejaria artesanal Crooked Can).",
+        "**Explore a Plant Street a pé**: a rua principal concentra lojinhas independentes, livrarias, sorveterias e cafés com mesas na calçada.",
+        "**Alugue uma bicicleta**: se tiver tempo extra, vale alugar uma bike perto do centro para pedalar um trecho da West Orange Trail.",
+      ],
+    },
+    {
+      color: "citrus",
+      icon: "camera",
+      title: "Melhores lugares para fotos",
+      list: [
+        "**Letreiro e torre do relógio**: a torre de tijolos vermelhos no cruzamento da Plant Street com a trilha é o cartão-postal clássico da cidade.",
+        "**Trilhos e vagão antigo**: perto do Central Florida Railroad Museum há um vagão de trem histórico restaurado que rende ótimos cliques.",
+        "**Fachada do Garden Theatre**: o letreiro estilo vintage iluminado na Plant Street fica especialmente bonito no fim da tarde.",
+        "**Fonte da Centennial Plaza**: o chafariz cercado por bancos e árvores no meio do centrinho é perfeito para fotos descontraídas em família.",
+      ],
+    },
+  ],
+};
 
 const nikeCard: StopCard = {
   id: "nike",
@@ -239,14 +284,15 @@ export default {
             steps: [
               { kind: "transit", time: "07:30", duration: "~30–35 min", destinationName: "Feira de Winter Garden" },
               { kind: "stop", time: "08:00", stopId: "feira", name: "Feira Winter Garden", icon: "corn" },
+              { kind: "stop", time: WINTER_GARDEN_WALK_TIME, stopId: "winter-garden-passeio", name: "Winter Garden: Passeio", icon: "tree" },
               { kind: "transit", time: "10:00", duration: "~5–10 min", destinationName: "Winter Garden Village" },
-              { kind: "stop", time: "10:15", stopId: "village", name: "Winter Garden Village", icon: "bag" },
+              { kind: "stop", time: "10:15", stopId: "village", name: "Winter Garden: Compras", icon: "bag" },
             ],
           },
           afternoonPeriod,
           nightPeriod,
         ],
-        cards: [feiraCard, villageCard("10:15"), ...SHARED_CARDS],
+        cards: [feiraCard, walkCard, villageCard("10:15"), ...SHARED_CARDS],
       },
       {
         key: "sem-feira",
@@ -264,13 +310,14 @@ export default {
             title: "Manhã",
             steps: [
               { kind: "transit", time: "09:25", duration: "~30–35 min", destinationName: "Winter Garden Village" },
-              { kind: "stop", time: "10:00", stopId: "village", name: "Winter Garden Village", icon: "bag" },
+              { kind: "stop", time: "10:00", stopId: "village", name: "Winter Garden: Compras", icon: "bag" },
+              { kind: "stop", time: WINTER_GARDEN_WALK_TIME, stopId: "winter-garden-passeio", name: "Winter Garden: Passeio", icon: "tree" },
             ],
           },
           afternoonPeriod,
           nightPeriod,
         ],
-        cards: [villageCard("10:00"), ...SHARED_CARDS],
+        cards: [villageCard("10:00"), walkCard, ...SHARED_CARDS],
       },
     ],
   },

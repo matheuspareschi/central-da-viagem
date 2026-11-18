@@ -5,6 +5,7 @@ import day10 from "../src/data/days/2026-12-10.ts";
 import day16 from "../src/data/days/2026-12-16.ts";
 import { toDayEntry } from "../src/lib/parkChecklist.ts";
 import { describeParkingChoice, describeParkingOption, findChosenParking } from "../src/lib/parkingOptions.ts";
+import { formatPeriodRange } from "../src/lib/schedule.ts";
 import { isGratis } from "../src/lib/estacionamento.ts";
 import { estacionamentos } from "../src/data/estacionamentos.ts";
 import type { ChecklistItem, ParkAttraction } from "../src/types";
@@ -153,6 +154,11 @@ const tests: Array<[string, () => void]> = [
       assert.equal(parking.id, key);
       assert.match(parking.conferidoEm, /^\d{4}-\d{2}-\d{2}$/);
     }
+  }],
+  ["período: a faixa de horário ignora passos 'A definir'", () => {
+    const stop = (time: string) => ({ kind: "stop" as const, time, stopId: "x", name: "x", icon: "bag" as const });
+    assert.equal(formatPeriodRange({ title: "Manhã", steps: [stop("09:25"), stop("10:00"), stop("A definir")] }), "09:25 – 10:00");
+    assert.equal(formatPeriodRange({ title: "Manhã", steps: [stop("A definir")] }), "A definir");
   }],
   ["nenhum resultado vira NaN", () => {
     const result = calcularPreco({ preco: 0, d1: 100, d2: 100, imposto: 100 });
