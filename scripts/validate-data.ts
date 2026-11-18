@@ -13,11 +13,12 @@ import { tollStages } from "../src/data/pedagio.ts";
 import { parkSnacksGuide } from "../src/data/global/parkSnacks.ts";
 import { kissimmeeActivitiesGuide } from "../src/data/global/kissimmeeActivities.ts";
 import { extraTools } from "../src/data/global/extraTools.ts";
+import { preTripReadings } from "../src/data/preTripReadings.ts";
 import { narcizoDays } from "../src/data/narcizo/index.ts";
 import { lanchesCategories, lanchesChains } from "../src/data/global/lanches.ts";
 import { boldShare, hasUnclosedBoldMark } from "../src/lib/richText.ts";
 import { toMinutes } from "../src/lib/schedule.ts";
-import type { DayData, JourneyTile, ParkAttraction, StopStep, TransitStep } from "../src/types";
+import type { AdventReading, DayData, JourneyTile, ParkAttraction, StopStep, TransitStep } from "../src/types";
 
 const MAX_JOURNEY_TILES = 4;
 const daysDirectory = resolve(import.meta.dirname, "../src/data/days");
@@ -300,11 +301,11 @@ function checkLanches(): string[] {
 }
 
 /** Dia com leituras precisa das quatro (1ª leitura, epístola, Evangelho e salmo), todas preenchidas. */
-function checkReadings(day: DayData): string[] {
-  if (!day.reading) return [];
-  return Object.entries(day.reading)
+function checkReading(dateISO: string, reading: AdventReading | undefined): string[] {
+  if (!reading) return [];
+  return Object.entries(reading)
     .filter(([, text]) => !text.trim())
-    .map(([field]) => `dia ${day.dateISO}: leitura com "${field}" vazio`);
+    .map(([field]) => `dia ${dateISO}: leitura com "${field}" vazio`);
 }
 
 function checkDay(day: DayData): string[] {
@@ -367,7 +368,8 @@ const errors = [
   ...checkCatalogs(),
   ...checkLanches(),
   ...days.flatMap(checkDayAndOptions),
-  ...[...days, ...narcizoDays].flatMap(checkReadings),
+  ...[...days, ...narcizoDays].flatMap((day) => checkReading(day.dateISO, day.reading)),
+  ...Object.entries(preTripReadings).flatMap(([dateISO, reading]) => checkReading(dateISO, reading)),
   ...checkBoldMarks(collectContentTexts(days)),
 ];
 
