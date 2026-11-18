@@ -280,7 +280,7 @@ export default {
       },
       {
         id: "main-street-pier",
-        address: "Daytona Beach, FL 32118",
+        address: "1200 Main St Bridge, Daytona Beach, FL 32118",
         name: "Main Street Pier",
         icon: "camera",
         time: "13:55",
@@ -290,7 +290,7 @@ export default {
             icon: "parking",
             title: "Endereço",
             paragraphs: [
-              "Final da Main Street, na orla ⚠️ **endereço exato a confirmar**. Garagem do Ocean Center (701 Earl Street) bem em frente.",
+              "1200 Main St Bridge, Daytona Beach, FL 32118, no final da Main Street, na orla. Garagem do Ocean Center (701 Earl Street) bem em frente.",
             ],
           },
           {
