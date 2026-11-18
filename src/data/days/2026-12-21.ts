@@ -6,7 +6,7 @@ export default {
   day: 21,
   park: {
     name: "Busch Gardens Tampa",
-    departure: "7h00",
+    departure: "9h00",
     opening: "9h",
     closing: "21h",
   },
@@ -26,18 +26,15 @@ export default {
     group: "Grupo só de radicais (acima de 1,38 m)",
     journey: {
       tiles: [
-        { label: "Acordar", value: "6h00" },
-        { label: "Sair de casa", value: "7h00" },
-        { label: "Sair de Tampa", value: "A definir" },
-        { label: "Chegar em casa", value: "A definir" },
+        { label: "Acordar", value: "8h00" },
+        { label: "Sair de casa", value: "9h00" },
+        { label: "Sair de Tampa", value: "Ao final" },
+        { label: "Deslocamento", value: "~1h30–1h45" },
       ],
       notes: [
         { icon: "car", text: "De carro: Storey Lake → Busch Gardens, cerca de **1h30 a 1h45** (~100 km)." },
-        { icon: "info", text: "Parque aberto das 9h às 21h." },
-        { icon: "info", text: "Quem não quiser fazer a Montu espera na saída ou usa o **Rider Switch**." },
-        { icon: "info", text: "O roteiro completo termina **por volta das 19h**, então o Tampa Outlet só cabe saindo do parque **até ~17h** e cortando os extras (Lory Land, Habitat Hideaway, Ubanga-Banga, teatros, Walkabout Way, Congo River Rapids)." },
       ],
-      alerts: ["Confirmar: horários sugeridos assumem abertura **às 9h**."],
+      alerts: [],
     },
     attractions: [
       {
@@ -53,7 +50,7 @@ export default {
             title: "Endereço / Estacionamento",
             paragraphs: [
               "10165 McKinley Dr, Tampa, FL. Cerca de 1h30 a 1h45 de carro de Orlando pela I-4 Oeste (~100 km, sujeito a trânsito). **Estacionamento pago à parte**.",
-              "Sugestão: acordar 6h00, sair do Storey Lake **às 7h00** e chegar entre ~8h30 e ~8h45, de 15 a 30 minutos antes de abrir.",
+              "Sugestão: acordar 8h00, sair do Storey Lake **às 9h00** e chegar entre ~10h30 e ~10h45, com o parque já aberto.",
             ],
           },
           {
@@ -165,8 +162,7 @@ export default {
         id: "cobra-curse",
         attractionId: "cobrass-curse",
         name: "Cobra's Curse",
-        // REVISAR (área a definir)
-        area: "a definir",
+        area: "Egypt",
         icon: "target",
         sections: [
           {
@@ -191,8 +187,7 @@ export default {
         id: "sheikra",
         attractionId: "sheikra",
         name: "SheiKra",
-        // REVISAR (área a definir)
-        area: "a definir",
+        area: "Stanleyville",
         icon: "target",
         sections: [
           {
@@ -217,8 +212,7 @@ export default {
         id: "tigris",
         attractionId: "tigris",
         name: "Tigris",
-        // REVISAR (área a definir)
-        area: "a definir",
+        area: "Jungala",
         icon: "target",
         sections: [
           {
@@ -240,8 +234,7 @@ export default {
       {
         id: "stanleyville-theater",
         name: "Stanleyville Theater",
-        // REVISAR (área a definir)
-        area: "a definir",
+        area: "Stanleyville",
         icon: "camera",
         sections: [
           {
@@ -407,8 +400,7 @@ export default {
       {
         id: "falcon-fury",
         name: "Falcon's Fury",
-        // REVISAR (área a definir)
-        area: "a definir",
+        area: "Pantopia",
         icon: "target",
         sections: [
           {
@@ -431,8 +423,7 @@ export default {
         id: "serengeti-flyer",
         attractionId: "serengeti-flyer",
         name: "Serengeti Flyer",
-        // REVISAR (área a definir)
-        area: "a definir",
+        area: "Pantopia",
         icon: "target",
         sections: [
           {
@@ -454,8 +445,7 @@ export default {
       {
         id: "phoenix-rising",
         name: "Phoenix Rising",
-        // REVISAR (área a definir)
-        area: "a definir",
+        area: "Pantopia",
         icon: "target",
         sections: [
           {
@@ -479,8 +469,7 @@ export default {
       {
         id: "pantopia-theater",
         name: "Pantopia Theater",
-        // REVISAR (área a definir)
-        area: "a definir",
+        area: "Pantopia",
         icon: "camera",
         sections: [
           {
@@ -504,8 +493,7 @@ export default {
       {
         id: "congo-river-rapids",
         name: "Congo River Rapids",
-        // REVISAR (área a definir)
-        area: "a definir",
+        area: "Congo",
         icon: "target",
         sections: [
           {
@@ -577,8 +565,7 @@ export default {
       {
         id: "walkabout-way",
         name: "Walkabout Way",
-        // REVISAR (área a definir)
-        area: "a definir",
+        area: "Bird Gardens",
         icon: "leaf",
         sections: [
           {
@@ -600,8 +587,7 @@ export default {
       {
         id: "lory-land",
         name: "Lory Land",
-        // REVISAR (área a definir)
-        area: "a definir",
+        area: "Bird Gardens",
         icon: "leaf",
         sections: [
           {
@@ -649,8 +635,7 @@ export default {
       {
         id: "myombe-reserve",
         name: "Myombe Reserve",
-        // REVISAR (área a definir)
-        area: "a definir",
+        area: "Nairobi",
         icon: "leaf",
         sections: [
           {
@@ -670,8 +655,7 @@ export default {
       {
         id: "moroccan-palace-theatre",
         name: "Moroccan Palace Theatre",
-        // REVISAR (área a definir)
-        area: "a definir",
+        area: "Morocco",
         icon: "camera",
         sections: [
           {
@@ -696,8 +680,7 @@ export default {
         id: "montu",
         attractionId: "montu",
         name: "Montu",
-        // REVISAR (área a definir)
-        area: "a definir",
+        area: "Egypt",
         icon: "target",
         sections: [
           {
