@@ -194,6 +194,8 @@ export interface ParkAttraction {
   type: string;
   kind: "attraction" | "show";
   description: string;
+  /** Dica de visita; aparece como "Dica" quando o item do dia não tem a sua. */
+  tip?: string;
   verify?: boolean;
 }
 

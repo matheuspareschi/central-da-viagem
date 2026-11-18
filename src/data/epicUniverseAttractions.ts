@@ -429,8 +429,9 @@ export const epicUniverseAttractions: ChecklistItem[] = [
   },
   {
     id: "encerramento",
-    name: "Encerramento",
-    area: "Fim do dia",
+    attractionId: "celestial-goodnight",
+    name: "Universal Celestial Goodnight",
+    area: "Celestial Park",
     icon: "camera",
     sections: [
       {

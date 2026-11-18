@@ -2,6 +2,7 @@ import type { ChecklistItem, DetailSection, IconName, ParkAttraction, ParkArea }
 
 const ADDED_ENTRY_PREFIX = "catalogo:";
 const CURIOSITIES_TITLE = "Curiosidades";
+const TIP_TITLE = "Dica";
 
 /** Linha do checklist de parque: item do dia ou atração incluída do catálogo. */
 export interface ChecklistEntry {
@@ -41,8 +42,7 @@ function curiosityParagraphs(linked: ParkAttraction[]): string[] {
   return linked.length === 1 ? [linked[0].description] : linked.map((attraction) => `**${attraction.name}:** ${attraction.description}`);
 }
 
-/** A descrição do catálogo vira "Curiosidades"; se o item do dia já tem as suas, ela entra junto, depois delas. */
-function withCuriosities(sections: DetailSection[], linked: ParkAttraction[]): DetailSection[] {
+function mergeCuriosities(sections: DetailSection[], linked: ParkAttraction[]): DetailSection[] {
   if (linked.length === 0) return sections;
   const catalogParagraphs = curiosityParagraphs(linked);
   const hasCuriosities = sections.some((section) => section.title === CURIOSITIES_TITLE);
@@ -52,6 +52,25 @@ function withCuriosities(sections: DetailSection[], linked: ParkAttraction[]): D
   );
 }
 
+function tipSection(linked: ParkAttraction[]): DetailSection | undefined {
+  const tips = linked.filter((attraction) => attraction.tip);
+  if (tips.length === 0) return undefined;
+  const paragraphs = tips.length === 1 && linked.length === 1 ? [tips[0].tip!] : tips.map((attraction) => `**${attraction.name}:** ${attraction.tip}`);
+  return { color: "gold", icon: "lightbulb", title: TIP_TITLE, paragraphs };
+}
+
+/**
+ * A descrição do catálogo vira "Curiosidades"; se o item do dia já tem as suas, ela entra junto, depois delas.
+ * A dica do catálogo só aparece quando o item do dia não tem a sua.
+ */
+function withCatalogInfo(sections: DetailSection[], linked: ParkAttraction[]): DetailSection[] {
+  if (linked.length === 0) return sections;
+  const withCuriosities = mergeCuriosities(sections, linked);
+  const tip = tipSection(linked);
+  const hasOwnTip = sections.some((section) => section.title === TIP_TITLE);
+  return tip && !hasOwnTip ? [...withCuriosities, tip] : withCuriosities;
+}
+
 export function toDayEntry(item: ChecklistItem, linked: ParkAttraction[], areas: ParkArea[]): ChecklistEntry {
   return {
     id: item.id,
@@ -59,7 +78,7 @@ export function toDayEntry(item: ChecklistItem, linked: ParkAttraction[], areas:
     icon: item.icon,
     subtitle: describeLinked(linked, areas),
     areaLabel: item.area,
-    sections: withCuriosities(item.sections, linked),
+    sections: withCatalogInfo(item.sections, linked),
     isAdded: false,
   };
 }
@@ -75,6 +94,7 @@ export function toAddedEntry(attraction: ParkAttraction, areas: ParkArea[]): Che
     sections: [
       { color: "navy", icon: "parking", title: "Onde fica", paragraphs: [areaLabel] },
       { color: "citrus", icon: "target", title: "Sobre", paragraphs: [attraction.description] },
+      ...(attraction.tip ? [{ color: "gold" as const, icon: "lightbulb" as const, title: TIP_TITLE, paragraphs: [attraction.tip] }] : []),
     ],
     isAdded: true,
   };

@@ -138,6 +138,12 @@ const tests: Array<[string, () => void]> = [
     assert.equal(sections.length, 1);
     assert.deepEqual(sections[0].paragraphs, ["própria", "d"]);
   }],
+  ["checklist: dica do catálogo só entra quando o item do dia não tem a sua", () => {
+    const withTip = { ...attraction("A", "T", "d"), tip: "dica do catálogo" };
+    const own = { color: "gold" as const, icon: "lightbulb" as const, title: "Dica", paragraphs: ["dica do dia"] };
+    assert.deepEqual(toDayEntry(item(), [withTip], areas).sections.map((section) => section.title), ["Curiosidades", "Dica"]);
+    assert.deepEqual(toDayEntry(item([own]), [withTip], areas).sections.filter((section) => section.title === "Dica"), [own]);
+  }],
   ["checklist: sem ligação não ganha subtítulo nem seção", () => {
     const entry = toDayEntry(item(), [], areas);
     assert.equal(entry.subtitle, undefined);
