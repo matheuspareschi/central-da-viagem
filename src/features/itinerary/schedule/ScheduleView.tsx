@@ -1,5 +1,5 @@
 import { useId, useState, type ReactNode } from "react";
-import { Car, ChevronRight, House, MapPin, Moon, Sun, Sunrise, type LucideIcon } from "lucide-react";
+import { Car, ChevronRight, House, MapPin, Moon, Music, Sun, Sunrise, type LucideIcon } from "lucide-react";
 import { IconBadge } from "../../../components";
 import { shopRegions } from "../../../data/shopping";
 import { useCurrentAgenda } from "../../../hooks/useCurrentAgenda";
@@ -78,6 +78,7 @@ const periodLooks: Record<string, PeriodLook> = {
   manhã: { icon: Sunrise, band: "bg-[#fbeccb] text-[#7a5200]" },
   tarde: { icon: Sun, band: "bg-[#fbe0cf] text-citrus-text" },
   noite: { icon: Moon, band: "bg-[#dfe3f0] text-[#2f3f73]" },
+  "lojas de música": { icon: Music, band: "bg-[#fbeccb] text-[#7a5200]" },
 };
 const neutralPeriodLook: PeriodLook = { icon: Sun, band: "bg-paper-inset text-ink" };
 

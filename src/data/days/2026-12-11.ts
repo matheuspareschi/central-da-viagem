@@ -364,53 +364,28 @@ export default {
         category: "turismo",
         title: "Matheus e Jairo — lojas de música, Windermere e Old Town",
         mode: "schedule",
-        summary: "Dia aberto, de carro, com horários aproximados. Lojas de Kissimmee de manhã, almoço em casa, depois o eixo norte (Corzic e Blackbird) e Windermere no fim da tarde, fechando no Old Town.",
+        summary: "Dia aberto, de carro, com horários aproximados. Lojas de música em Orlando de manhã (Discount Music Center, Music & Arts e Guitar Center), almoço em casa, depois o eixo norte (Corzic e Blackbird) e Windermere no fim da tarde, fechando no Old Town.",
         journey: {
           tiles: [],
           notes: [
             { icon: "info", text: "Se as lojas demorarem, **cortem a Blackbird** ou encurtem Windermere." },
-            { icon: "info", text: "Opcionais fora da rota: Guitar Center (12402 S Orange Blossom Trail, abre **11h–21h**) e Sound 4 Less (5563 International Dr — **confirmar por telefone** se ainda funciona: (407) 456-8844)." },
+            { icon: "info", text: "Visita só para **conhecer** as lojas: as compras de instrumentos serão feitas online." },
+            { icon: "info", text: "Opcional fora da rota: Sound 4 Less (5563 International Dr — **confirmar por telefone** se ainda funciona: (407) 456-8844)." },
           ],
           alerts: ["**Confirmar horários** das lojas independentes na véspera."],
         },
         periods: [
           {
-            title: "Manhã",
-            note: "Lojas perto de casa, em Kissimmee.",
+            title: "Lojas de música",
             steps: [
-              {
-                kind: "stop",
-                time: "10:00",
-                stopId: "lewis-music-store",
-                name: "Lewis Music Store",
-                icon: "bag",
-              },
-              {
-                kind: "transit",
-                time: "10:45",
-                duration: "~15 min",
-                destinationName: "Music & Arts",
-              },
-              {
-                kind: "stop",
-                time: "11:00",
-                stopId: "music-and-arts",
-                name: "Music & Arts",
-                icon: "bag",
-              },
-              {
-                kind: "transit",
-                time: "12:00",
-                duration: "~15 min",
-                destinationName: "Casa",
-              },
-              {
-                kind: "stop",
-                time: "12:15",
-                stopId: "",
-                name: "Almoço em casa",
-                icon: "house",
-              },
+              { kind: "transit", time: "09:25", duration: "~35 min", destinationName: "Discount Music Center" }, // REVISAR: tempos de deslocamento e de visita estimados
+              { kind: "stop", time: "10:00", stopId: "discount-music-center", name: "Discount Music Center", icon: "bag" },
+              { kind: "transit", time: "10:30", duration: "~20 min", destinationName: "Music & Arts (Millenia)" },
+              { kind: "stop", time: "11:00", stopId: "music-and-arts-millenia", name: "Music & Arts (Millenia)", icon: "bag" },
+              { kind: "transit", time: "11:30", duration: "~25 min", destinationName: "Guitar Center (Orange Blossom Trail)" },
+              { kind: "stop", time: "12:00", stopId: "guitar-center-obt", name: "Guitar Center (Orange Blossom Trail)", icon: "bag" },
+              { kind: "transit", time: "12:45", duration: "~25 min", destinationName: "Casa" },
+              { kind: "stop", time: "13:10", stopId: "", name: "Almoço em casa", icon: "house" },
             ],
           },
           {
@@ -419,26 +394,26 @@ export default {
             steps: [
               {
                 kind: "transit",
-                time: "13:30",
+                time: "14:00",
                 duration: "~40 min",
                 destinationName: "Corzic Music",
               },
               {
                 kind: "stop",
-                time: "14:15",
+                time: "14:45",
                 stopId: "corzic-music",
                 name: "Corzic Music",
                 icon: "bag",
               },
               {
                 kind: "transit",
-                time: "15:15",
+                time: "15:30",
                 duration: "~20–30 min",
                 destinationName: "Blackbird Vintage Music",
               },
               {
                 kind: "stop",
-                time: "15:45",
+                time: "16:00",
                 stopId: "blackbird-vintage-music",
                 name: "Blackbird Vintage Music",
                 icon: "bag",
@@ -479,64 +454,95 @@ export default {
         ],
         cards: [
           {
-            id: "lewis-music-store",
-            name: "Lewis Music Store",
+            id: "discount-music-center",
+            address: "3301 Gardenia Ave, Orlando, FL 32805",
+            name: "Discount Music Center",
             icon: "bag",
             time: "10:00",
             sections: [
               {
-                color: "navy",
-                icon: "parking",
-                title: "Endereço",
-                paragraphs: [
-                  "117 Broadway, Kissimmee, FL 34741 (centro histórico).",
-                ],
-              },
-              {
                 color: "citrus",
                 icon: "bag",
                 title: "Sobre",
-                paragraphs: [
-                  "Loja independente local, com instrumentos e acessórios em geral, novos e usados, e **preço acessível**.",
-                ],
+                paragraphs: ["**Discount Music Center**: loja pequena e antiga (desde 1972), forte em **Roland** e **Boss**."],
               },
               {
                 color: "gold",
                 icon: "lightbulb",
                 title: "Horário",
-                paragraphs: [
-                  "Ter–Sex 10h–18h · Sáb 10h–17h · **Seg e Dom fechado**.",
-                ],
+                paragraphs: ["A partir das **10h**."],
+              },
+              {
+                color: "navy",
+                icon: "house",
+                title: "Telefone",
+                paragraphs: ["(407) 423-4171"],
+              },
+              {
+                color: "attn",
+                icon: "alert",
+                title: "Atenção",
+                paragraphs: ["Horário de **10h** não confirmado em fonte oficial: **ligar antes**."],
               },
             ],
           },
           {
-            id: "music-and-arts",
-            name: "Music & Arts",
+            id: "music-and-arts-millenia",
+            address: "4676 Millenia Plaza Way, Orlando, FL 32839",
+            name: "Music & Arts (Millenia)",
             icon: "bag",
             time: "11:00",
             sections: [
               {
-                color: "navy",
-                icon: "parking",
-                title: "Endereço",
-                paragraphs: ["1263 W Osceola Pkwy, Kissimmee, FL 34741."],
-              },
-              {
                 color: "citrus",
                 icon: "bag",
                 title: "Sobre",
-                paragraphs: [
-                  "Rede nacional do grupo **Guitar Center**. Instrumentos de banda e orquestra, guitarras, teclados, acessórios e partituras, predominantemente novos.",
-                ],
+                paragraphs: ["**Music & Arts**: loja de rede, voltada a instrumentos de estudo, aluguel e reparo. Fica perto do Mall at Millenia."],
               },
               {
                 color: "gold",
                 icon: "lightbulb",
                 title: "Horário",
-                paragraphs: [
-                  "Seg–Sex **11h–20h** · Sáb 10h–17h · Dom 12h–17h.",
-                ],
+                paragraphs: ["Abre às **11h**."],
+              },
+              {
+                color: "navy",
+                icon: "house",
+                title: "Telefone",
+                paragraphs: ["407-345-0544"],
+              },
+            ],
+          },
+          {
+            id: "guitar-center-obt",
+            address: "12402 S Orange Blossom Trail, Suite 1, Orlando, FL 32837",
+            name: "Guitar Center (Orange Blossom Trail)",
+            icon: "bag",
+            time: "12:00",
+            sections: [
+              {
+                color: "citrus",
+                icon: "bag",
+                title: "Sobre",
+                paragraphs: ["**Guitar Center**: a maior das três, com seção de **usados** e sala de **guitarras vintage**. Fica no caminho de volta para Kissimmee."],
+              },
+              {
+                color: "gold",
+                icon: "lightbulb",
+                title: "Horário",
+                paragraphs: ["Abre às **11h**."],
+              },
+              {
+                color: "navy",
+                icon: "house",
+                title: "Telefone",
+                paragraphs: ["(407) 251-6659"],
+              },
+              {
+                color: "attn",
+                icon: "alert",
+                title: "Atenção",
+                paragraphs: ["Horário de sexta não confirmado: **confirmar horário**."],
               },
             ],
           },
@@ -544,7 +550,7 @@ export default {
             id: "corzic-music",
             name: "Corzic Music",
             icon: "bag",
-            time: "14:15",
+            time: "14:45",
             sections: [
               {
                 color: "navy",
@@ -574,7 +580,7 @@ export default {
             id: "blackbird-vintage-music",
             name: "Blackbird Vintage Music",
             icon: "bag",
-            time: "15:45",
+            time: "16:00",
             sections: [
               {
                 color: "navy",
