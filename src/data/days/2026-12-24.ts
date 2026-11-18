@@ -33,7 +33,9 @@ export default {
         { icon: "car", text: "Deslocamento: ~**1h15–1h30** cada trecho, ~**2h30–3h** de carro no total." },
         { icon: "info", text: "O **Holidays in Space** está confirmado para 2026 e o parque **fecha um pouco mais tarde** nesses dias (horário de fechamento ainda a confirmar)." },
       ],
-      alerts: [],
+      alerts: [
+        "**Comida:** pode levar a sua própria (almoço, lanches, frutas e água). **Embalagem:** só em lancheiras ou bolsas térmicas flexíveis, ou em mochilas comuns. **Proibido:** caixas térmicas rígidas ou grandes, garrafas e potes de vidro, facas e bebidas alcoólicas.",
+      ],
     },
     attractions: [
       {
