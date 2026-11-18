@@ -1,5 +1,32 @@
 import { epicUniverseAttractions } from "../epicUniverseAttractions";
-import type { DayData } from "../../types";
+import type { ChecklistItem, DayData } from "../../types";
+
+/** Só o dia 22 tem o Le Cirque Arcanus; ele fica logo depois dos itens de Harry Potter da lista compartilhada. */
+const cirqueArcanusItem: ChecklistItem = {
+  id: "cirque-varinhas-quadros",
+  attractionId: "le-cirque-arcanus",
+  name: "Le Cirque Arcanus, varinhas e quadros falantes",
+  area: "Harry Potter",
+  icon: "camera",
+  sections: [
+    {
+      color: "citrus",
+      icon: "camera",
+      title: "Sobre",
+      paragraphs: [
+        "Le Cirque Arcanus (**~11h15**): show de circo e Animais Fantásticos, hora de sentar (os guias divergem: opcional). Perto do Le Gobelet Noir, os quadros de Cassandra Trelawney, Sir Cadogan e Simon Beauchamp ensinam um feitiço a quem tem varinha.",
+      ],
+    },
+    {
+      color: "gold",
+      icon: "burger",
+      title: "Dica",
+      paragraphs: ["**~12h00** crepe de cerveja amanteigada no Café L'Air de la Sirène, para dividir."],
+    },
+  ],
+};
+
+const attractions = epicUniverseAttractions.flatMap((item) => (item.id === "portal-foto" ? [item, cirqueArcanusItem] : [item]));
 
 export default {
   dateISO: "2026-12-22",
@@ -23,7 +50,7 @@ export default {
   itinerary: {
     kind: "checklist",
     parkId: "epic-universe",
-    summary: "Segunda visita ao Epic Universe, com as mesmas atrações do dia 17.",
+    summary: "Segunda visita ao Epic Universe, com as atrações do dia 17 e o Le Cirque Arcanus.",
     journey: {
       tiles: [
         { label: "Acordar", value: "8h00" },
@@ -36,6 +63,6 @@ export default {
       ],
       alerts: ["**Alimentação**: Universal **não permite cooler**: levar muffin ou barrinha de whey assado."],
     },
-    attractions: epicUniverseAttractions,
+    attractions,
   },
 } satisfies DayData;
