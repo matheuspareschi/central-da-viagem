@@ -114,6 +114,7 @@ const celebrationCard: StopCard = {
       title: "Estacionamento",
       paragraphs: [
         "Rua costuma ser **gratuita**; à noite (Now Snowing) o movimento aumenta — cheguem com folga.",
+        "Dá para achar vagas **gratuitas** nas ruas próximas ao centrinho comercial com facilidade.",
       ],
     },
     {
@@ -138,6 +139,38 @@ const celebrationCard: StopCard = {
       title: "Jantar",
       paragraphs: [
         "Columbia Restaurant tem unidade em Celebration — **reserva recomendada** em dezembro.",
+      ],
+    },
+    {
+      color: "palm",
+      icon: "sparkle",
+      title: "Curiosidades",
+      list: [
+        "**Projeto inspirado no EPCOT**: nasceu da ideia original de Walt Disney de criar uma cidade-modelo perfeita. Foi construída nos anos 1990 com visual clássico americano.",
+        "**Independência da Disney**: a empresa administrou a comunidade até 2004. Hoje, o bairro tem gestão própria feita pelos moradores.",
+        "**Arquitetura controlada**: todas as casas seguem um manual rígido de estilos (vitoriano, colonial, clássico) para manter o visual de filme.",
+        "**Vizinho ilustre**: ficou muito famosa no Brasil por ter sido o endereço de férias do apresentador Silvio Santos.",
+      ],
+    },
+    {
+      color: "gold",
+      icon: "lightbulb",
+      title: "Dicas de passeio",
+      list: [
+        "**Vá sem pressa**: o foco aqui não são filas nem atrações radicais. Separe uma manhã ou um fim de tarde tranquilo para caminhar a pé.",
+        "**Refeição com vista**: faça uma pausa no restaurante Celebration Town Tavern ou tome um café na Market Street Bakery.",
+        "**Eventos sazonais**: no fim do ano, visite à noite para ver as casas iluminadas e a neve artificial caindo na rua principal.",
+      ],
+    },
+    {
+      color: "citrus",
+      icon: "camera",
+      title: "Melhores lugares para fotos",
+      list: [
+        "**Calçadão do Lake Rianhard**: o píer de madeira à beira do lago rende ótimos cliques, principalmente no pôr do sol.",
+        "**Cadeiras de balanço do lago**: ficam de frente para a água e são o cartão-postal clássico para descansar e fotografar.",
+        "**Market Street e Front Street**: as fachadas coloridas das lojinhas, o antigo cinema e as palmeiras criam um cenário de cidade do interior dos EUA.",
+        "**Ruas residenciais arborizadas**: caminhe pelos quarteirões próximos ao centro (como a Jeater Bend) para fotografar as casas em estilo colonial e vitoriano.",
       ],
     },
   ],
