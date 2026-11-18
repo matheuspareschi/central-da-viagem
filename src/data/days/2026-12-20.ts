@@ -1,3 +1,4 @@
+import { MCO_ADDRESS, mcoSections } from "../mco";
 import type { DayData } from "../../types";
 
 export default {
@@ -51,6 +52,8 @@ export default {
         steps: [
           { kind: "transit", time: "18:00", duration: "~20 min", destinationName: "Islands of Adventure" },
           { kind: "stop", time: "18:30", stopId: "islands-of-adventure", name: "Islands of Adventure (fecha às 22h)", icon: "target" },
+          { kind: "transit", time: "22:00", duration: "~25 min", destinationName: "Aeroporto de Orlando (MCO)" }, // REVISAR: tempo e horário estimados; o horário do voo do Rafa não está nos dados
+          { kind: "stop", time: "22:30", stopId: "pegar-rafa-mco", name: "Pegar o Rafa no aeroporto", icon: "target" },
         ],
       },
     ],
@@ -217,6 +220,14 @@ export default {
             ],
           },
         ],
+      },
+      {
+        id: "pegar-rafa-mco",
+        address: MCO_ADDRESS,
+        name: "Pegar o Rafa no aeroporto",
+        icon: "target",
+        time: "22:30",
+        sections: mcoSections,
       },
     ],
   },

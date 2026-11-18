@@ -1,3 +1,4 @@
+import { mcoSections } from "../mco";
 import type { DayData } from "../../types";
 
 export default {
@@ -113,30 +114,7 @@ export default {
         name: "Pouso em MCO",
         icon: "target",
         time: "15:40",
-        sections: [
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Informação",
-            paragraphs: ["Imigração, desembarque e bagagem."],
-          },
-          {
-            color: "gold",
-            icon: "sparkle",
-            title: "Curiosidades e fotos",
-            paragraphs: [
-              "A sigla MCO vem da antiga base militar McCoy Air Force Base. Para fotos, aproveite os **átrios internos** com jardins tropicais e fontes naturais, ou a arquitetura futurista e envidraçada do **novo Terminal C**.",
-            ],
-          },
-          {
-            color: "palm",
-            icon: "lightbulb",
-            title: "Dica para aproveitar",
-            paragraphs: [
-              "Use o serviço **gratuito** MCO Reserve para agendar horário e furar a fila da segurança na volta, além de conferir as lojas temáticas da Disney, Universal e NASA ainda dentro do terminal.",
-            ],
-          },
-        ],
+        sections: mcoSections,
       },
       {
         id: "retirada-carros",
