@@ -44,7 +44,6 @@ export default {
         steps: [
           { kind: "transit", time: "12:45", duration: "~10 min", destinationName: "Vineland Premium Outlets" },
           { kind: "stop", time: "13:00", stopId: "vineland-premium-outlets", name: "Vineland Premium Outlets", icon: "bag" },
-          { kind: "stop", time: "17:15", stopId: "basilica-maria-rainha", name: "Basílica de Maria, Rainha do Universo (opcional)", icon: "house" },
         ],
       },
       {
@@ -179,33 +178,6 @@ export default {
             paragraphs: [
               "Horário de funcionamento em dezembro ainda a **confirmar no site oficial** do outlet.",
             ],
-          },
-        ],
-      },
-      {
-        id: "basilica-maria-rainha",
-        address: "8300 Vineland Ave, Orlando, FL 32821",
-        name: "Basílica de Maria, Rainha do Universo",
-        icon: "house",
-        time: "17:15",
-        sections: [
-          {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço",
-            paragraphs: ["Basilica of the National Shrine of Mary, Queen of the Universe, 8300 Vineland Ave, Orlando, FL 32821."],
-          },
-          {
-            color: "palm",
-            icon: "leaf",
-            title: "Sobre",
-            paragraphs: ["Fica **ao lado do Vineland Premium Outlets**: dá para visitar no fim das compras. Parada opcional."],
-          },
-          {
-            color: "attn",
-            icon: "alert",
-            title: "Atenção",
-            paragraphs: ["Horários de visita e de missas **não confirmados**: conferir antes de ir."],
           },
         ],
       },
