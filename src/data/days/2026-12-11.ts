@@ -362,93 +362,44 @@ export default {
       {
         key: "matheus-jairo",
         category: "turismo",
-        title: "Matheus e Jairo — lojas de música, Windermere e Old Town",
+        title: "Lojas de Música e Epic Universe",
         mode: "schedule",
-        summary: "Dia aberto, de carro, com horários aproximados. Lojas de música em Orlando de manhã (Discount Music Center, Music & Arts e Guitar Center), almoço em casa, depois o eixo norte (Corzic e Blackbird) e Windermere no fim da tarde, fechando no Old Town.",
+        summary: "Dia aberto, de carro. Lojas de música em Orlando de manhã, almoço em fast food, tarde e noite no Epic Universe (saída às 20h) e, às 21h, buscar o pessoal no Hollywood Studios.",
         journey: {
-          tiles: [],
-          notes: [
-            { icon: "info", text: "Se as lojas demorarem, **cortem a Blackbird** ou encurtem Windermere." },
-            { icon: "info", text: "Visita só para **conhecer** as lojas: as compras de instrumentos serão feitas online." },
-            { icon: "info", text: "Opcional fora da rota: Sound 4 Less (5563 International Dr — **confirmar por telefone** se ainda funciona: (407) 456-8844)." },
+          tiles: [
+            { label: "Sair de casa", value: "9h30" },
+            { label: "Lojas de música", value: "3" },
+            { label: "Sair do Epic", value: "20h" },
+            { label: "Pegar o pessoal", value: "21h" },
           ],
-          alerts: ["**Confirmar horários** das lojas independentes na véspera."],
+          notes: [],
+          alerts: [],
         },
         periods: [
           {
             title: "Lojas de música",
             steps: [
-              { kind: "transit", time: "09:25", duration: "~35 min", destinationName: "Discount Music Center" }, // REVISAR: tempos de deslocamento e de visita estimados
-              { kind: "stop", time: "10:00", stopId: "discount-music-center", name: "Discount Music Center", icon: "bag" },
-              { kind: "transit", time: "10:30", duration: "~20 min", destinationName: "Music & Arts (Millenia)" },
+              { kind: "transit", time: "09:30", duration: "~35 min", destinationName: "Discount Music Center" }, // REVISAR: tempos de deslocamento e de visita estimados
+              { kind: "stop", time: "10:05", stopId: "discount-music-center", name: "Discount Music Center", icon: "bag" },
+              { kind: "transit", time: "10:35", duration: "~20 min", destinationName: "Music & Arts (Millenia)" },
               { kind: "stop", time: "11:00", stopId: "music-and-arts-millenia", name: "Music & Arts (Millenia)", icon: "bag" },
               { kind: "transit", time: "11:30", duration: "~25 min", destinationName: "Guitar Center (Orange Blossom Trail)" },
               { kind: "stop", time: "12:00", stopId: "guitar-center-obt", name: "Guitar Center (Orange Blossom Trail)", icon: "bag" },
-              { kind: "transit", time: "12:45", duration: "~25 min", destinationName: "Casa" },
-              { kind: "stop", time: "13:10", stopId: "", name: "Almoço em casa", icon: "house" },
+              { kind: "stop", time: "12:45", stopId: "", name: "Almoço (fast food)", icon: "burger" },
             ],
           },
           {
             title: "Tarde",
-            note: "Eixo norte de Orlando e Windermere.",
             steps: [
-              {
-                kind: "transit",
-                time: "14:00",
-                duration: "~40 min",
-                destinationName: "Corzic Music",
-              },
-              {
-                kind: "stop",
-                time: "14:45",
-                stopId: "corzic-music",
-                name: "Corzic Music",
-                icon: "bag",
-              },
-              {
-                kind: "transit",
-                time: "15:30",
-                duration: "~20–30 min",
-                destinationName: "Blackbird Vintage Music",
-              },
-              {
-                kind: "stop",
-                time: "16:00",
-                stopId: "blackbird-vintage-music",
-                name: "Blackbird Vintage Music",
-                icon: "bag",
-              },
-              {
-                kind: "transit",
-                time: "16:45",
-                duration: "~25–30 min",
-                destinationName: "Windermere",
-              },
-              {
-                kind: "stop",
-                time: "17:15",
-                stopId: "windermere",
-                name: "Passeio em Windermere",
-                icon: "tree",
-              },
+              { kind: "transit", time: "13:30", duration: "~30 min", destinationName: "Epic Universe" }, // REVISAR: tempo de deslocamento estimado
+              { kind: "stop", time: "14:00", stopId: "epic-universe", name: "Epic Universe", icon: "target" },
             ],
           },
           {
             title: "Noite",
             steps: [
-              {
-                kind: "transit",
-                time: "18:15",
-                duration: "~35–45 min",
-                destinationName: "Old Town Kissimmee",
-              },
-              {
-                kind: "stop",
-                time: "19:00",
-                stopId: "old-town-kissimmee",
-                name: "Old Town Kissimmee",
-                icon: "camera",
-              },
+              { kind: "transit", time: "20:00", duration: "~30 min", destinationName: "Hollywood Studios" }, // REVISAR: tempo de deslocamento estimado
+              { kind: "stop", time: "21:00", stopId: "pegar-pessoal-hollywood", name: "Pegar o pessoal no Hollywood Studios", icon: "target" },
             ],
           },
         ],
@@ -547,140 +498,44 @@ export default {
             ],
           },
           {
-            id: "corzic-music",
-            name: "Corzic Music",
-            icon: "bag",
-            time: "14:45",
+            id: "epic-universe",
+            address: "1001 Epic Blvd, Orlando, FL 32819",
+            name: "Epic Universe",
+            icon: "target",
+            time: "14:00",
             sections: [
               {
-                color: "navy",
-                icon: "parking",
-                title: "Endereço",
-                paragraphs: ["997 W Kennedy Blvd, Suite A1, Orlando, FL 32810."],
-              },
-              {
                 color: "citrus",
-                icon: "bag",
+                icon: "target",
                 title: "Sobre",
-                paragraphs: [
-                  "Loja boutique de alto padrão: **violões e guitarras artesanais** (Santa Cruz, Bourgeois, Lowden, Huss & Dalton), teclados Nord e baixos Warwick.",
-                ],
-              },
-              {
-                color: "attn",
-                icon: "alert",
-                title: "Atenção",
-                paragraphs: [
-                  "Às sextas **fecha às 16h** — chegar **até 15h** para ter tempo.",
-                ],
-              },
-            ],
-          },
-          {
-            id: "blackbird-vintage-music",
-            name: "Blackbird Vintage Music",
-            icon: "bag",
-            time: "16:00",
-            sections: [
-              {
-                color: "navy",
-                icon: "parking",
-                title: "Endereço",
-                paragraphs: ["1819 N Orange Ave, Orlando, FL 32804."],
-              },
-              {
-                color: "citrus",
-                icon: "bag",
-                title: "Sobre",
-                paragraphs: [
-                  "Guitarras e baixos vintage, amplificadores valvulados e pedais. Só usados e vintage, com preços de **~US$ 300** a **US$ 25.000**.",
-                ],
+                paragraphs: ["**Epic Universe**: parque da Universal. Saída às **20h**, para buscar o pessoal às **21h**."],
               },
               {
                 color: "gold",
                 icon: "lightbulb",
                 title: "Horário",
-                paragraphs: [
-                  "Ter–Sáb **12h–19h** · Seg e Dom fechado.",
-                ],
+                paragraphs: ["Fecha às **21h**."],
               },
             ],
           },
           {
-            id: "windermere",
-            name: "Windermere",
-            icon: "tree",
-            time: "17:15",
+            id: "pegar-pessoal-hollywood",
+            address: "351 S Studio Dr, Lake Buena Vista, FL 32830",
+            name: "Hollywood Studios",
+            icon: "target",
+            time: "21:00",
             sections: [
               {
-                color: "navy",
-                icon: "parking",
-                title: "Onde começar",
-                paragraphs: [
-                  "Centro (Town Square) na Main Street; Prefeitura no 614 Main St. **Estacionar ali** e fazer um trecho a pé.",
-                ],
-              },
-              {
                 color: "citrus",
-                icon: "tree",
-                title: "Rota sugerida (~1h)",
-                list: [
-                  "Centro: **Town Square**, lojas locais da Main Street e biblioteca (prédio estilo \"Florida Cracker\", com varanda ao redor).",
-                  "**Lake Street Park**: caminho à beira do lago, bom ponto para fotos.",
-                  "**Palmer Park** (Pine St, entre a 2nd e a 3rd Ave): bancos de frente para o Lake Butler.",
-                  "**Oakdale Street**, de carro: rua arborizada, boa para ver as casas.",
-                  "Lake Down: rampa pública **gratuita** na Conroy-Windermere Road.",
-                  "Isleworth: condomínio **fechado**, só dá para ver o entorno pela Conroy-Windermere Road.",
-                  "Opcional: **R.D. Keene Park** (10900 Chase Road), 52 acres na Lake Isleworth.",
-                ],
-              },
-              {
-                color: "attn",
-                icon: "alert",
-                title: "Atenção",
-                paragraphs: [
-                  "**Confirmar endereço e horário** da biblioteca no Google Maps. A maioria das ruas residenciais não é asfaltada: ir devagar. Escurece **por volta das 17h30**, então o passeio de carro rende mais com a última luz do dia.",
-                ],
-              },
-              {
-                color: "palm",
-                icon: "lightbulb",
-                title: "Observação",
-                paragraphs: [
-                  "A feira de Windermere acontece nas sextas de manhã na Main Street (horário não confirmado) — **só entra se o dia** for reorganizado para a manhã.",
-                ],
-              },
-            ],
-          },
-          {
-            id: "old-town-kissimmee",
-            name: "Old Town Kissimmee",
-            icon: "camera",
-            time: "19:00",
-            sections: [
-              {
-                color: "navy",
-                icon: "parking",
-                title: "Endereço",
-                paragraphs: [
-                  "5770 W Irlo Bronson Memorial Hwy, Kissimmee, FL 34746. Entrada e estacionamento no local: **grátis**.",
-                ],
-              },
-              {
-                color: "citrus",
-                icon: "bag",
+                icon: "target",
                 title: "Sobre",
-                paragraphs: [
-                  "Complexo a céu aberto com mais de 70 lojas e restaurantes independentes e roda-gigante. Aberto diariamente, **das 11h às 23h**. Brinquedos e atrações são pagos à parte.",
-                ],
+                paragraphs: ["Buscar o pessoal na saída do Hollywood Studios, às **21h**."],
               },
               {
                 color: "gold",
                 icon: "lightbulb",
-                title: "Friday Muscle Car Cruise",
-                paragraphs: [
-                  "Às sextas há exibição de muscle cars (pós-1964) e trucks **a partir das 15h**, com desfile **às 20h30**. Chegar **por volta das 19h** ajuda a pegar bom lugar na calçada.",
-                ],
+                title: "Horário",
+                paragraphs: ["O parque fecha às **21h**."],
               },
             ],
           },
