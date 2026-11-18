@@ -207,7 +207,8 @@ function checkDuplicatedStoreStops(where: string, { content }: DayTrack): string
 
 /** Toda atração de checklist de parque mostra a área na lista; sem `area`, a linha fica sem subtítulo. */
 function checkParking(where: string, { extras }: DayTrack): string[] {
-  if (extras.parkId && !estacionamentos[extras.parkId]) warnings.push(`${where}: parque "${extras.parkId}" sem dados em data/estacionamentos`);
+  const parkingKey = extras.parkingId ?? extras.parkId;
+  if (parkingKey && !estacionamentos[parkingKey]) warnings.push(`${where}: parque "${parkingKey}" sem dados em data/estacionamentos`);
   return [];
 }
 

@@ -1,5 +1,5 @@
 import { useId, useState, type ReactNode } from "react";
-import { ChevronDown, Footprints, MapPin, SquareParking, TramFront } from "lucide-react";
+import { Car, ChevronDown, Footprints, MapPin, SquareParking, TramFront, type LucideIcon } from "lucide-react";
 import { RichText } from "../../../components";
 import { mapSearchUrl } from "../../../lib/maps";
 import { isGratis } from "../../../lib/estacionamento";
@@ -41,8 +41,10 @@ function ParkingPrices({ prices }: { prices: Estacionamento["valores"] }) {
   );
 }
 
+const transportIcons: Record<Estacionamento["meio"], LucideIcon> = { tram: TramFront, "a-pe": Footprints, carro: Car };
+
 function ParkingHowToArrive({ parking }: { parking: Estacionamento }) {
-  const TransportIcon = parking.meio === "tram" ? TramFront : Footprints;
+  const TransportIcon = transportIcons[parking.meio];
   return (
     <div>
       <Label>Como chegar ao parque</Label>

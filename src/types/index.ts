@@ -155,8 +155,8 @@ export interface Estacionamento {
   valores: ValorEstacionamento[];
   /** `null` = ainda a definir: o bloco mostra "A definir" em vez de inventar. */
   comoChegar: string | null;
-  /** Escolhe o ícone da linha "Como chegar": tram ou a pé. */
-  meio: "tram" | "a-pe";
+  /** Escolhe o ícone da linha "Como chegar": tram, a pé ou carro. */
+  meio: "tram" | "a-pe" | "carro";
   /** Data ISO (AAAA-MM-DD) em que os valores foram conferidos. */
   conferidoEm: string;
   fonte: string;
@@ -180,6 +180,8 @@ export interface TrackExtras {
   journey: Journey;
   /** Só em trilhas de parque: aponta para o catálogo em `data/parks` e para o estacionamento em `data/estacionamentos`. */
   parkId?: string;
+  /** Chave em `data/estacionamentos` quando o parque não tem catálogo em `data/parks` (e por isso não tem `parkId`). */
+  parkingId?: string;
 }
 
 export interface ParkArea {

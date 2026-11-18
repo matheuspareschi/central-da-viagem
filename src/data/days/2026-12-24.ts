@@ -6,6 +6,7 @@ export default {
   day: 24,
   park: {
     name: "Kennedy Space Center",
+    departure: "7h30",
   },
   weekday: "Qui",
   liturgicalWeekday: "Véspera de Natal",
@@ -18,12 +19,19 @@ export default {
   },
   itinerary: {
     kind: "checklist",
+    parkingId: "kennedy-space-center",
     summary: "Dia inteiro no Kennedy Space Center Visitor Complex, véspera de Natal. Almoço no parque (Orbit Café ou Moon Rock Café).",
     group: "7 de 10 pessoas — Nunes e Gobette Pareschi embarcam para Savannah nesse mesmo dia",
     journey: {
-      tiles: [],
+      tiles: [
+        { label: "Acordar", value: "6h30" },
+        { label: "Sair de casa", value: "7h30" },
+        { label: "Chegada no parque", value: "9h00" },
+        { label: "Holidays in Space", value: "18h50" },
+      ],
       notes: [
         { icon: "car", text: "Deslocamento: ~**1h15–1h30** cada trecho, ~**2h30–3h** de carro no total." },
+        { icon: "info", text: "O **Holidays in Space** está confirmado para 2026 e o parque **fecha um pouco mais tarde** nesses dias (horário de fechamento ainda a confirmar)." },
       ],
       alerts: [],
     },
@@ -31,19 +39,9 @@ export default {
       {
         id: "ksc-bus-tour",
         name: "Kennedy Space Center Bus Tour",
-        // REVISAR (área a definir)
-        area: "a definir",
+        area: "Passeio de ônibus",
         icon: "parking",
         sections: [
-          {
-            color: "navy",
-            icon: "parking",
-            title: "Endereço e estacionamento",
-            paragraphs: [
-              "Space Commerce Way, Merritt Island, FL 32953.",
-              "Estacionamento **~US$ 15/dia** (gratuito só para Annual Pass).",
-            ],
-          },
           {
             color: "citrus",
             icon: "target",
@@ -73,18 +71,9 @@ export default {
       {
         id: "ksc-rocket-garden",
         name: "Rocket Garden",
-        // REVISAR (área a definir)
-        area: "a definir",
+        area: "Fotos",
         icon: "target",
         sections: [
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Tipo",
-            paragraphs: [
-              "Fotos.",
-            ],
-          },
           {
             color: "citrus",
             icon: "target",
@@ -98,7 +87,7 @@ export default {
             icon: "camera",
             title: "Curiosidades",
             paragraphs: [
-              "Coleção ao ar livre de foguetes históricos (Mercury, Gemini, Atlas, Titan). Em dez/2026 é também o palco do possível **Holidays in Space Drone Show** à noite.",
+              "Coleção ao ar livre de foguetes históricos (Mercury, Gemini, Atlas, Titan). Em dezembro é também o palco do **Holidays in Space Drone Show** à noite.",
             ],
           },
         ],
@@ -106,18 +95,9 @@ export default {
       {
         id: "ksc-astronaut-encounter",
         name: "Astronaut Encounter",
-        // REVISAR (área a definir)
-        area: "a definir",
+        area: "Show",
         icon: "target",
         sections: [
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Tipo",
-            paragraphs: [
-              "Show.",
-            ],
-          },
           {
             color: "citrus",
             icon: "target",
@@ -139,18 +119,9 @@ export default {
       {
         id: "ksc-atlantis",
         name: "Space Shuttle Atlantis® e Shuttle Launch Experience®",
-        // REVISAR (área a definir)
-        area: "a definir",
+        area: "Simulador",
         icon: "target",
         sections: [
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Tipo",
-            paragraphs: [
-              "Simulador.",
-            ],
-          },
           {
             color: "citrus",
             icon: "target",
@@ -172,8 +143,7 @@ export default {
       {
         id: "ksc-heroes-legends",
         name: "Heroes & Legends / U.S. Astronaut Hall of Fame",
-        // REVISAR (área a definir)
-        area: "a definir",
+        area: "Exposição",
         icon: "target",
         sections: [
           {
@@ -197,8 +167,7 @@ export default {
       {
         id: "ksc-gateway",
         name: "Gateway: The Deep Space Launch Complex®",
-        // REVISAR (área a definir)
-        area: "a definir",
+        area: "Exposição",
         icon: "target",
         sections: [
           {
@@ -222,32 +191,15 @@ export default {
       {
         id: "ksc-drone-show",
         name: "Holidays in Space — Drone Show",
-        // REVISAR (área a definir)
-        area: "a definir",
+        area: "Show",
         icon: "tree",
         sections: [
-          {
-            color: "attn",
-            icon: "alert",
-            title: "Pendente de confirmação",
-            paragraphs: [
-              "Edição 2026 ainda não confirmada oficialmente pelo parque — reconfirmar mais perto da data. Se acontecer, muda a hora de saída do parque (empurraria o retorno para **depois das 19h**).",
-            ],
-          },
-          {
-            color: "gold",
-            icon: "lightbulb",
-            title: "Tipo",
-            paragraphs: [
-              "Show.",
-            ],
-          },
           {
             color: "citrus",
             icon: "target",
             title: "Como aproveitar melhor",
             paragraphs: [
-              "Em 2025 rodou nightly **às 18h50**, de 21 a 30/dez (**fechado** só dia 25), incluso no ingresso, no Rocket Garden.",
+              "Acontece **todos os dias de 20 a 30/dez, às 18h50**, no Rocket Garden, com o parque fechando um pouco mais tarde. O parque fica **fechado no dia 25**, sem show nessa data.",
             ],
           },
           {
@@ -255,7 +207,15 @@ export default {
             icon: "camera",
             title: "Curiosidades",
             paragraphs: [
-              "Show de **~600 drones** contando a história de \"Starflake\", passando pelos programas Apollo, Shuttle e Artemis.",
+              "**Mil drones** iluminam o céu ao som de uma trilha sinfônica original, acompanhando a jornada da personagem **Starflake**.",
+            ],
+          },
+          {
+            color: "gold",
+            icon: "lightbulb",
+            title: "Decoração e atividades",
+            paragraphs: [
+              "Em todo o mês de dezembro o complexo tem decoração natalina temática e árvores iluminadas, além da caça ao tesouro interativa **Rocket Tree Trail**, em que os visitantes resolvem pistas para ganhar um brinde.",
             ],
           },
         ],
@@ -263,8 +223,7 @@ export default {
       {
         id: "ksc-space-shop",
         name: "The Space Shop",
-        // REVISAR (área a definir)
-        area: "a definir",
+        area: "Loja",
         icon: "bag",
         sections: [
           {

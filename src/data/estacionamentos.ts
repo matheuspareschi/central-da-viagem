@@ -80,4 +80,15 @@ export const estacionamentos: Record<string, Estacionamento> = {
     // REVISAR: fonte não informada; valores de matéria de fev/2024 (site oficial), outras fontes divergem.
     fonte: "Site oficial do parque, citado em matéria de fev/2024",
   },
+  "kennedy-space-center": {
+    id: "kennedy-space-center",
+    nome: "Kennedy Space Center",
+    endereco: "Space Commerce Way, Merritt Island, FL 32953",
+    valores: [{ rotulo: "Padrão", valor: "**US$ 15**/dia (carro), pago antes de entrar" }],
+    comoChegar:
+      "Pela **SR 405** a leste, por ~7,5 milhas; vire à direita na **Space Commerce Way** e siga ~1,2 milha, com o complexo à esquerda. Digitar só \"Kennedy Space Center\" no GPS pode levar ao lugar errado.",
+    meio: "carro",
+    conferidoEm: "2026-11-18",
+    fonte: "Site oficial do Kennedy Space Center (FAQ e página de viagem)",
+  },
 };
