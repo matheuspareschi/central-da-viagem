@@ -11,7 +11,7 @@ export function HomePage() {
   const { days } = useTripDays();
 
   return (
-    <div className="-mt-7 flex flex-col gap-4">
+    <div className="flex flex-col gap-4">
       <TopBar />
       <TodaySection now={now} />
       {getTripPhase(now, days) !== "after" && <AdventCard dateISO={toISODate(now)} />}
